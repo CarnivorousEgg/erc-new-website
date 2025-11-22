@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const ChromaGrid = ({ items }) => {
     return (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4 max-w-6xl mx-auto">
             {items.map((item, index) => (
                 <motion.div
                     key={index}

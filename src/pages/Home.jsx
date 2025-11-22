@@ -17,7 +17,7 @@ const Home = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-6xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mb-6"
+                        className="text-6xl md:text-8xl font-bold text-blue-600 dark:text-blue-400 mb-6 drop-shadow-xl"
                     >
                         ERC BITS GOA
                     </motion.h1>
@@ -26,7 +26,7 @@ const Home = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-8"
+                        className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8"
                     >
                         Innovating the future through Electronics and Robotics.
                     </motion.p>
@@ -52,22 +52,22 @@ const Home = () => {
                 <h2 className="text-4xl font-bold text-center mb-12">What We Do</h2>
                 <div className="grid md:grid-cols-3 gap-8">
                     <SpotlightCard>
-                        <h3 className="text-2xl font-bold mb-4 text-blue-400">Robotics</h3>
-                        <p className="text-gray-400">
+                        <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Robotics</h3>
+                        <p className="text-gray-600 dark:text-gray-400">
                             Designing and building autonomous robots for various competitions and research purposes.
                         </p>
                     </SpotlightCard>
 
                     <SpotlightCard>
-                        <h3 className="text-2xl font-bold mb-4 text-purple-400">Electronics</h3>
-                        <p className="text-gray-400">
+                        <h3 className="text-2xl font-bold mb-4 text-purple-600 dark:text-purple-400">Electronics</h3>
+                        <p className="text-gray-600 dark:text-gray-400">
                             Developing embedded systems, IoT devices, and custom PCBs for innovative solutions.
                         </p>
                     </SpotlightCard>
 
                     <SpotlightCard>
-                        <h3 className="text-2xl font-bold mb-4 text-pink-400">Research</h3>
-                        <p className="text-gray-400">
+                        <h3 className="text-2xl font-bold mb-4 text-pink-600 dark:text-pink-400">Research</h3>
+                        <p className="text-gray-600 dark:text-gray-400">
                             Pushing the boundaries of technology through cutting-edge research and development.
                         </p>
                     </SpotlightCard>

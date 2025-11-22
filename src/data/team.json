@@ -1,6 +1,44 @@
 {
     "current": [
         {
+            "name": "Saransh Agrawal",
+            "role": "Chief Coordinator",
+            "image": "https://ui-avatars.com/api/?name=Saransh+Agrawal&background=random",
+            "linkedin": "https://www.linkedin.com/in/saransh-agrawal-0b6b2b21b/"
+        },
+        {
+            "name": "Nilesh Bhatia",
+            "role": "Sub Coordinator",
+            "image": "https://ui-avatars.com/api/?name=Nilesh+Bhatia&background=random",
+            "linkedin": "https://www.linkedin.com/in/nilesh-bhatia-609a38268/"
+        },
+        {
+            "name": "Aryan Goyal",
+            "role": "Sub Coordinator",
+            "image": "https://ui-avatars.com/api/?name=Aryan+Goyal&background=random",
+            "linkedin": "https://www.linkedin.com/in/aryan-goyal-6ab13b265/"
+        },
+        {
+            "name": "Kevin Matthew",
+            "role": "Research Head",
+            "image": "https://ui-avatars.com/api/?name=Kevin+Matthew&background=random",
+            "linkedin": "https://www.linkedin.com/in/kevin-matthew-6ab13b265/"
+        },
+        {
+            "name": "Parth Jaju",
+            "role": "Treasurer",
+            "image": "https://ui-avatars.com/api/?name=Parth+Jaju&background=random",
+            "linkedin": "https://www.linkedin.com/in/parth-jaju-6ab13b265/"
+        },
+        {
+            "name": "Dev Thacker",
+            "role": "Electronics Head",
+            "image": "https://ui-avatars.com/api/?name=Dev+Thacker&background=random",
+            "linkedin": "https://www.linkedin.com/in/dev-thacker-6ab13b265/"
+        }
+    ],
+    "alumni": [
+        {
             "name": "Parth Shah",
             "role": "Team Lead",
             "image": "https://ui-avatars.com/api/?name=Parth+Shah&background=random",
@@ -29,9 +67,7 @@
             "role": "Member",
             "image": "https://ui-avatars.com/api/?name=Ansh+Parmeshwar&background=random",
             "linkedin": "https://www.linkedin.com/in/anshparmeshwar/"
-        }
-    ],
-    "alumni": [
+        },
         {
             "name": "Arjun Puthli",
             "image": "https://ui-avatars.com/api/?name=Arjun+Puthli&background=random",

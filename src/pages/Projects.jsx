@@ -34,8 +34,8 @@ const Projects = () => {
                         key={tab.id}
                         onClick={() => setFilter(tab.id)}
                         className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === tab.id
-                            ? 'bg-white text-black shadow-lg scale-105'
-                            : 'bg-white/10 text-white hover:bg-white/20'
+                            ? 'bg-black text-white dark:bg-white dark:text-black shadow-lg scale-105'
+                            : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-white/10 dark:text-white dark:hover:bg-white/20'
                             }`}
                     >
                         {tab.label}
@@ -64,7 +64,7 @@ const Projects = () => {
 
                             <Link
                                 to={`/projects/${project.id}`}
-                                className="block relative rounded-xl overflow-hidden bg-neutral-900 border border-white/10 h-full"
+                                className="block relative rounded-xl overflow-hidden bg-white dark:bg-neutral-900 border border-gray-200 dark:border-white/10 shadow-lg dark:shadow-none h-full transition-colors duration-300"
                             >
                                 <div className="aspect-video overflow-hidden">
                                     <img
@@ -75,12 +75,12 @@ const Projects = () => {
                                 </div>
                                 <div className="p-6">
                                     <div className="flex justify-between items-start mb-2">
-                                        <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">{project.title}</h3>
-                                        <span className="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-400 capitalize">
+                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{project.title}</h3>
+                                        <span className="text-xs px-2 py-1 rounded bg-blue-100 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400 capitalize">
                                             {project.category}
                                         </span>
                                     </div>
-                                    <p className="text-gray-400 text-sm mb-4">{project.description}</p>
+                                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{project.description}</p>
                                 </div>
                             </Link>
                         </motion.div>
