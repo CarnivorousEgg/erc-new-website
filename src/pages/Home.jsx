@@ -1,6 +1,7 @@
 import React from 'react';
 import GridScan from '../components/GridScan';
 import SpotlightCard from '../components/SpotlightCard';
+import PlusDivider from '../components/PlusDivider';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -41,6 +42,10 @@ const Home = () => {
                     </motion.div>
                 </div>
             </section>
+
+            <div className="container mx-auto px-4">
+                <PlusDivider />
+            </div>
 
             {/* Highlights Section */}
             <section className="py-20 px-4 container mx-auto">

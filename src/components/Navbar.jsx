@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { cn } from '../utils/cn'; // We'll need a utility for class merging
+import { cn } from '../utils/cn';
+import ThemeToggle from './ThemeToggle';
 
 const navItems = [
     { name: 'Home', path: '/' },
@@ -51,6 +52,7 @@ const Navbar = () => {
                         </Link>
                     );
                 })}
+                <ThemeToggle />
             </div>
         </nav>
     );

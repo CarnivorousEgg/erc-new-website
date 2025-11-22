@@ -1,42 +1,98 @@
 [
     {
-        "id": "1",
-        "title": "Autonomous Drone",
-        "category": "completed",
-        "image": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=2070&auto=format&fit=crop",
-        "description": "A fully autonomous drone capable of navigating complex environments.",
-        "github": "https://github.com/ERC-BPGC"
+        "id": "spiderbot",
+        "title": "SpiderBot",
+        "category": "ongoing",
+        "image": "https://images.unsplash.com/photo-1563206767-5b1d97299337?q=80&w=2070&auto=format&fit=crop",
+        "description": "A six-legged round body Hexapod designed to study walking gaits and traverse complex terrains with greater stability than quadrupeds.",
+        "github": "https://github.com/ERC-BPGC/SpiderBot"
     },
     {
-        "id": "2",
-        "title": "Mars Rover Prototype",
+        "id": "vulcan",
+        "title": "Vulcan",
+        "category": "ongoing",
+        "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop",
+        "description": "A humanoid head project aiming to replicate human features like blinking, eye contact, and mouth movement using OpenCV and NLP.",
+        "github": "https://github.com/ERC-BPGC/project-vulcan"
+    },
+    {
+        "id": "snakebot",
+        "title": "SnakeBot",
+        "category": "ongoing",
+        "image": "https://images.unsplash.com/photo-1535378437327-b7128d63743c?q=80&w=1935&auto=format&fit=crop",
+        "description": "A modular, wheel-less robot with universal joints, capable of serpentine and sidewinding motions for traversing various terrains.",
+        "github": "https://github.com/ERC-BPGC/SnakeBot"
+    },
+    {
+        "id": "quadruped",
+        "title": "Quadruped",
         "category": "ongoing",
         "image": "https://images.unsplash.com/photo-1541873676-a18131494184?q=80&w=2018&auto=format&fit=crop",
-        "description": "Prototype rover designed for rough terrain exploration.",
-        "github": "https://github.com/ERC-BPGC"
+        "description": "Designing and building a 12 Degree of Freedom (DoF) Quadruped robot from scratch.",
+        "github": "https://github.com/ERC-BPGC/quadruped"
     },
     {
-        "id": "3",
-        "title": "Smart Home System",
-        "category": "mini",
-        "image": "https://images.unsplash.com/photo-1558002038-1091a166111c?q=80&w=2070&auto=format&fit=crop",
-        "description": "IoT based home automation system using ESP32.",
-        "github": "https://github.com/ERC-BPGC"
+        "id": "drone-automation",
+        "title": "Drone Automation",
+        "category": "ongoing",
+        "image": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=2070&auto=format&fit=crop",
+        "description": "Developing an autonomous drone capable of catching moving obstacles like a tennis ball.",
+        "github": "https://github.com/ERC-BPGC/"
     },
     {
-        "id": "4",
-        "title": "Line Follower Bot",
-        "category": "mini",
-        "image": "https://images.unsplash.com/photo-1535378437327-b7128d63743c?q=80&w=1935&auto=format&fit=crop",
-        "description": "Fast line follower robot for competitions.",
-        "github": "https://github.com/ERC-BPGC"
-    },
-    {
-        "id": "5",
-        "title": "Humanoid Arm",
-        "category": "completed",
+        "id": "robotic-arm-v2",
+        "title": "Robotic Arm v2",
+        "category": "ongoing",
         "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
-        "description": "6 DOF robotic arm with haptic feedback control.",
-        "github": "https://github.com/ERC-BPGC"
+        "description": "Building the second version of the Robotic Arm project with 6 degrees of freedom.",
+        "github": "https://github.com/ERC-BPGC/RoboticArm"
+    },
+    {
+        "id": "robotic-arm-3dof",
+        "title": "Robotic Arm (3 DoF)",
+        "category": "completed",
+        "image": "https://images.unsplash.com/photo-1611174743420-3d7df880ce32?q=80&w=1974&auto=format&fit=crop",
+        "description": "A robust robotic arm with perception and control systems, capable of playing chess against humans.",
+        "github": "https://github.com/ERC-BPGC/RoboticArm"
+    },
+    {
+        "id": "air-hockey",
+        "title": "Air Hockey",
+        "category": "completed",
+        "image": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=2070&auto=format&fit=crop",
+        "description": "An AI agent trained via imitation learning to play air hockey, deployed on a custom-built gantry system.",
+        "github": "https://github.com/Maker-Rat/Air_Hockey_RL"
+    },
+    {
+        "id": "carborone",
+        "title": "Carborone",
+        "category": "completed",
+        "image": "https://images.unsplash.com/photo-1506947411487-a56738267384?q=80&w=1974&auto=format&fit=crop",
+        "description": "An autonomous drone-car hybrid capable of analyzing the environment to decide whether to drive or fly.",
+        "github": "https://github.com/4825vinay/Project-Carborone"
+    },
+    {
+        "id": "swarmbots",
+        "title": "SwarmBots 2.0",
+        "category": "completed",
+        "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop",
+        "description": "A swarm of autonomous mobile robots implementing collective decision-making algorithms.",
+        "github": "https://github.com/ERC-BPGC/swarm_bots"
+    },
+    {
+        "id": "trotbot",
+        "title": "Trotbot",
+        "category": "completed",
+        "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop",
+        "description": "A multipurpose omni-directional robot for indoor navigation and delivery.",
+        "github": "https://github.com/ERC-BPGC/Trotbot"
+    },
+    {
+        "id": "acoustic-camera",
+        "title": "Acoustic Camera",
+        "category": "completed",
+        "image": "https://images.unsplash.com/photo-1550009158-9ebf69173e03?q=80&w=2001&auto=format&fit=crop",
+        "description": "An imaging device using multiple microphones to locate sound sources for noise reduction applications.",
+        "github": "https://github.com/ERC-BPGC/echoslam_ROS"
     }
 ]
