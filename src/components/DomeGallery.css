@@ -238,6 +238,8 @@ main.sphere-main {
     font-size: 14px;
     font-weight: 500;
     transition: background 0.2s;
+    z-index: 3;
+    pointer-events: auto;
 }
 
 .enlarge-info a:hover {
@@ -246,4 +248,49 @@ main.sphere-main {
 
 .dg-scroll-lock {
     overflow: hidden;
+}
+
+.enlarge-top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    padding: 10px 16px;
+    border-radius: 12px;
+    color: white;
+    text-align: right;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease 0.2s;
+}
+
+[data-enlarging="true"] .enlarge-top-right {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.enlarge-top-right .role {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.enlarge-top-right .batch {
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.8;
+    color: #ddd;
+}
+
+.enlarge-info .current-work {
+    font-size: 15px;
+    color: #ccc;
+    margin-bottom: 12px;
+    font-style: italic;
 }

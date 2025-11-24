@@ -3,108 +3,142 @@
         {
             "name": "Saransh Agrawal",
             "role": "Chief Coordinator",
-            "image": "https://ui-avatars.com/api/?name=Saransh+Agrawal&background=random",
+            "image": "/images/people/2023 Batch/saransh_agrawal.jpeg",
             "linkedin": "https://www.linkedin.com/in/saransh-agrawal-0b6b2b21b/"
         },
         {
             "name": "Nilesh Bhatia",
             "role": "Sub Coordinator",
-            "image": "https://ui-avatars.com/api/?name=Nilesh+Bhatia&background=random",
+            "image": "/images/people/2023 Batch/nilesh_bhatia.jpeg",
             "linkedin": "https://www.linkedin.com/in/nilesh-bhatia-609a38268/"
         },
         {
             "name": "Aryan Goyal",
             "role": "Sub Coordinator",
-            "image": "https://ui-avatars.com/api/?name=Aryan+Goyal&background=random",
+            "image": "/images/people/2023 Batch/aryan_goyal.jpeg",
             "linkedin": "https://www.linkedin.com/in/aryan-goyal-6ab13b265/"
         },
         {
             "name": "Kevin Matthew",
             "role": "Research Head",
-            "image": "https://ui-avatars.com/api/?name=Kevin+Matthew&background=random",
+            "image": "/images/people/2023 Batch/kevin_matthew.jpeg",
             "linkedin": "https://www.linkedin.com/in/kevin-matthew-6ab13b265/"
         },
         {
             "name": "Parth Jaju",
             "role": "Treasurer",
-            "image": "https://ui-avatars.com/api/?name=Parth+Jaju&background=random",
+            "image": "/images/people/2023 Batch/parth_jaju.jpeg",
             "linkedin": "https://www.linkedin.com/in/parth-jaju-6ab13b265/"
         },
         {
             "name": "Dev Thacker",
             "role": "Electronics Head",
-            "image": "https://ui-avatars.com/api/?name=Dev+Thacker&background=random",
+            "image": "/images/people/2023 Batch/dev_thacker.jpeg",
             "linkedin": "https://www.linkedin.com/in/dev-thacker-6ab13b265/"
         }
     ],
     "alumni": [
         {
             "name": "Parth Shah",
-            "role": "Team Lead",
-            "image": "https://ui-avatars.com/api/?name=Parth+Shah&background=random",
+            "role": "Chief Coordinator 2024-2025",
+            "batch": "2022 Batch",
+            "currentWork": "Robotics enthusiast, Bits Pilani Goa",
+            "image": "/images/people/2022 Batch/Parth_Shah.jpeg",
             "linkedin": "https://www.linkedin.com/in/parth-shah-b014771b0/"
         },
         {
             "name": "Ritwik Sharma",
-            "role": "Team Lead",
-            "image": "https://ui-avatars.com/api/?name=Ritwik+Sharma&background=random",
+            "role": "Sub Coordinator 2024-2025",
+            "batch": "2022 Batch",
+            "currentWork": "TBD",
+            "image": "/images/people/2022 Batch/Ritwik_Shwarma.jpeg",
             "linkedin": "https://www.linkedin.com/in/ritwik-sharma-609a38268/"
         },
         {
             "name": "Ajinkya Deshpande",
-            "role": "Member",
-            "image": "https://ui-avatars.com/api/?name=Ajinkya+Deshpande&background=random",
+            "role": "PR & Projects Coordinator 2024-2025",
+            "batch": "2022 Batch",
+            "currentWork": "Student at Birla Institute of Technology and Science, Pilani",
+            "image": "/images/people/2022 Batch/Ajinkya_Deshpande.png",
             "linkedin": "https://www.linkedin.com/in/ajinkya-deshpande-6ab13b265/"
         },
         {
             "name": "Vimarsh Shah",
-            "role": "Member",
-            "image": "https://ui-avatars.com/api/?name=Vimarsh+Shah&background=random",
+            "role": "Research Head 2024-2025",
+            "batch": "2022 Batch",
+            "currentWork": "A maker and a Learner",
+            "image": "/images/people/2022 Batch/Vimarsh_Shah.jpg",
             "linkedin": "https://www.linkedin.com/in/vimarshshah/"
         },
         {
             "name": "Ansh Parmeshwar",
-            "role": "Member",
-            "image": "https://ui-avatars.com/api/?name=Ansh+Parmeshwar&background=random",
+            "role": "Mechanical Head 2024-2025",
+            "batch": "2022 Batch",
+            "currentWork": "Student at Birla Institute Of Technology",
+            "image": "/images/people/2022 Batch/Ansh_Parmeshwar.jpeg",
             "linkedin": "https://www.linkedin.com/in/anshparmeshwar/"
         },
         {
             "name": "Arjun Puthli",
-            "image": "https://ui-avatars.com/api/?name=Arjun+Puthli&background=random",
+            "role": "Member",
+            "batch": "2021 Batch",
+            "currentWork": "Research Intern @ IIT Delhi | Ex-Summer Research Intern @ IIIT-H",
+            "image": "/images/people/2021 Batch/arjun_puthli.jpeg",
             "linkedin": "https://www.linkedin.com/in/arjun-puthli-810938189/"
         },
         {
             "name": "Shantanu Deshmukh",
-            "image": "https://ui-avatars.com/api/?name=Shantanu+Deshmukh&background=random",
+            "role": "Member",
+            "batch": "2021 Batch",
+            "currentWork": "Embedded Software Engineer at Texas Instruments",
+            "image": "/images/people/2021 Batch/shantanu_deshmukh.jpeg",
             "linkedin": "https://www.linkedin.com/in/shantanu-deshmukh-819b5924a/"
         },
         {
             "name": "Aditya Kurande",
-            "image": "https://ui-avatars.com/api/?name=Aditya+Kurande&background=random",
+            "role": "Member",
+            "batch": "2021 Batch",
+            "currentWork": "Robotics Engineer | Robot Learning, AI & Control",
+            "image": "/images/people/2021 Batch/aditya_kurande.jpg",
             "linkedin": "https://www.linkedin.com/in/aditya-kurande-15a644254/"
         },
         {
             "name": "Aasim Sayyed",
+            "role": "Member",
+            "batch": "2023 Batch",
+            "currentWork": "Graduate - Birla Institute of Technology and Science, Pilani - Goa Campus | B.E. Mechanical",
             "image": "https://ui-avatars.com/api/?name=Aasim+Sayyed&background=random",
             "linkedin": "https://www.linkedin.com/in/aasim-sayyed-a966b423a/"
         },
         {
             "name": "Ishan Gokhale",
+            "role": "Member",
+            "batch": "2023 Batch",
+            "currentWork": "Digital Design/Verification Engineer at NXP Semiconductors",
             "image": "https://ui-avatars.com/api/?name=Ishan+Gokhale&background=random",
             "linkedin": "https://www.linkedin.com/in/ishan-gokhale-70bb92231/"
         },
         {
             "name": "Akshat Tubki",
+            "role": "Member",
+            "batch": "2023 Batch",
+            "currentWork": "Student at Birla Institute of Technology and Science, Pilani - Goa Campus",
             "image": "https://ui-avatars.com/api/?name=Akshat+Tubki&background=random",
             "linkedin": "https://www.linkedin.com/in/akshat-tubki-6b9b28244/"
         },
         {
             "name": "Adarsh Gopalakrishnan",
+            "role": "Member",
+            "batch": "2023 Batch",
+            "currentWork": "Associate Design Engineer @ WCB Robotics",
             "image": "https://ui-avatars.com/api/?name=Adarsh+G&background=random",
             "linkedin": "https://www.linkedin.com/in/adarsh-gopalakrishnan-748599229/"
         },
         {
             "name": "Ninaad Kotasthane",
+            "role": "Member",
+            "batch": "2023 Batch",
+            "currentWork": "Birla Institute of Technology and Science, Pilani - Goa Campus 25'||intern @ Pratt and Whitney||ex robotics intern @ Crystalball.ai",
             "image": "https://ui-avatars.com/api/?name=Ninaad+Kotasthane&background=random",
             "linkedin": "https://www.linkedin.com/in/ninaad-kotasthane-120669272/"
         }

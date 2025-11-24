@@ -41,11 +41,21 @@ function buildItems(pool, seg) {
         if (typeof item === 'string') {
             return { src: item, alt: '' };
         }
+
+        let src = item.image || item.src || '';
+        const isPlaceholder = src === 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+
+        if (!src || isPlaceholder) {
+            src = `https://ui-avatars.com/api/?name=${encodeURIComponent(item.name || 'User')}&background=random`;
+        }
+
         return {
-            src: item.image || item.src || '',
+            src: src,
             alt: item.name || item.alt || '',
             name: item.name,
             role: item.role,
+            batch: item.batch,
+            currentWork: item.currentWork,
             linkedin: item.linkedin
         };
     });
@@ -460,13 +470,25 @@ export default function DomeGallery({
             const name = parent.dataset.name;
             const role = parent.dataset.role;
             const linkedin = parent.dataset.linkedin;
+            const batch = parent.dataset.batch;
+            const currentWork = parent.dataset.currentWork;
+
+            if (batch || role) {
+                const topRight = document.createElement('div');
+                topRight.className = 'enlarge-top-right';
+                topRight.innerHTML = `
+                    ${role ? `<span class="role">${role}</span>` : ''}
+                    ${batch ? `<span class="batch">${batch}</span>` : ''}
+                `;
+                overlay.appendChild(topRight);
+            }
 
             if (name) {
                 const info = document.createElement('div');
                 info.className = 'enlarge-info';
                 info.innerHTML = `
             <h3>${name}</h3>
-            ${role ? `<p>${role}</p>` : ''}
+            ${currentWork ? `<p class="current-work">${currentWork}</p>` : ''}
             ${linkedin ? `<a href="${linkedin}" target="_blank" rel="noopener noreferrer">LinkedIn</a>` : ''}
           `;
                 info.addEventListener('click', (e) => e.stopPropagation());
@@ -579,6 +601,8 @@ export default function DomeGallery({
                                 data-src={it.src}
                                 data-name={it.name}
                                 data-role={it.role}
+                                data-batch={it.batch}
+                                data-current-work={it.currentWork}
                                 data-linkedin={it.linkedin}
                                 data-offset-x={it.x}
                                 data-offset-y={it.y}

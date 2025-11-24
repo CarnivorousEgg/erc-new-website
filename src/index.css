@@ -8,6 +8,7 @@
     --text-primary: #0a0a0a;
     --spotlight-color: rgba(0, 0, 0, 0.1);
     --grid-color: rgba(0, 0, 0, 0.05);
+    --dome-overlay: rgba(255, 255, 255, 0.9);
   }
 
   .dark {
@@ -15,6 +16,7 @@
     --text-primary: #ffffff;
     --spotlight-color: rgba(255, 255, 255, 0.1);
     --grid-color: #333;
+    --dome-overlay: rgba(0, 0, 0, 0.6);
   }
 
   body {

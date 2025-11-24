@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import projectsData from '../data/projects.json';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Projects = () => {
+    const location = useLocation();
     const [filter, setFilter] = useState('all');
+
+    React.useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const filterParam = params.get('filter');
+        if (filterParam) {
+            setFilter(filterParam);
+        } else {
+            setFilter('all');
+        }
+    }, [location.search]);
 
     const filteredProjects = filter === 'all'
         ? projectsData
@@ -18,17 +29,15 @@ const Projects = () => {
     ];
 
     return (
-        <div className="min-h-screen pt-24 px-4 container mx-auto">
-            <motion.h1
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
-            >
-                Our Projects
-            </motion.h1>
-
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="min-h-screen pt-24 px-4 container mx-auto pb-20"
+        >
             {/* Tabs */}
-            <div className="flex justify-center gap-4 mb-12 flex-wrap">
+            <div className="hidden md:flex justify-center gap-4 mb-16 flex-wrap">
                 {tabs.map((tab) => (
                     <button
                         key={tab.id}
@@ -87,7 +96,7 @@ const Projects = () => {
                     ))}
                 </AnimatePresence>
             </motion.div>
-        </div>
+        </motion.div>
     );
 };
 

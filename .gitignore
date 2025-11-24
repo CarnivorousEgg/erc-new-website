@@ -115,3 +115,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Puppeteer session data
+.puppeteer_data/

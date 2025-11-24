@@ -7,10 +7,29 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
-        <div className="relative min-h-screen pt-20">
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="relative min-h-screen pt-20"
+        >
             {/* Hero Section with Grid Scan Background */}
             <section className="relative h-[80vh] flex flex-col items-center justify-center overflow-hidden">
-                <GridScan />
+                <div className="absolute inset-0">
+                    <GridScan
+                        sensitivity={0.55}
+                        lineThickness={1}
+                        linesColor="#392e4e"
+                        gridScale={0.1}
+                        scanColor="#FF9FFC"
+                        scanOpacity={0.4}
+                        enablePost={true}
+                        bloomIntensity={0.6}
+                        chromaticAberration={0.002}
+                        noiseIntensity={0.01}
+                    />
+                </div>
 
                 <div className="relative z-10 text-center px-4">
                     <motion.h1
@@ -73,7 +92,7 @@ const Home = () => {
                     </SpotlightCard>
                 </div>
             </section>
-        </div>
+        </motion.div>
     );
 };
 

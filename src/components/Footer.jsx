@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaFacebook } from 'react-
 
 const Footer = () => {
     return (
-        <footer className="bg-white dark:bg-black border-t border-gray-200 dark:border-white/10 py-12 mt-20 transition-colors duration-300">
+        <footer className="bg-white dark:bg-black border-t border-gray-200 dark:border-white/10 py-8 mt-20 transition-colors duration-300">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8">
                     <div className="text-center md:text-left">
@@ -32,7 +32,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-gray-200 dark:border-white/10 text-center text-gray-500 text-sm flex flex-col gap-2">
+                <div className="mt-6 text-center text-gray-500 text-sm flex flex-col gap-1">
                     <p>&copy; {new Date().getFullYear()} Electronics and Robotics Club, BITS Goa. All rights reserved.</p>
                     <p>Made with ❤️ Parth Jaju</p>
                 </div>
