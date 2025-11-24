@@ -20,9 +20,9 @@ const Home = () => {
                     <GridScan
                         sensitivity={0.55}
                         lineThickness={1}
-                        linesColor="#392e4e"
+                        linesColor="#1e3a5f"
                         gridScale={0.1}
-                        scanColor="#FF9FFC"
+                        scanColor="#4a90e2"
                         scanOpacity={0.4}
                         enablePost={true}
                         bloomIntensity={0.6}

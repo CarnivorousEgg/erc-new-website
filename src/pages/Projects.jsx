@@ -39,16 +39,16 @@ const Projects = () => {
             {/* Tabs */}
             <div className="hidden md:flex justify-center gap-4 mb-16 flex-wrap">
                 {tabs.map((tab) => (
-                    <button
+                    <Link
                         key={tab.id}
-                        onClick={() => setFilter(tab.id)}
+                        to={tab.id === 'all' ? '/projects' : `/projects?filter=${tab.id}`}
                         className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === tab.id
                             ? 'bg-black text-white dark:bg-white dark:text-black shadow-lg scale-105'
                             : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-white/10 dark:text-white dark:hover:bg-white/20'
                             }`}
                     >
                         {tab.label}
-                    </button>
+                    </Link>
                 ))}
             </div>
 
