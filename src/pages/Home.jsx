@@ -19,15 +19,15 @@ const Home = () => {
                 <div className="absolute inset-0">
                     <GridScan
                         sensitivity={0.55}
-                        lineThickness={1}
-                        linesColor="#1e3a5f"
+                        lineThickness={0.6}
+                        linesColor="#c5d9ed"
                         gridScale={0.1}
-                        scanColor="#4a90e2"
-                        scanOpacity={0.4}
+                        scanColor="#3b82f6"
+                        scanOpacity={0.7}
                         enablePost={true}
-                        bloomIntensity={0.6}
-                        chromaticAberration={0.002}
-                        noiseIntensity={0.01}
+                        bloomIntensity={0.2}
+                        chromaticAberration={0.0003}
+                        noiseIntensity={0.001}
                     />
                 </div>
 

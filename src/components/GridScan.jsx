@@ -254,11 +254,10 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
     float n = fract(sin(dot(gl_FragCoord.xy + vec2(iTime * 123.4), vec2(12.9898,78.233))) * 43758.5453123);
     color += (n - 0.5) * uNoise;
     color = clamp(color, 0.0, 1.0);
-    float alpha = clamp(max(lineVis, combinedPulse), 0.0, 1.0);
-    float gx = 1.0 - smoothstep(tx * 2.0, tx * 2.0 + aax * 2.0, ax);
-    float gy = 1.0 - smoothstep(ty * 2.0, ty * 2.0 + aay * 2.0, ay);
-    float halo = max(gx, gy) * fade;
-    alpha = max(alpha, halo * clamp(uBloomOpacity, 0.0, 1.0));
+    
+    // FIXED: Alpha only from visible elements (lines/scans), not from background
+    float alpha = clamp(max(lineVis * fade, combinedPulse + combinedAura * 0.5), 0.0, 1.0);
+    
     fragColor = vec4(color, alpha);
 }
 
