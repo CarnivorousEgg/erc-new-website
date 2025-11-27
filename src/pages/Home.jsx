@@ -2,6 +2,8 @@ import React from 'react';
 import GridScan from '../components/GridScan';
 import SpotlightCard from '../components/SpotlightCard';
 import PlusDivider from '../components/PlusDivider';
+import DomeGallery from '../components/DomeGallery';
+import galleryData from '../data/gallery.json';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -90,6 +92,24 @@ const Home = () => {
                             Pushing the boundaries of technology through cutting-edge research and development.
                         </p>
                     </SpotlightCard>
+                </div>
+            </section>
+
+            <div className="container mx-auto px-4">
+                <PlusDivider />
+            </div>
+
+            {/* Events & Projects Gallery */}
+            <section className="py-20 px-4 container mx-auto">
+                <h2 className="text-4xl font-bold text-center mb-12">Our Events & Projects</h2>
+                <p className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
+                    Explore our amazing events, competitions, and innovative projects that showcase the creativity and technical expertise of our club members.
+                </p>
+                <div className="w-full overflow-hidden">
+                    <DomeGallery
+                        items={galleryData.events}
+                        overlayBlurColor="var(--dome-overlay)"
+                    />
                 </div>
             </section>
         </motion.div>

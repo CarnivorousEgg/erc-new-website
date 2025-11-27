@@ -1,0 +1,44 @@
+{
+    "events": [
+        {
+            "name": "RoboWars 2024",
+            "image": "https://picsum.photos/seed/robowars/600/400",
+            "description": "Annual robotics combat competition"
+        },
+        {
+            "name": "Workshop Series",
+            "image": "https://picsum.photos/seed/workshop/600/400",
+            "description": "Electronics and IoT workshops for students"
+        },
+        {
+            "name": "Autonomous Drone Project",
+            "image": "https://picsum.photos/seed/drone/600/400",
+            "description": "Developing autonomous navigation systems"
+        },
+        {
+            "name": "Tech Fest Exhibition",
+            "image": "https://picsum.photos/seed/techfest/600/400",
+            "description": "Showcasing innovative projects at annual fest"
+        },
+        {
+            "name": "Smart Home Automation",
+            "image": "https://picsum.photos/seed/smarthome/600/400",
+            "description": "IoT-based home automation system"
+        },
+        {
+            "name": "Line Following Robot",
+            "image": "https://picsum.photos/seed/linefollower/600/400",
+            "description": "Classic robotics project with PID control"
+        },
+        {
+            "name": "Research Symposium",
+            "image": "https://picsum.photos/seed/symposium/600/400",
+            "description": "Annual research paper presentations"
+        },
+        {
+            "name": "3D Printing Lab",
+            "image": "https://picsum.photos/seed/3dprinting/600/400",
+            "description": "Custom 3D printed mechanical components"
+        }
+    ]
+}

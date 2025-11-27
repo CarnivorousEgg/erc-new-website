@@ -1,11 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import ChromaGrid from '../components/ChromaGrid';
-import DomeGallery from '../components/DomeGallery';
+import AlumniTimeline from '../components/AlumniTimeline';
 import PlusDivider from '../components/PlusDivider';
 import SpotlightCard from '../components/SpotlightCard';
+import BackToTop from '../components/BackToTop';
 import teamData from '../data/team.json';
 import { FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import { cn } from '../utils/cn';
@@ -47,6 +48,7 @@ const tabs = [
 
 const About = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState('story');
     const [startCounters, setStartCounters] = useState(false);
 
@@ -54,12 +56,16 @@ const About = () => {
     const projects = useCountUp(20, 2000, startCounters);
     const alumni = useCountUp(500, 2500, startCounters);
 
+    // Handle URL hash for tabs
     useEffect(() => {
-        if (location.hash) {
-            const hash = location.hash.replace('#', '');
-            if (tabs.find(t => t.id === hash)) {
-                setActiveTab(hash);
-            }
+        const hash = location.hash.replace('#', '');
+        // Support both #alumni and #year=2021 style hashes
+        if (hash.startsWith('year=')) {
+            // Alumni year hash - set tab to alumni
+            setActiveTab('alumni');
+        } else if (hash && tabs.find(t => t.id === hash)) {
+            // Direct tab hash
+            setActiveTab(hash);
         }
     }, [location.hash]);
 
@@ -68,6 +74,12 @@ const About = () => {
             setStartCounters(true);
         }
     }, [activeTab]);
+
+    // Handle tab change and update URL hash
+    const handleTabChange = (tabId) => {
+        setActiveTab(tabId);
+        navigate(`#${tabId}`, { replace: true });
+    };
 
     return (
         <motion.div
@@ -78,12 +90,14 @@ const About = () => {
             className="min-h-screen pt-24 px-4 container mx-auto pb-20"
         >
 
+            <BackToTop />
+
             {/* Tab Navigation */}
             <div className="hidden md:flex flex-wrap justify-center gap-4 mb-16">
                 {tabs.map((tab) => (
                     <button
                         key={tab.id}
-                        onClick={() => setActiveTab(tab.id)}
+                        onClick={() => handleTabChange(tab.id)}
                         className={cn(
                             "px-6 py-2 rounded-full text-sm font-medium transition-all duration-300",
                             activeTab === tab.id
@@ -146,11 +160,7 @@ const About = () => {
 
                     {activeTab === 'alumni' && (
                         <section className="w-full overflow-hidden">
-                            <h2 className="text-4xl font-bold text-center mb-12">Our Alumni</h2>
-                            <DomeGallery
-                                items={teamData.alumni}
-                                overlayBlurColor="var(--dome-overlay)"
-                            />
+                            <AlumniTimeline alumni={teamData.alumni} />
                         </section>
                     )}
 

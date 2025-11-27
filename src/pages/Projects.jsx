@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import projectsData from '../data/projects.json';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import BackToTop from '../components/BackToTop';
 
 const Projects = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     const [filter, setFilter] = useState('all');
 
     React.useEffect(() => {
-        const params = new URLSearchParams(location.search);
-        const filterParam = params.get('filter');
-        if (filterParam) {
-            setFilter(filterParam);
+        // Check for hash-based filter (e.g., #completed, #ongoing)
+        const hash = location.hash.replace('#', '');
+        if (hash && ['all', 'completed', 'ongoing', 'mini'].includes(hash)) {
+            setFilter(hash);
         } else {
             setFilter('all');
         }
-    }, [location.search]);
+    }, [location.hash]);
 
     const filteredProjects = filter === 'all'
         ? projectsData
@@ -28,6 +30,12 @@ const Projects = () => {
         { id: 'mini', label: 'Mini Projects' },
     ];
 
+    const handleFilterChange = (filterId) => {
+        setFilter(filterId);
+        const hash = filterId === 'all' ? '' : `#${filterId}`;
+        navigate(hash, { replace: true });
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -36,19 +44,20 @@ const Projects = () => {
             transition={{ duration: 0.5 }}
             className="min-h-screen pt-24 px-4 container mx-auto pb-20"
         >
+            <BackToTop />
             {/* Tabs */}
             <div className="hidden md:flex justify-center gap-4 mb-16 flex-wrap">
                 {tabs.map((tab) => (
-                    <Link
+                    <button
                         key={tab.id}
-                        to={tab.id === 'all' ? '/projects' : `/projects?filter=${tab.id}`}
+                        onClick={() => handleFilterChange(tab.id)}
                         className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === tab.id
                             ? 'bg-black text-white dark:bg-white dark:text-black shadow-lg scale-105'
                             : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-white/10 dark:text-white dark:hover:bg-white/20'
                             }`}
                     >
                         {tab.label}
-                    </Link>
+                    </button>
                 ))}
             </div>
 
