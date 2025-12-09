@@ -9,7 +9,7 @@
         {
             "name": "Nilesh Bhatia",
             "role": "Sub Coordinator",
-            "image": "/images/people/2023 Batch/nilesh_bhatia.jpeg",
+            "image": "https://ui-avatars.com/api/?name=Nilesh+Bhatia&background=3b82f6&color=fff&size=400&font-size=0.4",
             "linkedin": "https://www.linkedin.com/in/nilesh-bhatia-609a38268/"
         },
         {
@@ -21,7 +21,7 @@
         {
             "name": "Kevin Matthew",
             "role": "Research Head",
-            "image": "/images/people/2023 Batch/kevin_matthew.jpeg",
+            "image": "https://ui-avatars.com/api/?name=Kevin+Matthew&background=8b5cf6&color=fff&size=400&font-size=0.4",
             "linkedin": "https://www.linkedin.com/in/kevin-matthew-6ab13b265/"
         },
         {
@@ -33,7 +33,7 @@
         {
             "name": "Dev Thacker",
             "role": "Electronics Head",
-            "image": "/images/people/2023 Batch/dev_thacker.jpeg",
+            "image": "https://ui-avatars.com/api/?name=Dev+Thacker&background=ec4899&color=fff&size=400&font-size=0.4",
             "linkedin": "https://www.linkedin.com/in/dev-thacker-6ab13b265/"
         }
     ],
@@ -42,105 +42,1073 @@
             "name": "Parth Shah",
             "role": "Chief Coordinator 2024-2025",
             "batch": "2022 Batch",
-            "currentWork": "Robotics enthusiast, Bits Pilani Goa",
-            "image": "/images/people/2022 Batch/Parth_Shah.jpeg",
+            "currentWork": "Intern at PNT Robotics",
+            "image": "/images/people/2022 Batch/Parth Shah.jpeg",
             "linkedin": "https://www.linkedin.com/in/parth-shah-b014771b0/"
         },
         {
             "name": "Ritwik Sharma",
             "role": "Sub Coordinator 2024-2025",
             "batch": "2022 Batch",
-            "currentWork": "TBD",
-            "image": "/images/people/2022 Batch/Ritwik_Shwarma.jpeg",
+            "currentWork": "Intern at CSIR-CEERI, Pilani",
+            "image": "/images/people/2022 Batch/Ritwik Sharma.jpeg",
             "linkedin": "https://www.linkedin.com/in/ritwik-sharma-609a38268/"
         },
         {
             "name": "Ajinkya Deshpande",
             "role": "PR & Projects Coordinator 2024-2025",
             "batch": "2022 Batch",
-            "currentWork": "Student at Birla Institute of Technology and Science, Pilani",
-            "image": "/images/people/2022 Batch/Ajinkya_Deshpande.png",
+            "currentWork": "Intern at CSIR-CEERI, Pilani",
+            "image": "/images/people/2022 Batch/Ajinkya Deshpande.png",
             "linkedin": "https://www.linkedin.com/in/ajinkya-deshpande-6ab13b265/"
         },
         {
             "name": "Vimarsh Shah",
             "role": "Research Head 2024-2025",
             "batch": "2022 Batch",
-            "currentWork": "A maker and a Learner",
-            "image": "/images/people/2022 Batch/Vimarsh_Shah.jpg",
+            "currentWork": "Intern at CSIR-CEERI, Pilani",
+            "image": "/images/people/2022 Batch/Vimarsh Shah.jpg",
             "linkedin": "https://www.linkedin.com/in/vimarshshah/"
         },
         {
             "name": "Ansh Parmeshwar",
             "role": "Mechanical Head 2024-2025",
             "batch": "2022 Batch",
-            "currentWork": "Student at Birla Institute Of Technology",
-            "image": "/images/people/2022 Batch/Ansh_Parmeshwar.jpeg",
+            "currentWork": "Intern at Aditya Birla Group",
+            "image": "/images/people/2022 Batch/Ansh Parmeshwar.jpeg",
             "linkedin": "https://www.linkedin.com/in/anshparmeshwar/"
         },
         {
             "name": "Arjun Puthli",
-            "role": "Member",
+            "role": "Chief Coordinator 2023-2024",
             "batch": "2021 Batch",
-            "currentWork": "Research Intern @ IIT Delhi | Ex-Summer Research Intern @ IIIT-H",
-            "image": "/images/people/2021 Batch/arjun_puthli.jpeg",
+            "currentWork": "Intern at Robotics Research Center, IIIT-H",
+            "image": "/images/people/2021 Batch/Arjun Puthli.jpeg",
             "linkedin": "https://www.linkedin.com/in/arjun-puthli-810938189/"
         },
         {
             "name": "Shantanu Deshmukh",
-            "role": "Member",
+            "role": "Sub Coordinator 2023-2024",
             "batch": "2021 Batch",
-            "currentWork": "Embedded Software Engineer at Texas Instruments",
-            "image": "/images/people/2021 Batch/shantanu_deshmukh.jpeg",
+            "currentWork": "Intern at CSIR-CEERI, Pilani",
+            "image": "/images/people/2021 Batch/Shantanu Deshmukh.jpeg",
             "linkedin": "https://www.linkedin.com/in/shantanu-deshmukh-819b5924a/"
         },
         {
             "name": "Aditya Kurande",
-            "role": "Member",
+            "role": "Research Head 2023-2024",
             "batch": "2021 Batch",
-            "currentWork": "Robotics Engineer | Robot Learning, AI & Control",
-            "image": "/images/people/2021 Batch/aditya_kurande.jpg",
+            "currentWork": "Intern at Robotics Research Center, IIIT-H",
+            "image": "/images/people/2021 Batch/Aditya Kurande.jpg",
             "linkedin": "https://www.linkedin.com/in/aditya-kurande-15a644254/"
         },
         {
             "name": "Aasim Sayyed",
-            "role": "Member",
-            "batch": "2023 Batch",
-            "currentWork": "Graduate - Birla Institute of Technology and Science, Pilani - Goa Campus | B.E. Mechanical",
-            "image": "https://ui-avatars.com/api/?name=Aasim+Sayyed&background=random",
+            "role": "Mechanical Head 2023-2024",
+            "batch": "2021 Batch",
+            "currentWork": "Intern at IGCAR",
+            "image": "/images/people/2021 Batch/Aasim Sayyed.jpg",
             "linkedin": "https://www.linkedin.com/in/aasim-sayyed-a966b423a/"
         },
         {
             "name": "Ishan Gokhale",
-            "role": "Member",
-            "batch": "2023 Batch",
-            "currentWork": "Digital Design/Verification Engineer at NXP Semiconductors",
-            "image": "https://ui-avatars.com/api/?name=Ishan+Gokhale&background=random",
+            "role": "Electronics Head 2023-2024",
+            "batch": "2021 Batch",
+            "currentWork": "Intern at Texas Instruments",
+            "image": "/images/people/2021 Batch/Ishan Gokhale.jpg",
             "linkedin": "https://www.linkedin.com/in/ishan-gokhale-70bb92231/"
         },
         {
             "name": "Akshat Tubki",
-            "role": "Member",
-            "batch": "2023 Batch",
-            "currentWork": "Student at Birla Institute of Technology and Science, Pilani - Goa Campus",
-            "image": "https://ui-avatars.com/api/?name=Akshat+Tubki&background=random",
+            "role": "Project Lead: Spiderbot",
+            "batch": "2021 Batch",
+            "currentWork": "Intern at AMD Technologies",
+            "image": "/images/people/2021 Batch/Akshat Tubki.jpeg",
             "linkedin": "https://www.linkedin.com/in/akshat-tubki-6b9b28244/"
         },
         {
             "name": "Adarsh Gopalakrishnan",
-            "role": "Member",
-            "batch": "2023 Batch",
-            "currentWork": "Associate Design Engineer @ WCB Robotics",
-            "image": "https://ui-avatars.com/api/?name=Adarsh+G&background=random",
+            "role": "Project Lead: Spiderbot",
+            "batch": "2021 Batch",
+            "currentWork": "",
+            "image": "/images/people/2021 Batch/Adarsh Gopalakrishnan.jpeg",
             "linkedin": "https://www.linkedin.com/in/adarsh-gopalakrishnan-748599229/"
         },
         {
             "name": "Ninaad Kotasthane",
-            "role": "Member",
-            "batch": "2023 Batch",
-            "currentWork": "Birla Institute of Technology and Science, Pilani - Goa Campus 25'||intern @ Pratt and Whitney||ex robotics intern @ Crystalball.ai",
-            "image": "https://ui-avatars.com/api/?name=Ninaad+Kotasthane&background=random",
+            "role": "Project Lead: Robotic Arm",
+            "batch": "2021 Batch",
+            "currentWork": "",
+            "image": "/images/people/2021 Batch/Ninaad Kotasthane.jpeg",
             "linkedin": "https://www.linkedin.com/in/ninaad-kotasthane-120669272/"
+        },
+        {
+            "name": "Priyanshu Kumar",
+            "role": "Project Lead: Gennav ROS2",
+            "batch": "2021 Batch",
+            "currentWork": "",
+            "image": "/images/people/2021 Batch/Priyanshu Kumar.jpeg",
+            "linkedin": "https://www.linkedin.com/in/priyanshu-kumar-2b7948222/"
+        },
+        {
+            "name": "Atharva Ghotavadekar",
+            "role": "Chief Coordinator 2022-2023",
+            "batch": "2020 Batch",
+            "currentWork": "Thesis at CTU, Prague",
+            "image": "/images/people/2020 Batch/Atharva Ghotavadekar.jpg",
+            "linkedin": "https://www.linkedin.com/in/atharva-g"
+        },
+        {
+            "name": "Dhruv Potdar",
+            "role": "Sub Coordinator 2022-2023",
+            "batch": "2020 Batch",
+            "currentWork": "Intern at CSIR-CEERI, Pilani",
+            "image": "/images/people/2020 Batch/Dhruv Potdar.png",
+            "linkedin": "https://www.linkedin.com/in/dhruv-potdar-322173204/"
+        },
+        {
+            "name": "Aditya Parandekar",
+            "role": "Technical Head 2022-2023",
+            "batch": "2020 Batch",
+            "currentWork": "Thesis at AirLab, CMU",
+            "image": "/images/people/2020 Batch/Aditya Parandekar.jpeg",
+            "linkedin": "https://www.linkedin.com/in/aditya-parandekar-ab9aa0218/"
+        },
+        {
+            "name": "Siddh Gosar",
+            "role": "Project Lead: Trotbot",
+            "batch": "2020 Batch",
+            "currentWork": "",
+            "image": "/images/people/2020 Batch/Siddh Gosar.jpg",
+            "linkedin": "https://www.linkedin.com/in/siddh-gosar/"
+        },
+        {
+            "name": "Laukik Nakhwa",
+            "role": "Project Lead: Spiderbot",
+            "batch": "2020 Batch",
+            "currentWork": "",
+            "image": "/images/people/2020 Batch/Laukik Nakhwa.jpg",
+            "linkedin": "https://www.linkedin.com/in/laukik-nakhwa-1191bb205/"
+        },
+        {
+            "name": "Ishan Tandon",
+            "role": "Project Lead: Robotic Arm",
+            "batch": "2020 Batch",
+            "currentWork": "",
+            "image": "/images/people/2020 Batch/Ishan Tandon.jpeg",
+            "linkedin": "https://www.linkedin.com/in/ishan-tandon-3886641a8/"
+        },
+        {
+            "name": "Yash Chavan",
+            "role": "Project Lead: Robotic Arm",
+            "batch": "2020 Batch",
+            "currentWork": "",
+            "image": "/images/people/2020 Batch/Yash Chavan.jpeg",
+            "linkedin": "https://www.linkedin.com/in/yash-chavan-199a41211/"
+        },
+        {
+            "name": "K Sai Akshit",
+            "role": "Core Member",
+            "batch": "2020 Batch",
+            "currentWork": "",
+            "image": "/images/people/2020 Batch/K Sai Akshit.JPG",
+            "linkedin": "https://www.linkedin.com/in/sai-akshit-948036230/"
+        },
+        {
+            "name": "Manan Arora",
+            "role": "Project Lead: SwarmBots 2.0",
+            "batch": "2020 Batch",
+            "currentWork": "",
+            "image": "/images/people/2020 Batch/Manan Arora.jpg",
+            "linkedin": "https://www.linkedin.com/in/manan-arora-8910b71bb/"
+        },
+        {
+            "name": "Yash Yelmame",
+            "role": "Core Member",
+            "batch": "2020 Batch",
+            "currentWork": "",
+            "image": "/images/people/2020 Batch/Yash Yelmame.jpg",
+            "linkedin": "https://www.linkedin.com/in/yash-yelmame-a68165205/"
+        },
+        {
+            "name": "Divith Mahajan",
+            "role": "Core Member",
+            "batch": "2020 Batch",
+            "currentWork": "",
+            "image": "/images/people/2020 Batch/Divith Mahajan.jpeg",
+            "linkedin": "https://www.linkedin.com/in/divith-mahajan-9170a2212/"
+        },
+        {
+            "name": "Ajay Krishna Gurubaran",
+            "role": "Core Member",
+            "batch": "2020 Batch",
+            "currentWork": "",
+            "image": "/images/people/2020 Batch/Ajay Krishna Gurubaran.jpg",
+            "linkedin": "https://www.linkedin.com/in/ajay-krishna-gurubaran-34b109216/"
+        },
+        {
+            "name": "Sahil Shingote",
+            "role": "Core Member",
+            "batch": "2020 Batch",
+            "currentWork": "",
+            "image": "/images/people/2020 Batch/Sahil Shingote.jpeg",
+            "linkedin": "https://www.linkedin.com/in/sahil-shingote-43a0531bb/"
+        },
+        {
+            "name": "Rohan Divekar",
+            "role": "Core Member",
+            "batch": "2020 Batch",
+            "currentWork": "",
+            "image": "/images/people/2020 Batch/Rohan Divekar.jpg",
+            "linkedin": "https://www.linkedin.com/in/rohan-divekar0112/"
+        },
+        {
+            "name": "Tanay Patni",
+            "role": "Core Member",
+            "batch": "2020 Batch",
+            "currentWork": "",
+            "image": "/images/people/2020 Batch/Tanay Patni.jpg",
+            "linkedin": "https://www.linkedin.com/in/tanay-patni-159219205/"
+        },
+        {
+            "name": "Ashutosh Gupta",
+            "role": "Chief Coordinator 2021-22",
+            "batch": "2019 Batch",
+            "currentWork": "PhD Robotics and AI, Oregon State University",
+            "image": "/images/people/2019 Batch/Ashutosh Gupta.jpeg",
+            "linkedin": "https://ashutosh781.github.io/"
+        },
+        {
+            "name": "Archit Rungta",
+            "role": "Technical Head 2021-22",
+            "batch": "2019 Batch",
+            "currentWork": "Thesis at Biorobotics Lab, CMU",
+            "image": "/images/people/2019 Batch/Archit Rungta.jpg",
+            "linkedin": "https://www.linkedin.com/in/archit-rungta-883156193/"
+        },
+        {
+            "name": "Pranav Goyal",
+            "role": "Teaching Head 2021-22",
+            "batch": "2019 Batch",
+            "currentWork": "Thesis at Biorobotics Lab, CMU",
+            "image": "/images/people/2019 Batch/Pranav Goyal.jpg",
+            "linkedin": "https://www.linkedin.com/in/pranav-goyal-010b08197/"
+        },
+        {
+            "name": "Yash Jangir",
+            "role": "Inventory Head 2020-2021",
+            "batch": "2019 Batch",
+            "currentWork": "RISS and Thesis at AirLab, CMU",
+            "image": "/images/people/2019 Batch/Yash Jangir.jpg",
+            "linkedin": "https://www.linkedin.com/in/yash-jangir-6a71651a1/"
+        },
+        {
+            "name": "Cheriyan Homey",
+            "role": "Inventory Head 2020-2021",
+            "batch": "2019 Batch",
+            "currentWork": "",
+            "image": "/images/people/2019 Batch/Cheriyan Homey.jpg",
+            "linkedin": "https://www.linkedin.com/in/cheriyan-homey-b4a7a9188/"
+        },
+        {
+            "name": "Srujan Deolasee",
+            "role": "MS Robotics, CMU",
+            "batch": "2019 Batch",
+            "currentWork": "RISS and Thesis Argo AI Centre, CMU",
+            "image": "/images/people/2019 Batch/Srujan Deolasee.jpeg",
+            "linkedin": "https://www.linkedin.com/in/srujan-deolasee/"
+        },
+        {
+            "name": "Abdul Jawad Khan",
+            "role": "Core Member",
+            "batch": "2019 Batch",
+            "currentWork": "",
+            "image": "/images/people/2019 Batch/Abdul Jawad Khan.jpg",
+            "linkedin": "https://www.linkedin.com/in/abdul-jawad-khan-52013817b/"
+        },
+        {
+            "name": "Avinandan Nag",
+            "role": "Core Member",
+            "batch": "2019 Batch",
+            "currentWork": "",
+            "image": "/images/people/2019 Batch/Avinandan Nag.jpg",
+            "linkedin": "https://www.linkedin.com/in/avinandan-nag-607691193"
+        },
+        {
+            "name": "Paurush Punyasheel",
+            "role": "Core Member",
+            "batch": "2019 Batch",
+            "currentWork": "",
+            "image": "/images/people/2019 Batch/Paurush Punyasheel.png",
+            "linkedin": "https://www.linkedin.com/in/paurush-punyasheel-596179136/"
+        },
+        {
+            "name": "Sanskar Jain",
+            "role": "Core Member",
+            "batch": "2019 Batch",
+            "currentWork": "",
+            "image": "/images/people/2019 Batch/Sanskar Jain.jpg",
+            "linkedin": "https://www.linkedin.com/in/sanskar-jain-8098831a6/"
+        },
+        {
+            "name": "Suhrudh S",
+            "role": "Research Intern at RBCCPS, IISc",
+            "batch": "2019 Batch",
+            "currentWork": "",
+            "image": "/images/people/2019 Batch/Suhrudh S.jpeg",
+            "linkedin": "https://suhrudhsarathy.github.io/"
+        },
+        {
+            "name": "Sushant S",
+            "role": "GSoC '22 at RoboComp",
+            "batch": "2019 Batch",
+            "currentWork": "",
+            "image": "/images/people/2019 Batch/Sushant S.jpg",
+            "linkedin": "https://www.linkedin.com/in/sushant-s-45b0391b2"
+        },
+        {
+            "name": "Atharv Sonwane",
+            "role": "Chief Coordinator 2020-2021",
+            "batch": "2018 Batch",
+            "currentWork": "Summer Research Intern, University of Toronto",
+            "image": "/images/people/2018 Batch/Atharv Sonwane.jpg",
+            "linkedin": "https://threewisemonkeys-as.github.io/"
+        },
+        {
+            "name": "Tanmay Bhonsale",
+            "role": "Research Head 2020-2021",
+            "batch": "2018 Batch",
+            "currentWork": "Research Collaborator, University of Sheffield",
+            "image": "/images/people/2018 Batch/Tanmay Bhonsale.jpg",
+            "linkedin": "https://www.linkedin.com/in/tanmay-bhonsale/"
+        },
+        {
+            "name": "Vedant Shah",
+            "role": "Teaching Head 2020-2021",
+            "batch": "2018 Batch",
+            "currentWork": "Summer Research Intern, Mila - Quebec AI Institute",
+            "image": "/images/people/2018 Batch/Vedant Shah.jpg",
+            "linkedin": "https://veds12.github.io/"
+        },
+        {
+            "name": "Advait Kulkarni",
+            "role": "Media Head 2019-2020",
+            "batch": "2018 Batch",
+            "currentWork": "Research Intern Bm Birla Science Center",
+            "image": "/images/people/2018 Batch/Advait Kulkarni.jpg",
+            "linkedin": "https://www.linkedin.com/in/advait-kulkarni-5574b21aa/"
+        },
+        {
+            "name": "Eash Vrudhula",
+            "role": "Media Head 2019-2020",
+            "batch": "2018 Batch",
+            "currentWork": "Software Engineering Intern, Draup",
+            "image": "/images/people/2018 Batch/Eash Vrudhula.jpg",
+            "linkedin": "https://in.linkedin.com/in/eash-vrudhula-a11b64170"
+        },
+        {
+            "name": "Mohit Chaudhari",
+            "role": "Inventory Head 2019-2020",
+            "batch": "2018 Batch",
+            "currentWork": "",
+            "image": "/images/people/2018 Batch/Mohit Chaudhari.jpeg",
+            "linkedin": "https://www.linkedin.com/in/mohit-chaudhari-759130171/"
+        },
+        {
+            "name": "Aditya Bidwai",
+            "role": "President for Life and Chief Sponsor",
+            "batch": "2018 Batch",
+            "currentWork": "",
+            "image": "/images/people/2018 Batch/Aditya Bidwai.jpg",
+            "linkedin": "https://www.linkedin.com/in/aditya-bidwai-27980016b/"
+        },
+        {
+            "name": "Anirudha Shrinivas",
+            "role": "Summer Intern, CDAC",
+            "batch": "2018 Batch",
+            "currentWork": "",
+            "image": "/images/people/2018 Batch/Anirudha Shrinivas.jpg",
+            "linkedin": "http://www.linkedin.com/in/anirudha-shrinivas-87a3811b0"
+        },
+        {
+            "name": "Shivangi Gupta",
+            "role": "Software Development Intern, Walmart",
+            "batch": "2018 Batch",
+            "currentWork": "",
+            "image": "/images/people/2018 Batch/Shivangi Gupta.jpg",
+            "linkedin": "https://www.linkedin.com/in/shivangi-gupta-3429aa8b"
+        },
+        {
+            "name": "Vishal Singh",
+            "role": "Core Member",
+            "batch": "2018 Batch",
+            "currentWork": "",
+            "image": "/images/people/2018 Batch/Vishal Singh.jpg",
+            "linkedin": "https://www.linkedin.com/in/vishal-singh-b51b52158/"
+        },
+        {
+            "name": "Aadhar Sharma",
+            "role": "Core Member",
+            "batch": "2018 Batch",
+            "currentWork": "",
+            "image": "/images/people/2018 Batch/Aadhar Sharma.jpeg",
+            "linkedin": "https://www.linkedin.com/in/aadharsharma218/"
+        },
+        {
+            "name": "Abhishek Dixit",
+            "role": "Summer Intern, Peppermint Robotics",
+            "batch": "2018 Batch",
+            "currentWork": "",
+            "image": "/images/people/2018 Batch/Abhishek Dixit.jpg",
+            "linkedin": "https://www.linkedin.com/in/abhishek-dixit-ba8497185"
+        },
+        {
+            "name": "Shambhavi Singh",
+            "role": "Embedded System Developer, RMJ Automation",
+            "batch": "2018 Batch",
+            "currentWork": "",
+            "image": "/images/people/2018 Batch/Shambhavi Singh.jpg",
+            "linkedin": "https://www.linkedin.com/in/shambhavi-singh-14a5b11b0/"
+        },
+        {
+            "name": "Rohan Kunjir",
+            "role": "Summer Intern, Nihon Communication Solutions",
+            "batch": "2018 Batch",
+            "currentWork": "",
+            "image": "/images/people/2018 Batch/Rohan Kunjir.jpeg",
+            "linkedin": "https://www.linkedin.com/in/rohan-kunjir-1b3043130/"
+        },
+        {
+            "name": "Shaktivelan Kartikeyan",
+            "role": "Core Member",
+            "batch": "2018 Batch",
+            "currentWork": "",
+            "image": "/images/people/2018 Batch/Shaktivelan Kartikeyan.jpg",
+            "linkedin": ""
+        },
+        {
+            "name": "Tejas Rane",
+            "role": "Chief Coordinator 2019-2020",
+            "batch": "2017 Batch",
+            "currentWork": "Research Scholar at Biorobotics Lab",
+            "image": "/images/people/2017 Batch/Tejas Rane.jpeg",
+            "linkedin": "https://www.linkedin.com/in/tejas-rane-359590149/"
+        },
+        {
+            "name": "Rishikesh Vanarse",
+            "role": "Sub Coordinator 2019-2020",
+            "batch": "2017 Batch",
+            "currentWork": "Research Associate, Carnegie Mellon University",
+            "image": "/images/people/2017 Batch/Rishikesh Vanarse.jpg",
+            "linkedin": "https://www.linkedin.com/in/rishikesh-vanarse-8032aa169/"
+        },
+        {
+            "name": "Harshal Deshpande",
+            "role": "Teaching Head 2019-2020",
+            "batch": "2017 Batch",
+            "currentWork": "Senior Robotics Engineer, Peppermint Robots",
+            "image": "/images/people/2017 Batch/Harshal Deshpande.jpg",
+            "linkedin": "https://hardesh.github.io/"
+        },
+        {
+            "name": "Prathmesh Thorwe",
+            "role": "Technical Head 2019-2020",
+            "batch": "2017 Batch",
+            "currentWork": "Graduate Researcher at Silence Laboratories",
+            "image": "/images/people/2017 Batch/Prathmesh Thorwe.jpeg",
+            "linkedin": "https://www.linkedin.com/in/prathmesh-thorwe-b76469153/"
+        },
+        {
+            "name": "Aditya Phopale",
+            "role": "Mechanical Head 2019-2020",
+            "batch": "2017 Batch",
+            "currentWork": "MS Computational Science, TUM",
+            "image": "/images/people/2017 Batch/Aditya Phopale.jpeg",
+            "linkedin": "https://www.linkedin.com/in/aditya-phopale-666a7515b/"
+        },
+        {
+            "name": "Mohit Gupta",
+            "role": "Research Head 2019-2020",
+            "batch": "2017 Batch",
+            "currentWork": "Research Assitant, IISc Bangalore",
+            "image": "/images/people/2017 Batch/Mohit Gupta.jpeg",
+            "linkedin": "https://www.linkedin.com/in/mohit-sushil-gupta-7a3821184/"
+        },
+        {
+            "name": "Ojit Mehta",
+            "role": "Software Designer, Hyperloop India",
+            "batch": "2017 Batch",
+            "currentWork": "",
+            "image": "/images/people/2017 Batch/Ojit Mehta.jpeg",
+            "linkedin": "https://ojitmehta123.github.io/"
+        },
+        {
+            "name": "Sanket Yannuwar",
+            "role": "Graduate student at North Carolina state university",
+            "batch": "2017 Batch",
+            "currentWork": "",
+            "image": "/images/people/2017 Batch/Sanket Yannuwar.jpeg",
+            "linkedin": "https://www.linkedin.com/in/sanket-yannuwar-671619200/"
+        },
+        {
+            "name": "Amogh Dabholkar",
+            "role": "Chief Coordinator 2018-2019",
+            "batch": "2016 Batch",
+            "currentWork": "Machine Learning Engineer, DeepEdge",
+            "image": "/images/people/2016 Batch/Amogh Dabholkar.png",
+            "linkedin": "http://amoghdabholkar.github.io/"
+        },
+        {
+            "name": "Mihir Kulkarni",
+            "role": "Sub Coordinator 2018-2019",
+            "batch": "2016 Batch",
+            "currentWork": "PhD Student at University Of Nevada, Reno",
+            "image": "/images/people/2016 Batch/Mihir Kulkarni.jpg",
+            "linkedin": "https://sites.google.com/goa.bits-pilani.ac.in/mihir-kulkarni/"
+        },
+        {
+            "name": "G V S S Jaideep Ram",
+            "role": "Technical Head 2018-2019",
+            "batch": "2016 Batch",
+            "currentWork": "Research Intern at University of Lisbon.",
+            "image": "/images/people/2016 Batch/G V S S Jaideep Ram.jpg",
+            "linkedin": "https://www.linkedin.com/in/jaideep-g-v-s-s-09b75215a"
+        },
+        {
+            "name": "Kapi Ketan Mehta",
+            "role": "Mechanical Head 2018-2019",
+            "batch": "2016 Batch",
+            "currentWork": "MS Student at Johns Hopkins",
+            "image": "/images/people/2016 Batch/Kapi Ketan Mehta.jpeg",
+            "linkedin": "https://www.linkedin.com/in/kapi-ketan-m-a71b3692/"
+        },
+        {
+            "name": "Mihir Dharmadhikari",
+            "role": "Research Head 2018-2019",
+            "batch": "2016 Batch",
+            "currentWork": "PhD Student at University of Nevada, Reno.",
+            "image": "/images/people/2016 Batch/Mihir Dharmadhikari.jpg",
+            "linkedin": "https://www.linkedin.com/in/mihir-dharmadhikari/"
+        },
+        {
+            "name": "Yash Pandit",
+            "role": "Software Engineer, Samsung India",
+            "batch": "2016 Batch",
+            "currentWork": "",
+            "image": "/images/people/2016 Batch/Yash Pandit.jpeg",
+            "linkedin": "https://www.linkedin.com/in/yash-pandit-2929b7144/"
+        },
+        {
+            "name": "Abhimanyu",
+            "role": "Chief Coordinator 2017-2018",
+            "batch": "2015 Batch",
+            "currentWork": "Research Assistant, Carnegie Mellon University",
+            "image": "/images/people/2015 Batch/Abhimanyu.jpeg",
+            "linkedin": "https://www.linkedin.com/in/abhimanyu-singh-21b017105"
+        },
+        {
+            "name": "Shubham Chavan",
+            "role": "Sub Coordinator 2017-2018",
+            "batch": "2015 Batch",
+            "currentWork": "System Engineer, Neocis",
+            "image": "/images/people/2015 Batch/Shubham Chavan.jpeg",
+            "linkedin": "https://www.linkedin.com/in/svc97/"
+        },
+        {
+            "name": "Abhishek Moitra",
+            "role": "Teaching Head 2017-2018",
+            "batch": "2015 Batch",
+            "currentWork": "Research Scholar, SRC",
+            "image": "/images/people/2015 Batch/Abhishek Moitra.jpeg",
+            "linkedin": "https://www.linkedin.com/in/abhishek-moitra-52696798/"
+        },
+        {
+            "name": "Rohan Godiyal",
+            "role": "Research Head 2017-2018",
+            "batch": "2015 Batch",
+            "currentWork": "Undergraduate Research Intern, IST Lisbon",
+            "image": "/images/people/2015 Batch/Rohan Godiyal.jpeg",
+            "linkedin": "https://rohangodiyal.wixsite.com/rohan-godiyal"
+        },
+        {
+            "name": "Smit Rajguru",
+            "role": "Interned at IBM",
+            "batch": "2015 Batch",
+            "currentWork": "Silicon Valley Startup",
+            "image": "/images/people/2015 Batch/Smit Rajguru.jpeg",
+            "linkedin": "https://www.facebook.com/smit.rajguru/"
+        },
+        {
+            "name": "Nikhil Khedekar",
+            "role": "PhD Student in Autonomous Robots Lab",
+            "batch": "2015 Batch",
+            "currentWork": "University of Nevada, Reno",
+            "image": "/images/people/2015 Batch/Nikhil Khedekar.jpg",
+            "linkedin": "https://www.linkedin.com/in/nkhedekar/"
+        },
+        {
+            "name": "Utkarsh Sarawgi",
+            "role": "MS Student and Researcher at MIT",
+            "batch": "2015 Batch",
+            "currentWork": "AI/ML Rotational Engineer, Apple",
+            "image": "/images/people/2015 Batch/Utkarsh Sarawgi.jpeg",
+            "linkedin": "https://www.linkedin.com/in/utkarshsarawgi"
+        },
+        {
+            "name": "Shubham Kumar",
+            "role": "Software Developer at Publicis Sapient",
+            "batch": "2015 Batch",
+            "currentWork": "Grad Student at UC San Diego",
+            "image": "/images/people/2015 Batch/Shubham Kumar.jpeg",
+            "linkedin": "https://www.linkedin.com/in/shubham-kumar-1410"
+        },
+        {
+            "name": "Anand Dugad",
+            "role": "Chief Coordinator 2016-2017",
+            "batch": "2014 Batch",
+            "currentWork": "Senior Datapath Design Engineer, WD",
+            "image": "/images/people/2014 Batch/Anand Dugad.jpeg",
+            "linkedin": "https://www.linkedin.com/in/anand-dugad"
+        },
+        {
+            "name": "Harsh Mavani",
+            "role": "Sub Coordinator 2016-2017",
+            "batch": "2014 Batch",
+            "currentWork": "Software Developer Engineer, Flipkart",
+            "image": "/images/people/2014 Batch/Harsh Mavani.jpeg",
+            "linkedin": "https://www.linkedin.com/in/harsh-mavani-518732b5"
+        },
+        {
+            "name": "Sanjeev Murthy",
+            "role": "Teaching Head 2016-2017",
+            "batch": "2014 Batch",
+            "currentWork": "FPGA Engineer, Apple",
+            "image": "/images/people/2014 Batch/Sanjeev Murthy.png",
+            "linkedin": "https://www.linkedin.com/in/sanjeev-murthy"
+        },
+        {
+            "name": "Shubhan Patni",
+            "role": "PhD at Humanoid Robotics Lab, CTU Prague",
+            "batch": "2014 Batch",
+            "currentWork": "",
+            "image": "/images/people/2014 Batch/Shubhan Patni.jpeg",
+            "linkedin": "https://in.linkedin.com/in/shubhan-patni-45b91010b"
+        },
+        {
+            "name": "Parva Patel",
+            "role": "Founder EzQuant",
+            "batch": "2014 Batch",
+            "currentWork": "",
+            "image": "/images/people/2014 Batch/Parva Patel.jpeg",
+            "linkedin": "mailto:parva@ezquant.in"
+        },
+        {
+            "name": "Tejas Zodage",
+            "role": "Masters in Robotics and Research, CMU",
+            "batch": "2014 Batch",
+            "currentWork": "",
+            "image": "/images/people/2014 Batch/Tejas Zodage.png",
+            "linkedin": "https://www.linkedin.com/in/tejas-zodage-4abb1412a"
+        },
+        {
+            "name": "Akshay Sancheti",
+            "role": "Co-Founder, Manastik",
+            "batch": "2014 Batch",
+            "currentWork": "",
+            "image": "/images/people/2014 Batch/Akshay Sancheti.jpeg",
+            "linkedin": "https://www.linkedin.com/in/akshaysancheti007"
+        },
+        {
+            "name": "Ananyo Rao",
+            "role": "Senior Computer Vision Engineer, BurnCal",
+            "batch": "2014 Batch",
+            "currentWork": "",
+            "image": "/images/people/2014 Batch/Ananyo Rao.jpeg",
+            "linkedin": "https://www.linkedin.com/in/ananyo-rao"
+        },
+        {
+            "name": "Pranav Pal Lekhi",
+            "role": "Chief Coordinator 2015-2016",
+            "batch": "2013 Batch",
+            "currentWork": "Systems Engineer, Qualcomm, Colorado",
+            "image": "/images/people/2013 Batch/Pranav Pal Lekhi.jpeg",
+            "linkedin": "http://www.linkedin.com/in/pranav-pal-lekhi-5b8440105"
+        },
+        {
+            "name": "Tanvi Jadhav",
+            "role": "Sub Coordinator 2015-2016",
+            "batch": "2013 Batch",
+            "currentWork": "Systems Eng, Kumu Networks, San Francisco",
+            "image": "/images/people/2013 Batch/Tanvi Jadhav.jpeg",
+            "linkedin": "https://www.linkedin.com/in/tanvi-jadhav-60539087/"
+        },
+        {
+            "name": "Shubham Sarwate",
+            "role": "Teaching Head 2015-2016",
+            "batch": "2013 Batch",
+            "currentWork": "Software Engineer, Appleo",
+            "image": "/images/people/2013 Batch/Shubham Sarwate.jpeg",
+            "linkedin": "https://www.linkedin.com/in/shubham-sarwate/"
+        },
+        {
+            "name": "Apurv Hajare",
+            "role": "Robocon Team Captain 2015-2016",
+            "batch": "2013 Batch",
+            "currentWork": "Co-founder at Dcodecare",
+            "image": "/images/people/2013 Batch/Apurv Hajare.jpg",
+            "linkedin": "https://in.linkedin.com/in/apurvhajare"
+        },
+        {
+            "name": "Aayush Attri",
+            "role": "Robocon Coordinator 2015-2016",
+            "batch": "2013 Batch",
+            "currentWork": "Fund Manager, Attri Brothers Capital",
+            "image": "/images/people/2013 Batch/Aayush Attri.jpg",
+            "linkedin": "https://www.linkedin.com/in/aayush-attri-05472194"
+        },
+        {
+            "name": "Shubham Maheshwari",
+            "role": "Co-founder, PingoLearn",
+            "batch": "2013 Batch",
+            "currentWork": "Co-founder, Winterbite",
+            "image": "/images/people/2013 Batch/Shubham Maheshwari.png",
+            "linkedin": "http://www.instagram.com/shubham7maheshwari"
+        },
+        {
+            "name": "Vedangi Pathak",
+            "role": "PHD Student, University of British Columbia",
+            "batch": "2013 Batch",
+            "currentWork": "",
+            "image": "/images/people/2013 Batch/Vedangi Pathak.png",
+            "linkedin": "https://www.linkedin.com/in/vedangi-pathak-439a3b85/"
+        },
+        {
+            "name": "Mandar Pradhan",
+            "role": "ML Engineer, Atlassian",
+            "batch": "2013 Batch",
+            "currentWork": "",
+            "image": "/images/people/2013 Batch/Mandar Pradhan.png",
+            "linkedin": "https://www.linkedin.com/in/mpradhan20"
+        },
+        {
+            "name": "Edwin Mascarenhas",
+            "role": "Graduate student at UCSD",
+            "batch": "2013 Batch",
+            "currentWork": "",
+            "image": "/images/people/2013 Batch/Edwin Mascarenhas.png",
+            "linkedin": "https://www.linkedin.com/in/edwin-mascarenhas"
+        },
+        {
+            "name": "Sudeep Mishra",
+            "role": "Design Engineer at Silicon Labs",
+            "batch": "2013 Batch",
+            "currentWork": "",
+            "image": "/images/people/2013 Batch/Sudeep Mishra.jpeg",
+            "linkedin": "https://www.linkedin.com/in/sudeep-mishra-756a4692"
+        },
+        {
+            "name": "Vichar Shroff",
+            "role": "Co-founder at BurnCal",
+            "batch": "2013 Batch",
+            "currentWork": "",
+            "image": "/images/people/2013 Batch/Vichar Shroff.jpeg",
+            "linkedin": "https://www.linkedin.com/in/vichar-shroff"
+        },
+        {
+            "name": "Maitreya Naik",
+            "role": "Chief Coordinator 2014-2015",
+            "batch": "2012 Batch",
+            "currentWork": "Software Engineer, Aurora",
+            "image": "/images/people/2012 Batch/Maitreya Naik.jpeg",
+            "linkedin": "https://www.linkedin.com/in/maitreyanaik/"
+        },
+        {
+            "name": "Rahul Bhola",
+            "role": "Sub Coordinator 2014-2015",
+            "batch": "2012 Batch",
+            "currentWork": "Software Development Engineer, Lenskart",
+            "image": "/images/people/2012 Batch/Rahul Bhola.jpeg",
+            "linkedin": "https://www.linkedin.com/in/rahulbhola1/"
+        },
+        {
+            "name": "Souryendu Das",
+            "role": "Teaching Head 2014-2015",
+            "batch": "2012 Batch",
+            "currentWork": "PhD Student, Texas A&M University",
+            "image": "/images/people/2012 Batch/Souryendu Das.jpeg",
+            "linkedin": "https://www.linkedin.com/in/souryendu-das"
+        },
+        {
+            "name": "Sharad Maheshwari",
+            "role": "Robocon Team Captain 2014-2015",
+            "batch": "2012 Batch",
+            "currentWork": "MS Robotics, EIT Digital (Trento and TU Berlin)",
+            "image": "/images/people/2012 Batch/Sharad Maheshwari.jpeg",
+            "linkedin": "https://www.linkedin.com/in/sharad-maheshwari-b85626ba/"
+        },
+        {
+            "name": "Aum Jadhav",
+            "role": "Robocon Coordinator 2014-2015",
+            "batch": "2012 Batch",
+            "currentWork": "Senior Software Engineer, Aurora",
+            "image": "/images/people/2012 Batch/Aum Jadhav.jpg",
+            "linkedin": "https://www.linkedin.com/in/aum-jadhav/"
+        },
+        {
+            "name": "Soham Patkar",
+            "role": "Robotics Autonomy Engineer",
+            "batch": "2012 Batch",
+            "currentWork": "SkySpecs, Ann Arbor, Michigan",
+            "image": "/images/people/2012 Batch/Soham Patkar.png",
+            "linkedin": "https://www.linkedin.com/in/sohampatkar/"
+        },
+        {
+            "name": "Madhura Gandhi",
+            "role": "Software Engineer, Waymo",
+            "batch": "2012 Batch",
+            "currentWork": "",
+            "image": "/images/people/2012 Batch/Madhura Gandhi.jpeg",
+            "linkedin": "https://www.linkedin.com/in/madhurag/"
+        },
+        {
+            "name": "Shikhar Sharma",
+            "role": "Chief Coordinator 2013-2014",
+            "batch": "2011 Batch",
+            "currentWork": "Founder and COO, Sheru",
+            "image": "/images/people/2011 Batch/Shikhar Sharma.jpeg",
+            "linkedin": "https://www.linkedin.com/in/shikhar03sharma/"
+        },
+        {
+            "name": "Neisarg Dave",
+            "role": "PhD Student at Penn State University",
+            "batch": "2011 Batch",
+            "currentWork": "Research Scientist, NEC Labs America Inc.",
+            "image": "/images/people/2011 Batch/Neisarg Dave.jpeg",
+            "linkedin": "https://www.linkedin.com/in/neisargdave"
+        },
+        {
+            "name": "Sneha Bajaj",
+            "role": "Software Engineer",
+            "batch": "2011 Batch",
+            "currentWork": "o9 Solutions, Inc.",
+            "image": "/images/people/2011 Batch/Sneha Bajaj.jpeg",
+            "linkedin": "https://www.linkedin.com/in/bajajsneha/"
+        },
+        {
+            "name": "Shridevi Muthkhod",
+            "role": "EE Grad student, Stanford University",
+            "batch": "2011 Batch",
+            "currentWork": "",
+            "image": "/images/people/2011 Batch/Shridevi Muthkhod.jpeg",
+            "linkedin": "https://www.linkedin.com/in/shridevi-muthkhod-51017a55/"
+        },
+        {
+            "name": "Niharika Gupta",
+            "role": "Systems Engineer, AMD",
+            "batch": "2011 Batch",
+            "currentWork": "",
+            "image": "/images/people/2011 Batch/Niharika Gupta.jpeg",
+            "linkedin": "https://www.linkedin.com/in/niharika-gupta-2a312676/"
+        },
+        {
+            "name": "Ronak Gupta",
+            "role": "Chief Coordinator 2012-2013",
+            "batch": "2010 Batch",
+            "currentWork": "MS, Jawaharlal Nehru Centre (JNCASR)",
+            "image": "/images/people/2010 Batch/Ronak Gupta.jpeg",
+            "linkedin": "https://www.linkedin.com/in/ronak-gupta-3a687425/"
+        },
+        {
+            "name": "Nikhilesh Behera",
+            "role": "Sub Coordinator 2012-2013",
+            "batch": "2010 Batch",
+            "currentWork": "Software Development Engineer, Amazon",
+            "image": "/images/people/2010 Batch/Nikhilesh Behera.jpeg",
+            "linkedin": "https://www.linkedin.com/in/nikhilesh-behera/"
+        },
+        {
+            "name": "Apurva Ankleshwaria",
+            "role": "Inventory Manager 2012-2013",
+            "batch": "2010 Batch",
+            "currentWork": "Founding Member, Bert Labs",
+            "image": "/images/people/2010 Batch/Apurva Ankleshwaria.jpg",
+            "linkedin": "https://www.linkedin.com/in/apurvaankleshwaria/"
+        },
+        {
+            "name": "Kushagra Nigam",
+            "role": "Lecture Series Manager 2012-2013",
+            "batch": "2010 Batch",
+            "currentWork": "Scientific Officer, CPP-IPR",
+            "image": "/images/people/2010 Batch/Kushagra Nigam.jpeg",
+            "linkedin": "https://www.linkedin.com/in/kushagra-nigam-18818b75/"
+        },
+        {
+            "name": "Vishal Pathak",
+            "role": "Project Manager 2012-2013",
+            "batch": "2010 Batch",
+            "currentWork": "CTO, QLS Academy",
+            "image": "/images/people/2010 Batch/Vishal Pathak.png",
+            "linkedin": "https://www.linkedin.com/in/vishal-pathak-b5338145/"
+        },
+        {
+            "name": "Arihant Lunawat",
+            "role": "Robotics Software Engineer",
+            "batch": "2010 Batch",
+            "currentWork": "Energy Robotics",
+            "image": "/images/people/2010 Batch/Arihant Lunawat.jpeg",
+            "linkedin": "https://www.linkedin.com/in/arihantlunawat/"
+        },
+        {
+            "name": "Arnav Goel",
+            "role": "Principal Software Engineer, Stealth-mode",
+            "batch": "2010 Batch",
+            "currentWork": "",
+            "image": "/images/people/2010 Batch/Arnav Goel.jpeg",
+            "linkedin": "https://www.linkedin.com/in/arnavgoel/"
+        },
+        {
+            "name": "Rohit Sant",
+            "role": "Robotics & Perception Software, Zipline",
+            "batch": "2010 Batch",
+            "currentWork": "",
+            "image": "/images/people/2010 Batch/Rohit Sant.jpeg",
+            "linkedin": "https://www.linkedin.com/in/rhsant/"
+        },
+        {
+            "name": "Chintak Sheth",
+            "role": "Software Engineer, Facebook",
+            "batch": "2010 Batch",
+            "currentWork": "",
+            "image": "/images/people/2010 Batch/Chintak Sheth.jpeg",
+            "linkedin": "https://www.linkedin.com/in/chintaksheth/"
+        },
+        {
+            "name": "Jinal Shah",
+            "role": "Chief Coordinator 2011-2012",
+            "batch": "2009 Batch",
+            "currentWork": "Circuit Design Engineer, NVIDIA",
+            "image": "/images/people/2009 Batch/Jinal Shah.jpeg",
+            "linkedin": "https://www.linkedin.com/in/jinal1/"
+        },
+        {
+            "name": "Akshay Barapatre",
+            "role": "Design Engineer",
+            "batch": "2009 Batch",
+            "currentWork": "Texas Instruments",
+            "image": "/images/people/2009 Batch/Akshay Barapatre.jpeg",
+            "linkedin": "https://www.linkedin.com/in/akshay-barapatre-43126058/"
+        },
+        {
+            "name": "Saksham Bhatla",
+            "role": "Software Development Engineer",
+            "batch": "2009 Batch",
+            "currentWork": "Amazon, Seattle",
+            "image": "/images/people/2009 Batch/Saksham Bhatla.png",
+            "linkedin": "https://www.linkedin.com/in/sakshambhatla/"
+        },
+        {
+            "name": "Kartik Mankad",
+            "role": "Senior Verification Engineer, NVIDIA",
+            "batch": "2009 Batch",
+            "currentWork": "",
+            "image": "/images/people/2009 Batch/Kartik Mankad.jpeg",
+            "linkedin": "https://www.linkedin.com/in/kartikmankad/"
+        },
+        {
+            "name": "Deepak Chandra",
+            "role": "Firmware Engineer, Apple",
+            "batch": "2009 Batch",
+            "currentWork": "",
+            "image": "/images/people/2009 Batch/Deepak Chandra.jpeg",
+            "linkedin": "https://www.linkedin.com/in/deepak-chandra/"
+        },
+        {
+            "name": "Mihir Karkhane",
+            "role": "",
+            "batch": "2009 Batch",
+            "currentWork": "",
+            "image": "/images/people/2009 Batch/Mihir Karkhane.jpeg",
+            "linkedin": "https://www.linkedin.com/in/mihir-karkhane-3a15a730/"
+        },
+        {
+            "name": "Avinash Kumar",
+            "role": "Chief Coordinator 2010-2011",
+            "batch": "2008 Batch",
+            "currentWork": "Software Engineer, Marvell Semiconductor",
+            "image": "/images/people/2008 Batch/Avinash Kumar.png",
+            "linkedin": "https://www.linkedin.com/in/avinashckumar/"
+        },
+        {
+            "name": "Shatruddha Kushwaha",
+            "role": "Entrepreneur",
+            "batch": "2008 Batch",
+            "currentWork": "SUN Mobility, Bengaluru, Karnataka",
+            "image": "/images/people/2008 Batch/Shatruddha Kushwaha.jpeg",
+            "linkedin": "https://www.linkedin.com/in/shatruddha/"
+        },
+        {
+            "name": "Nitant Gupta",
+            "role": "Graduate Student (PhD in Materials Science)",
+            "batch": "2008 Batch",
+            "currentWork": "Rice University, Houston, Texas",
+            "image": "/images/people/2008 Batch/Nitant Gupta.jpg",
+            "linkedin": "https://www.linkedin.com/in/nitantgupta/"
+        },
+        {
+            "name": "Nishant Singh",
+            "role": "Design Engineer, Analog Devices",
+            "batch": "2008 Batch",
+            "currentWork": "",
+            "image": "/images/people/2008 Batch/Nishant Singh.jpeg",
+            "linkedin": "https://www.linkedin.com/in/nishantsingh89/"
+        },
+        {
+            "name": "Ajusal Sugathan",
+            "role": "Chief Coordinator 2009-2010",
+            "batch": "2007 Batch",
+            "currentWork": "Head of Quant Research, Altitude Trading",
+            "image": "/images/people/2007 Batch/Ajusal Sugathan.jpeg",
+            "linkedin": "https://www.linkedin.com/in/ajusal/"
+        },
+        {
+            "name": "Kinshuk Kar",
+            "role": "Senior Director, Product Management",
+            "batch": "2007 Batch",
+            "currentWork": "Engati Chatbot Platform",
+            "image": "/images/people/2007 Batch/Kinshuk Kar.jpeg",
+            "linkedin": "https://www.linkedin.com/in/kinshukkar/"
+        },
+        {
+            "name": "Priti Sahay",
+            "role": "Associate Vice President",
+            "batch": "2007 Batch",
+            "currentWork": "Investment Banking, Edelweiss",
+            "image": "/images/people/2007 Batch/Priti Sahay.jpeg",
+            "linkedin": "https://www.linkedin.com/in/pritisahay/"
+        },
+        {
+            "name": "Shraddha Mehta",
+            "role": "Director, Product Management, Simpl",
+            "batch": "2007 Batch",
+            "currentWork": "",
+            "image": "/images/people/2007 Batch/Shraddha Mehta.jpeg",
+            "linkedin": "https://www.linkedin.com/in/shraddha-mehta-9781079/"
+        },
+        {
+            "name": "Arjun Bidesi",
+            "role": "Co-Founder, ERC",
+            "batch": "2006 Batch",
+            "currentWork": "Growth and Marketing Analytics, Thumbtack",
+            "image": "/images/people/2006 Batch/Arjun Bidesi.jpeg",
+            "linkedin": "https://www.linkedin.com/in/arjun-bidesi/"
+        },
+        {
+            "name": "Jayanth Varanasi",
+            "role": "Co-Founder, ERC",
+            "batch": "2006 Batch",
+            "currentWork": "Director of Product, Sugarbox",
+            "image": "/images/people/2006 Batch/Jayanth Varanasi.jpeg",
+            "linkedin": "https://www.linkedin.com/in/jayanthvaranasi/"
         }
     ]
 }

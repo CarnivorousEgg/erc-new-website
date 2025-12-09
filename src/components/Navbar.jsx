@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../utils/cn';
 import ThemeToggle from './ThemeToggle';
 import CardNav from './CardNav';
@@ -8,6 +8,7 @@ import CardNav from './CardNav';
 const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Projects', path: '/projects' },
+    { name: 'Events', path: '/events' },
     { name: 'About Us', path: '/about' },
     { name: 'Handbook', path: 'https://erc-bpgc.github.io/handbook/' },
 ];
@@ -17,6 +18,7 @@ const Navbar = () => {
     const navigate = useNavigate();
     const [hoveredPath, setHoveredPath] = useState(location.pathname);
     const [isMobile, setIsMobile] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
     const [theme, setTheme] = useState(() => {
         const savedTheme = localStorage.getItem('theme');
         if (!savedTheme) {
@@ -38,6 +40,24 @@ const Navbar = () => {
     const toggleTheme = useCallback(() => {
         setTheme(prev => prev === 'dark' ? 'light' : 'dark');
     }, []);
+
+    // Scroll-based navbar visibility - only on homepage for desktop
+    useEffect(() => {
+        const handleScroll = () => {
+            // Always show on mobile, or on non-home pages, or after scrolling 50px on desktop homepage
+            if (isMobile || location.pathname !== '/') {
+                setIsVisible(true);
+            } else {
+                setIsVisible(window.scrollY > 50);
+            }
+        };
+
+        // Initial check
+        handleScroll();
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [location.pathname, isMobile]);
 
     useEffect(() => {
         const checkMobile = () => {
@@ -72,6 +92,14 @@ const Navbar = () => {
             ]
         },
         {
+            label: "Events",
+            bgColor: "#7c3aed", // Purple 600
+            textColor: "#fff",
+            links: [
+                { label: "All Events", ariaLabel: "View All Events", href: "/events" }
+            ]
+        },
+        {
             label: "About Us",
             bgColor: "#2563eb", // Blue 600
             textColor: "#fff",
@@ -79,7 +107,7 @@ const Navbar = () => {
                 { label: "Our Story", ariaLabel: "Our Story", href: "/about#story" },
                 { label: "Current Team", ariaLabel: "Current Team", href: "/about#team" },
                 { label: "Alumni", ariaLabel: "Alumni", href: "/about#alumni" },
-                { label: "Outreach", ariaLabel: "Outreach", href: "/about#outreach" }
+                { label: "Contact Us", ariaLabel: "Contact Us", href: "/about#contact" }
             ]
         },
         {
@@ -133,25 +161,44 @@ const Navbar = () => {
     // Render CardNav on mobile
     if (isMobile) {
         return (
-            <CardNav
-                logo="/images/erc-logo.png"
-                logoAlt="ERC Logo"
-                items={cardNavItems}
-                baseColor="rgba(255, 255, 255, 0.8)"
-                menuColor="#000"
-                buttonBgColor="#111"
-                buttonTextColor="#fff"
-                ease="power3.out"
-                onLinkClick={handleCardNavLinkClick}
-                onLogoClick={handleCardNavLogoClick}
-                onThemeToggle={toggleTheme}
-            />
+            <AnimatePresence>
+                {isVisible && (
+                    <motion.div
+                        initial={{ y: -100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: -100, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: 'easeOut' }}
+                    >
+                        <CardNav
+                            logo="/images/erc-logo.png"
+                            logoAlt="ERC Logo"
+                            items={cardNavItems}
+                            baseColor="rgba(255, 255, 255, 0.8)"
+                            menuColor="#000"
+                            buttonBgColor="#111"
+                            buttonTextColor="#fff"
+                            ease="power3.out"
+                            onLinkClick={handleCardNavLinkClick}
+                            onLogoClick={handleCardNavLogoClick}
+                            onThemeToggle={toggleTheme}
+                        />
+                    </motion.div>
+                )}
+            </AnimatePresence>
         );
     }
 
     // Render regular navbar on desktop
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6 pointer-events-none">
+        <AnimatePresence>
+            {isVisible && (
+                <motion.nav
+                    initial={{ y: -100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -100, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: 'easeOut' }}
+                    className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6 pointer-events-none"
+                >
             <Link
                 to="/"
                 className="absolute left-6 top-1/2 -translate-y-1/2 pointer-events-auto"
@@ -201,7 +248,9 @@ const Navbar = () => {
                 })}
                 <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
             </div>
-        </nav>
+        </motion.nav>
+            )}
+        </AnimatePresence>
     );
 };
 

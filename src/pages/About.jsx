@@ -4,11 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ChromaGrid from '../components/ChromaGrid';
 import AlumniTimeline from '../components/AlumniTimeline';
-import PlusDivider from '../components/PlusDivider';
-import SpotlightCard from '../components/SpotlightCard';
 import BackToTop from '../components/BackToTop';
 import teamData from '../data/team.json';
-import { FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaEnvelope, FaTwitter } from 'react-icons/fa';
 import { cn } from '../utils/cn';
 
 // Counter animation hook
@@ -43,7 +41,7 @@ const tabs = [
     { id: 'story', label: 'Our Story' },
     { id: 'team', label: 'Current Team' },
     { id: 'alumni', label: 'Alumni' },
-    { id: 'outreach', label: 'Outreach' }
+    { id: 'contact', label: 'Contact Us' }
 ];
 
 const About = () => {
@@ -121,16 +119,25 @@ const About = () => {
                     className="min-h-[400px]"
                 >
                     {activeTab === 'story' && (
-                        <section className="text-center max-w-4xl mx-auto space-y-12">
+                        <section className="max-w-4xl mx-auto space-y-12">
                             <div>
                                 <h1 className="text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
                                     Our Story
                                 </h1>
-                                <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-                                    The Electronics and Robotics Club at BITS Goa is a hub for innovation and creativity.
-                                    Since our inception, we have been dedicated to fostering a culture of technical excellence
-                                    and hands-on learning. We build robots, design circuits, and push the boundaries of what's possible.
-                                </p>
+                                <div className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed space-y-6 text-left">
+                                    <p>
+                                        The Electronics and Robotics Club (ERC) of BITS Goa is a diverse group of students with interests ranging from electronics to machine learning to mechanical design. Founded in 2008, it is one of the oldest clubs on campus and has evolved into a platform to learn and experiment with various aspects of science and engineering and to apply them in robotics.
+                                    </p>
+                                    <p>
+                                        This Club is a great place not only for electronics engineers but also mechanical enthusiasts and dynamic coders. We are organised into multiple teams working on a wide range of projects including hardware design, open source libraries and even full robots from scratch! Members are also encouraged to exchange experiences and expertise and we hold weekly discussion sessions, demonstrations and presentations for exactly that.
+                                    </p>
+                                    <p>
+                                        Over the years, the Club has shifted its focus from competing in robotics competitions to taking on more research oriented projects and problem statements with real world applications. With robotics being a rapidly changing field, we strive to keep up with the latest developments in both research and industry while also learning about various subfields in detail. Apart from this, we frequently work on exhibition projects to display during the annual technical fest on the campus and other events throughout the year.
+                                    </p>
+                                    <p>
+                                        We are open to anyone with a general interest in engineering and who wants to explore robotics, so feel free to get in touch with us.
+                                    </p>
+                                </div>
                             </div>
 
                             {/* Stats Counters */}
@@ -164,53 +171,117 @@ const About = () => {
                         </section>
                     )}
 
-                    {activeTab === 'outreach' && (
-                        <section>
-                            <h2 className="text-4xl font-bold text-center mb-12">Outreach & Impact</h2>
-                            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                                <SpotlightCard>
-                                    <h3 className="text-2xl font-bold mb-4 text-yellow-600 dark:text-yellow-400">Workshops</h3>
-                                    <p className="text-gray-600 dark:text-gray-400">
-                                        We conduct regular workshops on robotics, IoT, and electronics for students
-                                        across Goa, fostering the next generation of engineers.
-                                    </p>
-                                </SpotlightCard>
-                                <SpotlightCard>
-                                    <h3 className="text-2xl font-bold mb-4 text-green-600 dark:text-green-400">Competitions</h3>
-                                    <p className="text-gray-600 dark:text-gray-400">
-                                        Our teams participate and win in national and international robotics competitions,
-                                        bringing accolades to the institute.
-                                    </p>
-                                </SpotlightCard>
+                    {activeTab === 'contact' && (
+                        <section className="w-full max-w-5xl mx-auto px-4 py-8">
+                            
+                            {/* 2x2 Grid with side labels */}
+                            <div className="grid grid-cols-2 gap-8 md:gap-12 max-w-lg mx-auto relative">
+                                
+                                {/* Instagram - Top Left */}
+                                <div className="relative flex items-center">
+                                    {/* Label on left side - text first, then arrow pointing to box */}
+                                    <div className="absolute -left-4 md:-left-56 top-1/2 -translate-y-1/2 flex items-center gap-3 md:gap-4">
+                                        <span className="text-sm md:text-lg font-bold text-pink-500 dark:text-pink-400 text-right leading-tight hidden md:block">
+                                            Reels &<br/>Behind the Scenes
+                                        </span>
+                                        <img 
+                                            src="/images/arrow1.png" 
+                                            alt="" 
+                                            className="w-12 h-12 md:w-20 md:h-20 opacity-80 dark:invert transform rotate-[120deg]"
+                                        />
+                                    </div>
+                                    <a
+                                        href="https://www.instagram.com/erc_bitsgoa/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="aspect-square w-full flex items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30"
+                                    >
+                                        <FaInstagram className="text-5xl md:text-7xl text-white" />
+                                    </a>
+                                </div>
+
+                                {/* LinkedIn - Top Right */}
+                                <div className="relative flex items-center">
+                                    {/* Label on right side - arrow first (pointing to box), then text */}
+                                    <div className="absolute -right-4 md:-right-52 top-1/2 -translate-y-1/2 flex items-center gap-3 md:gap-4">
+                                        <img 
+                                            src="/images/arrow2.png" 
+                                            alt="" 
+                                            className="w-12 h-12 md:w-20 md:h-20 opacity-80 dark:invert transform -rotate-[60deg]"
+                                        />
+                                        <span className="text-sm md:text-lg font-bold text-blue-500 dark:text-blue-400 text-left leading-tight hidden md:block">
+                                            Connect<br/>With Us
+                                        </span>
+                                    </div>
+                                    <a
+                                        href="https://in.linkedin.com/company/electronics-robotics-club-bits-goa"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="aspect-square w-full flex items-center justify-center rounded-2xl bg-blue-600 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30"
+                                    >
+                                        <FaLinkedin className="text-5xl md:text-7xl text-white" />
+                                    </a>
+                                </div>
+
+                                {/* Email - Bottom Left */}
+                                <div className="relative flex items-center">
+                                    {/* Label on left side - text first, then arrow pointing to box */}
+                                    <div className="absolute -left-4 md:-left-52 top-1/2 -translate-y-1/2 flex items-center gap-3 md:gap-4">
+                                        <span className="text-sm md:text-lg font-bold text-emerald-500 dark:text-emerald-400 text-right leading-tight hidden md:block">
+                                            Drop an<br/>Email!
+                                        </span>
+                                        <img 
+                                            src="/images/arrow2.png" 
+                                            alt="" 
+                                            className="w-12 h-12 md:w-20 md:h-20 opacity-80 dark:invert transform rotate-[120deg]"
+                                        />
+                                    </div>
+                                    <a
+                                        href="mailto:erc@goa.bits-pilani.ac.in"
+                                        className="aspect-square w-full flex items-center justify-center rounded-2xl bg-emerald-500 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/30"
+                                    >
+                                        <FaEnvelope className="text-5xl md:text-7xl text-white" />
+                                    </a>
+                                </div>
+
+                                {/* Twitter - Bottom Right */}
+                                <div className="relative flex items-center">
+                                    {/* Label on right side - arrow first (pointing to box), then text */}
+                                    <div className="absolute -right-4 md:-right-52 top-1/2 -translate-y-1/2 flex items-center gap-3 md:gap-4">
+                                        <img 
+                                            src="/images/arrow1.png" 
+                                            alt="" 
+                                            className="w-12 h-12 md:w-20 md:h-20 opacity-80 dark:invert transform -rotate-[60deg]"
+                                        />
+                                        <span className="text-sm md:text-lg font-bold text-sky-500 dark:text-sky-400 text-left leading-tight hidden md:block">
+                                            Exciting<br/>Updates
+                                        </span>
+                                    </div>
+                                    <a
+                                        href="https://twitter.com/erc_bitsgoa"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="aspect-square w-full flex items-center justify-center rounded-2xl bg-sky-500 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-sky-500/30"
+                                    >
+                                        <FaTwitter className="text-5xl md:text-7xl text-white" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* Email address display */}
+                            <div className="mt-16 text-center">
+                                <p className="text-gray-500 dark:text-gray-400 text-base mb-2">Or reach out directly at</p>
+                                <a 
+                                    href="mailto:erc@goa.bits-pilani.ac.in" 
+                                    className="text-xl md:text-2xl font-mono font-bold text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                                >
+                                    erc@goa.bits-pilani.ac.in
+                                </a>
                             </div>
                         </section>
                     )}
                 </motion.div>
             </AnimatePresence>
-
-            <div className="my-20">
-                <PlusDivider />
-            </div>
-
-            {/* Contact Section - Always Visible */}
-            <section className="max-w-2xl mx-auto text-center">
-                <h2 className="text-4xl font-bold mb-8">Reach Out to Us</h2>
-                <div className="flex justify-center gap-8 mb-8">
-                    <a href="https://linkedin.com" className="p-4 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white dark:bg-blue-600/20 dark:text-blue-400 dark:hover:text-white transition-all">
-                        <FaLinkedin size={32} />
-                    </a>
-                    <a href="https://instagram.com" className="p-4 rounded-full bg-pink-100 text-pink-600 hover:bg-pink-600 hover:text-white dark:bg-pink-600/20 dark:text-pink-400 dark:hover:text-white transition-all">
-                        <FaInstagram size={32} />
-                    </a>
-                    <a href="mailto:erc@goa.bits-pilani.ac.in" className="p-4 rounded-full bg-green-100 text-green-600 hover:bg-green-600 hover:text-white dark:bg-green-600/20 dark:text-green-400 dark:hover:text-white transition-all">
-                        <FaEnvelope size={32} />
-                    </a>
-                </div>
-                <p className="text-gray-600 dark:text-gray-400">
-                    Have a project idea or want to sponsor us? <br />
-                    Drop us an email at <a href="mailto:erc@goa.bits-pilani.ac.in" className="text-blue-600 dark:text-blue-400 hover:underline">erc@goa.bits-pilani.ac.in</a>
-                </p>
-            </section>
         </motion.div>
     );
 };

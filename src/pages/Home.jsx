@@ -14,11 +14,27 @@ const Home = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="relative min-h-screen pt-20"
+            className="relative min-h-screen"
         >
-            {/* Hero Section with Grid Scan Background */}
-            <section className="relative h-[80vh] flex flex-col items-center justify-center overflow-hidden">
+            {/* Hero Section with Video Background - Full Screen */}
+            <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
+                {/* Video Background */}
                 <div className="absolute inset-0">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover"
+                    >
+                        <source src="/Video_backdrop.mp4" type="video/mp4" />
+                    </video>
+                    {/* Black overlay for text visibility */}
+                    <div className="absolute inset-0 bg-black/50"></div>
+                </div>
+
+                {/* Old GridScan Background - Commented out */}
+                {/* <div className="absolute inset-0">
                     <GridScan
                         sensitivity={0.55}
                         lineThickness={0.6}
@@ -31,16 +47,16 @@ const Home = () => {
                         chromaticAberration={0.0003}
                         noiseIntensity={0.001}
                     />
-                </div>
+                </div> */}
 
                 <div className="relative z-10 text-center px-4">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-6xl md:text-8xl font-bold text-blue-600 dark:text-blue-400 mb-6 drop-shadow-xl"
+                        className="text-6xl md:text-8xl font-bold text-white mb-6 drop-shadow-xl"
                     >
-                        ERC BITS GOA
+                        Electronics and Robotics Club, BITS Goa
                     </motion.h1>
 
                     <motion.p
@@ -99,9 +115,9 @@ const Home = () => {
                 <PlusDivider />
             </div>
 
-            {/* Events & Projects Gallery */}
+            {/* ERC Gallery */}
             <section className="py-20 px-4 container mx-auto">
-                <h2 className="text-4xl font-bold text-center mb-12">Our Events & Projects</h2>
+                <h2 className="text-4xl font-bold text-center mb-12">ERC Gallery</h2>
                 <p className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
                     Explore our amazing events, competitions, and innovative projects that showcase the creativity and technical expertise of our club members.
                 </p>

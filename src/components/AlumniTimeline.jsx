@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './AlumniTimeline.css';
 
 /**
  * AlumniTimeline Component
- * SIMPLIFIED VERSION - Fixed sticky timeline and removed problematic auto-scroll
+ * Fixed year indicator with dynamic 5-year window
  */
 const AlumniTimeline = ({ alumni = [] }) => {
     const [activeYear, setActiveYear] = useState(null);
@@ -38,6 +38,27 @@ const AlumniTimeline = ({ alumni = [] }) => {
         return year || batch;
     };
 
+    // Calculate visible years (always 7, adjusted at boundaries) - ±3 around active
+    const visibleYears = useMemo(() => {
+        const VISIBLE_COUNT = 7;
+        if (!activeYear || sortedBatches.length === 0) {
+            return sortedBatches.slice(0, VISIBLE_COUNT);
+        }
+        
+        const activeIndex = sortedBatches.indexOf(activeYear);
+        const totalBatches = sortedBatches.length;
+        
+        // Calculate start index to keep active year centered when possible (±3)
+        let startIndex = Math.max(0, activeIndex - 3);
+        
+        // Adjust if we're near the end
+        if (startIndex + VISIBLE_COUNT > totalBatches) {
+            startIndex = Math.max(0, totalBatches - VISIBLE_COUNT);
+        }
+        
+        return sortedBatches.slice(startIndex, startIndex + VISIBLE_COUNT);
+    }, [activeYear, sortedBatches]);
+
     // Handle ONLY initial URL hash on mount - NEVER again after that
     useEffect(() => {
         if (!initialHashHandled.current) {
@@ -57,10 +78,13 @@ const AlumniTimeline = ({ alumni = [] }) => {
                         setActiveYear(matchingBatch);
                     }, 300);
                 }
+            } else if (sortedBatches.length > 0) {
+                // Set first batch as active by default
+                setActiveYear(sortedBatches[0]);
             }
             initialHashHandled.current = true;
         }
-    }, []); // Only run ONCE on mount
+    }, [sortedBatches]); // Only run ONCE on mount
 
     // Simple scroll spy - just update active state, NO hash updates
     useEffect(() => {
@@ -107,30 +131,34 @@ const AlumniTimeline = ({ alumni = [] }) => {
 
     return (
         <div className="alumni-timeline-wrapper">
-            {/* Desktop Timeline Navigation */}
-            <aside className="timeline-sidebar">
-                <nav className="timeline-nav">
-                    <div className="timeline-line"></div>
-                    <ul className="timeline-list">
-                        {sortedBatches.map((batch) => (
-                            <li
+            {/* Fixed Year Indicator - Desktop Only */}
+            <div className="fixed-year-indicator">
+                <div className="fixed-year-line">
+                    <div className="fixed-year-line-bg"></div>
+                </div>
+                <div className="fixed-year-list">
+                    <AnimatePresence mode="popLayout">
+                        {visibleYears.map((batch) => (
+                            <motion.button
                                 key={batch}
-                                className={`timeline-item ${activeYear === batch ? 'active' : ''}`}
+                                layout
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: 20 }}
+                                transition={{ duration: 0.3, ease: "easeOut" }}
+                                onClick={() => scrollToBatch(batch)}
+                                className={`fixed-year-item ${activeYear === batch ? 'active' : ''}`}
+                                aria-label={`Jump to ${batch}`}
                             >
-                                <button
-                                    onClick={() => scrollToBatch(batch)}
-                                    className="timeline-link"
-                                    aria-label={`Jump to ${batch}`}
-                                >
-                                    {getYearLabel(batch)}
-                                </button>
-                            </li>
+                                <span className="fixed-year-dot"></span>
+                                <span className="fixed-year-label">{getYearLabel(batch)}</span>
+                            </motion.button>
                         ))}
-                    </ul>
-                </nav>
-            </aside>
+                    </AnimatePresence>
+                </div>
+            </div>
 
-            {/* Mobile Navigation */}
+            {/* Mobile Navigation - Horizontal Pills */}
             <nav className="mobile-timeline-nav">
                 {sortedBatches.map((batch) => (
                     <button
