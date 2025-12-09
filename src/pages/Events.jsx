@@ -1,14 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import galleryData from '../data/gallery.json';
+import eventsData from '../data/events.json';
 
 const Events = () => {
-    // Create slugs for event URLs
-    const createSlug = (name) => {
-        return name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-    };
-
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -28,15 +23,15 @@ const Events = () => {
 
             {/* Events Gallery Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {galleryData.events.map((event, index) => (
+                {eventsData.map((event, index) => (
                     <motion.div
-                        key={event.name}
+                        key={event.id}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
                         <Link
-                            to={`/events/${createSlug(event.name)}`}
+                            to={`/events/${event.id}`}
                             className="group block relative overflow-hidden rounded-xl aspect-[4/3] bg-gray-100 dark:bg-gray-800"
                         >
                             {/* Event Image */}
