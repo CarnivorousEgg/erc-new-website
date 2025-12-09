@@ -30,5 +30,67 @@
             "image": "/images/events/eduspark/cover.jpg",
             "description": "Educational outreach and school workshops"
         }
+    ],
+    "projects": [
+        {
+            "name": "SpiderBot",
+            "image": "https://erc-bpgc.github.io/img/projects/spiderbot.jpg",
+            "description": "Six-legged Hexapod robot"
+        },
+        {
+            "name": "Vulcan",
+            "image": "https://erc-bpgc.github.io/img/projects/vulcan.jpeg",
+            "description": "Humanoid head with AI features"
+        },
+        {
+            "name": "SnakeBot",
+            "image": "https://erc-bpgc.github.io/img/projects/SnakeBot_v1.jpeg",
+            "description": "Modular snake-like robot"
+        },
+        {
+            "name": "Quadruped",
+            "image": "https://erc-bpgc.github.io/img/projects/quadruped.png",
+            "description": "12 DoF four-legged robot"
+        },
+        {
+            "name": "Air Hockey",
+            "image": "https://erc-bpgc.github.io/img/projects/AirHockey.png",
+            "description": "AI-powered air hockey player"
+        },
+        {
+            "name": "Carborone",
+            "image": "https://erc-bpgc.github.io/img/projects/carborone.jpeg",
+            "description": "Autonomous drone-car hybrid"
+        },
+        {
+            "name": "Trotbot",
+            "image": "https://erc-bpgc.github.io/img/projects/trotbot.jpeg",
+            "description": "Omni-directional delivery robot"
+        },
+        {
+            "name": "SwarmBots",
+            "image": "https://erc-bpgc.github.io/img/projects/swarm_bots_2.jpg",
+            "description": "Collective decision-making robots"
+        },
+        {
+            "name": "Sketcher",
+            "image": "https://erc-bpgc.github.io/img/projects/sketcher.jpeg",
+            "description": "Automated drawing machine"
+        },
+        {
+            "name": "LED Globe",
+            "image": "https://erc-bpgc.github.io/img/projects/led_globe.jpeg",
+            "description": "POV LED display globe"
+        },
+        {
+            "name": "LED Hexapad",
+            "image": "https://erc-bpgc.github.io/img/projects/led_hexapad2.jpeg",
+            "description": "Interactive MIDI controller"
+        },
+        {
+            "name": "Klann",
+            "image": "https://erc-bpgc.github.io/img/projects/klann.jpeg",
+            "description": "Eight-legged walking bot"
+        }
     ]
 }

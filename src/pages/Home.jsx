@@ -123,7 +123,7 @@ const Home = () => {
                 </p>
                 <div className="w-full overflow-hidden">
                     <DomeGallery
-                        items={galleryData.events}
+                        items={[...galleryData.events, ...(galleryData.projects || [])]}
                         overlayBlurColor="var(--dome-overlay)"
                     />
                 </div>
