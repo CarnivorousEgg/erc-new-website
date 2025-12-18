@@ -1,0 +1,28 @@
+[
+    {
+        "id": "sponsor-1",
+        "name": "Solidworks",
+        "logo": "/images/spons/sponsor1.png",
+        "website": "https://www.solidworks.com/"
+    },
+    {
+        "id": "sponsor-2",
+        "name": "UAV Garage",
+        "logo": "/images/spons/sponsor2-light.png",
+        "logoDark": "/images/spons/sponsor2.png",
+        "website": "https://uavgarage.com/"
+    },
+    {
+        "id": "sponsor-4",
+        "name": "OnlyScrews",
+        "logo": "/images/spons/sponsor4.jpeg",
+        "website": "https://onlyscrews.in/"
+    },
+    {
+        "id": "sponsor-3",
+        "name": "Pizza Wings",
+        "logo": "/images/spons/sponsor3.jpeg",
+        "website": "https://pizzawings.co.in/"
+    }
+    
+]

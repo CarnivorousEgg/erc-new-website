@@ -8,6 +8,7 @@ import ProjectDetail from './pages/ProjectDetail';
 import Events from './pages/Events';
 import EventDetail from './pages/EventDetail';
 import About from './pages/About';
+import Sitemap from './pages/Sitemap';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/events" element={<Events />} />
                 <Route path="/events/:id" element={<EventDetail />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/sitemap" element={<Sitemap />} />
             </Routes>
             <Footer />
         </div>

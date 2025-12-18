@@ -1,9 +1,11 @@
 import React from 'react';
 import GridScan from '../components/GridScan';
 import SpotlightCard from '../components/SpotlightCard';
-import PlusDivider from '../components/PlusDivider';
+import CurveDivider from '../components/CurveDivider';
 import DomeGallery from '../components/DomeGallery';
+import SponsorsTicker from '../components/SponsorsTicker';
 import galleryData from '../data/gallery.json';
+import sponsorsData from '../data/sponsors.json';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -17,7 +19,7 @@ const Home = () => {
             className="relative min-h-screen"
         >
             {/* Hero Section with Video Background - Full Screen */}
-            <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
+            <section className="section-hero relative h-screen flex flex-col items-center justify-center overflow-hidden">
                 {/* Video Background */}
                 <div className="absolute inset-0">
                     <video
@@ -63,7 +65,7 @@ const Home = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8"
+                        className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-8"
                     >
                         Innovating the future through Electronics and Robotics.
                     </motion.p>
@@ -78,54 +80,86 @@ const Home = () => {
                         </Link>
                     </motion.div>
                 </div>
-            </section>
 
-            <div className="container mx-auto px-4">
-                <PlusDivider />
-            </div>
-
-            {/* Highlights Section */}
-            <section className="py-20 px-4 container mx-auto">
-                <h2 className="text-4xl font-bold text-center mb-12">What We Do</h2>
-                <div className="grid md:grid-cols-3 gap-8">
-                    <SpotlightCard>
-                        <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Robotics</h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                            Designing and building autonomous robots for various competitions and research purposes.
-                        </p>
-                    </SpotlightCard>
-
-                    <SpotlightCard>
-                        <h3 className="text-2xl font-bold mb-4 text-purple-600 dark:text-purple-400">Electronics</h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                            Developing embedded systems, IoT devices, and custom PCBs for innovative solutions.
-                        </p>
-                    </SpotlightCard>
-
-                    <SpotlightCard>
-                        <h3 className="text-2xl font-bold mb-4 text-pink-600 dark:text-pink-400">Research</h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                            Pushing the boundaries of technology through cutting-edge research and development.
-                        </p>
-                    </SpotlightCard>
+                {/* Curve integrated into hero - cuts the video */}
+                <div className="absolute bottom-0 left-0 right-0 z-20">
+                    <svg
+                        className="w-full h-[60px] md:h-[80px]"
+                        viewBox="0 0 1440 100"
+                        preserveAspectRatio="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        {/* Main curve fill - matches next section background */}
+                        <path
+                            className="fill-white dark:fill-black"
+                            d="M0,100 L0,60 Q360,100 720,60 Q1080,20 1440,60 L1440,100 Z"
+                        />
+                        {/* Blue accent line */}
+                        <path
+                            className="stroke-blue-500"
+                            d="M0,60 Q360,100 720,60 Q1080,20 1440,60"
+                            fill="none"
+                            strokeWidth="3"
+                        />
+                    </svg>
                 </div>
             </section>
 
-            <div className="container mx-auto px-4">
-                <PlusDivider />
-            </div>
+            {/* Section 1: What We Do */}
+            <section className="relative">
+                <div className="py-20 px-4 container mx-auto">
+                    <h2 className="text-4xl font-bold text-center mb-12">What We Do</h2>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <SpotlightCard>
+                            <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Robotics</h3>
+                            <p className="text-gray-600 dark:text-gray-400">
+                                Designing and building autonomous robots for various competitions and research purposes.
+                            </p>
+                        </SpotlightCard>
 
-            {/* ERC Gallery */}
-            <section className="py-20 px-4 container mx-auto">
-                <h2 className="text-4xl font-bold text-center mb-12">ERC Gallery</h2>
-                <p className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
-                    Explore our amazing events, competitions, and innovative projects that showcase the creativity and technical expertise of our club members.
-                </p>
-                <div className="w-full overflow-hidden">
-                    <DomeGallery
-                        items={[...galleryData.events, ...(galleryData.projects || [])]}
-                        overlayBlurColor="var(--dome-overlay)"
-                    />
+                        <SpotlightCard>
+                            <h3 className="text-2xl font-bold mb-4 text-purple-600 dark:text-purple-400">Electronics</h3>
+                            <p className="text-gray-600 dark:text-gray-400">
+                                Developing embedded systems, IoT devices, and custom PCBs for innovative solutions.
+                            </p>
+                        </SpotlightCard>
+
+                        <SpotlightCard>
+                            <h3 className="text-2xl font-bold mb-4 text-pink-600 dark:text-pink-400">Research</h3>
+                            <p className="text-gray-600 dark:text-gray-400">
+                                Pushing the boundaries of technology through cutting-edge research and development.
+                            </p>
+                        </SpotlightCard>
+                    </div>
+                </div>
+            </section>
+
+            {/* Section 2: Sponsors */}
+            <section className="relative">
+                <CurveDivider variant={2} />
+                <div className="py-20 px-4 container mx-auto">
+                    <h2 className="text-4xl font-bold text-center mb-4">Our Previous Sponsors and Collaborators</h2>
+                    <p className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
+                        We are grateful to our sponsors and collaborators who have supported our journey in robotics and electronics.
+                    </p>
+                    <SponsorsTicker sponsors={sponsorsData} />
+                </div>
+            </section>
+            
+            {/* Section 3: ERC Gallery */}
+            <section className="relative">
+                <CurveDivider variant={3} />
+                <div className="py-20 px-4 container mx-auto">
+                    <h2 className="text-4xl font-bold text-center mb-12">ERC Gallery</h2>
+                    <p className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
+                        Explore our amazing events, competitions, and innovative projects that showcase the creativity and technical expertise of our club members.
+                    </p>
+                    <div className="w-full overflow-hidden">
+                        <DomeGallery
+                            items={[...galleryData.events, ...(galleryData.projects || [])]}
+                            overlayBlurColor="var(--dome-overlay)"
+                        />
+                    </div>
                 </div>
             </section>
         </motion.div>
