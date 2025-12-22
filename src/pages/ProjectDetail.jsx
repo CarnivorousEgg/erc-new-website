@@ -15,6 +15,12 @@ const findTeamMember = (name) => {
     );
     if (currentMember) return currentMember;
     
+    // Search in project leads
+    const projectLead = teamData.projectLeads?.find(
+        m => m.name.toLowerCase() === name.toLowerCase()
+    );
+    if (projectLead) return projectLead;
+    
     // Search in alumni
     const alumniMember = teamData.alumni?.find(
         m => m.name.toLowerCase() === name.toLowerCase()

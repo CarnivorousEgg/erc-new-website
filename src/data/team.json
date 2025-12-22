@@ -2,39 +2,71 @@
     "current": [
         {
             "name": "Saransh Agrawal",
-            "role": "Chief Coordinator",
+            "role": "Chief Coordinator and Project Lead - Quadruped",
             "image": "/images/people/2023 Batch/saransh_agrawal.jpeg",
-            "linkedin": "https://www.linkedin.com/in/saransh-agrawal-0b6b2b21b/"
+            "linkedin": "https://www.linkedin.com/in/saransh-ag15/"
         },
         {
             "name": "Nilesh Bhatia",
-            "role": "Sub Coordinator",
+            "role": "Sub Coordinator and Project Lead - Snakebot",
             "image": "https://ui-avatars.com/api/?name=Nilesh+Bhatia&background=3b82f6&color=fff&size=400&font-size=0.4",
-            "linkedin": "https://www.linkedin.com/in/nilesh-bhatia-609a38268/"
+            "linkedin": "https://www.linkedin.com/in/nilesh-bhatia-032790312/"
         },
         {
             "name": "Aryan Goyal",
-            "role": "Sub Coordinator",
+            "role": "Sub Coordinator and Project Lead - Vulcan",
             "image": "/images/people/2023 Batch/aryan_goyal.jpeg",
-            "linkedin": "https://www.linkedin.com/in/aryan-goyal-6ab13b265/"
+            "linkedin": "https://www.linkedin.com/in/aryan-goyal-29827432b/"
         },
         {
             "name": "Kevin Mathew",
             "role": "Research Head",
             "image": "/images/people/2023 Batch/kevin_mathew.jpg",
-            "linkedin": "https://www.linkedin.com/in/kevin-matthew-6ab13b265/"
+            "linkedin": "https://www.linkedin.com/in/kevin-mathew-672774249/"
         },
         {
             "name": "Parth Jaju",
             "role": "Treasurer",
             "image": "/images/people/2023 Batch/parth_jaju.jpeg",
-            "linkedin": "https://www.linkedin.com/in/parth-jaju-6ab13b265/"
+            "linkedin": "https://www.linkedin.com/in/parthjaju/"
         },
         {
             "name": "Dev Thacker",
-            "role": "Electronics Head",
+            "role": "Electronics Head and Project Lead - Snakebot",
             "image": "https://ui-avatars.com/api/?name=Dev+Thacker&background=ec4899&color=fff&size=400&font-size=0.4",
-            "linkedin": "https://www.linkedin.com/in/dev-thacker-6ab13b265/"
+            "linkedin": "https://www.linkedin.com/in/dev-thacker-5870a933b/"
+        }
+    ],
+    "projectLeads": [
+        {
+            "name": "Indrajit Mandal",
+            "role": "Project Lead - Swarm Drones",
+            "image": "https://ui-avatars.com/api/?name=Indrajit+Mandal&background=10b981&color=fff&size=400&font-size=0.4",
+            "linkedin": "https://www.linkedin.com/in/indrajit-mandal-2b50b01b4/"
+        },
+        {
+            "name": "Omkar Shrikant",
+            "role": "Project Lead - Swarm Drones",
+            "image": "https://ui-avatars.com/api/?name=Omkar+Shrikant&background=10b981&color=fff&size=400&font-size=0.4",
+            "linkedin": ""
+        },
+        {
+            "name": "Sudhanshu Kulkarni",
+            "role": "Project Lead - Robotic Arm",
+            "image": "https://ui-avatars.com/api/?name=Sudhanshu+Kulkarni&background=8b5cf6&color=fff&size=400&font-size=0.4",
+            "linkedin": "https://www.linkedin.com/in/sudhanshu-kulkarni-72097a2a6/"
+        },
+        {
+            "name": "Yash Kamat",
+            "role": "Project Lead - Project Nexus",
+            "image": "https://ui-avatars.com/api/?name=Yash+Kamat&background=f59e0b&color=fff&size=400&font-size=0.4",
+            "linkedin": "https://www.linkedin.com/in/yskamat/"
+        },
+        {
+            "name": "Sowmaditya",
+            "role": "Project Lead - Project Nexus",
+            "image": "https://ui-avatars.com/api/?name=Sowmaditya&background=f59e0b&color=fff&size=400&font-size=0.4",
+            "linkedin": ""
         }
     ],
     "alumni": [
@@ -77,6 +109,62 @@
             "currentWork": "Intern at Aditya Birla Group",
             "image": "/images/people/2022 Batch/Ansh Parmeshwar.jpeg",
             "linkedin": "https://www.linkedin.com/in/anshparmeshwar/"
+        },
+        {
+            "name": "Sharvil",
+            "role": "Project Lead - Vulcan",
+            "batch": "2022 Batch",
+            "currentWork": "",
+            "image": "https://ui-avatars.com/api/?name=Sharvil&background=3b82f6&color=fff&size=400&font-size=0.4",
+            "linkedin": ""
+        },
+        {
+            "name": "Ayush",
+            "role": "Project Lead - Robotic Arm",
+            "batch": "2022 Batch",
+            "currentWork": "",
+            "image": "https://ui-avatars.com/api/?name=Ayush&background=8b5cf6&color=fff&size=400&font-size=0.4",
+            "linkedin": ""
+        },
+        {
+            "name": "Nayan",
+            "role": "Project Lead - Drone Automation",
+            "batch": "2022 Batch",
+            "currentWork": "",
+            "image": "https://ui-avatars.com/api/?name=Nayan&background=10b981&color=fff&size=400&font-size=0.4",
+            "linkedin": ""
+        },
+        {
+            "name": "Harsh",
+            "role": "Project Lead - Snakebot",
+            "batch": "2022 Batch",
+            "currentWork": "",
+            "image": "https://ui-avatars.com/api/?name=Harsh&background=ec4899&color=fff&size=400&font-size=0.4",
+            "linkedin": ""
+        },
+        {
+            "name": "Hritik",
+            "role": "Project Lead - Snakebot",
+            "batch": "2022 Batch",
+            "currentWork": "",
+            "image": "https://ui-avatars.com/api/?name=Hritik&background=ec4899&color=fff&size=400&font-size=0.4",
+            "linkedin": ""
+        },
+        {
+            "name": "Sniggdha",
+            "role": "Project Lead - Quadruped",
+            "batch": "2022 Batch",
+            "currentWork": "",
+            "image": "https://ui-avatars.com/api/?name=Sniggdha&background=f59e0b&color=fff&size=400&font-size=0.4",
+            "linkedin": ""
+        },
+        {
+            "name": "Garv Gupta",
+            "role": "Project Lead - Spiderbot",
+            "batch": "2022 Batch",
+            "currentWork": "",
+            "image": "https://ui-avatars.com/api/?name=Garv+Gupta&background=06b6d4&color=fff&size=400&font-size=0.4",
+            "linkedin": ""
         },
         {
             "name": "Arjun Puthli",

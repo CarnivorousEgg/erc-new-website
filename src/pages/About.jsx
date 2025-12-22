@@ -5,8 +5,10 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import ChromaGrid from '../components/ChromaGrid';
 import AlumniTimeline from '../components/AlumniTimeline';
 import BackToTop from '../components/BackToTop';
+import CurveDivider from '../components/CurveDivider';
 import teamData from '../data/team.json';
-import { FaLinkedin, FaInstagram, FaEnvelope, FaTwitter } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaEnvelope, FaTwitter, FaCamera } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { cn } from '../utils/cn';
 
 // Counter animation hook
@@ -160,8 +162,18 @@ const About = () => {
 
                     {activeTab === 'team' && (
                         <section>
-                            <h2 className="text-4xl font-bold text-center mb-12">Current Team</h2>
+                            {/* Coordinators Section */}
+                            <h2 className="text-4xl font-bold text-center mb-12">Coordinators</h2>
                             <ChromaGrid items={teamData.current} />
+                            
+                            {/* Curve Divider */}
+                            <div className="my-16">
+                                <CurveDivider variant={2} />
+                            </div>
+                            
+                            {/* Project Leads Section */}
+                            <h2 className="text-4xl font-bold text-center mb-12">Project Leads</h2>
+                            <ChromaGrid items={teamData.projectLeads || []} />
                         </section>
                     )}
 
@@ -172,110 +184,107 @@ const About = () => {
                     )}
 
                     {activeTab === 'contact' && (
-                        <section className="w-full max-w-5xl mx-auto px-4 py-8">
-                            
-                            {/* 2x2 Grid with side labels */}
-                            <div className="grid grid-cols-2 gap-8 md:gap-12 max-w-lg mx-auto relative">
-                                
-                                {/* Instagram - Top Left */}
-                                <div className="relative flex items-center">
-                                    {/* Label on left side - text first, then arrow pointing to box */}
-                                    <div className="absolute -left-4 md:-left-56 top-1/2 -translate-y-1/2 flex items-center gap-3 md:gap-4">
-                                        <span className="text-sm md:text-lg font-bold text-pink-500 dark:text-pink-400 text-right leading-tight hidden md:block">
-                                            Reels &<br/>Behind the Scenes
-                                        </span>
-                                        <img 
-                                            src="/images/arrow1.png" 
-                                            alt="" 
-                                            className="w-12 h-12 md:w-20 md:h-20 opacity-80 dark:invert transform rotate-[120deg]"
-                                        />
-                                    </div>
-                                    <a
-                                        href="https://www.instagram.com/erc_bitsgoa/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="aspect-square w-full flex items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30"
-                                    >
-                                        <FaInstagram className="text-5xl md:text-7xl text-white" />
-                                    </a>
-                                </div>
-
-                                {/* LinkedIn - Top Right */}
-                                <div className="relative flex items-center">
-                                    {/* Label on right side - arrow first (pointing to box), then text */}
-                                    <div className="absolute -right-4 md:-right-52 top-1/2 -translate-y-1/2 flex items-center gap-3 md:gap-4">
-                                        <img 
-                                            src="/images/arrow2.png" 
-                                            alt="" 
-                                            className="w-12 h-12 md:w-20 md:h-20 opacity-80 dark:invert transform -rotate-[60deg]"
-                                        />
-                                        <span className="text-sm md:text-lg font-bold text-blue-500 dark:text-blue-400 text-left leading-tight hidden md:block">
-                                            Connect<br/>With Us
-                                        </span>
-                                    </div>
-                                    <a
-                                        href="https://in.linkedin.com/company/electronics-robotics-club-bits-goa"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="aspect-square w-full flex items-center justify-center rounded-2xl bg-blue-600 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30"
-                                    >
-                                        <FaLinkedin className="text-5xl md:text-7xl text-white" />
-                                    </a>
-                                </div>
-
-                                {/* Email - Bottom Left */}
-                                <div className="relative flex items-center">
-                                    {/* Label on left side - text first, then arrow pointing to box */}
-                                    <div className="absolute -left-4 md:-left-52 top-1/2 -translate-y-1/2 flex items-center gap-3 md:gap-4">
-                                        <span className="text-sm md:text-lg font-bold text-emerald-500 dark:text-emerald-400 text-right leading-tight hidden md:block">
-                                            Drop an<br/>Email!
-                                        </span>
-                                        <img 
-                                            src="/images/arrow2.png" 
-                                            alt="" 
-                                            className="w-12 h-12 md:w-20 md:h-20 opacity-80 dark:invert transform rotate-[120deg]"
-                                        />
-                                    </div>
-                                    <a
-                                        href="mailto:erc@goa.bits-pilani.ac.in"
-                                        className="aspect-square w-full flex items-center justify-center rounded-2xl bg-emerald-500 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/30"
-                                    >
-                                        <FaEnvelope className="text-5xl md:text-7xl text-white" />
-                                    </a>
-                                </div>
-
-                                {/* Twitter - Bottom Right */}
-                                <div className="relative flex items-center">
-                                    {/* Label on right side - arrow first (pointing to box), then text */}
-                                    <div className="absolute -right-4 md:-right-52 top-1/2 -translate-y-1/2 flex items-center gap-3 md:gap-4">
-                                        <img 
-                                            src="/images/arrow1.png" 
-                                            alt="" 
-                                            className="w-12 h-12 md:w-20 md:h-20 opacity-80 dark:invert transform -rotate-[60deg]"
-                                        />
-                                        <span className="text-sm md:text-lg font-bold text-sky-500 dark:text-sky-400 text-left leading-tight hidden md:block">
-                                            Exciting<br/>Updates
-                                        </span>
-                                    </div>
-                                    <a
-                                        href="https://twitter.com/erc_bitsgoa"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="aspect-square w-full flex items-center justify-center rounded-2xl bg-sky-500 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-sky-500/30"
-                                    >
-                                        <FaTwitter className="text-5xl md:text-7xl text-white" />
-                                    </a>
-                                </div>
+                        <section className="w-full max-w-5xl mx-auto px-4">
+                            {/* Headline */}
+                            <div className="text-center mb-12">
+                                <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter leading-none text-blue-600 dark:text-blue-500">
+                                    Don't Be A Stranger.
+                                </h1>
                             </div>
 
-                            {/* Email address display */}
-                            <div className="mt-16 text-center">
-                                <p className="text-gray-500 dark:text-gray-400 text-base mb-2">Or reach out directly at</p>
-                                <a 
-                                    href="mailto:erc@goa.bits-pilani.ac.in" 
-                                    className="text-xl md:text-2xl font-mono font-bold text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                            {/* Stacked Bars */}
+                            <div className="space-y-4">
+                                {/* Instagram Bar */}
+                                <a
+                                    href="https://www.instagram.com/erc_bitsgoa/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:from-pink-400 hover:via-red-400 hover:to-yellow-400 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink-500/30"
                                 >
-                                    erc@goa.bits-pilani.ac.in
+                                    <div className="flex justify-between items-center">
+                                        <div className="flex items-center gap-4 md:gap-6">
+                                            {/* Instagram to Camera morph */}
+                                            <div className="relative w-[30px] h-[30px] md:w-[48px] md:h-[48px]">
+                                                <FaInstagram className="absolute inset-0 text-3xl md:text-5xl text-white transition-all duration-300 group-hover:opacity-0 group-hover:scale-50 group-hover:rotate-180" />
+                                                <FaCamera className="absolute inset-0 text-3xl md:text-5xl text-white transition-all duration-300 opacity-0 scale-50 -rotate-180 group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0" />
+                                            </div>
+                                            <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+                                                The Gram
+                                            </span>
+                                        </div>
+                                        <span className="text-sm md:text-base text-white/80 group-hover:text-white group-hover:translate-x-2 transition-all duration-300 hidden sm:flex items-center gap-2">
+                                            Visual vibes only
+                                            <span className="text-lg md:text-xl">→</span>
+                                        </span>
+                                    </div>
+                                </a>
+
+                                {/* LinkedIn Bar */}
+                                <a
+                                    href="https://in.linkedin.com/company/electronics-robotics-club-bits-goa"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-blue-600 hover:bg-blue-500 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/30"
+                                >
+                                    <div className="flex justify-between items-center">
+                                        <div className="flex items-center gap-4 md:gap-6">
+                                            {/* LinkedIn rotates right */}
+                                            <FaLinkedin className="text-3xl md:text-5xl text-white transition-transform duration-300 ease-out group-hover:rotate-12" />
+                                            <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+                                                The Network
+                                            </span>
+                                        </div>
+                                        <span className="text-sm md:text-base text-white/80 group-hover:text-white group-hover:translate-x-2 transition-all duration-300 hidden sm:flex items-center gap-2">
+                                            Professional connections
+                                            <span className="text-lg md:text-xl">→</span>
+                                        </span>
+                                    </div>
+                                </a>
+
+                                {/* Twitter/X Bar */}
+                                <a
+                                    href="https://twitter.com/erc_bitsgoa"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-sky-500 hover:bg-gray-900 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-sky-500/30"
+                                >
+                                    <div className="flex justify-between items-center">
+                                        <div className="flex items-center gap-4 md:gap-6">
+                                            {/* Bird squashed by X animation */}
+                                            <div className="relative w-[30px] h-[30px] md:w-[48px] md:h-[48px]">
+                                                <FaTwitter className="absolute inset-0 text-3xl md:text-5xl text-white transition-all duration-300 group-hover:scale-y-0 group-hover:opacity-0" />
+                                                <FaXTwitter className="absolute inset-0 text-3xl md:text-5xl text-white transition-all duration-300 opacity-0 scale-150 group-hover:opacity-100 group-hover:scale-100" />
+                                            </div>
+                                            <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+                                                <span className="inline group-hover:hidden">The Bird App</span>
+                                                <span className="hidden group-hover:inline">Now It's X</span>
+                                            </span>
+                                        </div>
+                                        <span className="text-sm md:text-base text-white/80 group-hover:text-white group-hover:translate-x-2 transition-all duration-300 hidden sm:flex items-center gap-2">
+                                            Fast replies & updates
+                                            <span className="text-lg md:text-xl">→</span>
+                                        </span>
+                                    </div>
+                                </a>
+
+                                {/* Email Bar */}
+                                <a
+                                    href="mailto:erc@goa.bits-pilani.ac.in"
+                                    className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-gray-900/30 dark:hover:shadow-white/20"
+                                >
+                                    <div className="flex justify-between items-center">
+                                        <div className="flex items-center gap-4 md:gap-6">
+                                            {/* Email rotates left */}
+                                            <FaEnvelope className="text-3xl md:text-5xl text-white dark:text-gray-900 transition-transform duration-300 ease-out group-hover:-rotate-12" />
+                                            <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white dark:text-gray-900 uppercase tracking-tight">
+                                                The Old School Way
+                                            </span>
+                                        </div>
+                                        <span className="text-sm md:text-base text-white/80 dark:text-gray-600 group-hover:text-white dark:group-hover:text-gray-900 group-hover:translate-x-2 transition-all duration-300 hidden sm:flex items-center gap-2">
+                                            Send us an email
+                                            <span className="text-lg md:text-xl">→</span>
+                                        </span>
+                                    </div>
                                 </a>
                             </div>
                         </section>
