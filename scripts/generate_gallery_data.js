@@ -305,12 +305,25 @@ function generateHomeVideosData() {
         return [];
     }
 
+    // Define the preferred order of home videos
+    const preferredOrder = ['ERC_Badge.mp4', 'CV.mp4', 'Laser.mp4'];
+    
     const files = fs.readdirSync(homeVideosDir).filter(file => {
         const ext = path.extname(file).toLowerCase();
         return VIDEO_EXTENSIONS.includes(ext);
     });
 
-    return files.map(file => `/Home-Videos/${encodeURIComponent(file)}`);
+    // Sort files according to preferred order, others at the end
+    const sortedFiles = files.sort((a, b) => {
+        const aIndex = preferredOrder.findIndex(p => p.toLowerCase() === a.toLowerCase());
+        const bIndex = preferredOrder.findIndex(p => p.toLowerCase() === b.toLowerCase());
+        if (aIndex === -1 && bIndex === -1) return 0;
+        if (aIndex === -1) return 1;
+        if (bIndex === -1) return -1;
+        return aIndex - bIndex;
+    });
+
+    return sortedFiles.map(file => `/Home-Videos/${file}`);
 }
 
 function generateDomeGalleryData(eventsGallery, projectsGallery) {

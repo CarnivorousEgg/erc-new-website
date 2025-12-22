@@ -8,7 +8,7 @@
                 "type": "video",
                 "title": "ef6acea7 a625 40c6 92e0 83c2fe176da1",
                 "description": "Educational workshop in action",
-                "height": 350,
+                "height": 300,
                 "orientation": "horizontal"
             },
             {
@@ -26,7 +26,7 @@
                 "type": "image",
                 "title": "IMG 5170",
                 "description": "Eduspark - Educational outreach program",
-                "height": 300,
+                "height": 400,
                 "orientation": "horizontal"
             },
             {
@@ -35,7 +35,7 @@
                 "type": "image",
                 "title": "IMG 5178",
                 "description": "Eduspark - Educational outreach program",
-                "height": 400,
+                "height": 300,
                 "orientation": "horizontal"
             },
             {
@@ -44,7 +44,7 @@
                 "type": "image",
                 "title": "IMG 5185",
                 "description": "Eduspark - Educational outreach program",
-                "height": 300,
+                "height": 350,
                 "orientation": "horizontal"
             }
         ],
@@ -56,7 +56,7 @@
                 "type": "image",
                 "title": "DSC 0788",
                 "description": "Members demonstrating robot capabilities to visitors",
-                "height": 300,
+                "height": 400,
                 "orientation": "horizontal"
             },
             {
@@ -83,7 +83,7 @@
                 "type": "image",
                 "title": "DSC 0968",
                 "description": "Project display booth at Open Day",
-                "height": 350,
+                "height": 400,
                 "orientation": "horizontal"
             },
             {
@@ -110,7 +110,7 @@
                 "type": "image",
                 "title": "IMG 7606",
                 "description": "ERC team members explaining project details",
-                "height": 300,
+                "height": 350,
                 "orientation": "horizontal"
             },
             {
@@ -119,7 +119,7 @@
                 "type": "image",
                 "title": "IMG 7607",
                 "description": "Live robot demo in action",
-                "height": 400,
+                "height": 300,
                 "orientation": "horizontal"
             },
             {
@@ -128,7 +128,7 @@
                 "type": "image",
                 "title": "WhatsApp Image 2025 12 14 at 12.29.36 AM",
                 "description": "Group photo with event participants",
-                "height": 300,
+                "height": 350,
                 "orientation": "horizontal"
             }
         ],
@@ -143,7 +143,7 @@
                 "type": "image",
                 "title": "arm gripper ansh",
                 "description": "Arm gripper design",
-                "height": 300,
+                "height": 400,
                 "orientation": "horizontal"
             },
             {
@@ -181,7 +181,7 @@
                 "type": "image",
                 "title": "cover",
                 "description": "8-Bit Computer Project - Custom built computer from scratch",
-                "height": 400,
+                "height": 300,
                 "orientation": "horizontal"
             },
             {
@@ -190,7 +190,7 @@
                 "type": "image",
                 "title": "DSC 0956",
                 "description": "8-bit computer on display",
-                "height": 400,
+                "height": 350,
                 "orientation": "horizontal"
             }
         ],
@@ -221,7 +221,7 @@
                 "type": "image",
                 "title": "quadruped motor",
                 "description": "Quadruped motor assembly",
-                "height": 550,
+                "height": 600,
                 "orientation": "vertical"
             }
         ],
@@ -232,7 +232,7 @@
                 "type": "image",
                 "title": "arm gripper omza",
                 "description": "Arm gripper mechanism",
-                "height": 500,
+                "height": 400,
                 "orientation": "square"
             },
             {
@@ -250,7 +250,7 @@
                 "type": "image",
                 "title": "DSC 0893",
                 "description": "Robotic arm assembly",
-                "height": 300,
+                "height": 400,
                 "orientation": "horizontal"
             },
             {
@@ -259,7 +259,7 @@
                 "type": "image",
                 "title": "IMG 7576",
                 "description": "Robotic arm gripper",
-                "height": 300,
+                "height": 400,
                 "orientation": "horizontal"
             }
         ],
@@ -270,7 +270,7 @@
                 "type": "image",
                 "title": "cover",
                 "description": "SnakeBot modular robot",
-                "height": 350,
+                "height": 300,
                 "orientation": "horizontal"
             },
             {
@@ -279,7 +279,7 @@
                 "type": "image",
                 "title": "DSC 0904",
                 "description": "SnakeBot segments",
-                "height": 350,
+                "height": 400,
                 "orientation": "horizontal"
             },
             {
@@ -297,7 +297,7 @@
                 "type": "image",
                 "title": "snakebot V2",
                 "description": "SnakeBot version 2",
-                "height": 400,
+                "height": 300,
                 "orientation": "horizontal"
             }
         ],
@@ -308,7 +308,7 @@
                 "type": "image",
                 "title": "cover",
                 "description": "SpiderBot hexapod robot",
-                "height": 400,
+                "height": 300,
                 "orientation": "horizontal"
             },
             {
@@ -317,7 +317,7 @@
                 "type": "image",
                 "title": "DSC 0951",
                 "description": "SpiderBot hexapod in walking stance",
-                "height": 300,
+                "height": 350,
                 "orientation": "horizontal"
             },
             {
@@ -326,7 +326,7 @@
                 "type": "image",
                 "title": "DSC 0988",
                 "description": "SpiderBot leg mechanism detail",
-                "height": 350,
+                "height": 300,
                 "orientation": "horizontal"
             },
             {
@@ -335,7 +335,7 @@
                 "type": "video",
                 "title": "DSC 7584 (online video cutter.com)",
                 "description": "SpiderBot - Six-legged hexapod robot",
-                "height": 300,
+                "height": 350,
                 "orientation": "horizontal"
             },
             {
@@ -356,7 +356,7 @@
                 "type": "image",
                 "title": "cover",
                 "description": "Trotbot omni-directional robot",
-                "height": 400,
+                "height": 300,
                 "orientation": "horizontal"
             },
             {
@@ -365,7 +365,7 @@
                 "type": "video",
                 "title": "IMG 5137",
                 "description": "Trotbot - Omni-directional robot",
-                "height": 400,
+                "height": 350,
                 "orientation": "horizontal"
             },
             {
@@ -374,7 +374,7 @@
                 "type": "image",
                 "title": "IMG 5158",
                 "description": "Trotbot navigation",
-                "height": 350,
+                "height": 300,
                 "orientation": "horizontal"
             },
             {
@@ -383,7 +383,7 @@
                 "type": "image",
                 "title": "IMG 5188",
                 "description": "Trotbot in action",
-                "height": 300,
+                "height": 350,
                 "orientation": "horizontal"
             }
         ],
@@ -394,7 +394,7 @@
                 "type": "image",
                 "title": "cover",
                 "description": "Vulcan humanoid head",
-                "height": 350,
+                "height": 300,
                 "orientation": "horizontal"
             },
             {
@@ -403,7 +403,7 @@
                 "type": "image",
                 "title": "DSC 7683",
                 "description": "Vulcan face mechanism",
-                "height": 400,
+                "height": 300,
                 "orientation": "horizontal"
             },
             {
@@ -412,7 +412,7 @@
                 "type": "image",
                 "title": "DSC 7693",
                 "description": "Vulcan eye tracking system",
-                "height": 300,
+                "height": 400,
                 "orientation": "horizontal"
             },
             {
@@ -421,7 +421,7 @@
                 "type": "image",
                 "title": "IMG 7606",
                 "description": "Vulcan on display",
-                "height": 350,
+                "height": 400,
                 "orientation": "horizontal"
             },
             {
@@ -430,14 +430,14 @@
                 "type": "image",
                 "title": "IMG 7607",
                 "description": "Vulcan demonstration",
-                "height": 400,
+                "height": 300,
                 "orientation": "horizontal"
             }
         ]
     },
     "homeVideos": [
-        "/Home-Videos/CV.MP4",
         "/Home-Videos/ERC_Badge.mp4",
+        "/Home-Videos/CV.mp4",
         "/Home-Videos/Laser.mp4"
     ]
 }
