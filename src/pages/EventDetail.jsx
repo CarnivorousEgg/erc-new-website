@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useParams, Link } from 'react-router-dom';
 import eventsData from '../data/events.json';
+import galleryMedia from '../data/galleryMedia.json';
+import Masonry from '../components/Masonry';
 
 const EventDetail = () => {
     const { id } = useParams();
@@ -9,6 +11,30 @@ const EventDetail = () => {
     
     // Find the event by id
     const event = eventsData.find(e => e.id === id);
+    
+    // Get gallery items from the generated gallery media data
+    const masonryItems = useMemo(() => {
+        const eventGallery = galleryMedia.events?.[id] || [];
+        
+        // If we have gallery media from the script, use it
+        if (eventGallery.length > 0) {
+            return eventGallery;
+        }
+        
+        // Fallback to event.gallery if no generated data
+        if (event?.gallery) {
+            return event.gallery.map((src, index) => ({
+                id: `${id}-${index + 1}`,
+                img: src,
+                type: 'image',
+                title: `${event.name} - Photo ${index + 1}`,
+                description: event.description || '',
+                height: [300, 350, 400, 450, 500][Math.floor(Math.random() * 5)]
+            }));
+        }
+        
+        return [];
+    }, [id, event]);
     
     if (!event) {
         return (
@@ -30,13 +56,6 @@ const EventDetail = () => {
             </motion.div>
         );
     }
-
-    // Use gallery images from the event data
-    const galleryImages = event.gallery.map((src, index) => ({
-        id: index + 1,
-        src: src,
-        alt: `${event.name} - Image ${index + 1}`
-    }));
 
     return (
         <motion.div
@@ -121,28 +140,39 @@ const EventDetail = () => {
                 )}
             </header>
 
-            {/* Gallery Grid - Masonry-like layout */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {galleryImages.map((image, index) => (
-                    <motion.div
-                        key={image.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className={`relative overflow-hidden rounded-xl cursor-pointer ${
-                            index === 0 ? 'col-span-2 row-span-2' : ''
-                        }`}
-                        onClick={() => setSelectedImage(image)}
-                    >
-                        <img
-                            src={image.src}
-                            alt={image.alt}
-                            className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
-                        />
-                        <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors duration-300" />
-                    </motion.div>
-                ))}
-            </div>
+            {/* Gallery Masonry Grid */}
+            {masonryItems.length > 0 ? (
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                >
+                    <h2 className="text-2xl font-bold mb-6">Gallery</h2>
+                    <Masonry
+                        items={masonryItems}
+                        ease="power3.out"
+                        duration={0.6}
+                        stagger={0.05}
+                        animateFrom="bottom"
+                        scaleOnHover={true}
+                        hoverScale={0.97}
+                        blurToFocus={true}
+                        colorShiftOnHover={false}
+                        onItemClick={(item) => {
+                            if (item.type !== 'video') {
+                                setSelectedImage({
+                                    src: item.img,
+                                    alt: item.title || item.description
+                                });
+                            }
+                        }}
+                    />
+                </motion.div>
+            ) : (
+                <div className="text-center py-12 text-gray-500 dark:text-gray-400">
+                    <p>No gallery images available for this event yet.</p>
+                </div>
+            )}
 
             {/* Lightbox Modal */}
             <AnimatePresence>

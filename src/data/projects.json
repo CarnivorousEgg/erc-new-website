@@ -2,24 +2,27 @@
     {
         "id": "spiderbot",
         "title": "SpiderBot",
-        "category": "ongoing",
-        "image": "https://erc-bpgc.github.io/img/projects/spiderbot.jpg",
+        "category": "completed",
+        "image": "/images/projects/spiderbot/cover.JPG",
         "description": "Project SpiderBot aims to develop a six-legged round body Hexapod. Hexapods are a very versatile legged option since they provide more passive stability during locomotion as compared to a quadruped. They also benefit from a lower impact on the terrain and have greater mobility in surroundings. The major goal of this project is to study and develop walking gaits, trajectories and controllers for the robot to traverse any kind of terrain in an optimum manner. This will also include creating a more robust and reliable design for a hexapod.",
         "github": "https://github.com/ERC-BPGC/SpiderBot",
         "team_leads": [
             { "name": "Garv Gupta" },
             { "name": "Adarsh Gopalakrishnan" },
             { "name": "Akshat Tubki" }
+            
         ]
     },
     {
         "id": "vulcan",
         "title": "Vulcan",
         "category": "ongoing",
-        "image": "https://erc-bpgc.github.io/img/projects/vulcan.jpeg",
+        "image": "/images/projects/vulcan/cover.JPG",
         "description": "Fully humanoid robots that can replicate humans is quite an advanced research topic in the field of robotics. Vulcan is a humanoid head, being built with the aim of replicating human-like features such as blinking, making eye contact with the person speaking and mouth movement while 'speaking'. The project covers multiple technologies ranging from OpenCV to natural language processing methods to achieve this. Since building a full humanoid is quite complex and expensive, this will serve as a great launchpad for those that want to work with humanoid robots in the future.",
         "github": "https://github.com/ERC-BPGC/project-vulcan",
         "team_leads": [
+            { "name": "Aryan Goyal" },
+            { "name": "Kevin Mathew" },
             { "name": "Parth Shah" },
             { "name": "Ritwik Sharma" },
             { "name": "Sharvil Potdar" }
@@ -29,10 +32,12 @@
         "id": "snakebot",
         "title": "SnakeBot",
         "category": "ongoing",
-        "image": "https://erc-bpgc.github.io/img/projects/SnakeBot_v1.jpeg",
+        "image": "/images/projects/snakebot/cover.JPG",
         "description": "Snakebot is a modular, wheel-less robot having universal joints giving a 2 DOF at each joint. The motion is carried out with the help of servos using metallic strings. As of now, we have designed a CAD model. Initially, we will be focusing on straight motion and moving it in the 2D plane. This robot represents a new advancement in the field of robotics. The long-term goal of our project is to implement various snake-like motions such as serpentine, sidewinding, etc., and to enhance friction control of the robot across various terrains.",
         "github": "https://github.com/ERC-BPGC/SnakeBot",
         "team_leads": [
+            { "name": "Dev Thacker" },
+            { "name": "Nilesh Bhatia" },
             { "name": "Harsh Jain" },
             { "name": "Hritik Joglekar" }
         ]
@@ -45,15 +50,28 @@
         "description": "Designing and Building a 12 DoF Quadruped from scratch.",
         "github": "https://github.com/ERC-BPGC/quadruped",
         "team_leads": [
+            { "name": "Saransh Agrawal" },
             { "name": "Ritwik Sharma" },
             { "name": "Snigdha Semwal" }
         ]
     },
     {
+        "id": "swarm-drones",
+        "title": "Swarm Drones",
+        "category": "ongoing",
+        "image": "",
+        "description": "Making an Autonomous Drone with a goal to catch a moving obstacle like a tennis ball.",
+        "github": "https://github.com/ERC-BPGC/",
+        "team_leads": [
+            { "name": "Indrajit Mondal" },
+            { "name": "Omkar Shrikant" }
+        ]
+    },
+    {
         "id": "drone-automation",
         "title": "Drone Automation",
-        "category": "ongoing",
-        "image": "https://erc-bpgc.github.io/img/projects/DroneAuto_Placeholder.png",
+        "category": "completed",
+        "image": "/images/projects/drone-auto/cover.JPG",
         "description": "Making an Autonomous Drone with a goal to catch a moving obstacle like a tennis ball.",
         "github": "https://github.com/ERC-BPGC/",
         "team_leads": [
@@ -64,10 +82,11 @@
         "id": "robotic-arm-v2",
         "title": "Robotic Arm v2",
         "category": "ongoing",
-        "image": "https://erc-bpgc.github.io/img/projects/RoboticArm_v2_placeholder_moveo.jpg",
+        "image": "/images/projects/robotic-arm/cover.JPG",
         "description": "Building v2 for Robotic Arm Project with 6 degrees of freedom.",
         "github": "https://github.com/ERC-BPGC/RoboticArm",
         "team_leads": [
+            { "name": "Sudhanshu Kulkarni" },
             { "name": "Ayush Tiwari" },
             { "name": "Ansh Parmeshwar" }
         ]
@@ -76,7 +95,7 @@
         "id": "robotic-arm-3dof",
         "title": "Robotic Arm (3 DoF)",
         "category": "completed",
-        "image": "https://erc-bpgc.github.io/img/projects/romanov.jpeg",
+        "image": "/images/projects/3dof - arm/cover.png",
         "description": "This project aims to design and manufacture a robust robotic arm integrated with a reliable perception and control system that will enable it to perform simple as well as intelligent tasks with high precision and repeatability. The immediate aim of the project is to design and assemble a five-degree of freedom (DOF) robotic arm with forwarding and inverse kinematic control. Along with the capability of autonomous operation and object detection, which as a whole allows it to perform pick and place operations on objects within the workspace, including playing chess against human players.",
         "github": "https://github.com/ERC-BPGC/RoboticArm",
         "team_leads": [
@@ -91,6 +110,7 @@
         "description": "The idea for this project came up as a fun interactive demonstration for Quark '24. We were able to somewhat implement a Neural Network agent trained using imitation learning techniques. The expert for this approach was the computer of a mobile based air hockey game. Data was extracted from a half-hour long video playthrough of the game through computer vision techniques. The agent was trained using a DNN in keras. This was then deployed on hardware built completely in-house which used a stepper motor actuated gantry to actuate the paddle and a single camera to gather relevant information.",
         "github": "https://github.com/Maker-Rat/Air_Hockey_RL",
         "team_leads": [
+            { "name": "Saransh Agrawal" },
             { "name": "Ritwik Sharma" }
         ]
     },
@@ -120,7 +140,7 @@
         "id": "trotbot",
         "title": "Trotbot",
         "category": "completed",
-        "image": "https://erc-bpgc.github.io/img/projects/trotbot.jpeg",
+        "image": "/images/projects/trotbot/cover.jpg",
         "description": "Trotbot is a multipurpose omni-directional robot, designed to serve autonomously in indoor/semi-indoor environments. It can be used to deliver packages from one location to another in offices, construction sites, buildings etc. It can also be teleoperated to nearby locations using the camera feed for surveillance and mapping. The robot will be able to autonomously navigate around obstacles and reach waypoints set in and around the environment with the use of onboard sensors and be able to detect it's location. Currently, we are looking at visual inertial odometry for robust localization in indoor environments.",
         "github": "https://github.com/ERC-BPGC/Trotbot",
         "team_leads": [
@@ -232,5 +252,18 @@
         "description": "Klann was one of the display projects displayed in Quark 2020 by the ERC. The eight-legged walking bot was based on the Klann linkage, a planar mechanism designed to simulate the gait of a legged animal and function as a wheel replacement.",
         "github": "",
         "team_leads": []
+    },
+    {
+        "id": "8bit-computer",
+        "title": "8 Bit Computer",
+        "category": "mini",
+        "status": "completed",
+        "image": "/images/projects/8bit/8bit.JPG",
+        "description": "A fully functional 8-bit computer built from scratch using basic electronic components, demonstrating fundamental computer architecture principles.",
+        "github": "",
+        "team_leads": [
+            { "name": "Dev Thacker" },
+            { "name": "Harsh Gupta" }
+        ]
     }
 ]

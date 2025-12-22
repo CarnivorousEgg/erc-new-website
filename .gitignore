@@ -118,3 +118,10 @@ dist
 
 # Puppeteer session data
 .puppeteer_data/
+
+
+
+
+public/Home-Videos/
+public/**/*.mp4
+public/**/*.MOV

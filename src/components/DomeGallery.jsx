@@ -56,7 +56,9 @@ function buildItems(pool, seg) {
             role: item.role,
             batch: item.batch,
             currentWork: item.currentWork,
-            linkedin: item.linkedin
+            linkedin: item.linkedin,
+            link: item.link,
+            description: item.description
         };
     });
 
@@ -472,6 +474,8 @@ export default function DomeGallery({
             const linkedin = parent.dataset.linkedin;
             const batch = parent.dataset.batch;
             const currentWork = parent.dataset.currentWork;
+            const link = parent.dataset.link;
+            const description = parent.dataset.description;
 
             if (batch || role) {
                 const topRight = document.createElement('div');
@@ -483,13 +487,15 @@ export default function DomeGallery({
                 overlay.appendChild(topRight);
             }
 
-            if (name) {
+            if (name || description || link) {
                 const info = document.createElement('div');
                 info.className = 'enlarge-info';
                 info.innerHTML = `
-            <h3>${name}</h3>
+            ${name ? `<h3>${name}</h3>` : ''}
+            ${description ? `<p class="description">${description}</p>` : ''}
             ${currentWork ? `<p class="current-work">${currentWork}</p>` : ''}
-            ${linkedin ? `<a href="${linkedin}" target="_blank" rel="noopener noreferrer">LinkedIn</a>` : ''}
+            ${linkedin ? `<a href="${linkedin}" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn</a>` : ''}
+            ${link ? `<a href="${link}" class="view-more-link">View More →</a>` : ''}
           `;
                 info.addEventListener('click', (e) => e.stopPropagation());
                 overlay.appendChild(info);
@@ -604,6 +610,8 @@ export default function DomeGallery({
                                 data-batch={it.batch}
                                 data-current-work={it.currentWork}
                                 data-linkedin={it.linkedin}
+                                data-link={it.link}
+                                data-description={it.description}
                                 data-offset-x={it.x}
                                 data-offset-y={it.y}
                                 data-size-x={it.sizeX}

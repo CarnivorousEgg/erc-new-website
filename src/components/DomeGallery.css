@@ -294,3 +294,36 @@ main.sphere-main {
     margin-bottom: 12px;
     font-style: italic;
 }
+
+.enlarge-info .description {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.enlarge-info .view-more-link {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.enlarge-info .view-more-link:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateX(4px);
+}
+
+.enlarge-info .linkedin-link {
+    background: #0077b5;
+}
+
+.enlarge-info .linkedin-link:hover {
+    background: #005582;
+}

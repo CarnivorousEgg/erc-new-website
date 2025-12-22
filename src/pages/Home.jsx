@@ -1,15 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import GridScan from '../components/GridScan';
 import SpotlightCard from '../components/SpotlightCard';
 import CurveDivider from '../components/CurveDivider';
 import DomeGallery from '../components/DomeGallery';
 import SponsorsTicker from '../components/SponsorsTicker';
 import galleryData from '../data/gallery.json';
+import galleryMedia from '../data/galleryMedia.json';
 import sponsorsData from '../data/sponsors.json';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
+// Home videos from the public/Home-Videos folder
+const HOME_VIDEOS = galleryMedia.homeVideos || [
+    '/Home-Videos/ERC_Badge.mp4',
+    '/Home-Videos/CV.MP4',
+    '/Home-Videos/Laser.mp4'
+];
+
 const Home = () => {
+    const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+    const videoRef = useRef(null);
+
+    // Handle video ended event to switch to next video
+    const handleVideoEnded = () => {
+        setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % HOME_VIDEOS.length);
+    };
+
+    // When video index changes, play the new video
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.load();
+            videoRef.current.play().catch(() => {
+                // Autoplay might be blocked, that's okay
+            });
+        }
+    }, [currentVideoIndex]);
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -20,19 +46,39 @@ const Home = () => {
         >
             {/* Hero Section with Video Background - Full Screen */}
             <section className="section-hero relative h-screen flex flex-col items-center justify-center overflow-hidden">
-                {/* Video Background */}
+                {/* Video Background - Cycles through Home-Videos */}
                 <div className="absolute inset-0">
                     <video
+                        ref={videoRef}
                         autoPlay
-                        loop
                         muted
                         playsInline
+                        onEnded={handleVideoEnded}
                         className="w-full h-full object-cover"
+                        key={currentVideoIndex}
                     >
-                        <source src="/Video_backdrop.mp4" type="video/mp4" />
+                        <source src={HOME_VIDEOS[currentVideoIndex]} type="video/mp4" />
                     </video>
                     {/* Black overlay for text visibility */}
                     <div className="absolute inset-0 bg-black/50"></div>
+                    
+                    {/* Video indicator dots */}
+                    {HOME_VIDEOS.length > 1 && (
+                        <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+                            {HOME_VIDEOS.map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setCurrentVideoIndex(index)}
+                                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                        index === currentVideoIndex 
+                                            ? 'bg-white w-6' 
+                                            : 'bg-white/50 hover:bg-white/70'
+                                    }`}
+                                    aria-label={`Play video ${index + 1}`}
+                                />
+                            ))}
+                        </div>
+                    )}
                 </div>
 
                 {/* Old GridScan Background - Commented out */}
@@ -110,26 +156,32 @@ const Home = () => {
                 <div className="py-20 px-4 container mx-auto">
                     <h2 className="text-4xl font-bold text-center mb-12">What We Do</h2>
                     <div className="grid md:grid-cols-3 gap-8">
-                        <SpotlightCard>
-                            <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Robotics</h3>
-                            <p className="text-gray-600 dark:text-gray-400">
-                                Designing and building autonomous robots for various competitions and research purposes.
-                            </p>
-                        </SpotlightCard>
+                        <Link to="/projects" className="block transition-transform hover:scale-105">
+                            <SpotlightCard>
+                                <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Research Projects</h3>
+                                <p className="text-gray-600 dark:text-gray-400">
+                                    We work on cutting-edge research projects, bringing innovative ideas from concept to implementation.
+                                </p>
+                            </SpotlightCard>
+                        </Link>
 
-                        <SpotlightCard>
-                            <h3 className="text-2xl font-bold mb-4 text-purple-600 dark:text-purple-400">Electronics</h3>
-                            <p className="text-gray-600 dark:text-gray-400">
-                                Developing embedded systems, IoT devices, and custom PCBs for innovative solutions.
-                            </p>
-                        </SpotlightCard>
+                        <Link to="/events" className="block transition-transform hover:scale-105">
+                            <SpotlightCard>
+                                <h3 className="text-2xl font-bold mb-4 text-purple-600 dark:text-purple-400">Hosting Events</h3>
+                                <p className="text-gray-600 dark:text-gray-400">
+                                    We organize and host a variety of events throughout the year, from workshops to competitions.
+                                </p>
+                            </SpotlightCard>
+                        </Link>
 
-                        <SpotlightCard>
-                            <h3 className="text-2xl font-bold mb-4 text-pink-600 dark:text-pink-400">Research</h3>
-                            <p className="text-gray-600 dark:text-gray-400">
-                                Pushing the boundaries of technology through cutting-edge research and development.
-                            </p>
-                        </SpotlightCard>
+                        <Link to="/about#contact" className="block transition-transform hover:scale-105">
+                            <SpotlightCard>
+                                <h3 className="text-2xl font-bold mb-4 text-pink-600 dark:text-pink-400">Community Building</h3>
+                                <p className="text-gray-600 dark:text-gray-400">
+                                    We foster engagement and inspire a passion for robotics across our campus community.
+                                </p>
+                            </SpotlightCard>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -156,8 +208,9 @@ const Home = () => {
                     </p>
                     <div className="w-full overflow-hidden">
                         <DomeGallery
-                            items={[...galleryData.events, ...(galleryData.projects || [])]}
+                            items={[...galleryData.events, ...(galleryData.projects || []), ...(galleryData.alumni || [])]}
                             overlayBlurColor="var(--dome-overlay)"
+                            segments={20}
                         />
                     </div>
                 </div>

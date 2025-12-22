@@ -4,7 +4,7 @@
         "name": "Open Day",
         "description": "Annual showcase of ERC projects and demonstrations",
         "fullDescription": "Open Day is ERC's flagship annual event where we open our doors to the entire campus community. Students get hands-on experience with our robots, drones, and electronic projects. It's an opportunity for freshers to explore the world of robotics and electronics, interact with club members, and see live demonstrations of our ongoing projects.",
-        "image": "/images/events/open-day/cover.jpg",
+        "image": "/images/events/open-day/DSC_0788.JPG",
         "date": "Every Semester",
         "location": "ERC Lab, BITS Goa",
         "highlights": [
@@ -12,14 +12,6 @@
             "Hands-on project experiences",
             "Q&A with project leads",
             "Recruitment information"
-        ],
-        "gallery": [
-            "/images/events/open-day/1.jpg",
-            "/images/events/open-day/2.jpg",
-            "/images/events/open-day/3.jpg",
-            "/images/events/open-day/4.jpg",
-            "/images/events/open-day/5.jpg",
-            "/images/events/open-day/6.jpg"
         ]
     },
     {
@@ -27,7 +19,7 @@
         "name": "Quark",
         "description": "BITS Goa's annual technical festival",
         "fullDescription": "Quark is the annual technical festival of BITS Pilani, Goa Campus. ERC plays a major role in Quark by organizing robotics competitions, displaying our flagship projects, and conducting workshops. Our display projects like LED Globe, Sketcher, and LED Hexapad have been crowd favorites over the years.",
-        "image": "/images/events/quark/cover.jpg",
+        "image": "",
         "date": "February (Annual)",
         "location": "BITS Pilani, Goa Campus",
         "highlights": [
@@ -35,14 +27,6 @@
             "Project exhibitions",
             "Technical workshops",
             "Inter-college participation"
-        ],
-        "gallery": [
-            "/images/events/quark/1.jpg",
-            "/images/events/quark/2.jpg",
-            "/images/events/quark/3.jpg",
-            "/images/events/quark/4.jpg",
-            "/images/events/quark/5.jpg",
-            "/images/events/quark/6.jpg"
         ]
     },
     {
@@ -50,7 +34,7 @@
         "name": "CTE Techweekend",
         "description": "Weekend of technical workshops and competitions",
         "fullDescription": "CTE Techweekend is a collaborative event organized by the technical clubs of BITS Goa. ERC conducts hands-on workshops on electronics, Arduino programming, PCB design, and robotics fundamentals. It's a great opportunity for beginners to get started with hardware projects.",
-        "image": "/images/events/cte-techweekend/cover.jpg",
+        "image": "",
         "date": "Semester-wise",
         "location": "BITS Pilani, Goa Campus",
         "highlights": [
@@ -58,14 +42,6 @@
             "PCB design sessions",
             "Robotics basics",
             "Electronics fundamentals"
-        ],
-        "gallery": [
-            "/images/events/cte-techweekend/1.jpg",
-            "/images/events/cte-techweekend/2.jpg",
-            "/images/events/cte-techweekend/3.jpg",
-            "/images/events/cte-techweekend/4.jpg",
-            "/images/events/cte-techweekend/5.jpg",
-            "/images/events/cte-techweekend/6.jpg"
         ]
     },
     {
@@ -73,7 +49,7 @@
         "name": "QSTP",
         "description": "Quark Summer Technical Projects",
         "fullDescription": "QSTP (Quark Summer Technical Projects) is a summer program where students work on technical projects under the guidance of senior club members. ERC mentors projects in robotics, embedded systems, IoT, and automation. It's an intensive learning experience that helps students build real-world skills.",
-        "image": "/images/events/qstp/cover.jpg",
+        "image": "",
         "date": "Summer Break (May-July)",
         "location": "Online + Campus",
         "highlights": [
@@ -81,14 +57,6 @@
             "Weekly progress reviews",
             "Final project presentations",
             "Certificate of completion"
-        ],
-        "gallery": [
-            "/images/events/qstp/1.jpg",
-            "/images/events/qstp/2.jpg",
-            "/images/events/qstp/3.jpg",
-            "/images/events/qstp/4.jpg",
-            "/images/events/qstp/5.jpg",
-            "/images/events/qstp/6.jpg"
         ]
     },
     {
@@ -96,7 +64,7 @@
         "name": "Inductions",
         "description": "Annual recruitment of new club members",
         "fullDescription": "ERC Inductions is our annual recruitment drive where we welcome passionate students into the club. The process includes technical assessments, hands-on tasks, and interviews to identify students with genuine interest in electronics and robotics. Selected members join ongoing projects and contribute to the club's growth.",
-        "image": "/images/events/inductions/cover.jpg",
+        "image": "",
         "date": "August-September (Annual)",
         "location": "ERC Lab, BITS Goa",
         "highlights": [
@@ -104,14 +72,6 @@
             "Hands-on project tasks",
             "Personal interviews",
             "Project team allocation"
-        ],
-        "gallery": [
-            "/images/events/inductions/1.jpg",
-            "/images/events/inductions/2.jpg",
-            "/images/events/inductions/3.jpg",
-            "/images/events/inductions/4.jpg",
-            "/images/events/inductions/5.jpg",
-            "/images/events/inductions/6.jpg"
         ]
     },
     {
@@ -119,7 +79,7 @@
         "name": "Eduspark",
         "description": "Educational outreach and school workshops",
         "fullDescription": "Eduspark is ERC's educational outreach initiative where we conduct robotics and electronics workshops for school students. We visit local schools and organize campus events to inspire the next generation of engineers. Students get to interact with robots, learn basic programming, and understand the fundamentals of electronics.",
-        "image": "/images/events/eduspark/cover.jpg",
+        "image": "/images/events/eduspark/IMG_5153.jpg",
         "date": "Throughout the year",
         "location": "Schools & Campus",
         "highlights": [
@@ -127,14 +87,6 @@
             "Basic robotics workshops",
             "Interactive demonstrations",
             "STEM education promotion"
-        ],
-        "gallery": [
-            "/images/events/eduspark/1.jpg",
-            "/images/events/eduspark/2.jpg",
-            "/images/events/eduspark/3.jpg",
-            "/images/events/eduspark/4.jpg",
-            "/images/events/eduspark/5.jpg",
-            "/images/events/eduspark/6.jpg"
         ]
     }
 ]

@@ -1,96 +1,86 @@
 {
     "events": [
         {
-            "name": "Open Day",
-            "image": "/images/events/open-day/cover.jpg",
-            "description": "Annual showcase of ERC projects and demonstrations"
-        },
-        {
-            "name": "Quark",
-            "image": "/images/events/quark/cover.jpg",
-            "description": "BITS Goa's annual technical festival"
-        },
-        {
-            "name": "CTE Techweekend",
-            "image": "/images/events/cte-techweekend/cover.jpg",
-            "description": "Weekend of technical workshops and competitions"
-        },
-        {
-            "name": "QSTP",
-            "image": "/images/events/qstp/cover.jpg",
-            "description": "Quark Summer Technical Projects"
-        },
-        {
-            "name": "Inductions",
-            "image": "/images/events/inductions/cover.jpg",
-            "description": "Annual recruitment of new club members"
-        },
-        {
             "name": "Eduspark",
-            "image": "/images/events/eduspark/cover.jpg",
-            "description": "Educational outreach and school workshops"
+            "image": "/images/events/eduspark/IMG_5153.jpg",
+            "description": "Eduspark - Educational outreach program",
+            "link": "/events/eduspark"
+        },
+        {
+            "name": "Open Day",
+            "image": "/images/events/open-day/DSC_0788.JPG",
+            "description": "Members demonstrating robot capabilities to visitors",
+            "link": "/events/open-day"
         }
     ],
     "projects": [
         {
-            "name": "SpiderBot",
-            "image": "https://erc-bpgc.github.io/img/projects/spiderbot.jpg",
-            "description": "Six-legged Hexapod robot"
+            "name": "3dof   arm",
+            "image": "/images/projects/3dof - arm/cover.png",
+            "description": "Robotic Arm 3 DoF",
+            "link": "/projects/3dof - arm"
         },
         {
-            "name": "Vulcan",
-            "image": "https://erc-bpgc.github.io/img/projects/vulcan.jpeg",
-            "description": "Humanoid head with AI features"
+            "name": "8bit",
+            "image": "/images/projects/8bit/cover.JPG",
+            "description": "8-Bit Computer Project - Custom built computer from scratch",
+            "link": "/projects/8bit"
         },
         {
-            "name": "SnakeBot",
-            "image": "https://erc-bpgc.github.io/img/projects/SnakeBot_v1.jpeg",
-            "description": "Modular snake-like robot"
+            "name": "Drone Auto",
+            "image": "/images/projects/drone-auto/cover.JPG",
+            "description": "Drone automation project",
+            "link": "/projects/drone-auto"
         },
         {
             "name": "Quadruped",
-            "image": "https://erc-bpgc.github.io/img/projects/quadruped.png",
-            "description": "12 DoF four-legged robot"
+            "image": "/images/projects/quadruped/quadruped%20motor.jpeg",
+            "description": "Quadruped motor assembly",
+            "link": "/projects/quadruped"
         },
         {
-            "name": "Air Hockey",
-            "image": "https://erc-bpgc.github.io/img/projects/AirHockey.png",
-            "description": "AI-powered air hockey player"
+            "name": "Robotic Arm",
+            "image": "/images/projects/robotic-arm/cover.JPG",
+            "description": "Robotic Arm v2",
+            "link": "/projects/robotic-arm"
         },
         {
-            "name": "Carborone",
-            "image": "https://erc-bpgc.github.io/img/projects/carborone.jpeg",
-            "description": "Autonomous drone-car hybrid"
+            "name": "Snakebot",
+            "image": "/images/projects/snakebot/cover.JPG",
+            "description": "SnakeBot modular robot",
+            "link": "/projects/snakebot"
+        },
+        {
+            "name": "Spiderbot",
+            "image": "/images/projects/spiderbot/cover.JPG",
+            "description": "SpiderBot hexapod robot",
+            "link": "/projects/spiderbot"
         },
         {
             "name": "Trotbot",
-            "image": "https://erc-bpgc.github.io/img/projects/trotbot.jpeg",
-            "description": "Omni-directional delivery robot"
+            "image": "/images/projects/trotbot/cover.jpg",
+            "description": "Trotbot omni-directional robot",
+            "link": "/projects/trotbot"
         },
         {
-            "name": "SwarmBots",
-            "image": "https://erc-bpgc.github.io/img/projects/swarm_bots_2.jpg",
-            "description": "Collective decision-making robots"
+            "name": "Vulcan",
+            "image": "/images/projects/vulcan/cover.JPG",
+            "description": "Vulcan humanoid head",
+            "link": "/projects/vulcan"
+        }
+    ],
+    "alumni": [
+        {
+            "name": "ERC Alumni",
+            "image": "/images/alumni.jpg",
+            "description": "Our proud alumni network",
+            "link": "/about"
         },
         {
-            "name": "Sketcher",
-            "image": "https://erc-bpgc.github.io/img/projects/sketcher.jpeg",
-            "description": "Automated drawing machine"
-        },
-        {
-            "name": "LED Globe",
-            "image": "https://erc-bpgc.github.io/img/projects/led_globe.jpeg",
-            "description": "POV LED display globe"
-        },
-        {
-            "name": "LED Hexapad",
-            "image": "https://erc-bpgc.github.io/img/projects/led_hexapad2.jpeg",
-            "description": "Interactive MIDI controller"
-        },
-        {
-            "name": "Klann",
-            "image": "https://erc-bpgc.github.io/img/projects/klann.jpeg",
-            "description": "Eight-legged walking bot"
+            "name": "ERC Alumni",
+            "image": "/images/alumni2.jpg",
+            "description": "Our proud alumni network",
+            "link": "/about"
         }
     ]
 }

@@ -1,0 +1,443 @@
+{
+    "events": {
+        "cte-techweekend": [],
+        "eduspark": [
+            {
+                "id": "eduspark-1",
+                "img": "/images/events/eduspark/ef6acea7-a625-40c6-92e0-83c2fe176da1.mp4",
+                "type": "video",
+                "title": "ef6acea7 a625 40c6 92e0 83c2fe176da1",
+                "description": "Educational workshop in action",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "eduspark-2",
+                "img": "/images/events/eduspark/IMG_5153.jpg",
+                "type": "image",
+                "title": "IMG 5153",
+                "description": "Eduspark - Educational outreach program",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "eduspark-3",
+                "img": "/images/events/eduspark/IMG_5170.jpg",
+                "type": "image",
+                "title": "IMG 5170",
+                "description": "Eduspark - Educational outreach program",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "eduspark-4",
+                "img": "/images/events/eduspark/IMG_5178.jpg",
+                "type": "image",
+                "title": "IMG 5178",
+                "description": "Eduspark - Educational outreach program",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "eduspark-5",
+                "img": "/images/events/eduspark/IMG_5185.jpg",
+                "type": "image",
+                "title": "IMG 5185",
+                "description": "Eduspark - Educational outreach program",
+                "height": 300,
+                "orientation": "horizontal"
+            }
+        ],
+        "inductions": [],
+        "open-day": [
+            {
+                "id": "open-day-1",
+                "img": "/images/events/open-day/DSC_0788.JPG",
+                "type": "image",
+                "title": "DSC 0788",
+                "description": "Members demonstrating robot capabilities to visitors",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "open-day-2",
+                "img": "/images/events/open-day/DSC_0810.JPG",
+                "type": "image",
+                "title": "DSC 0810",
+                "description": "Hands-on experience with electronics projects",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "open-day-3",
+                "img": "/images/events/open-day/DSC_0906.JPG",
+                "type": "image",
+                "title": "DSC 0906",
+                "description": "Interactive session with freshers",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "open-day-4",
+                "img": "/images/events/open-day/DSC_0968.JPG",
+                "type": "image",
+                "title": "DSC 0968",
+                "description": "Project display booth at Open Day",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "open-day-5",
+                "img": "/images/events/open-day/IMG_7573.JPG",
+                "type": "image",
+                "title": "IMG 7573",
+                "description": "Crowd gathered around robot demonstration",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "open-day-6",
+                "img": "/images/events/open-day/IMG_7592.JPG",
+                "type": "image",
+                "title": "IMG 7592",
+                "description": "Students learning about embedded systems",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "open-day-7",
+                "img": "/images/events/open-day/IMG_7606.JPG",
+                "type": "image",
+                "title": "IMG 7606",
+                "description": "ERC team members explaining project details",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "open-day-8",
+                "img": "/images/events/open-day/IMG_7607.JPG",
+                "type": "image",
+                "title": "IMG 7607",
+                "description": "Live robot demo in action",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "open-day-9",
+                "img": "/images/events/open-day/WhatsApp%20Image%202025-12-14%20at%2012.29.36%20AM.jpeg",
+                "type": "image",
+                "title": "WhatsApp Image 2025 12 14 at 12.29.36 AM",
+                "description": "Group photo with event participants",
+                "height": 300,
+                "orientation": "horizontal"
+            }
+        ],
+        "qstp": [],
+        "quark": []
+    },
+    "projects": {
+        "3dof - arm": [
+            {
+                "id": "3dof - arm-1",
+                "img": "/images/projects/3dof - arm/arm%20gripper%20ansh.jpeg",
+                "type": "image",
+                "title": "arm gripper ansh",
+                "description": "Arm gripper design",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "3dof - arm-2",
+                "img": "/images/projects/3dof - arm/cover.png",
+                "type": "image",
+                "title": "cover",
+                "description": "Robotic Arm 3 DoF",
+                "height": 400,
+                "orientation": "square"
+            },
+            {
+                "id": "3dof - arm-3",
+                "img": "/images/projects/3dof - arm/WhatsApp%20Image%202024-07-16%20at%202.04.55%20PM.jpeg",
+                "type": "image",
+                "title": "WhatsApp Image 2024 07 16 at 2.04.55 PM",
+                "description": "Robotic Arm (3 DoF) - Three degree of freedom arm",
+                "height": 350,
+                "orientation": "horizontal"
+            }
+        ],
+        "8bit": [
+            {
+                "id": "8bit-1",
+                "img": "/images/projects/8bit/8bit2.JPG",
+                "type": "image",
+                "title": "8bit2",
+                "description": "Close-up of circuit board design",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "8bit-2",
+                "img": "/images/projects/8bit/cover.JPG",
+                "type": "image",
+                "title": "cover",
+                "description": "8-Bit Computer Project - Custom built computer from scratch",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "8bit-3",
+                "img": "/images/projects/8bit/DSC_0956.JPG",
+                "type": "image",
+                "title": "DSC 0956",
+                "description": "8-bit computer on display",
+                "height": 400,
+                "orientation": "horizontal"
+            }
+        ],
+        "drone-auto": [
+            {
+                "id": "drone-auto-1",
+                "img": "/images/projects/drone-auto/cover.JPG",
+                "type": "image",
+                "title": "cover",
+                "description": "Drone automation project",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "drone-auto-2",
+                "img": "/images/projects/drone-auto/drone%20auto.jpeg",
+                "type": "image",
+                "title": "drone auto",
+                "description": "Drone in flight",
+                "height": 300,
+                "orientation": "horizontal"
+            }
+        ],
+        "quadruped": [
+            {
+                "id": "quadruped-1",
+                "img": "/images/projects/quadruped/quadruped%20motor.jpeg",
+                "type": "image",
+                "title": "quadruped motor",
+                "description": "Quadruped motor assembly",
+                "height": 550,
+                "orientation": "vertical"
+            }
+        ],
+        "robotic-arm": [
+            {
+                "id": "robotic-arm-1",
+                "img": "/images/projects/robotic-arm/arm%20gripper%20omza.jpeg",
+                "type": "image",
+                "title": "arm gripper omza",
+                "description": "Arm gripper mechanism",
+                "height": 500,
+                "orientation": "square"
+            },
+            {
+                "id": "robotic-arm-2",
+                "img": "/images/projects/robotic-arm/cover.JPG",
+                "type": "image",
+                "title": "cover",
+                "description": "Robotic Arm v2",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "robotic-arm-3",
+                "img": "/images/projects/robotic-arm/DSC_0893.JPG",
+                "type": "image",
+                "title": "DSC 0893",
+                "description": "Robotic arm assembly",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "robotic-arm-4",
+                "img": "/images/projects/robotic-arm/IMG_7576.JPG",
+                "type": "image",
+                "title": "IMG 7576",
+                "description": "Robotic arm gripper",
+                "height": 300,
+                "orientation": "horizontal"
+            }
+        ],
+        "snakebot": [
+            {
+                "id": "snakebot-1",
+                "img": "/images/projects/snakebot/cover.JPG",
+                "type": "image",
+                "title": "cover",
+                "description": "SnakeBot modular robot",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "snakebot-2",
+                "img": "/images/projects/snakebot/DSC_0904.JPG",
+                "type": "image",
+                "title": "DSC 0904",
+                "description": "SnakeBot segments",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "snakebot-3",
+                "img": "/images/projects/snakebot/DSC_7591%20(online-video-cutter.com).mp4",
+                "type": "video",
+                "title": "DSC 7591 (online video cutter.com)",
+                "description": "SnakeBot - Modular wheel-less robot",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "snakebot-4",
+                "img": "/images/projects/snakebot/snakebot%20V2.jpeg",
+                "type": "image",
+                "title": "snakebot V2",
+                "description": "SnakeBot version 2",
+                "height": 400,
+                "orientation": "horizontal"
+            }
+        ],
+        "spiderbot": [
+            {
+                "id": "spiderbot-1",
+                "img": "/images/projects/spiderbot/cover.JPG",
+                "type": "image",
+                "title": "cover",
+                "description": "SpiderBot hexapod robot",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "spiderbot-2",
+                "img": "/images/projects/spiderbot/DSC_0951.JPG",
+                "type": "image",
+                "title": "DSC 0951",
+                "description": "SpiderBot hexapod in walking stance",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "spiderbot-3",
+                "img": "/images/projects/spiderbot/DSC_0988.JPG",
+                "type": "image",
+                "title": "DSC 0988",
+                "description": "SpiderBot leg mechanism detail",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "spiderbot-4",
+                "img": "/images/projects/spiderbot/DSC_7584%20(online-video-cutter.com).mp4",
+                "type": "video",
+                "title": "DSC 7584 (online video cutter.com)",
+                "description": "SpiderBot - Six-legged hexapod robot",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "spiderbot-5",
+                "img": "/images/projects/spiderbot/DSC_7635.JPG",
+                "type": "image",
+                "title": "DSC 7635",
+                "description": "SpiderBot full assembly",
+                "height": 400,
+                "orientation": "horizontal"
+            }
+        ],
+        "swarm-drones": [],
+        "trotbot": [
+            {
+                "id": "trotbot-1",
+                "img": "/images/projects/trotbot/cover.jpg",
+                "type": "image",
+                "title": "cover",
+                "description": "Trotbot omni-directional robot",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "trotbot-2",
+                "img": "/images/projects/trotbot/IMG_5137.MOV",
+                "type": "video",
+                "title": "IMG 5137",
+                "description": "Trotbot - Omni-directional robot",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "trotbot-3",
+                "img": "/images/projects/trotbot/IMG_5158.jpg",
+                "type": "image",
+                "title": "IMG 5158",
+                "description": "Trotbot navigation",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "trotbot-4",
+                "img": "/images/projects/trotbot/IMG_5188.jpg",
+                "type": "image",
+                "title": "IMG 5188",
+                "description": "Trotbot in action",
+                "height": 300,
+                "orientation": "horizontal"
+            }
+        ],
+        "vulcan": [
+            {
+                "id": "vulcan-1",
+                "img": "/images/projects/vulcan/cover.JPG",
+                "type": "image",
+                "title": "cover",
+                "description": "Vulcan humanoid head",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "vulcan-2",
+                "img": "/images/projects/vulcan/DSC_7683.JPG",
+                "type": "image",
+                "title": "DSC 7683",
+                "description": "Vulcan face mechanism",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "vulcan-3",
+                "img": "/images/projects/vulcan/DSC_7693.JPG",
+                "type": "image",
+                "title": "DSC 7693",
+                "description": "Vulcan eye tracking system",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "vulcan-4",
+                "img": "/images/projects/vulcan/IMG_7606.JPG",
+                "type": "image",
+                "title": "IMG 7606",
+                "description": "Vulcan on display",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "vulcan-5",
+                "img": "/images/projects/vulcan/IMG_7607.JPG",
+                "type": "image",
+                "title": "IMG 7607",
+                "description": "Vulcan demonstration",
+                "height": 400,
+                "orientation": "horizontal"
+            }
+        ]
+    },
+    "homeVideos": [
+        "/Home-Videos/CV.MP4",
+        "/Home-Videos/ERC_Badge.mp4",
+        "/Home-Videos/Laser.mp4"
+    ]
+}
