@@ -213,7 +213,7 @@ const About = () => {
                                             </span>
                                         </div>
                                         <span className="text-sm md:text-base text-white/80 group-hover:text-white group-hover:translate-x-2 transition-all duration-300 hidden sm:flex items-center gap-2">
-                                            Visual vibes only
+                                            Reels & Behind the scenes
                                             <span className="text-lg md:text-xl">→</span>
                                         </span>
                                     </div>
@@ -270,17 +270,17 @@ const About = () => {
                                 {/* Email Bar */}
                                 <a
                                     href="mailto:erc@goa.bits-pilani.ac.in"
-                                    className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-gray-900/30 dark:hover:shadow-white/20"
+                                    className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-gray-900/30 dark:hover:shadow-white/20 overflow-hidden"
                                 >
-                                    <div className="flex justify-between items-center">
+                                    <div className="flex justify-between items-center relative">
                                         <div className="flex items-center gap-4 md:gap-6">
-                                            {/* Email rotates left */}
-                                            <FaEnvelope className="text-3xl md:text-5xl text-white dark:text-gray-900 transition-transform duration-300 ease-out group-hover:-rotate-12" />
-                                            <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white dark:text-gray-900 uppercase tracking-tight">
+                                            {/* Email slides right to cover text - fast reset, slow animation */}
+                                            <FaEnvelope className="text-3xl md:text-5xl text-white dark:text-gray-900 transition-all duration-300 ease-linear group-hover:translate-x-[calc(100vw-8rem)] group-hover:scale-150 group-hover:opacity-0 group-hover:duration-[6000ms] z-10 relative" />
+                                            <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white dark:text-gray-900 uppercase tracking-tight transition-opacity duration-300 ease-linear group-hover:opacity-0 group-hover:duration-[4100ms]">
                                                 The Old School Way
                                             </span>
                                         </div>
-                                        <span className="text-sm md:text-base text-white/80 dark:text-gray-600 group-hover:text-white dark:group-hover:text-gray-900 group-hover:translate-x-2 transition-all duration-300 hidden sm:flex items-center gap-2">
+                                        <span className="text-sm md:text-base text-white/80 dark:text-gray-600 group-hover:text-white dark:group-hover:text-gray-900 transition-all duration-300 ease-linear hidden sm:flex items-center gap-2 group-hover:opacity-0 group-hover:duration-[4100ms]">
                                             Send us an email
                                             <span className="text-lg md:text-xl">→</span>
                                         </span>
