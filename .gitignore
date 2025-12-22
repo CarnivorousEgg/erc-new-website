@@ -122,6 +122,5 @@ dist
 
 
 
-public/Home-Videos/
-public/**/*.mp4
-public/**/*.MOV
+public/Home-Videos/Computer_Vision.MP4
+
