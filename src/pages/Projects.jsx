@@ -1,23 +1,29 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import projectsData from '../data/projects.json';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import BackToTop from '../components/BackToTop';
 
 const Projects = () => {
     const location = useLocation();
     const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
     const [filter, setFilter] = useState('all');
 
     React.useEffect(() => {
-        // Check for hash-based filter (e.g., #completed, #ongoing)
+        // Check for query param filter (e.g., ?filter=completed)
+        const queryFilter = searchParams.get('filter');
+        // Also check for hash-based filter (e.g., #completed, #ongoing) for backwards compatibility
         const hash = location.hash.replace('#', '');
-        if (hash && ['all', 'completed', 'ongoing', 'mini'].includes(hash)) {
+        
+        if (queryFilter && ['all', 'completed', 'ongoing', 'mini'].includes(queryFilter)) {
+            setFilter(queryFilter);
+        } else if (hash && ['all', 'completed', 'ongoing', 'mini'].includes(hash)) {
             setFilter(hash);
         } else {
             setFilter('all');
         }
-    }, [location.hash]);
+    }, [location.hash, searchParams]);
 
     // Custom sorting for 'all' view: ongoing first, then alternate mini/completed
     const getSortedProjects = () => {

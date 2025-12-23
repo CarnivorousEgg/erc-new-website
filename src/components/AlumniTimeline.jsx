@@ -159,6 +159,7 @@ const AlumniTimeline = ({ alumni = [] }) => {
             </div>
 
             {/* Mobile Navigation - Horizontal Pills */}
+            <div className="mobile-timeline-backdrop" />
             <nav className="mobile-timeline-nav">
                 {sortedBatches.map((batch) => (
                     <button

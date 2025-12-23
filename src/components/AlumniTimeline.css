@@ -10,6 +10,11 @@
     position: relative;
 }
 
+/* Hide mobile backdrop on desktop */
+.mobile-timeline-backdrop {
+    display: none;
+}
+
 /* ===== FIXED YEAR INDICATOR - Desktop Only ===== */
 .fixed-year-indicator {
     position: fixed;
@@ -160,6 +165,7 @@
     .alumni-timeline-wrapper {
         padding: 10px;
         padding-left: 10px; /* Remove space for fixed indicator on mobile */
+        padding-top: 120px; /* Account for both navbars */
     }
 
     .fixed-year-indicator {
@@ -175,29 +181,55 @@
         overflow-x: auto;
         gap: 12px;
         padding: 12px 15px;
-        background: rgba(249, 250, 251, 0.95);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        /* Solid opaque background - theme dependent */
+        background: #f9fafb;
         position: fixed;
-        top: 64px; /* Right below main navbar */
+        top: 76px; /* Below the blur backdrop area */
         left: 0;
         right: 0;
-        z-index: 99;
-        border-bottom: 1px solid var(--border, #e5e7eb);
+        z-index: 30; /* Below menu overlay (z-40) and main navbar (z-50) */
+        border-bottom: 1px solid #e5e7eb;
         margin: 0;
         scrollbar-width: none;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .dark .mobile-timeline-nav {
-        background: rgba(30, 41, 59, 0.95);
+        background: #0f172a;
         border-color: #334155;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
+    /* Blurred backdrop that sits behind the main navbar area - theme dependent */
+    .mobile-timeline-backdrop {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        background: rgba(249, 250, 251, 0.95);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        z-index: 35; /* Above content, below year nav */
+    }
+
+    .dark .mobile-timeline-backdrop {
+        background: rgba(15, 23, 42, 0.95);
+    }
+
+    /* Remove the pseudo-element approach */
+    .mobile-timeline-nav::before {
+        display: none;
+    }
+
+    .dark .mobile-timeline-nav::before {
+        background: rgba(15, 23, 42, 0.85);
+    }
+
     /* Add padding to content to account for fixed nav */
     .timeline-content {
-        padding-top: 60px;
+        padding-top: 20px;
     }
 
     .timeline-header {

@@ -10,6 +10,7 @@ import teamData from '../data/team.json';
 import { FaLinkedin, FaInstagram, FaEnvelope, FaTwitter, FaCamera } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { cn } from '../utils/cn';
+import '../components/ContactAnimations.css';
 
 // Counter animation hook
 const useCountUp = (end, duration = 2000, shouldStart = false) => {
@@ -195,97 +196,109 @@ const About = () => {
                             {/* Stacked Bars */}
                             <div className="space-y-4">
                                 {/* Instagram Bar */}
-                                <a
-                                    href="https://www.instagram.com/erc_bitsgoa/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:from-pink-400 hover:via-red-400 hover:to-yellow-400 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink-500/30"
-                                >
-                                    <div className="flex justify-between items-center">
-                                        <div className="flex items-center gap-4 md:gap-6">
-                                            {/* Instagram to Camera morph */}
-                                            <div className="relative w-[30px] h-[30px] md:w-[48px] md:h-[48px]">
-                                                <FaInstagram className="absolute inset-0 text-3xl md:text-5xl text-white transition-all duration-300 group-hover:opacity-0 group-hover:scale-50 group-hover:rotate-180" />
-                                                <FaCamera className="absolute inset-0 text-3xl md:text-5xl text-white transition-all duration-300 opacity-0 scale-50 -rotate-180 group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0" />
+                                <div>
+                                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 sm:hidden">Reels & Behind the scenes</p>
+                                    <a
+                                        href="https://www.instagram.com/erc_bitsgoa/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:from-pink-400 hover:via-red-400 hover:to-yellow-400 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink-500/30"
+                                    >
+                                        <div className="flex justify-between items-center">
+                                            <div className="flex items-center gap-4 md:gap-6">
+                                                {/* Instagram to Camera morph - desktop only */}
+                                                <div className="relative w-[30px] h-[30px] md:w-[48px] md:h-[48px]">
+                                                    <FaInstagram className="absolute inset-0 text-3xl md:text-5xl text-white transition-all duration-300 md:group-hover:opacity-0 md:group-hover:scale-50 md:group-hover:rotate-180" />
+                                                    <FaCamera className="absolute inset-0 text-3xl md:text-5xl text-white transition-all duration-300 opacity-0 md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0" />
+                                                </div>
+                                                <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+                                                    The Gram
+                                                </span>
                                             </div>
-                                            <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
-                                                The Gram
+                                            <span className="text-sm md:text-base text-white/80 group-hover:text-white group-hover:translate-x-2 transition-all duration-300 hidden sm:flex items-center gap-2">
+                                                Reels & Behind the scenes
+                                                <span className="text-lg md:text-xl">→</span>
                                             </span>
                                         </div>
-                                        <span className="text-sm md:text-base text-white/80 group-hover:text-white group-hover:translate-x-2 transition-all duration-300 hidden sm:flex items-center gap-2">
-                                            Reels & Behind the scenes
-                                            <span className="text-lg md:text-xl">→</span>
-                                        </span>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
 
                                 {/* LinkedIn Bar */}
-                                <a
-                                    href="https://in.linkedin.com/company/electronics-robotics-club-bits-goa"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-blue-600 hover:bg-blue-500 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/30"
-                                >
-                                    <div className="flex justify-between items-center">
-                                        <div className="flex items-center gap-4 md:gap-6">
-                                            {/* LinkedIn rotates right */}
-                                            <FaLinkedin className="text-3xl md:text-5xl text-white transition-transform duration-300 ease-out group-hover:rotate-12" />
-                                            <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
-                                                The Network
+                                <div>
+                                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 sm:hidden">Professional connections</p>
+                                    <a
+                                        href="https://in.linkedin.com/company/electronics-robotics-club-bits-goa"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-blue-600 hover:bg-blue-500 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/30"
+                                    >
+                                        <div className="flex justify-between items-center">
+                                            <div className="flex items-center gap-4 md:gap-6">
+                                                {/* LinkedIn rotates on hover - desktop only */}
+                                                <FaLinkedin className="text-3xl md:text-5xl text-white transition-transform duration-300 ease-out md:group-hover:rotate-12" />
+                                                <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+                                                    The Network
+                                                </span>
+                                            </div>
+                                            <span className="text-sm md:text-base text-white/80 group-hover:text-white group-hover:translate-x-2 transition-all duration-300 hidden sm:flex items-center gap-2">
+                                                Professional connections
+                                                <span className="text-lg md:text-xl">→</span>
                                             </span>
                                         </div>
-                                        <span className="text-sm md:text-base text-white/80 group-hover:text-white group-hover:translate-x-2 transition-all duration-300 hidden sm:flex items-center gap-2">
-                                            Professional connections
-                                            <span className="text-lg md:text-xl">→</span>
-                                        </span>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
 
                                 {/* Twitter/X Bar */}
-                                <a
-                                    href="https://twitter.com/erc_bitsgoa"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-sky-500 hover:bg-gray-900 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-sky-500/30"
-                                >
-                                    <div className="flex justify-between items-center">
-                                        <div className="flex items-center gap-4 md:gap-6">
-                                            {/* Bird squashed by X animation */}
-                                            <div className="relative w-[30px] h-[30px] md:w-[48px] md:h-[48px]">
-                                                <FaTwitter className="absolute inset-0 text-3xl md:text-5xl text-white transition-all duration-300 group-hover:scale-y-0 group-hover:opacity-0" />
-                                                <FaXTwitter className="absolute inset-0 text-3xl md:text-5xl text-white transition-all duration-300 opacity-0 scale-150 group-hover:opacity-100 group-hover:scale-100" />
+                                <div>
+                                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 sm:hidden">Fast replies & updates</p>
+                                    <a
+                                        href="https://twitter.com/erc_bitsgoa"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-sky-500 md:hover:bg-gray-900 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-sky-500/30"
+                                    >
+                                        <div className="flex justify-between items-center">
+                                            <div className="flex items-center gap-4 md:gap-6">
+                                                {/* X icon on mobile, Twitter-to-X animation on desktop */}
+                                                <div className="relative w-[30px] h-[30px] md:w-[48px] md:h-[48px]">
+                                                    <FaXTwitter className="absolute inset-0 text-3xl md:text-5xl text-white md:opacity-0 md:scale-150 md:group-hover:opacity-100 md:group-hover:scale-100 transition-all duration-300" />
+                                                    <FaTwitter className="absolute inset-0 text-3xl md:text-5xl text-white opacity-0 md:opacity-100 md:group-hover:scale-y-0 md:group-hover:opacity-0 transition-all duration-300" />
+                                                </div>
+                                                <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+                                                    <span className="inline md:group-hover:hidden">The Bird App</span>
+                                                    <span className="hidden md:group-hover:inline">Now It's X</span>
+                                                </span>
                                             </div>
-                                            <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
-                                                <span className="inline group-hover:hidden">The Bird App</span>
-                                                <span className="hidden group-hover:inline">Now It's X</span>
+                                            <span className="text-sm md:text-base text-white/80 group-hover:text-white group-hover:translate-x-2 transition-all duration-300 hidden sm:flex items-center gap-2">
+                                                Fast replies & updates
+                                                <span className="text-lg md:text-xl">→</span>
                                             </span>
                                         </div>
-                                        <span className="text-sm md:text-base text-white/80 group-hover:text-white group-hover:translate-x-2 transition-all duration-300 hidden sm:flex items-center gap-2">
-                                            Fast replies & updates
-                                            <span className="text-lg md:text-xl">→</span>
-                                        </span>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
 
                                 {/* Email Bar */}
-                                <a
-                                    href="mailto:erc@goa.bits-pilani.ac.in"
-                                    className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-gray-900/30 dark:hover:shadow-white/20 overflow-hidden"
-                                >
-                                    <div className="flex justify-between items-center relative">
-                                        <div className="flex items-center gap-4 md:gap-6">
-                                            {/* Email slides right to cover text - fast reset, slow animation */}
-                                            <FaEnvelope className="text-3xl md:text-5xl text-white dark:text-gray-900 transition-all duration-300 ease-linear group-hover:translate-x-[calc(100vw-8rem)] group-hover:scale-150 group-hover:opacity-0 group-hover:duration-[6000ms] z-10 relative" />
-                                            <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white dark:text-gray-900 uppercase tracking-tight transition-opacity duration-300 ease-linear group-hover:opacity-0 group-hover:duration-[4100ms]">
-                                                The Old School Way
+                                <div>
+                                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 sm:hidden">Send us an email</p>
+                                    <a
+                                        href="mailto:erc@goa.bits-pilani.ac.in"
+                                        className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-gray-900/30 dark:hover:shadow-white/20 overflow-hidden"
+                                    >
+                                        <div className="flex justify-between items-center relative">
+                                            <div className="flex items-center gap-4 md:gap-6">
+                                                {/* Email slides right on desktop hover */}
+                                                <FaEnvelope className="text-3xl md:text-5xl text-white dark:text-gray-900 transition-all duration-300 ease-linear md:group-hover:translate-x-[calc(100vw-8rem)] md:group-hover:scale-150 md:group-hover:opacity-0 md:group-hover:duration-[6000ms] z-10 relative" />
+                                                <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white dark:text-gray-900 uppercase tracking-tight transition-opacity duration-300 ease-linear md:group-hover:opacity-0 md:group-hover:duration-[4100ms]">
+                                                    The Old School Way
+                                                </span>
+                                            </div>
+                                            <span className="text-sm md:text-base text-white/80 dark:text-gray-600 group-hover:text-white dark:group-hover:text-gray-900 transition-all duration-300 ease-linear hidden sm:flex items-center gap-2 md:group-hover:opacity-0 md:group-hover:duration-[4100ms]">
+                                                Send us an email
+                                                <span className="text-lg md:text-xl">→</span>
                                             </span>
                                         </div>
-                                        <span className="text-sm md:text-base text-white/80 dark:text-gray-600 group-hover:text-white dark:group-hover:text-gray-900 transition-all duration-300 ease-linear hidden sm:flex items-center gap-2 group-hover:opacity-0 group-hover:duration-[4100ms]">
-                                            Send us an email
-                                            <span className="text-lg md:text-xl">→</span>
-                                        </span>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
                         </section>
                     )}

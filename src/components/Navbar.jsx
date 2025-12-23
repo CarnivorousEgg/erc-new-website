@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../utils/cn';
 import ThemeToggle from './ThemeToggle';
-import CardNav from './CardNav';
+import MobileMenu from './MobileMenu';
 
 const navItems = [
     { name: 'Home', path: '/' },
@@ -69,122 +69,10 @@ const Navbar = () => {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-    // CardNav configuration for mobile
-    const cardNavItems = useMemo(() => [
-        {
-            label: "Home",
-            bgColor: "#3b82f6", // Blue 500
-            textColor: "#fff",
-            links: [
-                { label: "Home", ariaLabel: "Go to Home", href: "/" }
-            ]
-        },
-        {
-            label: "Projects",
-            bgColor: "#1e40af", // Blue 700
-            textColor: "#fff",
-            links: [
-                { label: "All Projects", ariaLabel: "View All Projects", href: "/projects" },
-                { label: "Completed", ariaLabel: "Completed Projects", href: "/projects?filter=completed" },
-                { label: "Ongoing", ariaLabel: "Ongoing Projects", href: "/projects?filter=ongoing" },
-                { label: "Mini Projects", ariaLabel: "Mini Projects", href: "/projects?filter=mini" },
-                { label: "Handbook", ariaLabel: "Handbook", href: "https://erc-bpgc.github.io/handbook/" }
-            ]
-        },
-        {
-            label: "Events",
-            bgColor: "#7c3aed", // Purple 600
-            textColor: "#fff",
-            links: [
-                { label: "All Events", ariaLabel: "View All Events", href: "/events" }
-            ]
-        },
-        {
-            label: "About Us",
-            bgColor: "#2563eb", // Blue 600
-            textColor: "#fff",
-            links: [
-                { label: "Our Story", ariaLabel: "Our Story", href: "/about#story" },
-                { label: "Current Team", ariaLabel: "Current Team", href: "/about#team" },
-                { label: "Alumni", ariaLabel: "Alumni", href: "/about#alumni" },
-                { label: "Contact Us", ariaLabel: "Contact Us", href: "/about#contact" }
-            ]
-        },
-        {
-            label: "Theme Toggle",
-            bgColor: "#60a5fa", // Blue 400
-            textColor: "#fff",
-            isCustom: true,
-            component: <ThemeToggle className="" theme={theme} toggleTheme={toggleTheme} />
-        }
-    ], [theme, toggleTheme]);
-
-    // Handle CardNav link clicks
-    // Handle CardNav link clicks
-    const handleCardNavLinkClick = (e, href) => {
-        if (href && !href.startsWith('http')) {
-            e.preventDefault();
-
-            // Handle hash links
-            if (href.includes('#')) {
-                const [path, hash] = href.split('#');
-
-                // If we're on the same page, just scroll
-                if (location.pathname === path || (path === '/' && location.pathname === '/')) {
-                    const element = document.getElementById(hash);
-                    if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' });
-                    }
-                } else {
-                    // Navigate to page then scroll (handled by useEffect in target page or hash link handler)
-                    navigate(href);
-                    // Small timeout to allow navigation to happen before scrolling
-                    setTimeout(() => {
-                        const element = document.getElementById(hash);
-                        if (element) {
-                            element.scrollIntoView({ behavior: 'smooth' });
-                        }
-                    }, 100);
-                }
-            } else {
-                navigate(href);
-            }
-        }
-    };
-
-    // Handle CardNav logo click
-    const handleCardNavLogoClick = (e) => {
-        e.preventDefault();
-        navigate('/');
-    };
-
-    // Render CardNav on mobile
+    // Render new MobileMenu on mobile
     if (isMobile) {
         return (
-            <AnimatePresence>
-                {isVisible && (
-                    <motion.div
-                        initial={{ y: -100, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        exit={{ y: -100, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: 'easeOut' }}
-                    >
-                        <CardNav
-                            logo="/images/erc-logo.png"
-                            logoAlt="ERC Logo"
-                            items={cardNavItems}
-                            baseColor="rgba(255, 255, 255, 0.8)"
-                            menuColor="#000"
-                            buttonBgColor="#111"
-                            buttonTextColor="#fff"
-                            ease="power3.out"
-                            onLinkClick={handleCardNavLinkClick}
-                            onLogoClick={handleCardNavLogoClick}
-                            onThemeToggle={toggleTheme}
-                        />
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            <MobileMenu theme={theme} toggleTheme={toggleTheme} />
         );
     }
 

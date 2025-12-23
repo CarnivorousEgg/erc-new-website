@@ -41,18 +41,18 @@ const Events = () => {
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
                             
-                            {/* Gradient Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            {/* Gradient Overlay - Always visible */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                             
-                            {/* Event Name - appears on hover */}
-                            <div className="absolute inset-0 flex flex-col items-center justify-end p-6 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
+                            {/* Event Name - Always visible with enhanced hover */}
+                            <div className="absolute inset-0 flex flex-col items-center justify-end p-6">
                                 <h3 className="text-xl font-bold text-white text-center mb-2">
                                     {event.name}
                                 </h3>
-                                <p className="text-sm text-gray-300 text-center">
+                                <p className="text-sm text-gray-300 text-center opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                                     {event.description}
                                 </p>
-                                <span className="mt-3 px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm text-white border border-white/30">
+                                <span className="mt-3 px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm text-white border border-white/30 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
                                     View Gallery →
                                 </span>
                             </div>
