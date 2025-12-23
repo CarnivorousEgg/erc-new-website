@@ -128,12 +128,12 @@ const Home = () => {
                             </Link>
                         )}
                         {currentVideoIndex === 1 && (
-                            <Link to="/events" className="px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-full font-medium transition-colors shadow-lg shadow-purple-500/30">
+                            <Link to="/events" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-colors shadow-lg shadow-blue-500/30">
                                 Explore Events
                             </Link>
                         )}
                         {currentVideoIndex === 2 && (
-                            <Link to="/about#contact" className="px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-full font-medium transition-colors shadow-lg shadow-pink-500/30">
+                            <Link to="/about#contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-colors shadow-lg shadow-blue-500/30">
                                 Contact Us
                             </Link>
                         )}
