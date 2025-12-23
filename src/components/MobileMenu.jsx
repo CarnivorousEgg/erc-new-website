@@ -16,10 +16,10 @@ const menuItems = [
         path: '/projects',
         hasDropdown: true,
         subItems: [
-            { name: 'All Projects', path: '/projects' },
+            { name: 'All Research Projects', path: '/projects' },
+            { name: 'All Mini Projects', path: '/projects#mini' },
             { name: 'Ongoing', path: '/projects#ongoing' },
-            { name: 'Completed', path: '/projects#completed' },
-            { name: 'Mini Projects', path: '/projects#mini' }
+            { name: 'Completed', path: '/projects#completed' }
         ]
     },
     {
