@@ -50,7 +50,7 @@
         "title": "Quadruped",
         "category": "ongoing",
         "type": "research",
-        "image": "https://erc-bpgc.github.io/img/projects/Quadruped_placeholder.png",
+        "image": "/images/projects/quadruped/cover.png",
         "description": "Designing and Building a 12 DoF Quadruped from scratch.",
         "github": "https://github.com/ERC-BPGC/quadruped",
         "team_leads": [
@@ -115,7 +115,7 @@
         "title": "Air Hockey",
         "category": "completed",
         "type": "mini",
-        "image": "https://erc-bpgc.github.io/img/projects/AirHockey.png",
+        "image": "/images/projects/air-hockey/cover.png",
         "description": "The idea for this project came up as a fun interactive demonstration for Quark '24. We were able to somewhat implement a Neural Network agent trained using imitation learning techniques. The expert for this approach was the computer of a mobile based air hockey game. Data was extracted from a half-hour long video playthrough of the game through computer vision techniques. The agent was trained using a DNN in keras. This was then deployed on hardware built completely in-house which used a stepper motor actuated gantry to actuate the paddle and a single camera to gather relevant information.",
         "github": "https://github.com/Maker-Rat/Air_Hockey_RL",
         "team_leads": [
@@ -128,7 +128,7 @@
         "title": "Carborone",
         "category": "completed",
         "type": "research",
-        "image": "https://erc-bpgc.github.io/img/projects/carborone.jpeg",
+        "image": "/images/projects/carborone/cover.jpeg",
         "description": "This project aims to Create a model of Autonomous drone car. Which can analyse the environment and take decisions using OpenCV and decide whether to move on the ground or fly to avoid an obstacle and decide its own trajectory. It's main aim is to improve the applications of a car on the ground so that it could travel to even the most difficult places than it would be possible for a normal car. We also aim to have a power efficient version of drone car that can fly for longer durations and make it more accessible by safely going to different locations.",
         "github": "https://github.com/4825vinay/Project-Carborone",
         "team_leads": [
@@ -140,7 +140,7 @@
         "title": "SwarmBots 2.0",
         "category": "completed",
         "type": "research",
-        "image": "https://erc-bpgc.github.io/img/projects/swarm_bots_2.jpg",
+        "image": "/images/projects/swarmbots-2/cover.jpg",
         "description": "Swarm robotics is an approach to the coordinated behaviour of multi-robot systems. A swarm robotic system comprises a group of simple robots equipped with basic algorithms, sensors, and actuators. However, these bots are collectively able to carry out complex tasks. The project aims to build a swarm of autonomous mobile robots and implement various 'collective decision-making' algorithms on this swarm. The project will serve as a platform for various swarm-robotics-related applications in the future. It is intended to also explore and eventually implement multi-agent learning based methods, inspired by classical swarm algorithms.",
         "github": "https://github.com/ERC-BPGC/swarm_bots",
         "team_leads": [
@@ -165,7 +165,7 @@
         "title": "Acoustic Camera",
         "category": "completed",
         "type": "research",
-        "image": "https://erc-bpgc.github.io/img/projects/acoustic_camera.jpg",
+        "image": "/images/projects/acoustic-camera/cover.jpg",
         "description": "An acoustic camera is an imaging device used to locate sound sources. It uses multiple microphones and advanced acoustic signal processing algorithms to accomplish this task. Our goal is to create a low-cost acoustic camera that could be used in applications such as noise reduction in machinery and aerodynamic surfaces.",
         "github": "https://github.com/ERC-BPGC/echoslam_ROS",
         "team_leads": [
@@ -178,7 +178,7 @@
         "title": "GenNav",
         "category": "completed",
         "type": "research",
-        "image": "https://erc-bpgc.github.io/img/projects/gennav.png",
+        "image": "/images/projects/gennav/cover.png",
         "description": "Gennav aims to create a general purpose python library that can be used for path planning in various robotics settings. It will have a collection of path planning algorithms, motion controllers along with various utilities to handle different methods of path optimisation, environment representation and eventually a geometry module to handle the underlying computations. Currently focused on the 2D path planning aspect of navigation. Rather than writing a big new python file for each new path planning algorithm, we could build on already defined utilities and primitives. This would be a big help to anyone working on any robot with autonomous navigation capabilities in the future.",
         "github": "https://github.com/ERC-BPGC/gennav",
         "team_leads": [
@@ -190,7 +190,7 @@
         "title": "Quadruped a.k.a. Bhaagwati",
         "category": "completed",
         "type": "mini",
-        "image": "https://erc-bpgc.github.io/img/projects/quadruped.png",
+        "image": "/images/projects/quadruped-bhaagwati/cover.png",
         "description": "The main objective is to mimic a four legged animal and get various gaits out of it like trot, bound, canter through open loop and closed loop methods. It will be further used as a platform for attachment of vision based system for mapping different terrains. We have successfully deployed trotting walk on the quadruped. A ROS (Robot Operating System) package is also created. A static self-stabilizing PID controller using an IMU has been created and successfully deployed on the quadruped. Different gaits will be tested on the quadruped. A dynamic stabilizing strategy will be developed. Later, environment tracking using realsense depth camera will be developed.",
         "github": "https://github.com/MohitGupta007/Quadruped_BPGC",
         "team_leads": [
@@ -202,7 +202,7 @@
         "title": "Modbot",
         "category": "completed",
         "type": "research",
-        "image": "https://erc-bpgc.github.io/img/projects/modbot.jpeg",
+        "image": "/images/projects/modbot/cover.jpeg",
         "description": "Modular Robots are a system of individual modules capable of linking to each other to form reconfigurable structures suited for different purposes. Using this method, a single system can be used for a wide range of applications. This is useful when the task/environment of a bot is not known beforehand. The project aimed to design, simulate and manufacture such modules with maximum DOFs possible for a highly flexible and robust system. A single module was manufactured capable of teleoperation. An Arduino Nano and an ESP32 were used to control the input to the respective motors.",
         "github": "https://github.com/rmvanarse/modbot2",
         "team_leads": [
@@ -214,7 +214,7 @@
         "title": "Swarmbots",
         "category": "completed",
         "type": "research",
-        "image": "https://erc-bpgc.github.io/img/projects/swarmbots.png",
+        "image": "/images/projects/swarmbots/cover.png",
         "description": "Swarm robotics is an approach to coordinate multiple robots as a system, which consists of large numbers of mostly simple physical robots. The project aimed at the task to automate a decentralized swarm of autonomous mobile robots to carry out different tasks. The bots do not communicate with each other, and perform tasks through 'collective decision making' algorithms. Multiple simulations have been created to perform tasks such as line formation, circle formation, etc. Along with this evaluation metrics were attached to each task to monitor the quality.",
         "github": "https://github.com/rmvanarse/swarm_tasks",
         "team_leads": [
@@ -226,7 +226,7 @@
         "title": "Sketcher",
         "category": "completed",
         "type": "mini",
-        "image": "https://erc-bpgc.github.io/img/projects/sketcher.jpeg",
+        "image": "/images/projects/sketcher/cover.jpeg",
         "description": "Sketcher was one of the display projects displayed in Quark 2020 by the ERC. It is basically a full-scale prototype of a polargraph - a fully automated drawing machine capable of rendering one image into multiple artistic forms on paper. It supports multiple drawing styles such as stipples, travelling salesperson, D2S etc.",
         "github": "https://github.com/ERC-BPGC/Sketcher",
         "team_leads": []
@@ -236,7 +236,7 @@
         "title": "LED Hexapad",
         "category": "completed",
         "type": "mini",
-        "image": "https://erc-bpgc.github.io/img/projects/led_hexapad2.jpeg",
+        "image": "/images/projects/led-hexapad/cover.jpeg",
         "description": "The LED Hexapad was an interactive display piece for Quark 2020. At its heart it is a MIDI controller with six touch sensitive pads, that can trigger a wide range of virtual instruments on a computer. In addition to this, each hexagonally shaped pad is illuminated by NeoPixel LEDs which show dynamic animations that react to human touch.",
         "github": "https://github.com/ERC-BPGC/LED-Octapad",
         "team_leads": []
@@ -246,7 +246,7 @@
         "title": "LED Globe",
         "category": "completed",
         "type": "mini",
-        "image": "https://erc-bpgc.github.io/img/projects/led_globe.jpeg",
+        "image": "/images/projects/led-globe/cover.jpeg",
         "description": "LED Globe was the flagship display project from ERC for Quark 2019, the technical fest of BITS-Goa. The globe consisted of two 75 cm radius acrylic semicircular discs having LEDs along the perimeter of one of them. This setup was mounted vertically on an aluminium frame. The setup would be rotated using a high torque motor. The synchronised firing of LEDs created the illusion of an image. The programming that was involved allowed one to take any image from the internet, divide it into a number of segments which the code could recognize and thus program the LEDs in that manner.",
         "github": "",
         "team_leads": [
@@ -258,7 +258,7 @@
         "title": "Ball-Drone",
         "category": "completed",
         "type": "research",
-        "image": "https://erc-bpgc.github.io/img/projects/ball-drone.png",
+        "image": "/images/projects/ball-drone/cover.png",
         "description": "Ball drone is a 'uni-rotor' VTOL drone that is maneuvered using four control surfaces. The drone is capable of performing all the tasks done by a conventional quadcopter using less power. The spherical shell also helps in protecting the inner hardware and rotating propeller from any immediate threat. The spherical shell will be 3D printed and the flight controller will be made with an ESP32 microcontroller and a MPU 9250. A CAD model and a simulator of the drone on Simscape multibody is made.",
         "github": "",
         "team_leads": [
@@ -270,7 +270,7 @@
         "title": "Klann",
         "category": "completed",
         "type": "mini",
-        "image": "https://erc-bpgc.github.io/img/projects/klann.jpeg",
+        "image": "/images/projects/klann/cover.jpeg",
         "description": "Klann was one of the display projects displayed in Quark 2020 by the ERC. The eight-legged walking bot was based on the Klann linkage, a planar mechanism designed to simulate the gait of a legged animal and function as a wheel replacement.",
         "github": "",
         "team_leads": []
@@ -405,16 +405,6 @@
         "type": "mini",
         "image": "",
         "description": "A combat-style robot designed for competitive robotics battles with offensive and defensive capabilities.",
-        "github": "",
-        "team_leads": []
-    },
-    {
-        "id": "led-octapad",
-        "title": "LED Octapad",
-        "category": "completed",
-        "type": "mini",
-        "image": "",
-        "description": "An interactive MIDI controller with eight touch-sensitive pads illuminated by responsive LED animations that react to user input.",
         "github": "",
         "team_leads": []
     }
