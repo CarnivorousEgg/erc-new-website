@@ -2,69 +2,128 @@
     {
         "id": "open-day",
         "name": "Open Day",
-        "description": "Annual showcase of ERC projects and demonstrations",
-        "fullDescription": "Open Day is ERC's flagship annual event where we open our doors to the entire campus community. Students get hands-on experience with our robots, drones, and electronic projects. It's an opportunity for freshers to explore the world of robotics and electronics, interact with club members, and see live demonstrations of our ongoing projects.",
-        "image": "/images/events/open-day/DSC_0788.JPG",
-        "date": "Every Semester",
-        "location": "ERC Lab, BITS Goa",
+        "fullDescription": "Open Day is ERC's premier annual exhibition held in the first semester of each academic year, where we showcase our cutting-edge research projects to academic partners and visiting institutions. Hosted in the D-Spine of BITS Pilani, Goa Campus, this event attracts distinguished faculty members from our college, dignitaries from various academic institutions, and students from nearby schools. Beyond demonstrating technical excellence, Open Day serves as a platform to ignite curiosity among young minds and foster meaningful collaborations with the academic community.",
+        "image": "/images/events/open-day",
+        "date": "Semester 1 (Annually)",
+        "location": "D-Spine, BITS Pilani K K Birla Goa Campus",
         "highlights": [
-            "Live robot demonstrations",
-            "Hands-on project experiences",
-            "Q&A with project leads",
-            "Recruitment information"
+            "Live project demonstrations",
+            "Interactions with visiting professors and dignitaries",
+            "School outreach to inspire young students",
+            "Q&A sessions with project leads"
         ]
     },
     {
         "id": "quark",
         "name": "Quark",
-        "description": "BITS Goa's annual technical festival",
-        "fullDescription": "Quark is the annual technical festival of BITS Pilani, Goa Campus. ERC plays a major role in Quark by organizing robotics competitions, displaying our flagship projects, and conducting workshops. Our display projects like LED Globe, Sketcher, and LED Hexapad have been crowd favorites over the years.",
-        "image": "",
-        "date": "February (Annual)",
-        "location": "BITS Pilani, Goa Campus",
+        "fullDescription": "Quark is the annual techno-management festival of BITS Pilani, K.K. Birla Goa Campus, and ERC takes center stage with an impressive exhibition of innovative mini-projects. Our teams begin preparations a month in advance, crafting projects that captivate visitors alongside industrial participants. Beyond showcasing our work, we collaborate with the organizing committee to conduct hands-on workshops designed to ignite curiosity among those new to robotics. Held in the second semester, Quark generates significant footfall and serves as a testament to ERC's commitment to making robotics accessible to everyone.",
+        "image": "/images/events/quark",
+        "date": "Semester 2 (February, Annually)",
+        "location": "BITS Pilani K K Birla Goa Campus",
         "highlights": [
-            "Robotics competitions",
-            "Project exhibitions",
-            "Technical workshops",
-            "Inter-college participation"
+            "Innovative mini-project exhibitions",
+            "Industrial participation and networking",
+            "Beginner-friendly robotics workshops",
+            "High visitor engagement and footfall"
+        ]
+    },
+    {
+        "id": "eduspark",
+        "name": "Eduspark",
+        "fullDescription": "Eduspark represents ERC's commitment to social responsibility through our collaboration with Nirmaan, an NGO dedicated to uplifting underprivileged communities. During this event, we showcase select projects to children from underserved backgrounds, explaining complex engineering concepts in simple, accessible terms. The highlight of Eduspark is allowing the children to take control of our robots themselves—witnessing their excitement and curiosity is immensely rewarding. We take immense pride in supporting this cause and inspiring the next generation of innovators, regardless of their background.",
+        "image": "/images/events/eduspark/IMG_5153.jpg",
+        "date": "Semester 1 (Annually)",
+        "location": "Student Activity Centre, BITS Pilani Goa Campus",
+        "highlights": [
+            "Interactive robot demonstrations",
+            "Hands-on experience for children",
+            "Simplified concept explanations",
+            "Collaboration with Nirmaan NGO"
+        ]
+    },
+    {
+        "id": "prof-talk",
+        "name": "Prof Talk",
+        "fullDescription": "Prof Talk is ERC's annual academic enrichment initiative where we invite distinguished professors to share insights into their ongoing research and academic experiences. These sessions provide our members with a unique opportunity to understand the current landscape of robotics and electronics research, gain exposure to emerging technologies, and engage in meaningful discussions with experts in the field. Prof Talk bridges the gap between classroom learning and real-world research, inspiring students to pursue innovative projects and academic excellence.",
+        "image": "/images/events/prof-talk",
+        "date": "Once per Academic Year",
+        "location": "BITS Pilani K K Birla Goa Campus",
+        "highlights": [
+            "Insights into cutting-edge research",
+            "Interactive Q&A sessions",
+            "Networking with faculty",
+            "Academic career guidance"
+        ]
+    },
+    {
+        "id": "erc-ros-hackathon",
+        "name": "ERC ROS Hackathon",
+        "fullDescription": "The ERC ROS Hackathon is our flagship competitive event, conducted entirely online each summer to maximize participation from students across the country. This hackathon challenges participants to solve complex robotics problems using the Robot Operating System (ROS), testing their skills in simulation, navigation, and autonomous systems. With approximately 40 teams participating in recent editions, the hackathon has grown into a highly anticipated event in the student robotics community.",
+        "image": "/images/events/erc-ros-hackathon",
+        "date": "Summer (Annually)",
+        "location": "Online",
+        "type": "hackathon",
+        "highlights": [
+            "Nationwide participation",
+            "ROS-based problem statements",
+            "Competitive leaderboard"
+        ],
+        "editions": [
+            {
+                "year": 2024,
+                "problemStatementLink": "https://docs.google.com/document/d/1XoXo3bY7y3b6F2F1z5Jt1Q9K2ZV8e9H5/edit?usp=sharing&ouid=115234567890123456789&rtpof=true&sd=true",
+                "participants": 40,
+                "leaderboard": [
+                    { "rank": 1, "teamName": "Team Name", "college": "College Name", "score": 0 },
+                    { "rank": 2, "teamName": "Team Name", "college": "College Name", "score": 0 },
+                    { "rank": 3, "teamName": "Team Name", "college": "College Name", "score": 0 }
+                ]
+            },
+            {
+                "year": 2023,
+                "problemStatementLink": "",
+                "participants": 10,
+                "leaderboard": [
+                    { "rank": 1, "teamName": "Team Name", "college": "College Name", "score": 0 },
+                    { "rank": 2, "teamName": "Team Name", "college": "College Name", "score": 0 },
+                    { "rank": 3, "teamName": "Team Name", "college": "College Name", "score": 0 }
+                ]
+            }
         ]
     },
     {
         "id": "cte-techweekend",
         "name": "CTE Techweekend",
-        "description": "Weekend of technical workshops and competitions",
-        "fullDescription": "CTE Techweekend is a collaborative event organized by the technical clubs of BITS Goa. ERC conducts hands-on workshops on electronics, Arduino programming, PCB design, and robotics fundamentals. It's a great opportunity for beginners to get started with hardware projects.",
-        "image": "",
-        "date": "Semester-wise",
-        "location": "BITS Pilani, Goa Campus",
+        "fullDescription": "CTE Techweekend is an exhilarating 2-day hackathon-style event organized in collaboration with the Centre for Technical Excellence. Held during the second semester of the academic year, this event challenges participants with engaging technical competitions including bidding wars, capture-the-flag challenges, and more—all with an attractive prize pool on the line. CTE Techweekend is designed to push the boundaries of technical skills while fostering healthy competition and peer learning among students.",
+        "image": "/images/events/cte-techweekend",
+        "date": "Semester 2 (Annually)",
+        "location": "BITS Pilani K K Birla Goa Campus",
         "highlights": [
-            "Arduino workshops",
-            "PCB design sessions",
-            "Robotics basics",
-            "Electronics fundamentals"
+            "BITS & Bids competition",
+            "Capture the Flag challenges",
+            "Attractive prize pool",
+            "2-day intensive format"
         ]
     },
     {
         "id": "qstp",
         "name": "QSTP",
-        "description": "Quark Summer Technical Projects",
-        "fullDescription": "QSTP (Quark Summer Technical Projects) is a summer program where students work on technical projects under the guidance of senior club members. ERC mentors projects in robotics, embedded systems, IoT, and automation. It's an intensive learning experience that helps students build real-world skills.",
-        "image": "",
+        "fullDescription": "Quark Summer Technical Projects (QSTP) is ERC's summer learning initiative designed to make technical education accessible to students of all experience levels. During the summer break, we offer structured project-based courses covering topics such as mechatronics, reinforcement learning, neural networks, and embedded systems fundamentals. Each program features carefully crafted lesson plans with weekly assignments, guiding participants from foundational concepts to hands-on project completion. QSTP embodies our belief that quality technical education should be available to anyone with the curiosity to learn.",
+        "image": "/images/events/qstp",
         "date": "Summer Break (May-July)",
-        "location": "Online + Campus",
+        "location": "Online",
         "highlights": [
-            "Mentored project work",
-            "Weekly progress reviews",
-            "Final project presentations",
+            "Structured lesson plans",
+            "Weekly assignments and mentorship",
+            "Topics: Mechatronics, RL, Neural Networks, Embedded Systems",
             "Certificate of completion"
         ]
     },
     {
         "id": "inductions",
         "name": "Inductions",
-        "description": "Annual recruitment of new club members",
         "fullDescription": "ERC Inductions is our annual recruitment drive where we welcome passionate students into the club. The process includes technical assessments, hands-on tasks, and interviews to identify students with genuine interest in electronics and robotics. Selected members join ongoing projects and contribute to the club's growth.",
-        "image": "",
+        "image": "/images/events/inductions",
         "date": "August-September (Annual)",
         "location": "ERC Lab, BITS Goa",
         "highlights": [
@@ -72,21 +131,6 @@
             "Hands-on project tasks",
             "Personal interviews",
             "Project team allocation"
-        ]
-    },
-    {
-        "id": "eduspark",
-        "name": "Eduspark",
-        "description": "Educational outreach and school workshops",
-        "fullDescription": "Eduspark is ERC's educational outreach initiative where we conduct robotics and electronics workshops for school students. We visit local schools and organize campus events to inspire the next generation of engineers. Students get to interact with robots, learn basic programming, and understand the fundamentals of electronics.",
-        "image": "/images/events/eduspark/IMG_5153.jpg",
-        "date": "Throughout the year",
-        "location": "Schools & Campus",
-        "highlights": [
-            "School outreach programs",
-            "Basic robotics workshops",
-            "Interactive demonstrations",
-            "STEM education promotion"
         ]
     }
 ]

@@ -1,0 +1,461 @@
+{
+  "categories": [
+    {
+      "id": "roadmap",
+      "name": "Roadmap",
+      "icon": "🗺️",
+      "description": "Getting started with robotics - languages, tools, and learning paths",
+      "color": "from-purple-500 to-indigo-600"
+    },
+    {
+      "id": "automation",
+      "name": "Automation",
+      "icon": "🤖",
+      "description": "ROS, path planning, control theory, and autonomous systems",
+      "color": "from-blue-500 to-cyan-600"
+    },
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "icon": "⚡",
+      "description": "Microcontrollers, sensors, actuators, and circuit design",
+      "color": "from-yellow-500 to-orange-600"
+    },
+    {
+      "id": "mechanical",
+      "name": "Mechanical",
+      "icon": "⚙️",
+      "description": "Robot design, kinematics, dynamics, and CAD",
+      "color": "from-green-500 to-emerald-600"
+    },
+    {
+      "id": "simulation",
+      "name": "Simulation",
+      "icon": "🖥️",
+      "description": "Gazebo, STDR, and virtual robot testing environments",
+      "color": "from-pink-500 to-rose-600"
+    }
+  ],
+  "articles": [
+    {
+      "id": "roadmap",
+      "title": "Roadmap for Robotics",
+      "category": "roadmap",
+      "excerpt": "A comprehensive guide for beginners covering programming languages, development tools, and learning paths for all aspects of robotics.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/roadmap/",
+      "sections": [
+        {
+          "title": "A Common Beginning",
+          "content": "As a beginner, the most important thing is to start learning a language since it opens up a lot of opportunities in terms of projects to work on. In robotics, different languages have different uses: Python and C++ for automation and ML, C for embedded systems, and MATLAB for modelling.",
+          "subsections": [
+            {
+              "title": "Python",
+              "links": [
+                {"text": "Web tutorial", "url": "http://introtopython.org/"},
+                {"text": "Corey Schafer's video tutorials", "url": "https://www.youtube.com/playlist?list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7"}
+              ]
+            },
+            {
+              "title": "C/C++",
+              "links": [
+                {"text": "FreeCodeCamp Video Tutorials", "url": "https://www.youtube.com/watch?v=KJgsSFOSQv0"},
+                {"text": "Learn C++", "url": "https://www.learncpp.com/"}
+              ]
+            },
+            {
+              "title": "MATLAB & Simulink",
+              "links": [
+                {"text": "MATLAB Onramp", "url": "https://in.mathworks.com/learn/tutorials/matlab-onramp.html"},
+                {"text": "Simulink Onramp", "url": "https://in.mathworks.com/learn/tutorials/simulink-onramp.html"}
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Development Environment",
+          "content": "Linux is essential for robotics due to its tight integration with tools like ROS. Get comfortable with the Linux terminal, Git for version control, and a good code editor like VS Code.",
+          "links": [
+            {"text": "Linux Terminal Tutorial", "url": "https://youtu.be/oxuRxtrO2Ag"},
+            {"text": "Git Tutorial", "url": "https://www.youtube.com/watch?v=RGOj5yH7evk"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "automation-intro",
+      "title": "Introduction to Automation",
+      "category": "automation",
+      "excerpt": "Overview of robot automation including planning, controls, and state estimation.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/automation/intro/",
+      "content": "Robots would be pretty useless without having the ability to do stuff on their own. Today, with ever more powerful machine learning techniques, robots are on their way to becoming truly autonomous. Different aspects of Automation include Planning, Controls and State estimation.\n\nMotion planning refers to the computational process of moving from one place to another in the presence of obstacles. The Robot control system directs the motion and sensory processing of a robot. State estimation involves estimating the position and orientation of a robot as it moves through the world using sensors like cameras or laser rangefinders."
+    },
+    {
+      "id": "ros-setup",
+      "title": "Setting Up ROS",
+      "category": "automation",
+      "subcategory": "ROS",
+      "excerpt": "Complete guide to preparing your development environment for ROS including OS setup, installation, and useful tools.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/automation/ROS/setting_up/",
+      "sections": [
+        {
+          "title": "Operating System",
+          "content": "Robotics Development relies heavily on Linux. We recommend using Ubuntu 18.04 since it is the most widely used and supported variant. Options include dual booting, virtual machines, or WSL for Windows users."
+        },
+        {
+          "title": "Installing ROS",
+          "content": "Different versions of Ubuntu need different variants of ROS. Ubuntu 18.04 uses ROS Melodic, Ubuntu 16.04 uses ROS Kinetic.",
+          "links": [
+            {"text": "ROS Melodic Installation", "url": "http://wiki.ros.org/melodic/Installation/Ubuntu"},
+            {"text": "ROS Kinetic Installation", "url": "http://wiki.ros.org/kinetic/Installation/Ubuntu"}
+          ]
+        },
+        {
+          "title": "Useful Tools",
+          "content": "Essential tools include Git for version control, Terminator for multiple terminals, and VS Code for code editing.",
+          "code": "sudo apt install git\nsudo apt install terminator"
+        }
+      ]
+    },
+    {
+      "id": "ros-getting-started",
+      "title": "Getting Started with ROS",
+      "category": "automation",
+      "subcategory": "ROS",
+      "excerpt": "Learn the fundamentals of Robot Operating System including nodes, topics, publishers, subscribers, and services.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/automation/ROS/ros/",
+      "sections": [
+        {
+          "title": "What is ROS?",
+          "content": "ROS is a collection of tools and frameworks which make automating robotics projects much easier. A ROS system can be visualized as a graph where vertices are nodes (programs performing tasks) and edges are topics (channels for message exchange)."
+        },
+        {
+          "title": "Basic Concepts",
+          "content": "Key concepts include: Catkin (build system), Workspace (directory containing packages), Packages (organized code units), Nodes (executable programs), Topics (communication channels), Publishers/Subscribers (for async data exchange), and Services (for request-response patterns)."
+        },
+        {
+          "title": "Getting Things Running",
+          "content": "Use 'roscore' to start ROS Master, 'rosrun' to execute nodes, and 'roslaunch' to launch multiple nodes from a launch file."
+        }
+      ],
+      "references": [
+        {"text": "Programming Robots with ROS by Morgan Quigley", "url": "https://www.pdfdrive.com/programming-robots-with-ros-a-practical-introduction-to-the-robot-operating-system-d166617536.html"},
+        {"text": "Official ROS Tutorials", "url": "http://wiki.ros.org/ROS/Tutorials"}
+      ]
+    },
+    {
+      "id": "ros-parameters",
+      "title": "ROS Parameters",
+      "category": "automation",
+      "subcategory": "ROS",
+      "excerpt": "Advanced ROS concepts including parameter server, tf transforms, and URDF robot descriptions.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/automation/ROS/ros_p2/"
+    },
+    {
+      "id": "path-planning-intro",
+      "title": "Introduction to Path Planning",
+      "category": "automation",
+      "subcategory": "Path Planning",
+      "excerpt": "Overview of path planning algorithms for robot navigation and motion planning.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/automation/PathPlanners/Introduction_to_Path_Planning_in_Robotics/intro/"
+    },
+    {
+      "id": "astar",
+      "title": "A* Algorithm",
+      "category": "automation",
+      "subcategory": "Path Planning",
+      "excerpt": "Graph-based path planning using A* algorithm with heuristics for optimal pathfinding.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/automation/PathPlanners/Graph_Based_Algorithms/Astar/"
+    },
+    {
+      "id": "dijkstra",
+      "title": "Dijkstra's Algorithm",
+      "category": "automation",
+      "subcategory": "Path Planning",
+      "excerpt": "Classic graph-based algorithm for finding shortest paths in weighted graphs.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/automation/PathPlanners/Graph_Based_Algorithms/Dijkstra/"
+    },
+    {
+      "id": "rrt",
+      "title": "RRT (Rapidly-exploring Random Trees)",
+      "category": "automation",
+      "subcategory": "Path Planning",
+      "excerpt": "Sampling-based algorithm for path planning in high-dimensional spaces.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/automation/PathPlanners/Sampling_Based_Algorithms/RRT/"
+    },
+    {
+      "id": "rrt-star",
+      "title": "RRT* Algorithm",
+      "category": "automation",
+      "subcategory": "Path Planning",
+      "excerpt": "Asymptotically optimal variant of RRT with rewiring for better path quality.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/automation/PathPlanners/Sampling_Based_Algorithms/RRT_Star/"
+    },
+    {
+      "id": "prm",
+      "title": "PRM (Probabilistic Roadmap)",
+      "category": "automation",
+      "subcategory": "Path Planning",
+      "excerpt": "Multi-query path planning algorithm using probabilistic sampling.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/automation/PathPlanners/Sampling_Based_Algorithms/PRM/"
+    },
+    {
+      "id": "control-theory-intro",
+      "title": "Introduction to Control Theory",
+      "category": "automation",
+      "subcategory": "Control Theory",
+      "excerpt": "Fundamentals of control systems and their application in robotics.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/automation/ControlTheory/Control_Theory/"
+    },
+    {
+      "id": "pid-controller",
+      "title": "PID Controller",
+      "category": "automation",
+      "subcategory": "Control Theory",
+      "excerpt": "Proportional-Integral-Derivative control - the most widely used control technique in robotics and industry.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/automation/ControlTheory/PID_Controller/",
+      "sections": [
+        {
+          "title": "PID Controller",
+          "content": "PID control is the most popular technique in industries because it is relatively easy to design and implement. The control law is: u(t) = Kp*e(t) + Ki*∫e(t) + Kd*de(t)/dt, where e is the error signal."
+        },
+        {
+          "title": "Proportional Factor",
+          "content": "The output is the product of gain and measured error. Larger gain causes faster response but can lead to oscillation and steady-state offset."
+        },
+        {
+          "title": "Integral Factor",
+          "content": "Eliminates steady-state error by accumulating past errors. Can contribute to overshoot if not tuned properly."
+        },
+        {
+          "title": "Derivative Factor",
+          "content": "Improves closed-loop stability by predicting future error based on rate of change. Allows for more aggressive P and I tuning."
+        },
+        {
+          "title": "Tuning Methods",
+          "content": "Trial and Error: Start with P, add I to reduce steady-state error, add D to reduce overshoot. Ziegler-Nichols: Systematic approach using critical gain and oscillation period."
+        }
+      ]
+    },
+    {
+      "id": "lqr",
+      "title": "Linear Quadratic Regulator (LQR)",
+      "category": "automation",
+      "subcategory": "Control Theory",
+      "excerpt": "Optimal control technique that minimizes a quadratic cost function for linear systems.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/automation/ControlTheory/LQR/"
+    },
+    {
+      "id": "mpc",
+      "title": "Model Predictive Control (MPC)",
+      "category": "automation",
+      "subcategory": "Control Theory",
+      "excerpt": "Advanced control strategy using system models to predict future behavior and optimize control actions.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/automation/ControlTheory/MPC/"
+    },
+    {
+      "id": "electronics-intro",
+      "title": "Introduction to Electronics",
+      "category": "electronics",
+      "excerpt": "Overview of electronics in robotics - microcontrollers, sensors, actuators, and interfacing.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/electronics/intro/",
+      "content": "From interfacing microprocessors to making logical circuits, Robotics is incomplete without electronics. Every task that a Robot performs eventually boils down to some signal received by it. Most robots have a processing unit (Raspberry Pi, Nvidia Jetson, Arduino) that collects data from sensors and performs calculations. Common sensors include depth cameras, LIDAR, Encoders, and IMU."
+    },
+    {
+      "id": "breadboard",
+      "title": "Breadboard",
+      "category": "electronics",
+      "subcategory": "Basic Components",
+      "excerpt": "Introduction to breadboards for prototyping electronic circuits.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/electronics/Basic_Electronic_Components/breadboard/"
+    },
+    {
+      "id": "lidar",
+      "title": "LiDAR",
+      "category": "electronics",
+      "subcategory": "Sensors",
+      "excerpt": "Light Detection and Ranging sensors for distance measurement and mapping.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/electronics/Sensors/lidar/"
+    },
+    {
+      "id": "arduino",
+      "title": "Arduino",
+      "category": "electronics",
+      "subcategory": "Development Boards",
+      "excerpt": "Complete guide to Arduino - the most accessible microcontroller platform for beginners.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/electronics/Development_Boards/Arduino/",
+      "sections": [
+        {
+          "title": "Board Layout",
+          "content": "Arduino UNO features USB port for power/programming, power jack, voltage regulator, crystal oscillator (16MHz), reset button, digital I/O pins, analog pins (A0-A5), and the main ATmega328P microcontroller."
+        },
+        {
+          "title": "The Blink Sketch",
+          "content": "The 'Hello World' of Arduino - blinks the onboard LED. Every sketch needs setup() (runs once) and loop() (runs repeatedly) functions."
+        },
+        {
+          "title": "Programming",
+          "content": "Use Arduino IDE to write, compile, and upload code. Key functions: pinMode() for configuration, digitalWrite() for output, analogRead() for reading sensors, and Serial for communication."
+        }
+      ],
+      "references": [
+        {"text": "Jeremy Blum's Arduino Tutorials", "url": "https://www.youtube.com/playlist?list=PLA567CE235D39FA84"},
+        {"text": "Arduino Official Tutorials", "url": "https://www.arduino.cc/en/Tutorial/HomePage"}
+      ]
+    },
+    {
+      "id": "esp32",
+      "title": "ESP32",
+      "category": "electronics",
+      "subcategory": "Development Boards",
+      "excerpt": "Powerful dual-core microcontroller with built-in WiFi and Bluetooth - nearly 10x faster than Arduino Uno.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/electronics/Development_Boards/ESP32/",
+      "sections": [
+        {
+          "title": "Introduction",
+          "content": "ESP32 is a dual-core 32-bit MCU with integrated Wi-Fi and Bluetooth. It runs at 160/240 MHz (vs Arduino's 16 MHz), has 512KB RAM (vs 2KB), and 36 GPIO pins with support for ADC, DAC, SPI, I2C, UART, and more."
+        },
+        {
+          "title": "Features",
+          "content": "18 ADC channels (12-bit), 2 DAC channels, 10 capacitive touch sensors, 3 SPI channels, 2 I2C interfaces, 16 PWM channels, and Hall effect sensor."
+        },
+        {
+          "title": "Programming",
+          "content": "Can be programmed using Arduino IDE, PlatformIO, MicroPython, Lua, or Espressif IDF. Arduino IDE setup is similar to regular Arduino with additional board support."
+        }
+      ]
+    },
+    {
+      "id": "stm32",
+      "title": "BluePill (STM32F103C8T6)",
+      "category": "electronics",
+      "subcategory": "Development Boards",
+      "excerpt": "Powerful ARM Cortex-M3 based microcontroller for advanced projects.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/electronics/Development_Boards/STM32/"
+    },
+    {
+      "id": "stm32-vs-arduino",
+      "title": "Arduino vs STM32",
+      "category": "electronics",
+      "subcategory": "Development Boards",
+      "excerpt": "Comparison of Arduino and STM32 microcontrollers for different use cases.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/electronics/Development_Boards/STM32vsArduinoUNO/"
+    },
+    {
+      "id": "pyboard",
+      "title": "Pyboard - MicroPython",
+      "category": "electronics",
+      "subcategory": "Development Boards",
+      "excerpt": "Running Python on microcontrollers with MicroPython and Pyboard.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/electronics/Development_Boards/Pyboard/"
+    },
+    {
+      "id": "wifi-module",
+      "title": "WiFi Module",
+      "category": "electronics",
+      "subcategory": "Modules",
+      "excerpt": "Adding wireless connectivity to your robots using WiFi modules.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/electronics/Modules/wifi_module/"
+    },
+    {
+      "id": "servo-motors",
+      "title": "Servo Motors",
+      "category": "electronics",
+      "subcategory": "Motors",
+      "excerpt": "Understanding and controlling servo motors for precise angular positioning.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/electronics/Motors/ServoMotor/"
+    },
+    {
+      "id": "mechanical-intro",
+      "title": "Introduction to Mechanical Design",
+      "category": "mechanical",
+      "excerpt": "Overview of mechanical aspects including robot configuration, joint mechanisms, and CAD design.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/mechanical/intro/",
+      "content": "Mechanical aspects of robotics involve designing, building and testing mechanical sensors and devices. This includes robot configuration, joint mechanisms, axes, heat transfer, and mounting positions. CAD software is used for design, and solving kinematics/dynamics equations is essential for robot tasks."
+    },
+    {
+      "id": "mech101",
+      "title": "Mechanical 101",
+      "category": "mechanical",
+      "excerpt": "Fundamentals of mechanical engineering for robotics.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/mechanical/mech101/"
+    },
+    {
+      "id": "gears",
+      "title": "Gears",
+      "category": "mechanical",
+      "excerpt": "Understanding gear types, ratios, and applications in robotics.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/mechanical/Gears/"
+    },
+    {
+      "id": "drive-mechanism",
+      "title": "Drive Mechanism",
+      "category": "mechanical",
+      "excerpt": "Different drive mechanisms for robot locomotion and manipulation.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/mechanical/drive_mechanism/"
+    },
+    {
+      "id": "position-orientation",
+      "title": "Position and Orientation",
+      "category": "mechanical",
+      "subcategory": "Kinematics",
+      "excerpt": "Representing robot position and orientation in 3D space.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/mechanical/position%20and%20orientation/"
+    },
+    {
+      "id": "joint-kinematics",
+      "title": "Joint Kinematics",
+      "category": "mechanical",
+      "subcategory": "Kinematics",
+      "excerpt": "Understanding joint types and their kinematic properties.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/mechanical/Joint%20Kinematics/"
+    },
+    {
+      "id": "forward-inverse-kinematics",
+      "title": "Forward and Inverse Kinematics",
+      "category": "mechanical",
+      "subcategory": "Kinematics",
+      "excerpt": "Computing end-effector position from joint angles and vice versa.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/mechanical/Forward%20and%20Inverse%20Kinematics/"
+    },
+    {
+      "id": "dynamics-intro",
+      "title": "Introduction to Dynamics",
+      "category": "mechanical",
+      "subcategory": "Dynamics",
+      "excerpt": "Understanding forces and torques in robot motion.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/mechanical/Introduction%20to%20Dynamics/"
+    },
+    {
+      "id": "simulation-intro",
+      "title": "Introduction to Simulation",
+      "category": "simulation",
+      "excerpt": "Why simulation is essential for robotics development and testing.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/simulation/intro/",
+      "content": "Simulation is an essential part of Robotics Automation. They provide a versatile platform to quickly test your code for bugs and performance. While robots are becoming more accessible, running code in simulations will always be more convenient for initial development and testing."
+    },
+    {
+      "id": "gazebo-basics",
+      "title": "Basics of Gazebo",
+      "category": "simulation",
+      "subcategory": "Gazebo",
+      "excerpt": "Getting started with Gazebo - the most popular robot simulation environment.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/simulation/gazebo/basics/"
+    },
+    {
+      "id": "robot-description",
+      "title": "Robot Description (URDF)",
+      "category": "simulation",
+      "subcategory": "Gazebo",
+      "excerpt": "Creating robot models using URDF for simulation and visualization.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/simulation/gazebo/Robot_Description/"
+    },
+    {
+      "id": "stdr-basics",
+      "title": "Basics of STDR",
+      "category": "simulation",
+      "subcategory": "STDR",
+      "excerpt": "Simple Two-Dimensional Robot simulator for quick 2D navigation testing.",
+      "externalUrl": "https://erc-bpgc.github.io/handbook/simulation/stdr/Basics/"
+    }
+  ]
+}

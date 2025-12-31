@@ -34,7 +34,8 @@ const menuItems = [
         subItems: [
             { name: 'Our Story', path: '/about#story' },
             { name: 'Current Team', path: '/about#team' },
-            { name: 'Alumni', path: '/about#alumni' }
+            { name: 'Alumni', path: '/about#alumni' },
+            { name: 'News', path: '/about#news' }
         ]
     },
     {
@@ -43,10 +44,14 @@ const menuItems = [
         hasDropdown: false
     },
     {
+        name: 'Blog',
+        path: '/blog',
+        hasDropdown: false
+    },
+    {
         name: 'Handbook',
-        path: 'https://erc-bpgc.github.io/handbook/',
-        hasDropdown: false,
-        external: true
+        path: '/handbook',
+        hasDropdown: false
     }
 ];
 

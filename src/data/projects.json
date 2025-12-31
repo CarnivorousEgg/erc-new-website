@@ -1,11 +1,11 @@
 [
     {
-        "id": "spiderbot",
+        "id": "spiderbot_done",
         "title": "SpiderBot",
         "category": "completed",
         "type": "research",
         "image": "/images/projects/spiderbot/cover.JPG",
-        "description": "Project SpiderBot aims to develop a six-legged round body Hexapod. Hexapods are a very versatile legged option since they provide more passive stability during locomotion as compared to a quadruped. They also benefit from a lower impact on the terrain and have greater mobility in surroundings. The major goal of this project is to study and develop walking gaits, trajectories and controllers for the robot to traverse any kind of terrain in an optimum manner. This will also include creating a more robust and reliable design for a hexapod.",
+        "description": "The Project SpiderBot initiative aims to construct a hexapod robot capable of multi-terrain navigation, applying advanced locomotion algorithms and robotic perception for practical applications in diverse environments.",
         "github": "https://github.com/ERC-BPGC/SpiderBot",
         "team_leads": [
             { "name": "Garv Gupta" },
@@ -15,12 +15,12 @@
         ]
     },
     {
-        "id": "vulcan",
+        "id": "vulcan_done",
         "title": "Vulcan",
         "category": "ongoing",
         "type": "research",
         "image": "/images/projects/vulcan/cover.JPG",
-        "description": "Fully humanoid robots that can replicate humans is quite an advanced research topic in the field of robotics. Vulcan is a humanoid head, being built with the aim of replicating human-like features such as blinking, making eye contact with the person speaking and mouth movement while 'speaking'. The project covers multiple technologies ranging from OpenCV to natural language processing methods to achieve this. Since building a full humanoid is quite complex and expensive, this will serve as a great launchpad for those that want to work with humanoid robots in the future.",
+        "description": "Fully humanoid robots that can replicate humans is quite an advanced research topic in the field of robotics. Vulcan is our attempt of building a humanoid, with the aim of replicating human-like features such as blinking, making eye contact with the person speaking and mouth movement while 'speaking'. The project covers multiple technologies ranging from OpenCV to natural language processing methods to achieve this. Since building a full humanoid is quite complex and expensive, this will serve as a great launchpad for those that want to work with humanoid robots in the future. While starting from a base point which was the facial structure, we are now working towards interacting with real world objects via a bionic arm which will serve to further Vulcan's progress in the field of humanoid robotics.",
         "github": "https://github.com/ERC-BPGC/project-vulcan",
         "team_leads": [
             { "name": "Aryan Goyal" },
@@ -31,12 +31,12 @@
         ]
     },
     {
-        "id": "snakebot",
+        "id": "snakebot_done",
         "title": "SnakeBot",
         "category": "ongoing",
         "type": "research",
         "image": "/images/projects/snakebot/cover.JPG",
-        "description": "Snakebot is a modular, wheel-less robot having universal joints giving a 2 DOF at each joint. The motion is carried out with the help of servos using metallic strings. As of now, we have designed a CAD model. Initially, we will be focusing on straight motion and moving it in the 2D plane. This robot represents a new advancement in the field of robotics. The long-term goal of our project is to implement various snake-like motions such as serpentine, sidewinding, etc., and to enhance friction control of the robot across various terrains.",
+        "description": "Snakebot is a modular, wheel-less snake robot in which each segment operates independently with onboard control and power. The current design implements 2-DOF motion using a virtual rolling joint driven by 2 servos. A six-segment version has been successfully assembled and tested, demonstrating basic locomotion patterns such as caterpillar . Future work focuses on enabling advanced snake gaits, including serpentine and sidewinding motion, and enhancing friction control for improved terrain adaptability.",
         "github": "https://github.com/ERC-BPGC/SnakeBot",
         "team_leads": [
             { "name": "Dev Thacker" },
@@ -46,12 +46,12 @@
         ]
     },
     {
-        "id": "quadruped",
+        "id": "quadruped_done",
         "title": "Quadruped",
         "category": "ongoing",
         "type": "research",
         "image": "/images/projects/quadruped/cover.png",
-        "description": "Designing and Building a 12 DoF Quadruped from scratch.",
+        "description": "Project Quadruped aims to develop an advanced quadruped robot designed for autonomous site documentation and surveying in challenging environments, such as construction sites and disaster areas. Inspired by Boston Dynamics, 'Spot', the robot features four robotic legs, each with three degrees of freedom (3-DOF), allowing it to traverse uneven terrain, climb stairs, and maneuver over obstacles with ease. This versatility makes it ideal for environments where traditional wheeled robots may struggle.",
         "github": "https://github.com/ERC-BPGC/quadruped",
         "team_leads": [
             { "name": "Saransh Agrawal" },
@@ -60,15 +60,15 @@
         ]
     },
     {
-        "id": "swarm-drones",
+        "id": "swarm-drones_done",
         "title": "Swarm Drones",
         "category": "ongoing",
         "type": "research",
         "image": "",
-        "description": "Making an Autonomous Drone with a goal to catch a moving obstacle like a tennis ball.",
+        "description": "This ongoing project is focused on the development of a mother child drone architecture, where a primary drone transports and deploys multiple child drones into indoor environments for autonomous exploration. The child drones are being developed to perform multi-agent ToF-based scanning and mapping, supported by swarm algorithms for coordination, communication, and data fusion. System behavior and scalability are being continuously validated using ROS 2 with Aerostack2 simulations. In parallel, a custom ESP32-based child drone platform is being designed to replace Crazyflie, enabling full low level control and flexible integration of ToF sensors and additional onboard processors.",
         "github": "https://github.com/ERC-BPGC/",
         "team_leads": [
-            { "name": "Indrajit Mondal" },
+            { "name": "Indrajit Mandal" },
             { "name": "Omkar Shrikant" }
         ]
     },
@@ -85,12 +85,25 @@
         ]
     },
     {
-        "id": "robotic-arm-v2",
+        "id": "embedded-systems",
+        "title": "Embedded Systems",
+        "category": "ongoing",
+        "type": "research",
+        "image": "",
+        "description": "",
+        "github": "https://github.com/ERC-BPGC/",
+        "team_leads": [
+            { "name": "Yash Kamat" },
+            { "name": "Soumyaditya Nandy"}
+        ]
+    },
+    {
+        "id": "robotic-arm-v2_done",
         "title": "Robotic Arm v2",
         "category": "ongoing",
         "type": "research",
         "image": "/images/projects/robotic-arm/cover.JPG",
-        "description": "Building v2 for Robotic Arm Project with 6 degrees of freedom.",
+        "description": "This project explores the structured development of robotic manipulators, progressing from a custom 3-DOF robotic arm to a 6-DOF MOVEO manipulator, and currently to SO-ARM 100-based systems as a modular test platform. The work emphasizes mechanical and actuator design, kinematic and dynamic modeling, embedded control, and system integration, with the long-term objective of realizing a fully custom, in-house fabricated 6-DOF dual-arm robotic system. The platform is intended for robotic manipulation research and control algorithm experimentation.",
         "github": "https://github.com/ERC-BPGC/RoboticArm",
         "team_leads": [
             { "name": "Sudhanshu Kulkarni" },
@@ -99,7 +112,7 @@
         ]
     },
     {
-        "id": "robotic-arm-3dof",
+        "id": "robotic-arm-3dof_done",
         "title": "Robotic Arm (3 DoF)",
         "category": "completed",
         "type": "research",
@@ -111,12 +124,12 @@
         ]
     },
     {
-        "id": "air-hockey",
+        "id": "air-hockey_done",
         "title": "Air Hockey",
         "category": "completed",
         "type": "mini",
         "image": "/images/projects/air-hockey/cover.png",
-        "description": "The idea for this project came up as a fun interactive demonstration for Quark '24. We were able to somewhat implement a Neural Network agent trained using imitation learning techniques. The expert for this approach was the computer of a mobile based air hockey game. Data was extracted from a half-hour long video playthrough of the game through computer vision techniques. The agent was trained using a DNN in keras. This was then deployed on hardware built completely in-house which used a stepper motor actuated gantry to actuate the paddle and a single camera to gather relevant information.",
+        "description": "Originally conceptualized for Quark '24, this project features a fully autonomous air hockey robot built on custom, in-house hardware. The system utilizes a robust, stepper-motor actuated gantry and a single-camera computer vision setup to track game states in real-time. To control the paddle, we implemented and benchmarked three distinct algorithms: an Imitation Learning agent (a Keras DNN trained on video data extracted from an expert mobile game), a Reinforcement Learning (RL) model for adaptive strategy, and a conventional physics engine for mathematical trajectory prediction. This multi-model approach allows us to test classical control theory against modern AI techniques on a rigorous physical platform.",
         "github": "https://github.com/Maker-Rat/Air_Hockey_RL",
         "team_leads": [
             { "name": "Saransh Agrawal" },
@@ -124,7 +137,7 @@
         ]
     },
     {
-        "id": "carborone",
+        "id": "carborone_done",
         "title": "Carborone",
         "category": "completed",
         "type": "research",
@@ -136,7 +149,7 @@
         ]
     },
     {
-        "id": "swarmbots-2",
+        "id": "swarmbots-2_done",
         "title": "SwarmBots 2.0",
         "category": "completed",
         "type": "research",
@@ -148,7 +161,7 @@
         ]
     },
     {
-        "id": "trotbot",
+        "id": "trotbot_done",
         "title": "Trotbot",
         "category": "completed",
         "type": "mini",
@@ -161,7 +174,7 @@
         ]
     },
     {
-        "id": "acoustic-camera",
+        "id": "acoustic-camera_done",
         "title": "Acoustic Camera",
         "category": "completed",
         "type": "research",
@@ -174,19 +187,19 @@
         ]
     },
     {
-        "id": "gennav",
+        "id": "gennav_done",
         "title": "GenNav",
         "category": "completed",
         "type": "research",
         "image": "/images/projects/gennav/cover.png",
-        "description": "Gennav aims to create a general purpose python library that can be used for path planning in various robotics settings. It will have a collection of path planning algorithms, motion controllers along with various utilities to handle different methods of path optimisation, environment representation and eventually a geometry module to handle the underlying computations. Currently focused on the 2D path planning aspect of navigation. Rather than writing a big new python file for each new path planning algorithm, we could build on already defined utilities and primitives. This would be a big help to anyone working on any robot with autonomous navigation capabilities in the future.",
+        "description": "Gennav aims to create a general purpose python library that can be used for path planning in various robotics settings. It will have a collection of path planning algorithms, motion controllers along with various utilities to handle different methods of path optimisation, environment representation and eventually a geometry module to handle the underlying computations. Currently focused on the 2D path planning aspect of navigation. Rather than writing a big new python file for each new path planning algorithm, we could build on already defined utilities and primitives. This would be a big help to anyone working on any robot with autonomous navigation capabilities in the future. All they would need to do is implement the robot specific code and use gennav for the planning, control and optimization heavy lifting.",
         "github": "https://github.com/ERC-BPGC/gennav",
         "team_leads": [
             { "name": "Atharv Sonwane" }
         ]
     },
     {
-        "id": "quadruped-bhaagwati",
+        "id": "quadruped-bhaagwati_done",
         "title": "Quadruped a.k.a. Bhaagwati",
         "category": "completed",
         "type": "mini",
@@ -198,7 +211,7 @@
         ]
     },
     {
-        "id": "modbot",
+        "id": "modbot_done",
         "title": "Modbot",
         "category": "completed",
         "type": "research",
@@ -210,7 +223,7 @@
         ]
     },
     {
-        "id": "swarmbots",
+        "id": "swarmbots_done",
         "title": "Swarmbots",
         "category": "completed",
         "type": "research",
@@ -222,7 +235,7 @@
         ]
     },
     {
-        "id": "sketcher",
+        "id": "sketcher_done",
         "title": "Sketcher",
         "category": "completed",
         "type": "mini",
@@ -232,7 +245,7 @@
         "team_leads": []
     },
     {
-        "id": "led-hexapad",
+        "id": "led-hexapad_done",
         "title": "LED Hexapad",
         "category": "completed",
         "type": "mini",
@@ -242,19 +255,19 @@
         "team_leads": []
     },
     {
-        "id": "led-globe",
+        "id": "led-globe_done",
         "title": "LED Globe",
         "category": "completed",
         "type": "mini",
         "image": "/images/projects/led-globe/cover.jpeg",
         "description": "LED Globe was the flagship display project from ERC for Quark 2019, the technical fest of BITS-Goa. The globe consisted of two 75 cm radius acrylic semicircular discs having LEDs along the perimeter of one of them. This setup was mounted vertically on an aluminium frame. The setup would be rotated using a high torque motor. The synchronised firing of LEDs created the illusion of an image. The programming that was involved allowed one to take any image from the internet, divide it into a number of segments which the code could recognize and thus program the LEDs in that manner.",
-        "github": "",
+        "github": "https://github.com/ERC-BPGC/LED_Globe",
         "team_leads": [
             { "name": "Mohit Gupta" }
         ]
     },
     {
-        "id": "ball-drone",
+        "id": "ball-drone_done",
         "title": "Ball-Drone",
         "category": "completed",
         "type": "research",
@@ -266,7 +279,7 @@
         ]
     },
     {
-        "id": "klann",
+        "id": "klann_done",
         "title": "Klann",
         "category": "completed",
         "type": "mini",
@@ -276,12 +289,12 @@
         "team_leads": []
     },
     {
-        "id": "8bit-computer",
+        "id": "8bit-computer_done",
         "title": "8 Bit Computer",
         "category": "completed",
         "type": "mini",
         "image": "/images/projects/8bit/8bit.JPG",
-        "description": "A fully functional 8-bit computer built from scratch using basic electronic components, demonstrating fundamental computer architecture principles.",
+        "description": "A fully functional 8-bit computer built from scratch using Integrated Circuits, demonstrating fundamental computer architecture principles.",
         "github": "",
         "team_leads": [
             { "name": "Dev Thacker" },
@@ -289,14 +302,21 @@
         ]
     },
     {
-        "id": "desktop-companion-bot",
+        "id": "desktop-companion-bot_done",
         "title": "Desktop Companion Bot",
         "category": "completed",
         "type": "mini",
         "image": "",
         "description": "A small interactive desktop robot companion designed to assist and entertain users with various programmed behaviors and responses.",
-        "github": "",
-        "team_leads": []
+        "github": "https://github.com/ERC-BPGC/Desktop-Companion-Bot",
+        "team_leads": [
+            {"name": "Saransh Agrawal"},
+            {"name": "Nilesh Bhatia"},
+            {"name": "Aryan Goyal"},
+            {"name": "Parth Jaju"},
+            {"name": "Dev Thacker"},
+            {"name": "Kevin Mathew"}
+        ]
     },
     {
         "id": "stewart-platform",
@@ -305,107 +325,166 @@
         "type": "mini",
         "image": "",
         "description": "A parallel manipulator platform with six degrees of freedom, commonly used for motion simulation and precision positioning applications.",
-        "github": "",
-        "team_leads": []
+        "github": "https://github.com/ERC-BPGC/Stewart-Platform",
+        "team_leads": [
+            {"name": "Yash Kamat"}
+        ]
     },
     {
-        "id": "cubli",
+        "id": "cubli_done",
         "title": "Cubli",
         "category": "completed",
         "type": "mini",
         "image": "",
         "description": "A self-balancing cube robot that can balance on its corner and edges using reaction wheels and advanced control algorithms.",
-        "github": "",
-        "team_leads": []
+        "github": "https://github.com/ERC-BPGC/Cubli",
+        "team_leads": [
+            {"name": "Dev Thacker"},
+            {"name": "Nilesh Bhatia"},
+            {"name": "Khayik Champawat"},
+            {"name": "Arshika Sharma"}
+        ]
     },
     {
-        "id": "single-inverted-pendulum",
+        "id": "single-inverted-pendulum_done",
         "title": "Single Inverted Pendulum",
         "category": "completed",
         "type": "mini",
         "image": "",
-        "description": "A classic control systems project demonstrating the balancing of an inverted pendulum using feedback control techniques.",
-        "github": "",
-        "team_leads": []
+        "description": "A classic control systems project demonstrating the stabilization and balancing of a single inverted pendulum using multiple control strategies, including PID, LQR, and MPC. The project focused on modeling the pendulum dynamics, designing and tuning controllers, and comparing their performance in maintaining upright equilibrium under disturbances.",
+        "github": "https://github.com/ERC-BPGC/Single_Inverted_Pendulum",
+        "team_leads": [
+            {"name": "Parth Jaju"}
+        ]
     },
     {
-        "id": "automated-orchestra",
+        "id": "tars_done",
+        "title": "Tars",
+        "category": "completed",
+        "type": "mini",
+        "image": "",
+        "description": "A miniature replica of TARS from the movie Interstellar that mimics it's locomotion and speech capabilities keeping it's 'sarcasm' in mind",
+        "github": "https://github.com/bodsvei/TARS_Quark-25",
+        "team_leads": [
+            {"name": "Kevin Mathew"},
+            {"name": "Yash Vijay"},
+            {"name": "Nathan Sequeira"}
+        ]
+    },
+    {
+        "id": "lasor-projector",
+        "title": "Lasor Projector",
+        "category": "completed",
+        "type": "mini",
+        "image": "",
+        "description": "",
+        "github": "",
+        "team_leads": [
+            {"name": "Suryansh Singh"},
+            {"name": "Advait Anand Kelkar"}
+        ]
+    },
+    {
+        "id": "automated-orchestra_done",
         "title": "Automated Orchestra",
         "category": "completed",
         "type": "mini",
         "image": "",
-        "description": "An automated musical system that plays instruments autonomously, creating orchestral performances through robotics and programming.",
-        "github": "",
-        "team_leads": []
+        "description": "An automated musical system that works as an add-on to conventional instruments, enabling them to be played autonomously through robotic actuation and intelligent control, thereby creating synchronized orchestral performances without human performers.",
+        "github": "https://github.com/ERC-BPGC/Auto-Orchestra",
+        "team_leads": [
+            {"name": "Sudhanshu Kulkarni"}
+        ]
     },
     {
-        "id": "automated-dart-board",
+        "id": "automated-dart-board_done",
         "title": "Automated Dart Board",
         "category": "completed",
         "type": "mini",
         "image": "",
-        "description": "A smart dart board system that automatically tracks and scores dart throws using computer vision and sensors.",
-        "github": "",
-        "team_leads": []
+        "description": "In this project we created a low-cost, marker-based motion capture system specifically created for an automated bullseye dartboard. The system was built using modified PS3 Eye cameras enhanced for infrared sensitivity, enabling precise, real time tracking of IR reflective markers. Our solution included meticulous intrinsic and extrinsic calibration processes, ensuring millimeter level accuracy while remaining cost effective. On the mechanical side, the system employed a gantry based mechanism driven by six NEMA stepper motors to achieve precise belt based motion control.",
+        "github": "https://github.com/ERC-BPGC/Auto-Dart-Board",
+        "team_leads": [
+            {"name": "Yashvardhan Mote"},
+            {"name": "Omkar Shrikant"},
+            {"name": "Ranadip Chakraborty"},
+            {"name": "Sudhanshu Kulkarni"},
+            {"name": "Aadit"}
+        ]
     },
     {
-        "id": "led-matrix",
+        "id": "led-matrix_done",
         "title": "LED Matrix",
         "category": "completed",
         "type": "mini",
         "image": "",
         "description": "A programmable LED matrix display capable of showing animations, text, and graphics through custom programming.",
-        "github": "",
-        "team_leads": []
+        "github": "https://github.com/ERC-BPGC/LED_Matrix",
+        "team_leads": [
+            {"name": "Dev Thacker"}
+        ]
     },
     {
-        "id": "swarm-minions",
+        "id": "swarm-minions_done",
         "title": "Swarm Minions",
         "category": "completed",
         "type": "mini",
         "image": "",
         "description": "A group of small coordinated robots that work together using swarm intelligence algorithms to accomplish tasks collectively.",
-        "github": "",
-        "team_leads": []
+        "github": "https://github.com/ERC-BPGC/Swarm-Minions",
+        "team_leads": [
+            {"name": "Aryan Goyal"},
+            {"name": "Indrajit Mandal"},
+            {"name": "Devansh Dusad"},
+            {"name": "Harikrishnan"}
+        ]
     },
     {
-        "id": "maze-solver",
+        "id": "maze-solver_done",
         "title": "Maze Solver",
         "category": "completed",
         "type": "mini",
         "image": "",
         "description": "An autonomous robot capable of navigating and solving mazes using sensors and pathfinding algorithms.",
-        "github": "",
-        "team_leads": []
+        "github": "https://github.com/ERC-BPGC/Maze_Solver",
+        "team_leads": [
+            {"name": "Pranav Saxena"},
+            {"name": "Ajinkya Deshpande"}
+        ]
     },
     {
-        "id": "wall-e",
+        "id": "wall-e_done",
         "title": "WALL-E",
         "category": "completed",
         "type": "mini",
         "image": "",
         "description": "A replica of the beloved Pixar robot WALL-E, featuring expressive movements and interactive behaviors.",
-        "github": "",
-        "team_leads": []
+        "github": "https://github.com/ERC-BPGC/WALL-E",
+        "team_leads": [
+            {"name": "Parth Shah"}
+        ]
     },
     {
-        "id": "bb8-droid",
+        "id": "bb8-droid_done",
         "title": "BB8 Droid",
         "category": "completed",
         "type": "mini",
         "image": "",
         "description": "A replica of the Star Wars BB-8 droid, featuring the signature ball-based movement and head balancing mechanism.",
-        "github": "",
-        "team_leads": []
+        "github": "https://github.com/ERC-BPGC/BB8_Droid",
+        "team_leads": [
+            {"name": "Sharvil Potdar"},
+            {"name": "Chirag"}
+        ]
     },
     {
-        "id": "strikebot",
+        "id": "strikebot_done",
         "title": "Strikebot",
         "category": "completed",
         "type": "mini",
         "image": "",
         "description": "A combat-style robot designed for competitive robotics battles with offensive and defensive capabilities.",
-        "github": "",
+        "github": "https://github.com/ERC-BPGC/strikeBot",
         "team_leads": []
     }
 ]

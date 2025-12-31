@@ -7,6 +7,7 @@ import AlumniTimeline from '../components/AlumniTimeline';
 import BackToTop from '../components/BackToTop';
 import CurveDivider from '../components/CurveDivider';
 import teamData from '../data/team.json';
+import newsData from '../data/news.json';
 import { FaLinkedin, FaInstagram, FaEnvelope, FaTwitter, FaCamera } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { cn } from '../utils/cn';
@@ -44,6 +45,7 @@ const tabs = [
     { id: 'story', label: 'Our Story' },
     { id: 'team', label: 'Current Team' },
     { id: 'alumni', label: 'Alumni' },
+    { id: 'news', label: 'News' },
     { id: 'contact', label: 'Contact Us' }
 ];
 
@@ -181,6 +183,38 @@ const About = () => {
                     {activeTab === 'alumni' && (
                         <section className="w-full overflow-hidden">
                             <AlumniTimeline alumni={teamData.alumni} />
+                        </section>
+                    )}
+
+                    {activeTab === 'news' && (
+                        <section className="w-full max-w-4xl mx-auto px-4">
+                            <div className="text-center mb-12">
+                                <h2 className="text-3xl md:text-4xl font-bold mb-4">News</h2>
+                                <p className="text-gray-600 dark:text-gray-400">
+                                    Latest updates from our members
+                                </p>
+                            </div>
+                            
+                            <div className="space-y-4">
+                                {newsData.map((item, index) => (
+                                    <motion.div
+                                        key={item.id}
+                                        initial={{ opacity: 0, x: -20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: index * 0.05 }}
+                                        className="flex gap-4 md:gap-6 p-4 md:p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                                    >
+                                        <div className="flex-shrink-0 w-24 md:w-28">
+                                            <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+                                                [{item.date}]
+                                            </span>
+                                        </div>
+                                        <p className="text-gray-700 dark:text-gray-300 flex-1">
+                                            {item.content}
+                                        </p>
+                                    </motion.div>
+                                ))}
+                            </div>
                         </section>
                     )}
 

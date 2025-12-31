@@ -23,6 +23,13 @@
         "name": "Pizza Wings",
         "logo": "/images/spons/sponsor3.jpeg",
         "website": "https://pizzawings.co.in/"
+    },
+    {
+        "id": "sponsor-5",
+        "name": "Espressif Systems",
+        "logo": "/images/spons/sponsor5.png",
+        "logoDark": "/images/spons/sponsor5-dark.png",
+        "website": "https://www.espressif.com/en"
     }
     
 ]

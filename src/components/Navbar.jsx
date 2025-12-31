@@ -10,7 +10,8 @@ const navItems = [
     { name: 'Projects', path: '/projects' },
     { name: 'Events', path: '/events' },
     { name: 'About Us', path: '/about' },
-    { name: 'Handbook', path: 'https://erc-bpgc.github.io/handbook/' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Handbook', path: '/handbook' },
 ];
 
 const Navbar = () => {

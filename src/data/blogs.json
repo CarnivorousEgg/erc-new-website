@@ -1,0 +1,360 @@
+[
+  {
+    "id": "behaviour-based-robotics",
+    "title": "Behaviour Based Robotics",
+    "excerpt": "This article talks about Behaviour Based Robotics: what it is, how it works, its applications and the future of BBR in AI.",
+    "author": {
+      "name": "Rohan Divekar",
+      "link": "https://www.linkedin.com/in/rohandivekar/"
+    },
+    "date": "February 14, 2022",
+    "readTime": "7 min",
+    "categories": ["AI", "Robotics", "Automation", "Behavious-Based-Robotics"],
+    "coverImage": "https://erc-bpgc.github.io/blog/img/bbr/cover.png",
+    "sections": [
+      {
+        "title": "Introduction",
+        "content": "Behaviour Based Robotics (BBR) is a branch of robotics that emerged in the late 1980s as a reaction to the limitations of traditional AI-based robotic control. Rather than relying on complex symbolic reasoning and detailed world models, BBR advocates for robots to be controlled by a set of simple behaviours that interact with each other and the environment directly.\n\nThe concept was pioneered by Rodney Brooks at MIT, who argued that intelligent behaviour could emerge from the interaction of simple, sensor-driven behaviours without the need for explicit representations of the world. This approach is often called the \"subsumption architecture.\""
+      },
+      {
+        "title": "How It Works",
+        "content": "In BBR, a robot's control system is organized as a collection of behaviour modules. Each behaviour is a simple control loop that maps sensor inputs directly to actuator outputs. These behaviours run concurrently and compete for control of the robot's actuators.\n\nThe key principles include:\n\n1. **Situatedness**: The robot is embedded in the real world and responds to actual sensor data, not abstract symbols.\n\n2. **Embodiment**: The physical body of the robot is integral to its intelligence. The robot's morphology affects how it interacts with the world.\n\n3. **Emergence**: Complex behaviour emerges from the interaction of simple behaviours, rather than being explicitly programmed.\n\n4. **Reactivity**: Behaviours respond quickly to changes in the environment without extensive deliberation."
+      },
+      {
+        "title": "Subsumption Architecture",
+        "content": "The subsumption architecture, proposed by Brooks, organizes behaviours into layers. Lower layers handle basic survival behaviours (like obstacle avoidance), while higher layers implement more complex behaviours (like exploration or goal-seeking).\n\nHigher layers can \"subsume\" or override lower layers when necessary, but lower layers continue to operate and can take over if the situation demands it. This creates a robust system that degrades gracefully rather than failing completely.",
+        "image": {
+          "src": "https://erc-bpgc.github.io/blog/img/bbr/subsumption.png",
+          "caption": "Subsumption Architecture - Layered behavior organization"
+        }
+      },
+      {
+        "title": "Applications",
+        "content": "BBR has been successfully applied in various domains:\n\n- **Mobile Robots**: Vacuum cleaners like Roomba use behaviour-based control for navigation and cleaning.\n\n- **Swarm Robotics**: Simple behaviours enable coordination among large numbers of robots without centralized control.\n\n- **Legged Locomotion**: Walking robots often use BBR for stable locomotion over uneven terrain.\n\n- **Space Exploration**: Rovers use reactive behaviours for autonomous navigation in unknown environments."
+      },
+      {
+        "title": "Advantages and Limitations",
+        "content": "**Advantages:**\n- Real-time responsiveness\n- Robustness to sensor noise and failures\n- No need for complete world models\n- Emergent complexity from simple rules\n\n**Limitations:**\n- Difficulty in achieving high-level goals\n- Hard to predict emergent behaviour\n- Limited ability to learn or adapt\n- Scaling issues with complex tasks"
+      },
+      {
+        "title": "Future of BBR",
+        "content": "Modern robotics increasingly combines BBR principles with learning-based approaches. Reinforcement learning can be used to tune behaviour parameters, while deep learning can create more sophisticated perception modules that feed into behaviour-based control.\n\nThe integration of BBR with other AI paradigms offers promising directions for creating robots that are both reactive and capable of complex, goal-directed behaviour."
+      }
+    ],
+    "references": [
+      {
+        "text": "Brooks, R. A. (1986). A robust layered control system for a mobile robot. IEEE Journal on Robotics and Automation.",
+        "link": ""
+      },
+      {
+        "text": "Arkin, R. C. (1998). Behavior-Based Robotics. MIT Press.",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "id": "model-predictive-control",
+    "title": "Model Predictive Control",
+    "excerpt": "This blog covers Model Predictive Control (MPC), an advanced method of process control that uses a model of the system to predict future behaviour and optimize control actions.",
+    "author": {
+      "name": "Pranav Goyal",
+      "link": "https://www.linkedin.com/in/pranavgoyal1803/"
+    },
+    "date": "May 1, 2021",
+    "readTime": "6 min",
+    "categories": ["AI", "Automation", "Controls"],
+    "coverImage": "https://erc-bpgc.github.io/blog/img/mpc/cover.png",
+    "sections": [
+      {
+        "title": "Introduction",
+        "content": "Model Predictive Control (MPC) is an advanced control strategy that uses a mathematical model of a system to predict its future behaviour and determine optimal control actions. Unlike traditional control methods that react to errors, MPC looks ahead and plans control actions that will minimize future errors while respecting constraints.\n\nMPC has become increasingly popular in robotics, autonomous vehicles, and industrial process control due to its ability to handle multi-variable systems with constraints."
+      },
+      {
+        "title": "How MPC Works",
+        "content": "The MPC algorithm operates in a receding horizon fashion:\n\n1. **Prediction**: At each time step, use the system model to predict future states over a prediction horizon.\n\n2. **Optimization**: Solve an optimization problem to find the control sequence that minimizes a cost function (typically tracking error and control effort) while satisfying constraints.\n\n3. **Implementation**: Apply only the first control action from the optimal sequence.\n\n4. **Repeat**: Move to the next time step and repeat the process with updated measurements.\n\nThis approach allows MPC to continuously adapt to changes in the system and disturbances."
+      },
+      {
+        "title": "Mathematical Formulation",
+        "content": "The core of MPC is solving an optimization problem at each time step. For a discrete-time linear system:\n\nx(k+1) = Ax(k) + Bu(k)\ny(k) = Cx(k)\n\nThe optimization typically minimizes:\n\nJ = Σ [||y(k+i) - r(k+i)||²Q + ||u(k+i)||²R]\n\nwhere Q and R are weighting matrices, r is the reference, and the sum is over the prediction horizon. Constraints on states and inputs are added as inequality constraints.",
+        "image": {
+          "src": "https://erc-bpgc.github.io/blog/img/mpc/mpc_diagram.png",
+          "caption": "MPC Receding Horizon Control Strategy"
+        }
+      },
+      {
+        "title": "Applications in Robotics",
+        "content": "MPC finds extensive use in robotics:\n\n- **Autonomous Vehicles**: Path following, lane keeping, and collision avoidance\n- **Robotic Manipulators**: Trajectory tracking with joint limits and obstacle avoidance\n- **Quadrotors**: Aggressive manoeuvres with input constraints\n- **Legged Robots**: Footstep planning and balance control\n\nThe ability to incorporate constraints makes MPC particularly suitable for safety-critical applications."
+      },
+      {
+        "title": "Advantages and Challenges",
+        "content": "**Advantages:**\n- Handles multi-variable systems naturally\n- Explicitly incorporates constraints\n- Preview capability for known future references/disturbances\n- Optimal control within the prediction horizon\n\n**Challenges:**\n- Computational complexity for large systems or long horizons\n- Requires accurate system model\n- Tuning of cost function weights and horizon lengths\n- Real-time implementation requirements"
+      },
+      {
+        "title": "Recent Developments",
+        "content": "Recent advances in MPC include:\n\n- **Nonlinear MPC (NMPC)**: Extends MPC to nonlinear systems using nonlinear optimization\n- **Learning-based MPC**: Combines MPC with machine learning to learn models or improve performance\n- **Stochastic MPC**: Handles uncertainty in models and disturbances\n- **Explicit MPC**: Pre-computes the control law offline for fast online implementation\n\nWith increasing computational power, MPC is becoming feasible for faster systems and more complex applications."
+      }
+    ],
+    "references": [
+      {
+        "text": "Rawlings, J. B., Mayne, D. Q., & Diehl, M. (2017). Model Predictive Control: Theory, Computation, and Design.",
+        "link": ""
+      },
+      {
+        "text": "Kouvaritakis, B., & Cannon, M. (2016). Model Predictive Control: Classical, Robust and Stochastic. Springer.",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "id": "path-planning",
+    "title": "Heuristically Guided Sampling Based Path Planning",
+    "excerpt": "An article that discusses various sampling-based path planning algorithms and how heuristics can improve their efficiency.",
+    "author": {
+      "name": "Suhrudh S",
+      "link": "https://www.linkedin.com/in/suhrudh-s/"
+    },
+    "date": "April 8, 2021",
+    "readTime": "6 min",
+    "categories": ["AI", "Automation", "Path-Planning"],
+    "coverImage": "https://erc-bpgc.github.io/blog/img/path_planning/cover.png",
+    "sections": [
+      {
+        "title": "Introduction",
+        "content": "Path planning is a fundamental problem in robotics - finding a collision-free path from a start configuration to a goal configuration. While grid-based methods like A* work well in low-dimensional spaces, they become computationally intractable in high-dimensional configuration spaces due to the curse of dimensionality.\n\nSampling-based planning algorithms address this by randomly sampling the configuration space, making them suitable for robots with many degrees of freedom like manipulators and humanoids."
+      },
+      {
+        "title": "Probabilistic Roadmap (PRM)",
+        "content": "PRM is a multi-query planner that builds a roadmap of the free configuration space:\n\n1. **Sampling Phase**: Randomly sample configurations and check if they're collision-free\n2. **Connection Phase**: Connect nearby samples with straight-line paths if the path is collision-free\n3. **Query Phase**: For each start-goal pair, connect them to the roadmap and search for a path\n\nPRM is efficient when multiple queries are needed in the same environment but requires preprocessing time.",
+        "image": {
+          "src": "https://erc-bpgc.github.io/blog/img/path_planning/prm.png",
+          "caption": "Probabilistic Roadmap construction and query"
+        }
+      },
+      {
+        "title": "Rapidly-exploring Random Trees (RRT)",
+        "content": "RRT is a single-query planner that incrementally builds a tree rooted at the start:\n\n1. Sample a random configuration\n2. Find the nearest node in the tree\n3. Extend from that node towards the sample\n4. If the extension is collision-free, add the new node\n5. Repeat until the goal is reached\n\nRRT explores the space efficiently by being biased towards unexplored regions, but the resulting paths are often suboptimal.",
+        "image": {
+          "src": "https://erc-bpgc.github.io/blog/img/path_planning/rrt.png",
+          "caption": "RRT tree expansion towards goal"
+        }
+      },
+      {
+        "title": "RRT* and Asymptotic Optimality",
+        "content": "RRT* improves upon RRT by:\n\n1. Considering all nodes within a radius when adding a new node\n2. Choosing the parent that minimizes path cost from start\n3. Rewiring nearby nodes if going through the new node is cheaper\n\nThis provides asymptotic optimality - as the number of samples increases, the path converges to the optimal solution. Variants like Informed RRT* further improve convergence by focusing sampling in relevant regions."
+      },
+      {
+        "title": "Heuristic Guidance",
+        "content": "Sampling-based planners can be improved using heuristics:\n\n- **Biased Sampling**: Sample more densely near the goal or along expected paths\n- **Adaptive Sampling**: Adjust sampling distribution based on exploration progress\n- **Learned Heuristics**: Use machine learning to predict good samples or paths\n- **Batch Informed Trees (BIT*)**: Combines the strengths of graph-based and sampling-based planning\n\nHeuristics can dramatically reduce planning time while maintaining solution quality guarantees."
+      },
+      {
+        "title": "Applications",
+        "content": "These algorithms are used extensively in:\n\n- **Robotic Manipulation**: Planning arm motions in cluttered environments\n- **Autonomous Navigation**: Vehicle path planning with dynamic obstacles\n- **Multi-robot Systems**: Coordinated motion planning\n- **Animation**: Character motion planning in computer graphics\n\nThe choice of algorithm depends on the specific requirements: single vs. multi-query, optimality requirements, and available computation time."
+      }
+    ],
+    "references": [
+      {
+        "text": "LaValle, S. M. (2006). Planning Algorithms. Cambridge University Press.",
+        "link": "http://lavalle.pl/planning/"
+      },
+      {
+        "text": "Karaman, S., & Frazzoli, E. (2011). Sampling-based algorithms for optimal motion planning. IJRR.",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "id": "semantic-scene-understanding",
+    "title": "Semantic Scene Understanding In Robotics",
+    "excerpt": "An article on why semantic scene understanding could be the next big thing in autonomous robotics, where we are now, and what comes next.",
+    "author": {
+      "name": "Rishikesh Vanarse",
+      "link": "https://rmvanarse.github.io/"
+    },
+    "date": "March 11, 2021",
+    "readTime": "8 min",
+    "categories": ["Innovation", "AI", "Computer-Vision"],
+    "coverImage": "https://erc-bpgc.github.io/blog/img/semantic_scene/cover.png",
+    "sections": [
+      {
+        "title": "Introduction",
+        "content": "I accidentally dropped my keys this morning. They fell and slid down right under the bed. I got down, making sure not to knock anything over, and tried to reach them, but they seemed out of reach. I instinctively looked around to see if I could use anything to reach the keys, and saw an unused guitar-stand nearby. It took me 4-5 seconds to dismantle the stand, and use its rod to retrieve my keys. This whole 'side-quest' barely cost me 25 seconds.\n\nBeing a human being, retrieving a key from under a bed is a task that is too insignificant for us to ponder over. We overcome multiple such hindrances daily, without realizing their complexity. For today's robots (even the most advanced ones), this very task would be extremely complex. Why is that so?"
+      },
+      {
+        "title": "The Gap in Robot Intelligence",
+        "content": "Robotic arms and grippers of our age possess amazing dexterity and recent robots have overcome some of the hardest challenges in control. With advanced sensors, processors and algorithms, tasks such as localization & motion planning are more efficient than ever before. Developments in AI have made real-time object detection and tracking possible.\n\nYet, tasks such as the one mentioned above still seem near-impossible due to a simple unanswered question: How would a robot figure out what to do in such unplanned situations?\n\nDespite employing state-of-the-art neural networks, robots do not possess a true understanding of the semantics of their environment, i.e. the meaning of the things around them. Robots do not know how every object in their surroundings can influence their goal."
+      },
+      {
+        "title": "Semantic SLAM",
+        "content": "One of the relatively more explored sub-fields of semantic scene understanding is semantic SLAM (Simultaneous Localization and Mapping). Most techniques in semantic SLAM simply augment a map with semantic information.\n\nIn earlier works, keypoints extracted within object detection bounding boxes are used to introduce physical constraints during SLAM. Knowledge of recognized objects can be used to introduce semantic priors (eg: A tree should be vertically oriented, the trunk should always touch the ground).\n\nMany approaches also predict 3D structures that are not fully visible, by using known shapes of common objects. This helps the robot predict occluded structures and free-spaces. Recent approaches go further by taking into account factors such as the movability, flexibility, allowed degrees of freedom and expected behaviour of known objects.",
+        "image": {
+          "src": "https://erc-bpgc.github.io/blog/img/semantic_scene/semantic_slam.png",
+          "caption": "Semantic SLAM - How Tesla Autopilot sees the world (left) and augmenting SLAM with object information (right)"
+        }
+      },
+      {
+        "title": "Ontology and Logic",
+        "content": "For robots to make sense of the inter-relations of objects, our knowledge of these objects needs to be arranged in some form of conceptual hierarchy. A common approach towards this is using conceptual maps. These maps are an abstraction of the environment in terms of a graph.\n\nIn some approaches, nodes represent physical area-labels (room, corridor) and their transition points (doors, gates). Other approaches further cluster objects based on which node they are associated with (eg: An oven is associated with a kitchen).\n\nAn effective way to introduce logical reasoning in robots is by storing knowledge in an ontological structure. This is a graph that provides the robot information about what the objects are, what they can be used for and how to use them.",
+        "image": {
+          "src": "https://erc-bpgc.github.io/blog/img/semantic_scene/ontology.png",
+          "caption": "Ontological structures - Cropped diagram of a robot figuring out how to find a cup of tea"
+        }
+      },
+      {
+        "title": "Learning to Reason",
+        "content": "Hardcoding logical rules still has its limitations. Human understanding is beyond a fixed set of pre-fed rules. Humans can observe their surroundings and instantly understand what is going on through common sense.\n\nOne area where machines are getting better at gaining such an understanding is not in robotics, but in artificial video/image captioning networks. Such architectures generally consist of a CNN-based model for object recognition giving a feature vector. This feature vector is fed to an RNN that generates a sentence describing it.\n\nThe second area of learning through observation is imitation learning. There exists research in this area that tries to solve the correspondence problem; i.e.: Humans and robots perceive and interact with the world in fundamentally different ways.",
+        "image": {
+          "src": "https://erc-bpgc.github.io/blog/img/semantic_scene/captioning.png",
+          "caption": "AI answering questions about an image through visual reasoning"
+        }
+      },
+      {
+        "title": "General Intelligence & Artificial Conscience",
+        "content": "Despite all these advances, there is still a very long way to go. As we build systems with growing semantic understanding, we gradually approach towards Artificial General Intelligence (AGI). AGI can be defined as the ability of a machine to perform any task that a human can.\n\nContemporary state-of-the-art systems are still designed to perform well on very specific tasks, but not so much on anything else. An AGI on the other hand should be able to learn a broader range of tasks with far less training.\n\nAn AGI singularity is defined as the point in the future when Artificial Intelligence surpasses human level thinking. Based on current trends of advancement in the field, some experts believe that the singularity may arrive as early as the year 2060."
+      }
+    ],
+    "references": [
+      {
+        "text": "R.Salas, N.Newcombe, H.Strasdat, P.Kelly, A.Davidson; SLAM++: Simultaneous localization and mapping at the level of Objects; CVPR 2013",
+        "link": ""
+      },
+      {
+        "text": "I.Kostavelis, A.Gasteratos; Semantic Mapping for Mobile Robot Tasks - A survey; Robotics & Autonomous Systems S66 (2015)",
+        "link": ""
+      },
+      {
+        "text": "R. Zellers, Y.Bisk, A.Farhadi, Y.Choi: From Recognition to Cognition - Visual Common Sense Reasoning; CVPR 2019",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "id": "robotic-arms",
+    "title": "Robotic Arms: A Brief",
+    "excerpt": "This article gives a brief history of Robotic Arms and discusses their different types and various uses.",
+    "author": {
+      "name": "Sanskar Jain",
+      "link": "https://in.linkedin.com/in/sanskar-jain-8098831a6"
+    },
+    "date": "January 3, 2021",
+    "readTime": "6 min",
+    "categories": ["Mechanical", "Innovation", "Industry"],
+    "coverImage": "https://erc-bpgc.github.io/blog/img/robotic_arms/cover.jpg",
+    "sections": [
+      {
+        "title": "Introduction",
+        "content": "Most of the world's robots are designed for hard, repetitive production work. They perform activities that human beings find complicated, dangerous or tedious. The most common production robot is a robotic arm.\n\nA robotic arm is a device that is programmed to carry out a particular task with extreme accuracy at a rapid pace with great efficiency."
+      },
+      {
+        "title": "History of the Arm",
+        "content": "The idea of a robot arm is not new. The first robotic arm was designed by Leonardo da Vinci in the late fifteenth century. While analyzing his papers in the 1950s researchers discovered that he had sketched a robotic arm and humanoid figurines which could run on the clockwork technologies available at that time. It used pulleys, weights and gears to provide a partially autonomous motion.\n\nIn 1941, Isaac Asimov published a short science fiction story where he introduced the Three Laws of Robotics thereby coining the term robotics. This inspired engineer Joseph Engelberger and inventor George Devol, who filed for a patent for a programmed article transfer device — the first version of the robotic arm. In 1961, they started Unimation Inc. which focused on the manufacture of industrial robots. Their flagship was the Unimate 1900 - a simple robotic arm.",
+        "image": {
+          "src": "https://erc-bpgc.github.io/blog/img/robotic_arms/1.jpg",
+          "caption": "Unimate Robot"
+        }
+      },
+      {
+        "title": "Evolution of Robotic Arms",
+        "content": "In 1963, researchers at the Rancho Los Amigos Hospital in California developed the Rancho Arm to help move disabled patients. It was the first computer-controlled robotic arm and was equipped with six joints to let it move like a human arm.\n\nIn 1968, Marvin Minsky developed the Minsky Arm which had 12 joints which could be controlled by a joystick. The arm was powered by hydraulic fluids and was used for gentle lifting of the patients.\n\nIn 1969 Scheinman's Stanford Arm achieved a milestone as the first successful electrically driven, computer-controlled robot arm. By 1974 it was able to guide itself through optical and contact sensors. It was the first arm to provide tactile feedback to its operator.\n\nIn 1973, German company Kuka launched Famulus - a robotic arm which worked using six electromagnetic axles. This was revolutionary.\n\nThe CMU Direct-drive Arm I was built in 1981 at the CMU Robotics Institute. This arm had motors installed directly into each joint, removing the need for chains or tendons used in previous arms.",
+        "image": {
+          "src": "https://erc-bpgc.github.io/blog/img/robotic_arms/3.jpg",
+          "caption": "The Stanford Arm"
+        }
+      },
+      {
+        "title": "Construction of a Robotic Arm",
+        "content": "The entire system of a robotic arm is based on two elements: the mechanical component and the signal processing component. The signal processing component processes the computational language which is uploaded on the processing unit whereas the mechanical portion is the design of the functioning arm using mechanics.\n\nAn industrial robotic arm consists of a series of joints, articulations and manipulators that work together to closely resemble the motion and functionality of a human arm. Depending upon the specific task expected by the robotic arm to perform it can have varying number of degrees of freedom.\n\nGenerally, the motion of a robotic arm is determined under three categories: Roll, Pitch and Yaw. A human hand has pitch and roll along the shoulder; pitch and yaw along the arm and roll, pitch and yaw along the wrist giving a total of 7 degrees of freedom. The wrist or hand part of the robotic arm is also called the end effector.",
+        "image": {
+          "src": "https://erc-bpgc.github.io/blog/img/robotic_arms/6.jpg",
+          "caption": "Roll, Pitch and Yaw"
+        }
+      },
+      {
+        "title": "Types of Robotic Arm",
+        "content": "There are various distinct robotic arms available today each manufactured for a particular role with special abilities suited for that environment:\n\n**Cartesian or gantry robotic arms**: These arms consist of three articulating joints that are coincident with the cartesian axes X, Y, and Z. They are used in picking and placing objects and assembly operations.\n\n**Cylindrical robotic arm**: This is the arm whose axes form a cylindrical coordinate system. They are used for handling machine tools, assembly operations and spot welding.\n\n**Spherical or Polar robotic arm**: This is the arm whose axes form a spherical coordinate system. It is mainly used in die casting, welding, and fettling machines.\n\n**SCARA robotic arm**: The term SCARA stands for Selective Compliance Assembly Robot Arm. To provide enforcement in a plane, this arm features two parallel rotary joints.\n\n**Articulated robotic arm**: These are robotic arms having at least three rotary joints. They are typically used for assembly operations, die casting, gas welding, arc welding, and spray painting.",
+        "image": {
+          "src": "https://erc-bpgc.github.io/blog/img/robotic_arms/8.jpg",
+          "caption": "SCARA by KUKA"
+        }
+      },
+      {
+        "title": "Uses of Robotic Arm",
+        "content": "A robotic arm greatly increases the production rate and accuracy of placement and picking tasks. They are also used for other industrial applications like welding, painting, and drilling. They are also used in servicing of nuclear power plants, thermal power stations and cleaning up radioactive wastes.\n\nThe arm has applications in space exploration involving the repairs of the space station and collection of samples when mounted on top of a rover.\n\nBy using sensors and cameras with the arm, they can be used in rescue and relief operations. The assistance of a robotic arm is used in performing surgeries.\n\nWith the advancing technology, the cost of manufacturing different components of a robot has decreased. This has led to a rapid expansion in the affordability and availability of robots not only for large scale operations but also for small scale operations."
+      }
+    ],
+    "references": [
+      {
+        "text": "Why Was the Robotic Arm Invented? by Megan Ray Nichols",
+        "link": "https://interestingengineering.com/why-was-the-robotic-arm-invented"
+      },
+      {
+        "text": "Assembling and Controlling a Robotic Arm by Manoel Carlos Ramon",
+        "link": "https://link.springer.com/chapter/10.1007/978-1-4302-6838-3_11"
+      },
+      {
+        "text": "Timeline of Computer History - Computer History Museum",
+        "link": "https://www.computerhistory.org/timeline/ai-robotics/"
+      }
+    ]
+  },
+  {
+    "id": "modular-self-reconfigurable-robots",
+    "title": "Modular Self Reconfigurable Robots",
+    "excerpt": "The article discusses the idea of Modular Self Reconfigurable Robots, and how they boost robots' utility in various sectors.",
+    "author": {
+      "name": "Ashutosh Gupta",
+      "link": "https://in.linkedin.com/in/ashutosh-gupta781"
+    },
+    "date": "September 27, 2020",
+    "readTime": "4 min",
+    "categories": ["Automation", "Electronics", "Mechanical"],
+    "coverImage": "https://erc-bpgc.github.io/blog/img/mssr/cover.png",
+    "sections": [
+      {
+        "title": "Introduction",
+        "content": "Robots were invented with the goal of helping humans carry out their tasks more comfortably, particularly 4D (Dirty, Dangerous, Difficult, and Dull) tasks. In designing robots, the conventional approach has been to design their hardware and software in accordance with the tasks they are supposed to do.\n\nConventional robots can perform specific tasks accurately, but they are not very versatile and adaptive, and thus applications that are consigned to them rely heavily on their physical structure and controller capabilities. As a workaround to flexibility and adaptability limitations of fixed-body robots, Modular Self Reconfigurable Robots were introduced.",
+        "image": {
+          "src": "https://erc-bpgc.github.io/blog/img/mssr/pic2.png",
+          "caption": "SMORES by GRASP Lab at Penn Engineering"
+        }
+      },
+      {
+        "title": "Advantages of Modular Robotics",
+        "content": "Modular robotics provides a unique advantage over traditional robotic technologies in terms of reconfigurability, reusability, and ease in manufacturing. Many applications such as large-scale facility management, space exploration, military-zone monitoring, disaster management, and prosthetics for physically disabled need adaptable and self-healing capabilities, and modular self reconfigurable robots are often seen as a feasible solution to the same.\n\nThe major difference of modular system designs over conventional robots can be viewed as the ability to form various configurations as per the requirement of application with minimal human intervention."
+      },
+      {
+        "title": "Types of Modular Robots",
+        "content": "A modular robot consists of several units with few degrees of freedom (DOFs) called modules which are usually equipped with connection mechanisms to cooperatively connect to or detach from each other in order to create complex structures and configurations with many DOFs. Modular robots are usually classified into:\n\n**Chain-type architectures** consist of modules that are connected together in a linear or tree topology. This structure can fold-up to become space filling, but the underlying architecture is serial. These modular robots are able to autonomously change their configuration into a wheel, quadruped, snake, worm, and so on. Examples include Polybot, iMOBOT, Transmote, Ubot, and CoSMO.\n\n**Lattice-type robot** has modules that are arranged in a regular three-dimensional (3D) pattern, such as a cubical or hexagonal grid. Lattice-type modular robots are inherently self-reconfigurable because reconfiguration is their only means of locomotion. Examples include M-blocks, Telecube, CHOBIE, and Atron.\n\n**Hybrid-type architectures** have features of both lattice-type and chain-type architectures. Some modular robots can be configured both as chain and as lattice structures. Examples include M-TRAN, Superbot, SMORES, and Roombots.",
+        "image": {
+          "src": "https://erc-bpgc.github.io/blog/img/mssr/pic3.png",
+          "caption": "M-TRAN by AIST and Tokyo Tech"
+        }
+      },
+      {
+        "title": "ERC's Modbot Project",
+        "content": "ERC, BITS Goa's, Modbot project, focused on developing a new design for a modular robot that had sufficient degrees of freedom to be able to perform a large number of configurations. The project aimed at developing a lightweight, manufacturable network of modules able to overcome functional limitations faced by existing modular self reconfigurable robots.\n\nA single module was fabricated capable of complete teleoperation. A custom circuit on a prototyping board was manufactured to overcome difficulties in connections and properly interfacing the micro-controller with peripherals. The team also performed torque analysis for gears and linkages in a simulation environment.\n\nIn Feb 2020, the team began the process of improvising the mechanical model in order to overcome the space constraints to fit in the IR modules (TCRT5000). The future prospects of the project includes migrating the whole project onto ROS and preparing a custom stack for the project.",
+        "image": {
+          "src": "https://erc-bpgc.github.io/blog/img/mssr/pic5.jpg",
+          "caption": "Modbot by ERC, BITS Goa"
+        }
+      },
+      {
+        "title": "Future of Modular Robotics",
+        "content": "A modular robot also contains a lot of electronics on a single module aside from all the mechanical structure discussed here. These range from actuation motors to sensors for perception of the environment and computer processors which can handle all remote computation.\n\nTo be fully self reconfigurable these robots need to be autonomous and complete various tasks with minimal or no human interference. This requires precise control algorithms, motion and path planning and even the application of machine learning in some stages.\n\nTherefore the concept of modular robotics has tremendous research potential and a lot more diverse applications. By showing us new ways robots can interact with the real world and adapt to different conditions, they are slowly evolving and changing our idea of robotics. This very well is just the beginning in the world of Modular Self Reconfigurable Robots."
+      }
+    ],
+    "references": [
+      {
+        "text": "Modular robotic systems: Methods and algorithms for abstraction, planning, control, and synchronization by Hossein Ahmadzadeh et.al.",
+        "link": "https://www.sciencedirect.com/science/article/pii/S0004370215000260"
+      },
+      {
+        "text": "Modular Self-Reconfigurable Robotic Systems: A Survey on Hardware Architectures by S. Sankhar Reddy Chennareddy et. al.",
+        "link": "https://www.hindawi.com/journals/jr/2017/5013532/"
+      },
+      {
+        "text": "Current trends in reconfigurable modular robots design by Alberto Brunete et.al.",
+        "link": "https://journals.sagepub.com/doi/full/10.1177/172988141771045"
+      }
+    ]
+  }
+]
