@@ -293,7 +293,7 @@
         "title": "8 Bit Computer",
         "category": "completed",
         "type": "mini",
-        "image": "/images/projects/8bit/8bit.JPG",
+        "image": "/images/projects/8bit/cover.JPG",
         "description": "A fully functional 8-bit computer built from scratch using Integrated Circuits, demonstrating fundamental computer architecture principles.",
         "github": "",
         "team_leads": [
@@ -306,7 +306,7 @@
         "title": "Desktop Companion Bot",
         "category": "completed",
         "type": "mini",
-        "image": "",
+        "image": "/images/projects/choubot/cover.JPG",
         "description": "A small interactive desktop robot companion designed to assist and entertain users with various programmed behaviors and responses.",
         "github": "https://github.com/ERC-BPGC/Desktop-Companion-Bot",
         "team_leads": [
@@ -323,7 +323,7 @@
         "title": "Stewart Platform",
         "category": "completed",
         "type": "mini",
-        "image": "",
+        "image": "/images/projects/stewarts platform/20250124_225728.jpg",
         "description": "A parallel manipulator platform with six degrees of freedom, commonly used for motion simulation and precision positioning applications.",
         "github": "https://github.com/ERC-BPGC/Stewart-Platform",
         "team_leads": [
@@ -335,7 +335,7 @@
         "title": "Cubli",
         "category": "completed",
         "type": "mini",
-        "image": "",
+        "image": "/images/projects/cubli/DSC_1191.JPG",
         "description": "A self-balancing cube robot that can balance on its corner and edges using reaction wheels and advanced control algorithms.",
         "github": "https://github.com/ERC-BPGC/Cubli",
         "team_leads": [
@@ -350,7 +350,7 @@
         "title": "Single Inverted Pendulum",
         "category": "completed",
         "type": "mini",
-        "image": "",
+        "image": "/images/projects/inverted pendulum/DSC_1043.JPG",
         "description": "A classic control systems project demonstrating the stabilization and balancing of a single inverted pendulum using multiple control strategies, including PID, LQR, and MPC. The project focused on modeling the pendulum dynamics, designing and tuning controllers, and comparing their performance in maintaining upright equilibrium under disturbances.",
         "github": "https://github.com/ERC-BPGC/Single_Inverted_Pendulum",
         "team_leads": [
@@ -362,7 +362,7 @@
         "title": "Tars",
         "category": "completed",
         "type": "mini",
-        "image": "",
+        "image": "/images/projects/tars/20250209_184940.jpg",
         "description": "A miniature replica of TARS from the movie Interstellar that mimics it's locomotion and speech capabilities keeping it's 'sarcasm' in mind",
         "github": "https://github.com/bodsvei/TARS_Quark-25",
         "team_leads": [
@@ -389,7 +389,7 @@
         "title": "Automated Orchestra",
         "category": "completed",
         "type": "mini",
-        "image": "",
+        "image": "/images/projects/automated orchestra/DSC_1015.JPG",
         "description": "An automated musical system that works as an add-on to conventional instruments, enabling them to be played autonomously through robotic actuation and intelligent control, thereby creating synchronized orchestral performances without human performers.",
         "github": "https://github.com/ERC-BPGC/Auto-Orchestra",
         "team_leads": [
@@ -401,7 +401,7 @@
         "title": "Automated Dart Board",
         "category": "completed",
         "type": "mini",
-        "image": "",
+        "image": "/images/projects/dartboard/DSC_1199.JPG",
         "description": "In this project we created a low-cost, marker-based motion capture system specifically created for an automated bullseye dartboard. The system was built using modified PS3 Eye cameras enhanced for infrared sensitivity, enabling precise, real time tracking of IR reflective markers. Our solution included meticulous intrinsic and extrinsic calibration processes, ensuring millimeter level accuracy while remaining cost effective. On the mechanical side, the system employed a gantry based mechanism driven by six NEMA stepper motors to achieve precise belt based motion control.",
         "github": "https://github.com/ERC-BPGC/Auto-Dart-Board",
         "team_leads": [
@@ -417,7 +417,7 @@
         "title": "LED Matrix",
         "category": "completed",
         "type": "mini",
-        "image": "",
+        "image": "/images/projects/led matrix/DSC_1013.JPG",
         "description": "A programmable LED matrix display capable of showing animations, text, and graphics through custom programming.",
         "github": "https://github.com/ERC-BPGC/LED_Matrix",
         "team_leads": [
@@ -429,7 +429,7 @@
         "title": "Swarm Minions",
         "category": "completed",
         "type": "mini",
-        "image": "",
+        "image": "/images/projects/swarm minions/DSC_1009.JPG",
         "description": "A group of small coordinated robots that work together using swarm intelligence algorithms to accomplish tasks collectively.",
         "github": "https://github.com/ERC-BPGC/Swarm-Minions",
         "team_leads": [

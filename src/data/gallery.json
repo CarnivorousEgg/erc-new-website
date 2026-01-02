@@ -7,10 +7,22 @@
             "link": "/events/eduspark"
         },
         {
+            "name": "Inductions",
+            "image": "/images/events/inductions/cover.jpg",
+            "description": "ERC Inductions - Recruiting new talent",
+            "link": "/events/inductions"
+        },
+        {
             "name": "Open Day",
             "image": "/images/events/open-day/DSC_0788.JPG",
             "description": "Members demonstrating robot capabilities to visitors",
             "link": "/events/open-day"
+        },
+        {
+            "name": "Quark",
+            "image": "/images/events/quark/20250209_185749.jpg",
+            "description": "Quark Technical Festival - BITS Goa's annual tech fest",
+            "link": "/events/quark"
         }
     ],
     "projects": [
@@ -27,22 +39,124 @@
             "link": "/projects/8bit"
         },
         {
+            "name": "Acoustic Camera",
+            "image": "/images/projects/acoustic-camera/cover.jpg",
+            "description": "",
+            "link": "/projects/acoustic-camera"
+        },
+        {
+            "name": "Air Hockey",
+            "image": "/images/projects/air-hockey/cover.png",
+            "description": "",
+            "link": "/projects/air-hockey"
+        },
+        {
+            "name": "Automated orchestra",
+            "image": "/images/projects/automated orchestra/DSC_1015.JPG",
+            "description": "",
+            "link": "/projects/automated orchestra"
+        },
+        {
+            "name": "Ball Drone",
+            "image": "/images/projects/ball-drone/cover.png",
+            "description": "",
+            "link": "/projects/ball-drone"
+        },
+        {
+            "name": "Carborone",
+            "image": "/images/projects/carborone/cover.jpeg",
+            "description": "",
+            "link": "/projects/carborone"
+        },
+        {
+            "name": "Choubot",
+            "image": "/images/projects/choubot/cover.JPG",
+            "description": "",
+            "link": "/projects/choubot"
+        },
+        {
+            "name": "Cubli",
+            "image": "/images/projects/cubli/DSC_1191.JPG",
+            "description": "",
+            "link": "/projects/cubli"
+        },
+        {
+            "name": "Dartboard",
+            "image": "/images/projects/dartboard/DSC_1199.JPG",
+            "description": "",
+            "link": "/projects/dartboard"
+        },
+        {
             "name": "Drone Auto",
             "image": "/images/projects/drone-auto/cover.JPG",
             "description": "Drone automation project",
             "link": "/projects/drone-auto"
         },
         {
+            "name": "Gennav",
+            "image": "/images/projects/gennav/cover.png",
+            "description": "",
+            "link": "/projects/gennav"
+        },
+        {
+            "name": "Inverted pendulum",
+            "image": "/images/projects/inverted pendulum/DSC_1043.JPG",
+            "description": "",
+            "link": "/projects/inverted pendulum"
+        },
+        {
+            "name": "Klann",
+            "image": "/images/projects/klann/cover.jpeg",
+            "description": "",
+            "link": "/projects/klann"
+        },
+        {
+            "name": "Led matrix",
+            "image": "/images/projects/led matrix/DSC_1013.JPG",
+            "description": "",
+            "link": "/projects/led matrix"
+        },
+        {
+            "name": "Led Globe",
+            "image": "/images/projects/led-globe/cover.jpeg",
+            "description": "",
+            "link": "/projects/led-globe"
+        },
+        {
+            "name": "Led Hexapad",
+            "image": "/images/projects/led-hexapad/cover.jpeg",
+            "description": "",
+            "link": "/projects/led-hexapad"
+        },
+        {
+            "name": "Modbot",
+            "image": "/images/projects/modbot/cover.jpeg",
+            "description": "",
+            "link": "/projects/modbot"
+        },
+        {
             "name": "Quadruped",
-            "image": "/images/projects/quadruped/quadruped%20motor.jpeg",
-            "description": "Quadruped motor assembly",
+            "image": "/images/projects/quadruped/cover.png",
+            "description": "Quadruped - 12 DoF four-legged robot",
             "link": "/projects/quadruped"
+        },
+        {
+            "name": "Quadruped Bhaagwati",
+            "image": "/images/projects/quadruped-bhaagwati/cover.png",
+            "description": "",
+            "link": "/projects/quadruped-bhaagwati"
         },
         {
             "name": "Robotic Arm",
             "image": "/images/projects/robotic-arm/cover.JPG",
             "description": "Robotic Arm v2",
             "link": "/projects/robotic-arm"
+        },
+        {
+            "name": "Sketcher",
+            "image": "/images/projects/sketcher/cover.jpeg",
+            "description": "",
+            "link": "/projects/sketcher"
         },
         {
             "name": "Snakebot",
@@ -57,6 +171,36 @@
             "link": "/projects/spiderbot"
         },
         {
+            "name": "Stewarts platform",
+            "image": "/images/projects/stewarts platform/20250124_225728.jpg",
+            "description": "",
+            "link": "/projects/stewarts platform"
+        },
+        {
+            "name": "Swarm minions",
+            "image": "/images/projects/swarm minions/DSC_1009.JPG",
+            "description": "",
+            "link": "/projects/swarm minions"
+        },
+        {
+            "name": "Swarmbots",
+            "image": "/images/projects/swarmbots/cover.png",
+            "description": "",
+            "link": "/projects/swarmbots"
+        },
+        {
+            "name": "Swarmbots 2",
+            "image": "/images/projects/swarmbots-2/cover.jpg",
+            "description": "",
+            "link": "/projects/swarmbots-2"
+        },
+        {
+            "name": "Tars",
+            "image": "/images/projects/tars/20250209_184940.jpg",
+            "description": "",
+            "link": "/projects/tars"
+        },
+        {
             "name": "Trotbot",
             "image": "/images/projects/trotbot/cover.jpg",
             "description": "Trotbot omni-directional robot",
@@ -67,6 +211,12 @@
             "image": "/images/projects/vulcan/cover.JPG",
             "description": "Vulcan humanoid head",
             "link": "/projects/vulcan"
+        },
+        {
+            "name": "Walle",
+            "image": "/images/projects/walle/cover.jpeg",
+            "description": "",
+            "link": "/projects/walle"
         }
     ],
     "alumni": [

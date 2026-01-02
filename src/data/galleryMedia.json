@@ -26,7 +26,7 @@
                 "type": "image",
                 "title": "IMG 5170",
                 "description": "Eduspark - Educational outreach program",
-                "height": 400,
+                "height": 350,
                 "orientation": "horizontal"
             },
             {
@@ -35,7 +35,7 @@
                 "type": "image",
                 "title": "IMG 5178",
                 "description": "Eduspark - Educational outreach program",
-                "height": 300,
+                "height": 400,
                 "orientation": "horizontal"
             },
             {
@@ -48,7 +48,44 @@
                 "orientation": "horizontal"
             }
         ],
-        "inductions": [],
+        "inductions": [
+            {
+                "id": "inductions-1",
+                "img": "/images/events/inductions/cover.jpg",
+                "type": "image",
+                "title": "cover",
+                "description": "ERC Inductions - Recruiting new talent",
+                "height": 650,
+                "orientation": "vertical"
+            },
+            {
+                "id": "inductions-2",
+                "img": "/images/events/inductions/IMG_20250829_203403.jpg",
+                "type": "image",
+                "title": "IMG 20250829 203403",
+                "description": "ERC Inductions - Recruiting new talent",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "inductions-3",
+                "img": "/images/events/inductions/IMG_20250829_204500.jpg",
+                "type": "image",
+                "title": "IMG 20250829 204500",
+                "description": "ERC Inductions - Recruiting new talent",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "inductions-4",
+                "img": "/images/events/inductions/IMG_20250829_204958.jpg",
+                "type": "image",
+                "title": "IMG 20250829 204958",
+                "description": "ERC Inductions - Recruiting new talent",
+                "height": 350,
+                "orientation": "horizontal"
+            }
+        ],
         "open-day": [
             {
                 "id": "open-day-1",
@@ -56,7 +93,7 @@
                 "type": "image",
                 "title": "DSC 0788",
                 "description": "Members demonstrating robot capabilities to visitors",
-                "height": 400,
+                "height": 350,
                 "orientation": "horizontal"
             },
             {
@@ -74,7 +111,7 @@
                 "type": "image",
                 "title": "DSC 0906",
                 "description": "Interactive session with freshers",
-                "height": 350,
+                "height": 300,
                 "orientation": "horizontal"
             },
             {
@@ -92,7 +129,7 @@
                 "type": "image",
                 "title": "IMG 7573",
                 "description": "Crowd gathered around robot demonstration",
-                "height": 400,
+                "height": 350,
                 "orientation": "horizontal"
             },
             {
@@ -101,7 +138,7 @@
                 "type": "image",
                 "title": "IMG 7592",
                 "description": "Students learning about embedded systems",
-                "height": 400,
+                "height": 350,
                 "orientation": "horizontal"
             },
             {
@@ -110,7 +147,7 @@
                 "type": "image",
                 "title": "IMG 7606",
                 "description": "ERC team members explaining project details",
-                "height": 350,
+                "height": 300,
                 "orientation": "horizontal"
             },
             {
@@ -119,7 +156,7 @@
                 "type": "image",
                 "title": "IMG 7607",
                 "description": "Live robot demo in action",
-                "height": 300,
+                "height": 350,
                 "orientation": "horizontal"
             },
             {
@@ -133,7 +170,89 @@
             }
         ],
         "qstp": [],
-        "quark": []
+        "quark": [
+            {
+                "id": "quark-1",
+                "img": "/images/events/quark/20250209_185749.jpg",
+                "type": "image",
+                "title": "20250209 185749",
+                "description": "Quark Technical Festival - BITS Goa's annual tech fest",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "quark-2",
+                "img": "/images/events/quark/20250209_185844.jpg",
+                "type": "image",
+                "title": "20250209 185844",
+                "description": "Quark Technical Festival - BITS Goa's annual tech fest",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "quark-3",
+                "img": "/images/events/quark/cover.JPG",
+                "type": "image",
+                "title": "cover",
+                "description": "Quark Technical Festival - BITS Goa's annual tech fest",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "quark-4",
+                "img": "/images/events/quark/DSC_1028.JPG",
+                "type": "image",
+                "title": "DSC 1028",
+                "description": "Quark Technical Festival - BITS Goa's annual tech fest",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "quark-5",
+                "img": "/images/events/quark/DSC_1032.JPG",
+                "type": "image",
+                "title": "DSC 1032",
+                "description": "Quark Technical Festival - BITS Goa's annual tech fest",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "quark-6",
+                "img": "/images/events/quark/DSC_1088.JPG",
+                "type": "image",
+                "title": "DSC 1088",
+                "description": "Quark Technical Festival - BITS Goa's annual tech fest",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "quark-7",
+                "img": "/images/events/quark/DSC_1265.JPG",
+                "type": "image",
+                "title": "DSC 1265",
+                "description": "Quark Technical Festival - BITS Goa's annual tech fest",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "quark-8",
+                "img": "/images/events/quark/DSC_1308.JPG",
+                "type": "image",
+                "title": "DSC 1308",
+                "description": "Quark Technical Festival - BITS Goa's annual tech fest",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "quark-9",
+                "img": "/images/events/quark/DSC_1310.JPG",
+                "type": "image",
+                "title": "DSC 1310",
+                "description": "Quark Technical Festival - BITS Goa's annual tech fest",
+                "height": 300,
+                "orientation": "horizontal"
+            }
+        ]
     },
     "projects": {
         "3dof - arm": [
@@ -152,7 +271,7 @@
                 "type": "image",
                 "title": "cover",
                 "description": "Robotic Arm 3 DoF",
-                "height": 400,
+                "height": 450,
                 "orientation": "square"
             },
             {
@@ -161,7 +280,7 @@
                 "type": "image",
                 "title": "WhatsApp Image 2024 07 16 at 2.04.55 PM",
                 "description": "Robotic Arm (3 DoF) - Three degree of freedom arm",
-                "height": 350,
+                "height": 400,
                 "orientation": "horizontal"
             }
         ],
@@ -190,7 +309,230 @@
                 "type": "image",
                 "title": "DSC 0956",
                 "description": "8-bit computer on display",
+                "height": 300,
+                "orientation": "horizontal"
+            }
+        ],
+        "acoustic-camera": [
+            {
+                "id": "acoustic-camera-1",
+                "img": "/images/projects/acoustic-camera/cover.jpg",
+                "type": "image",
+                "title": "cover",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            }
+        ],
+        "air-hockey": [
+            {
+                "id": "air-hockey-1",
+                "img": "/images/projects/air-hockey/20250209_180829.mp4",
+                "type": "video",
+                "title": "20250209 180829",
+                "description": "",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "air-hockey-2",
+                "img": "/images/projects/air-hockey/cover.png",
+                "type": "image",
+                "title": "cover",
+                "description": "",
                 "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "air-hockey-3",
+                "img": "/images/projects/air-hockey/DSC_1354.JPG",
+                "type": "image",
+                "title": "DSC 1354",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            }
+        ],
+        "automated orchestra": [
+            {
+                "id": "automated orchestra-1",
+                "img": "/images/projects/automated orchestra/DSC_1015.JPG",
+                "type": "image",
+                "title": "DSC 1015",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "automated orchestra-2",
+                "img": "/images/projects/automated orchestra/DSC_1031.JPG",
+                "type": "image",
+                "title": "DSC 1031",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            }
+        ],
+        "ball-drone": [
+            {
+                "id": "ball-drone-1",
+                "img": "/images/projects/ball-drone/cover.png",
+                "type": "image",
+                "title": "cover",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            }
+        ],
+        "carborone": [
+            {
+                "id": "carborone-1",
+                "img": "/images/projects/carborone/cover.jpeg",
+                "type": "image",
+                "title": "cover",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            }
+        ],
+        "choubot": [
+            {
+                "id": "choubot-1",
+                "img": "/images/projects/choubot/cover.JPG",
+                "type": "image",
+                "title": "cover",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "choubot-2",
+                "img": "/images/projects/choubot/IMG_7653.JPG",
+                "type": "image",
+                "title": "IMG 7653",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "choubot-3",
+                "img": "/images/projects/choubot/IMG_7654.JPG",
+                "type": "image",
+                "title": "IMG 7654",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "choubot-4",
+                "img": "/images/projects/choubot/IMG_7656.JPG",
+                "type": "image",
+                "title": "IMG 7656",
+                "description": "",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "choubot-5",
+                "img": "/images/projects/choubot/IMG_7657.JPG",
+                "type": "image",
+                "title": "IMG 7657",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            }
+        ],
+        "cubli": [
+            {
+                "id": "cubli-1",
+                "img": "/images/projects/cubli/Cubli.mp4",
+                "type": "video",
+                "title": "Cubli",
+                "description": "",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "cubli-2",
+                "img": "/images/projects/cubli/DSC_1191.JPG",
+                "type": "image",
+                "title": "DSC 1191",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "cubli-3",
+                "img": "/images/projects/cubli/DSC_1192.JPG",
+                "type": "image",
+                "title": "DSC 1192",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "cubli-4",
+                "img": "/images/projects/cubli/DSC_1203.JPG",
+                "type": "image",
+                "title": "DSC 1203",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "cubli-5",
+                "img": "/images/projects/cubli/DSC_1204.JPG",
+                "type": "image",
+                "title": "DSC 1204",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "cubli-6",
+                "img": "/images/projects/cubli/DSC_1205.JPG",
+                "type": "image",
+                "title": "DSC 1205",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "cubli-7",
+                "img": "/images/projects/cubli/DSC_1278.JPG",
+                "type": "image",
+                "title": "DSC 1278",
+                "description": "",
+                "height": 300,
+                "orientation": "horizontal"
+            }
+        ],
+        "dartboard": [
+            {
+                "id": "dartboard-1",
+                "img": "/images/projects/dartboard/DSC_1199.JPG",
+                "type": "image",
+                "title": "DSC 1199",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "dartboard-2",
+                "img": "/images/projects/dartboard/DSC_1288.JPG",
+                "type": "image",
+                "title": "DSC 1288",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "dartboard-3",
+                "img": "/images/projects/dartboard/DSC_1296.JPG",
+                "type": "image",
+                "title": "DSC 1296",
+                "description": "",
+                "height": 300,
                 "orientation": "horizontal"
             }
         ],
@@ -214,15 +556,130 @@
                 "orientation": "horizontal"
             }
         ],
+        "gennav": [
+            {
+                "id": "gennav-1",
+                "img": "/images/projects/gennav/cover.png",
+                "type": "image",
+                "title": "cover",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            }
+        ],
+        "inverted pendulum": [
+            {
+                "id": "inverted pendulum-1",
+                "img": "/images/projects/inverted pendulum/DSC_1043.JPG",
+                "type": "image",
+                "title": "DSC 1043",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            }
+        ],
+        "klann": [
+            {
+                "id": "klann-1",
+                "img": "/images/projects/klann/cover.jpeg",
+                "type": "image",
+                "title": "cover",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            }
+        ],
+        "led matrix": [
+            {
+                "id": "led matrix-1",
+                "img": "/images/projects/led matrix/DSC_1013.JPG",
+                "type": "image",
+                "title": "DSC 1013",
+                "description": "",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "led matrix-2",
+                "img": "/images/projects/led matrix/DSC_1078.JPG",
+                "type": "image",
+                "title": "DSC 1078",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "led matrix-3",
+                "img": "/images/projects/led matrix/DSC_1124.JPG",
+                "type": "image",
+                "title": "DSC 1124",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            }
+        ],
+        "led-globe": [
+            {
+                "id": "led-globe-1",
+                "img": "/images/projects/led-globe/cover.jpeg",
+                "type": "image",
+                "title": "cover",
+                "description": "",
+                "height": 500,
+                "orientation": "square"
+            }
+        ],
+        "led-hexapad": [
+            {
+                "id": "led-hexapad-1",
+                "img": "/images/projects/led-hexapad/cover.jpeg",
+                "type": "image",
+                "title": "cover",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            }
+        ],
+        "modbot": [
+            {
+                "id": "modbot-1",
+                "img": "/images/projects/modbot/cover.jpeg",
+                "type": "image",
+                "title": "cover",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            }
+        ],
         "quadruped": [
             {
                 "id": "quadruped-1",
+                "img": "/images/projects/quadruped/cover.png",
+                "type": "image",
+                "title": "cover",
+                "description": "Quadruped - 12 DoF four-legged robot",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "quadruped-2",
                 "img": "/images/projects/quadruped/quadruped%20motor.jpeg",
                 "type": "image",
                 "title": "quadruped motor",
                 "description": "Quadruped motor assembly",
-                "height": 600,
+                "height": 650,
                 "orientation": "vertical"
+            }
+        ],
+        "quadruped-bhaagwati": [
+            {
+                "id": "quadruped-bhaagwati-1",
+                "img": "/images/projects/quadruped-bhaagwati/cover.png",
+                "type": "image",
+                "title": "cover",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
             }
         ],
         "robotic-arm": [
@@ -263,6 +720,17 @@
                 "orientation": "horizontal"
             }
         ],
+        "sketcher": [
+            {
+                "id": "sketcher-1",
+                "img": "/images/projects/sketcher/cover.jpeg",
+                "type": "image",
+                "title": "cover",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            }
+        ],
         "snakebot": [
             {
                 "id": "snakebot-1",
@@ -279,7 +747,7 @@
                 "type": "image",
                 "title": "DSC 0904",
                 "description": "SnakeBot segments",
-                "height": 400,
+                "height": 350,
                 "orientation": "horizontal"
             },
             {
@@ -297,7 +765,7 @@
                 "type": "image",
                 "title": "snakebot V2",
                 "description": "SnakeBot version 2",
-                "height": 300,
+                "height": 400,
                 "orientation": "horizontal"
             }
         ],
@@ -308,7 +776,7 @@
                 "type": "image",
                 "title": "cover",
                 "description": "SpiderBot hexapod robot",
-                "height": 300,
+                "height": 400,
                 "orientation": "horizontal"
             },
             {
@@ -317,7 +785,7 @@
                 "type": "image",
                 "title": "DSC 0951",
                 "description": "SpiderBot hexapod in walking stance",
-                "height": 350,
+                "height": 400,
                 "orientation": "horizontal"
             },
             {
@@ -335,7 +803,7 @@
                 "type": "video",
                 "title": "DSC 7584 (online video cutter.com)",
                 "description": "SpiderBot - Six-legged hexapod robot",
-                "height": 350,
+                "height": 300,
                 "orientation": "horizontal"
             },
             {
@@ -344,11 +812,165 @@
                 "type": "image",
                 "title": "DSC 7635",
                 "description": "SpiderBot full assembly",
+                "height": 300,
+                "orientation": "horizontal"
+            }
+        ],
+        "stewarts platform": [
+            {
+                "id": "stewarts platform-1",
+                "img": "/images/projects/stewarts platform/20250124_225728.jpg",
+                "type": "image",
+                "title": "20250124 225728",
+                "description": "",
                 "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "stewarts platform-2",
+                "img": "/images/projects/stewarts platform/Stewart.jpg",
+                "type": "image",
+                "title": "Stewart",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "stewarts platform-3",
+                "img": "/images/projects/stewarts platform/Stewart.mp4",
+                "type": "video",
+                "title": "Stewart",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "stewarts platform-4",
+                "img": "/images/projects/stewarts platform/Working3.mp4",
+                "type": "video",
+                "title": "Working3",
+                "description": "",
+                "height": 300,
+                "orientation": "horizontal"
+            }
+        ],
+        "swarm minions": [
+            {
+                "id": "swarm minions-1",
+                "img": "/images/projects/swarm minions/DSC_1009.JPG",
+                "type": "image",
+                "title": "DSC 1009",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "swarm minions-2",
+                "img": "/images/projects/swarm minions/DSC_1085.JPG",
+                "type": "image",
+                "title": "DSC 1085",
+                "description": "",
+                "height": 350,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "swarm minions-3",
+                "img": "/images/projects/swarm minions/Minions2.jpg",
+                "type": "image",
+                "title": "Minions2",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "swarm minions-4",
+                "img": "/images/projects/swarm minions/Minions3.jpg",
+                "type": "image",
+                "title": "Minions3",
+                "description": "",
+                "height": 350,
                 "orientation": "horizontal"
             }
         ],
         "swarm-drones": [],
+        "swarmbots": [
+            {
+                "id": "swarmbots-1",
+                "img": "/images/projects/swarmbots/cover.png",
+                "type": "image",
+                "title": "cover",
+                "description": "",
+                "height": 300,
+                "orientation": "horizontal"
+            }
+        ],
+        "swarmbots-2": [
+            {
+                "id": "swarmbots-2-1",
+                "img": "/images/projects/swarmbots-2/cover.jpg",
+                "type": "image",
+                "title": "cover",
+                "description": "",
+                "height": 300,
+                "orientation": "horizontal"
+            }
+        ],
+        "tars": [
+            {
+                "id": "tars-1",
+                "img": "/images/projects/tars/20250209_184940.jpg",
+                "type": "image",
+                "title": "20250209 184940",
+                "description": "",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "tars-2",
+                "img": "/images/projects/tars/20250209_190620.mp4",
+                "type": "video",
+                "title": "20250209 190620",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "tars-3",
+                "img": "/images/projects/tars/20250209_192420.mp4",
+                "type": "video",
+                "title": "20250209 192420",
+                "description": "",
+                "height": 300,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "tars-4",
+                "img": "/images/projects/tars/DSC_1040.JPG",
+                "type": "image",
+                "title": "DSC 1040",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "tars-5",
+                "img": "/images/projects/tars/DSC_1041.JPG",
+                "type": "image",
+                "title": "DSC 1041",
+                "description": "",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "tars-6",
+                "img": "/images/projects/tars/DSC_1042.JPG",
+                "type": "image",
+                "title": "DSC 1042",
+                "description": "",
+                "height": 300,
+                "orientation": "horizontal"
+            }
+        ],
         "trotbot": [
             {
                 "id": "trotbot-1",
@@ -356,7 +978,7 @@
                 "type": "image",
                 "title": "cover",
                 "description": "Trotbot omni-directional robot",
-                "height": 300,
+                "height": 350,
                 "orientation": "horizontal"
             },
             {
@@ -365,7 +987,7 @@
                 "type": "video",
                 "title": "IMG 5137",
                 "description": "Trotbot - Omni-directional robot",
-                "height": 350,
+                "height": 300,
                 "orientation": "horizontal"
             },
             {
@@ -383,7 +1005,7 @@
                 "type": "image",
                 "title": "IMG 5188",
                 "description": "Trotbot in action",
-                "height": 350,
+                "height": 300,
                 "orientation": "horizontal"
             }
         ],
@@ -403,7 +1025,7 @@
                 "type": "image",
                 "title": "DSC 7683",
                 "description": "Vulcan face mechanism",
-                "height": 300,
+                "height": 400,
                 "orientation": "horizontal"
             },
             {
@@ -412,7 +1034,7 @@
                 "type": "image",
                 "title": "DSC 7693",
                 "description": "Vulcan eye tracking system",
-                "height": 400,
+                "height": 350,
                 "orientation": "horizontal"
             },
             {
@@ -421,7 +1043,7 @@
                 "type": "image",
                 "title": "IMG 7606",
                 "description": "Vulcan on display",
-                "height": 400,
+                "height": 350,
                 "orientation": "horizontal"
             },
             {
@@ -430,8 +1052,28 @@
                 "type": "image",
                 "title": "IMG 7607",
                 "description": "Vulcan demonstration",
-                "height": 300,
+                "height": 350,
                 "orientation": "horizontal"
+            }
+        ],
+        "walle": [
+            {
+                "id": "walle-1",
+                "img": "/images/projects/walle/cover.jpeg",
+                "type": "image",
+                "title": "cover",
+                "description": "",
+                "height": 500,
+                "orientation": "vertical"
+            },
+            {
+                "id": "walle-2",
+                "img": "/images/projects/walle/IMG_20250817_160304.jpg",
+                "type": "image",
+                "title": "IMG 20250817 160304",
+                "description": "",
+                "height": 650,
+                "orientation": "vertical"
             }
         ]
     },

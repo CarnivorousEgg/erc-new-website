@@ -41,31 +41,31 @@
         {
             "name": "Indrajit Mandal",
             "role": "Project Lead - Swarm Drones",
-            "image": "https://ui-avatars.com/api/?name=Indrajit+Mandal&background=10b981&color=fff&size=400&font-size=0.4",
+            "image": "/images/people/2023 Batch/IMG-20251015-WA0013 - INDRAJIT Mandal.jpg",
             "linkedin": "https://www.linkedin.com/in/indrajit-mandal-2b50b01b4/"
         },
         {
             "name": "Omkar Shrikant",
             "role": "Project Lead - Swarm Drones",
-            "image": "https://ui-avatars.com/api/?name=Omkar+Shrikant&background=10b981&color=fff&size=400&font-size=0.4",
+            "image": "/images/people/2023 Batch/1 - omkar shrikanth.jpeg",
             "linkedin": ""
         },
         {
             "name": "Sudhanshu Kulkarni",
             "role": "Project Lead - Robotic Arm",
-            "image": "https://ui-avatars.com/api/?name=Sudhanshu+Kulkarni&background=8b5cf6&color=fff&size=400&font-size=0.4",
+            "image": "/images/people/2023 Batch/pic - Sudhanshu Walker.jpg",
             "linkedin": "https://www.linkedin.com/in/sudhanshu-kulkarni-72097a2a6/"
         },
         {
             "name": "Yash Kamat",
             "role": "Project Lead - Project Nexus",
-            "image": "https://ui-avatars.com/api/?name=Yash+Kamat&background=f59e0b&color=fff&size=400&font-size=0.4",
+            "image": "/images/people/2023 Batch/20251223_113541(1) - Yash Kamat.jpg",
             "linkedin": "https://www.linkedin.com/in/yskamat/"
         },
         {
-            "name": "Sowmaditya",
+            "name": "Soumyaditya Nandy",
             "role": "Project Lead - Project Nexus",
-            "image": "https://ui-avatars.com/api/?name=Sowmaditya&background=f59e0b&color=fff&size=400&font-size=0.4",
+            "image": "/images/people/2023 Batch/Screenshot_20251223_135553_Photos - SOUMYADITYA NANDY.jpg",
             "linkedin": ""
         }
     ],
@@ -75,7 +75,7 @@
             "role": "Chief Coordinator 2024-2025",
             "batch": "2022 Batch",
             "currentWork": "Intern at PNT Robotics",
-            "image": "/images/people/2022 Batch/Parth Shah.jpeg",
+            "image": "/images/people/2022 Batch/Parth_Shah.jpeg",
             "linkedin": "https://www.linkedin.com/in/parth-shah-b014771b0/"
         },
         {
@@ -99,7 +99,7 @@
             "role": "Research Head 2024-2025",
             "batch": "2022 Batch",
             "currentWork": "Intern at CSIR-CEERI, Pilani",
-            "image": "/images/people/2022 Batch/Vimarsh Shah.jpg",
+            "image": "/images/people/2022 Batch/Vimarsh_Shah.jpg",
             "linkedin": "https://www.linkedin.com/in/vimarshshah/"
         },
         {
@@ -119,11 +119,11 @@
             "linkedin": ""
         },
         {
-            "name": "Ayush",
+            "name": "Ayush Tiwari",
             "role": "Project Lead - Robotic Arm",
             "batch": "2022 Batch",
             "currentWork": "",
-            "image": "https://ui-avatars.com/api/?name=Ayush&background=8b5cf6&color=fff&size=400&font-size=0.4",
+            "image": "/images/people/2022 Batch/20251219_173710_Original - zara.jpeg",
             "linkedin": ""
         },
         {
@@ -135,11 +135,11 @@
             "linkedin": ""
         },
         {
-            "name": "Harsh",
+            "name": "Harsh Jain",
             "role": "Project Lead - Snakebot",
             "batch": "2022 Batch",
             "currentWork": "",
-            "image": "https://ui-avatars.com/api/?name=Harsh&background=ec4899&color=fff&size=400&font-size=0.4",
+            "image": "/images/people/2022 Batch/IMG_20250406_232523 - Harsh Jain.jpg",
             "linkedin": ""
         },
         {
@@ -151,11 +151,11 @@
             "linkedin": ""
         },
         {
-            "name": "Sniggdha",
+            "name": "Snigdha Semwal",
             "role": "Project Lead - Quadruped",
             "batch": "2022 Batch",
             "currentWork": "",
-            "image": "https://ui-avatars.com/api/?name=Sniggdha&background=f59e0b&color=fff&size=400&font-size=0.4",
+            "image": "/images/people/2022 Batch/IMG-20230328-WA0007 (3) - Snigdha Semwal.jpg",
             "linkedin": ""
         },
         {
@@ -164,6 +164,14 @@
             "batch": "2022 Batch",
             "currentWork": "",
             "image": "https://ui-avatars.com/api/?name=Garv+Gupta&background=06b6d4&color=fff&size=400&font-size=0.4",
+            "linkedin": ""
+        },
+        {
+            "name": "Atul M",
+            "role": "Alumni",
+            "batch": "2022 Batch",
+            "currentWork": "",
+            "image": "/images/people/2022 Batch/Batchsnaps 2025 -DoPy- 124~2 - Atul M.jpg",
             "linkedin": ""
         },
         {

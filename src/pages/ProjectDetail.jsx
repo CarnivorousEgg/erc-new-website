@@ -30,10 +30,17 @@ const findTeamMember = (name) => {
 
 // Map project IDs to gallery folder names
 const PROJECT_FOLDER_MAP = {
-    'robotic-arm-v2': 'robotic-arm',
-    'robotic-arm-3dof': '3dof - arm',
-    '8bit-computer': '8bit',
-    'drone-automation': 'drone-auto'
+    'robotic-arm-v2_done': 'robotic-arm',
+    'robotic-arm-3dof_done': '3dof - arm',
+    '8bit-computer_done': '8bit',
+    'drone-automation': 'drone-auto',
+    'desktop-companion-bot_done': 'choubot',
+    'stewart-platform': 'stewarts platform',
+    'single-inverted-pendulum_done': 'inverted pendulum',
+    'automated-orchestra_done': 'automated orchestra',
+    'automated-dart-board_done': 'dartboard',
+    'led-matrix_done': 'led matrix',
+    'swarm-minions_done': 'swarm minions'
 };
 
 const ProjectDetail = () => {
@@ -122,9 +129,6 @@ const ProjectDetail = () => {
 
                     <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                         {project.description}
-                        {/* Add more dummy text for detail view */}
-                        <br /><br />
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
 
                     {project.team_leads && project.team_leads.length > 0 && (
