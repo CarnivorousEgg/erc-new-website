@@ -201,68 +201,43 @@ const BlogDetail = () => {
                     </motion.section>
                 )}
 
-                {/* Author Card */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="mt-12 p-6 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800"
-                >
-                    <div className="flex items-center gap-4">
-                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-2xl font-bold">
-                            {blog.author.name.charAt(0)}
-                        </div>
-                        <div>
-                            <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">Written by</p>
-                            <a
-                                href={blog.author.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-xl font-bold text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                            >
-                                {blog.author.name}
-                            </a>
-                        </div>
-                    </div>
-                </motion.div>
-
                 {/* Navigation */}
                 <motion.nav
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
-                    className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800"
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800"
                 >
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {prevBlog && (
-                            <Link
-                                to={`/blog/${prevBlog.id}`}
-                                className="group p-4 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all"
-                            >
-                                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 flex items-center gap-1">
-                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                                    </svg>
-                                    Previous Article
-                                </p>
-                                <p className="font-medium text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-1">
-                                    {prevBlog.title}
-                                </p>
-                            </Link>
-                        )}
+                    <div className="flex justify-center">
                         {nextBlog && (
                             <Link
                                 to={`/blog/${nextBlog.id}`}
-                                className="group p-4 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all md:text-right md:ml-auto"
+                                className="group p-6 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all text-center min-w-[280px]"
                             >
-                                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 flex items-center gap-1 md:justify-end">
+                                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 flex items-center justify-center gap-1">
                                     Next Article
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
                                 </p>
-                                <p className="font-medium text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-1">
+                                <p className="font-medium text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                     {nextBlog.title}
+                                </p>
+                            </Link>
+                        )}
+                        {!nextBlog && prevBlog && (
+                            <Link
+                                to={`/blog/${prevBlog.id}`}
+                                className="group p-6 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all text-center min-w-[280px]"
+                            >
+                                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 flex items-center justify-center gap-1">
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                    Previous Article
+                                </p>
+                                <p className="font-medium text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                    {prevBlog.title}
                                 </p>
                             </Link>
                         )}
