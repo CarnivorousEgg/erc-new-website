@@ -1,0 +1,317 @@
+[
+  {
+    "id": "simulation-intro",
+    "title": "Introduction to Simulation",
+    "category": "simulation",
+    "excerpt": "Overview of simulation in robotics - why it's essential and how it helps in robot development.",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Introduction"
+      },
+      {
+        "type": "text",
+        "value": "Simulation is an essential part of Robotics Automation. They provide a versatile platform to quickly test your code for bugs and performance and try out new ideas. While robots are becoming more accessible all the time, it is still not at the stage where you can test your code directly on them. In fact, running code in simulations will always be more convenient. For a more thorough introduction on simulators and the robots you can find in them, go through Chapter 6 of Morgan Quigley."
+      }
+    ]
+  },
+  {
+    "id": "gazebo",
+    "title": "Gazebo Simulator",
+    "category": "simulation",
+    "excerpt": "Gazebo is the most popular physics simulator for robotics development, fully integrated with ROS.",
+    "subcategory": "Gazebo",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Gazebo"
+      },
+      {
+        "type": "text",
+        "value": "Gazebo is the most popular physics simulator for robotics development. It can simulate robots in a 3D environment and can be fully integrated into ROS integrated with Gazebo using the gazebo_ros ROS package. You can interface your robots in the simulation using ROS and control them using ROS messages and services."
+      },
+      {
+        "type": "subheading",
+        "value": "2.1 Installation"
+      },
+      {
+        "type": "text",
+        "value": "Gazebo and gazebo_ros package are both automatically installed when you install ROS. To make sure you have all the ROS packages necessary for running Gazebo simulations are installed"
+      },
+      {
+        "type": "text",
+        "value": "sudo apt-get install ros-melodic-gazebo-*"
+      },
+      {
+        "type": "text",
+        "value": "Gazebo can also be installed independently of ROS by using the command"
+      },
+      {
+        "type": "text",
+        "value": "curl -sSL http://get.gazebosim.org | sh"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "here",
+            "url": "http://gazebosim.org/tutorials?cat=install"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "2.2 Getting Started"
+      },
+      {
+        "type": "text",
+        "value": "You can launch the Gazebo GUI simulator window by just running the command gazebo in the terminal. To understand how to spawn robot models in gazebo it is recommended to first get familiar with .urdf, .sdf and .world files. You can refer to the Robot Description section to read about these."
+      },
+      {
+        "type": "text",
+        "value": "A file can be opened simply by running the follwing command in the command line:"
+      },
+      {
+        "type": "text",
+        "value": "gazebo <path/to/file>"
+      },
+      {
+        "type": "subheading",
+        "value": "2.3 Client Server Separation"
+      },
+      {
+        "type": "text",
+        "value": "Running the gazebo command starts two programmes, namely the gzserver and the gzclient. The gzserver is responsible for doing most of the 'processing' part, i.e., doing all the calculations for the simulation, sensor data generation, basically all the backend processing. The gzclient is responsible for generating the user interface. It provides a nice visualization of simulation, and convenient controls over various simulation properties. gzserver is capable of running independently of gzclient and vice-versa. For eg; in many cases gzserver is run on a cloud computer in case enough processing power is not available locally. Try running the command gzserver in one terminal and the command gzclient in other terminal. You will notice that the gazebo window pops up only when you run the gzclient command. The term run headless is used to refer to cases when only the gzserver is being used."
+      },
+      {
+        "type": "subheading",
+        "value": "2.4 Environment Variables in Gazebo"
+      },
+      {
+        "type": "text",
+        "value": "Environment Variables are variables whose values are valid throughout the system and are used by different applications and the OS for several purposes. These environment variables can contain different types of things ranging from parameter values to paths to certain files depending on what they are used for. Gazebo uses various such environment variables too. These variables and their uses are described below:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "GAZEBO_MODEL_PATH : This environment variable contains colon-separated paths to different directories where gazebo will search for models. Models refers to the sdf file describing the robot. For more information on this refer to the Robot Description section of the handbook.",
+          "GAZEBO_RESOURCE_PATH: This environment variable contains colon-separated set of directories where Gazebo will search for other resources such as world and media files. For eg. if you run the command gazebo worlds/pioneer2dx.world. You will see gazebo window pop up with an empty environment. In fact you can execute this command in any directory. You might ask how does gazebo know where the worlds directory is stored?. The answer is that the path to the world directory, that is /usr/share/gazebo-7/worlds is stored in the environment variable GAZEBO_RESOURCE_PATH.",
+          "GAZEBO_MASTER__URI: URI of the Gazebo master. This specifies the IP and port where the server(gzserver) will be started and tells the clients(gzclients) where to connect to.",
+          "GAZEBO_PLUGIN_PATH: colon-separated set of directories where Gazebo will search for the plugin shared libraries at runtime. Plugins are basically..... You can refer to this section to read more about gazebo plugins.",
+          "GAZEBO_MODEL_DATABASE_URI: URI of the online model database where Gazebo will download models from."
+        ]
+      },
+      {
+        "type": "text",
+        "value": "The default values of these environment variables are stored in the <install_path>/share/gazebo/setup.sh file. If you want to change the values of this variables for example, add or remove a path from GITHUB_MODEL_PATH you will have to source this file first using the command"
+      },
+      {
+        "type": "text",
+        "value": "source <install_path>/share/gazebo/setup.sh"
+      },
+      {
+        "type": "text",
+        "value": "Once this is done you can edit that value of the variable by editing the value by opening the setup.sh file or directly thorugh the terminal/command line using the command:"
+      },
+      {
+        "type": "text",
+        "value": "GITHUB_MODEL_PATH=$GITHUB_MODEL_PATH:<path of the directory you want to add>"
+      }
+    ]
+  },
+  {
+    "id": "robot-description",
+    "title": "Robot Description (URDF/SDF)",
+    "category": "simulation",
+    "excerpt": "Creating robot descriptions using URDF and SDF formats for Gazebo simulation.",
+    "subcategory": "Gazebo",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Introduction:"
+      },
+      {
+        "type": "text",
+        "value": "Robot models in gazebo serve as the digital counterparts of physical robots, representing their physical characteristics, kinematics, dynamics, and sensors in a virtual setting. These models play a crucial role in various fields, including robotics research, autonomous systems development, and even educational purposes. Using Robot Description Formats, roboticists can rapidly prototype and experiment with various robotic configurations without the need for a physical robot. This capability significantly speeds up the development process, allowing for iterative testing, debugging, and fine-tuning of robot designs and control algorithms before deployment on real hardware."
+      },
+      {
+        "type": "heading",
+        "value": "Model:"
+      },
+      {
+        "type": "text",
+        "value": "URDF: In Gazebo, URDF files serve as the foundation for creating robot models. A URDF file contains essential information about the robot's mechanical structure, such as links, joints, sensors, and physical properties like mass, inertia, and collision geometry. Additionally, it can define visual elements, enabling users to visualize the robot accurately during simulations. These description files require designs of various components of the robot, hence are usually bundled with a meshes folder having an accessible path. The model files are of the XML format and have the extension .urdf; however, if you use macros to clean up the code, it becomes urdf.xacro. Refer to roswiki for more on urdfs. There are plugins in various 3d modelling softwares that automatically generate urdfs. It can also be done manually. (Using the urdf snippet tool in vscode fast-tracks the process of writing urdfs). Following tutorials would help gain better understanding of its structure, which is imperative for tweaking attributes and on the go customisation. Sometimes, running a software like Gazebo just for visualisation becomes tedious use the URDF previewer that is conveniently part of the ROS extension in Visual Studio Code."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Methods of spawning:",
+          "Writing a simulation description format (SDF) file:",
+          "Create a config file.",
+          "Including meshes(stl,dae) in .sdf file."
+        ]
+      },
+      {
+        "type": "text",
+        "value": "Importing using gazebo GUI: In gazebo, navigate to insert/path look for the mesh(.stl;.dae) file and add its path. The model can be dragged directly into the scene and can further be reloaded using the saved world file."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Spawn.urdf in the launch file:",
+          "Call the spawn.urdf method of the ros_gazebo node from the ros_gazebo package",
+          "Position the urdf in 3d space (0 0 1.0)"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Control:"
+      },
+      {
+        "type": "text",
+        "value": "When urdfs are simply spawned into an environment, the joints go limp under the influence of gravity. ROS (Robot Operating System) Controllers help maintaining a joint state or position and play a fundamental role in controlling robotic systems within the ROS ecosystem. To effectively interact with and control robots, ROS Controllers are employed to handle various aspects of robot behaviour, such as motion control, joint control etc. The primary objective of ROS Controllers is to abstract the complexities of low-level hardware control and provide a unified interface for developers to command and manage robots. This abstraction allows robot designers and developers to focus on higher-level tasks and algorithms without having to deal with specific hardware details."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Key Components of ROS Controllers:",
+          "Hardware Interface: The hardware interface is a crucial component of ROS Controllers, responsible for communication between the higher-level control system (software) and the robot's actuators (hardware). This needs to be added in the description file under the transmission tag:",
+          "Controller Plugins: Controller plugins are modular software components that implement different control algorithms and strategies. These plugins receive high-level commands from the user or other ROS nodes and translate them into low-level control signals that the hardware can understand. Some commonly used controller plugins include joint position controllers, joint velocity controllers, and effort controllers."
+        ]
+      },
+      {
+        "type": "text",
+        "value": "Controller Manager: The controller manager is responsible for loading and unloading controller plugins and managing their lifecycle. It provides a centralized interface for activating and deactivating controllers based on user commands or the current robot state. It is loaded into the launch file as a rosparam and is a config file in nature with the extension .yaml. ```xml <!-- Load joint controller configurations from YAML file to parameter server --> <rosparam file=\"$(find urdf_assembly6)/config/controllers.yaml\" command=\"load\"/>"
+      },
+      {
+        "type": "text",
+        "value": "<!-- load the controllers --> <node name=\"controller_spawner\" pkg=\"controller_manager\" type=\"spawner\" respawn=\"false\" output=\"screen\" ns=\"/manipulator\" args=\"joint1_position_controller joint2_position_controller joint3_position_controller joint_state_controller\"/> ```"
+      },
+      {
+        "type": "text",
+        "value": "Joint State Controller: The joint state controller is a special type of controller that reads joint states (position, velocity, effort) from the robot's sensors and publishes them to the ROS network. This controller is essential for other controllers that require feedback about the robot's current state."
+      },
+      {
+        "type": "text",
+        "value": "ROS Messages and Services: ROS Controllers utilize ROS messages and services to receive commands and send feedback to other ROS nodes. This communication mechanism ensures seamless integration with the broader ROS ecosystem."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Types of ROS Controllers:",
+          "Position Controllers: Position controllers are used to set the desired joint positions of a robot. They compute the necessary control efforts to reach and maintain these positions."
+        ]
+      },
+      {
+        "type": "text",
+        "value": "Velocity Controllers: Velocity controllers command the desired joint velocities of a robot. They regulate the joint speeds to achieve the desired motion."
+      },
+      {
+        "type": "text",
+        "value": "Effort Controllers: Effort controllers apply specific forces or torques to robot joints, allowing for precise control of joint efforts. This type of control is particularly useful for applications requiring high accuracy and force/torque control."
+      },
+      {
+        "type": "text",
+        "value": "Trajectory Controllers: Trajectory controllers enable robots to follow predefined trajectories, smoothly interpolating between waypoints."
+      },
+      {
+        "type": "heading",
+        "value": "Glossary:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Urdfs(Universal Robot Description Format)-an xml format defining the attributes(inertial,visual) of a single robot.",
+          "Meshes- models created using interconnected polygons to create a visual and geometric representation of the robot's structure",
+          "SDF(simulation Description Format)- t is an XML-based file format used to describe the world, objects, and entities in a simulated environment within the Gazebo robotics simulator.",
+          "Xacro-an xml format used to clean up urdfs by handling repetitive code blocks or macros.",
+          "Transmission tags- An extension to the URDF robot description model that is used to describe the relationship between an actuator and a joint."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stdr",
+    "title": "STDR Simulator",
+    "category": "simulation",
+    "excerpt": "Simple Two-Dimensional Robot Simulator for quick prototyping.",
+    "subcategory": "STDR",
+    "content": [
+      {
+        "type": "subheading",
+        "value": "General Introduction"
+      },
+      {
+        "type": "text",
+        "value": "STDR is a simple two dimensional robot simulator. It is very useful in cases where there is no need for computationally costly 3-D simulation of robots. It is computationally light and serves the purpose good. Hence it is very useful for learning based robotics or for multi robot simulation."
+      },
+      {
+        "type": "subheading",
+        "value": "Installation"
+      },
+      {
+        "type": "list",
+        "items": [
+          "For ROS Kinetic, stdr can be installed using apt-get.",
+          "For ROS Melodic, it is advisible to install stdr from source."
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Architecture Overview"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/architecture.jpg",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "ROS Wiki",
+            "url": "http://wiki.ros.org/stdr_simulator"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Basic Usage"
+      },
+      {
+        "type": "list",
+        "items": [
+          "The `stdr_launchers` package contains launch files basic usage. However, custom launch files can be created to serve personal purposes easily. Some of the launch files are",
+          "`server_no_map.launch` launches the stdr server without any map, robot or the gui.",
+          "`server_with_map_and_gui.launch` launches the serve with preloaded map and gui.",
+          "`server_with_map_and_gui_plus_robot.launch` launches the stdr_server, with preloaded map and robot along with the gui",
+          "You can also launch Rviz with a preset config file using `rviz.launch` file in the stdr_launchers package."
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Robot Namespaces"
+      },
+      {
+        "type": "list",
+        "items": [
+          "The topics corresponding to each robot have a unique namespace attached to it. For example the first robot launched has a namespace `/robot0. Published topics pertaining to that robot are published as /robot0/topic_name`.",
+          "Note that whenever a new robot is spawned the robot number is incremented by 1. This happens even though you delete a robot.",
+          "such namespacing avoids conflicts of topic names when doing multi robot simulation."
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "References"
+      },
+      {
+        "type": "list",
+        "items": [
+          "For more information refer the `stdr_simulator` page in ROS Wiki.",
+          "The github repository for stdr_simulator."
+        ]
+      }
+    ]
+  }
+]

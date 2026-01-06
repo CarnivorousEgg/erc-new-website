@@ -12,7 +12,6 @@ import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import Handbook from './pages/Handbook';
 import HandbookArticle from './pages/HandbookArticle';
-import Sitemap from './pages/Sitemap';
 
 function App() {
     return (
@@ -30,7 +29,6 @@ function App() {
                 <Route path="/handbook" element={<Handbook />} />
                 <Route path="/handbook/:id" element={<HandbookArticle />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/sitemap" element={<Sitemap />} />
             </Routes>
             <Footer />
         </div>

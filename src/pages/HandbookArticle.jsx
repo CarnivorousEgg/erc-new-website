@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import handbookData from '../data/handbook.json';
+import handbookData from '../data/handbook/index.js';
 
 const HandbookArticle = () => {
     const { id } = useParams();

@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import handbookData from '../data/handbook.json';
+import handbookData from '../data/handbook/index.js';
 import { FaChevronDown, FaChevronRight, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Handbook = () => {
@@ -119,9 +119,9 @@ const Handbook = () => {
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="lg:w-72 flex-shrink-0"
                     >
-                        <div className="sticky top-28">
+                        <div className="lg:sticky lg:top-28 flex flex-col max-h-[70vh] lg:max-h-[calc(100vh-8rem)]">
                             {/* Search */}
-                            <div className="relative mb-6">
+                            <div className="relative mb-6 flex-shrink-0">
                                 <input
                                     type="text"
                                     placeholder="Search documentation..."
@@ -140,7 +140,7 @@ const Handbook = () => {
                             </div>
 
                             {/* Category Navigation */}
-                            <nav className="space-y-1 max-h-[65vh] overflow-y-auto pr-2">
+                            <nav className="space-y-1 overflow-y-auto pr-2 flex-1 min-h-0 scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700 scrollbar-track-transparent">
                                 {categories.map(category => {
                                     const categoryData = articlesByCategory[category.id];
                                     const hasSubcategories = categoryData && Object.keys(categoryData.subcategories).length > 0;

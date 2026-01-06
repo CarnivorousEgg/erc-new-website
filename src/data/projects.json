@@ -457,7 +457,7 @@
         "title": "WALL-E",
         "category": "completed",
         "type": "mini",
-        "image": "",
+        "image": "/images/projects/walle/cover.jpeg",
         "description": "A replica of the beloved Pixar robot WALL-E, featuring expressive movements and interactive behaviors.",
         "github": "https://github.com/ERC-BPGC/WALL-E",
         "team_leads": [

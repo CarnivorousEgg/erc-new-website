@@ -1,0 +1,588 @@
+[
+  {
+    "id": "roadmap",
+    "title": "Roadmap for Robotics",
+    "category": "roadmap",
+    "excerpt": "A comprehensive guide for beginners covering programming languages, development tools, and learning paths for all aspects of robotics.",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Roadmap for Robotics"
+      },
+      {
+        "type": "heading",
+        "value": "A common beginning"
+      },
+      {
+        "type": "text",
+        "value": "As a beginner, the most important thing is to start learning a language since it opens up a lot of opportunities in terms of projects to work on and things to do. Also keep in mind that once you know one language well, it's relatively easy to pick up another one quickly."
+      },
+      {
+        "type": "text",
+        "value": "In robotics, different languages have different uses:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Automation & Machine Learning: Python for basic stuff, C++ for more advanced stuff",
+          "Embedded systems and electronics: C",
+          "Modelling: Python, MATLAB"
+        ]
+      },
+      {
+        "type": "text",
+        "value": "We would recommend starting with either Python or C/C++. Knowing both is pretty much essential for advanced robotics. Here are some places where you can get started:"
+      },
+      {
+        "type": "subheading",
+        "value": "Python"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Intro to Python - Web Tutorial",
+            "url": "http://introtopython.org/"
+          },
+          {
+            "name": "Corey Schafer's Video Tutorials",
+            "url": "https://www.youtube.com/playlist?list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "C"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "FreeCodeCamp Video Tutorials",
+            "url": "https://www.youtube.com/watch?v=KJgsSFOSQv0"
+          },
+          {
+            "name": "Learn C - Browser based tutorial",
+            "url": "https://www.learn-c.org/"
+          },
+          {
+            "name": "Beej's Guide (for those who already know programming)",
+            "url": "http://beej.us/guide/bgc/html"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "C++"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Welcome to C++ Playlist - YouTube",
+            "url": "https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb"
+          },
+          {
+            "name": "LearnCpp - Web Tutorial",
+            "url": "https://www.learncpp.com/"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "MATLAB & Simulink"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "MATLAB Onramp",
+            "url": "https://in.mathworks.com/learn/tutorials/matlab-onramp.html"
+          },
+          {
+            "name": "Simulink Onramp",
+            "url": "https://in.mathworks.com/learn/tutorials/simulink-onramp.html"
+          },
+          {
+            "name": "Self-paced MATLAB Courses",
+            "url": "https://matlabacademy.mathworks.com/?s_tid=gn_trg_cosp"
+          },
+          {
+            "name": "MATLAB How-To Playlist",
+            "url": "https://www.youtube.com/playlist?list=PLn8PRpmsu08oBSjfGe8WIMN-2_rwWFSgr"
+          },
+          {
+            "name": "Versioning with Git in Simulink",
+            "url": "https://www.youtube.com/watch?v=AJynESuE1dc&list=PLn8PRpmsu08o7pv1tJ7EnEyHVWSU2-OrR&index=5"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Development Environment"
+      },
+      {
+        "type": "text",
+        "value": "Writing code isn't just as simple as typing into a text editor. Usually there are many other components involved such as a compiler, external libraries, path environments, a terminal, version control, documentation etc. Don't worry if you don't know what these things mean, together they are generally known as your development environment. To begin with, make sure you are comfortable with the following:"
+      },
+      {
+        "type": "subheading",
+        "value": "Linux Operating System"
+      },
+      {
+        "type": "text",
+        "value": "Linux is an open source operating system - this means that anyone can view and propose changes to its source code. It comes in many variants, Ubuntu being the recommended choice for beginners. It's essential to have access to Linux due to its tight integration with many of the tools used to program robots."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Dual Boot Ubuntu Guide",
+            "url": "https://help.ubuntu.com/community/WindowsDualBoot"
+          },
+          {
+            "name": "Install Linux in VirtualBox",
+            "url": "https://itsfoss.com/install-linux-in-virtualbox/"
+          },
+          {
+            "name": "Windows Subsystem for Linux (WSL)",
+            "url": "https://docs.microsoft.com/en-us/windows/wsl/install-win10"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Linux Terminal"
+      },
+      {
+        "type": "text",
+        "value": "While most of us are familiar with the point and click based interface of windows, computers first started off as terminals - text based prompts that you had to type into. The terminal is still used for pretty much everything in software development and is an essential skill."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Linux Terminal Tutorial - YouTube",
+            "url": "https://youtu.be/oxuRxtrO2Ag"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Git"
+      },
+      {
+        "type": "text",
+        "value": "When working on complex code, or as part of a team, keeping track of changes to the code becomes very important. Git provides a way to do this and much more. Platforms such as GitHub and GitLab have become the bedrock of the open source community in recent years."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Git Tutorial for Beginners - YouTube",
+            "url": "https://www.youtube.com/watch?v=RGOj5yH7evk"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Electronics"
+      },
+      {
+        "type": "text",
+        "value": "The Electronics part of Robotics can be divided into 3 parts: Microcontroller, Sensors and Actuators. Sensors and Actuators (through drivers) are interfaced with the microcontroller to form the electronics system of the robot."
+      },
+      {
+        "type": "subheading",
+        "value": "Arduino"
+      },
+      {
+        "type": "text",
+        "value": "Arduino is one of the most popular microcontroller platforms for beginners. It's easy to learn and has a large community."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Arduino Introduction",
+            "url": "https://www.arduino.cc/en/Guide/Introduction"
+          },
+          {
+            "name": "Arduino IDE Download",
+            "url": "https://www.arduino.cc/en/software"
+          },
+          {
+            "name": "Official Arduino Tutorials",
+            "url": "https://www.arduino.cc/en/Tutorial/HomePage"
+          },
+          {
+            "name": "Jeremy Blum's Arduino Tutorials",
+            "url": "https://www.youtube.com/playlist?list=PLA567CE235D39FA84"
+          },
+          {
+            "name": "Paul McWhorter's Arduino Tutorials",
+            "url": "https://www.youtube.com/c/mcwhorpj"
+          },
+          {
+            "name": "TinkerCad - Online Arduino Simulator",
+            "url": "https://www.tinkercad.com/"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "STM32 (BluePill)"
+      },
+      {
+        "type": "text",
+        "value": "For more advanced projects, STM32 microcontrollers offer more power and features."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "STM32 Handbook Article",
+            "url": "/handbook/stm32"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "PCB Design"
+      },
+      {
+        "type": "text",
+        "value": "For custom electronics, you'll need to design Printed Circuit Boards (PCBs)."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "EAGLE PCB Design Software",
+            "url": "https://www.autodesk.in/products/eagle/overview"
+          },
+          {
+            "name": "EAGLE Free Download",
+            "url": "https://www.autodesk.in/products/eagle/free-download"
+          },
+          {
+            "name": "Jeremy Blum's EAGLE Tutorials",
+            "url": "https://www.youtube.com/playlist?list=PL868B73617C6F6FAD"
+          },
+          {
+            "name": "Terminal Two's PCB Design Tutorials",
+            "url": "https://www.youtube.com/playlist?list=PLr0mEvO7yBe6QHexsgU2WFUGesFFobGZp"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Automation"
+      },
+      {
+        "type": "subheading",
+        "value": "Robot Operating System (ROS)"
+      },
+      {
+        "type": "text",
+        "value": "ROS is a flexible framework for writing robot software. It is a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behavior."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "What is ROS? - Video",
+            "url": "https://www.youtube.com/watch?v=N6K2LWG2kRI"
+          },
+          {
+            "name": "ROS in 5 Minutes",
+            "url": "https://www.youtube.com/watch?v=LyC9RAYE96M"
+          },
+          {
+            "name": "ROS Handbook Article",
+            "url": "/handbook/ros-basics"
+          },
+          {
+            "name": "Setting Up ROS",
+            "url": "/handbook/ros-setup"
+          },
+          {
+            "name": "Official ROS Tutorials",
+            "url": "http://wiki.ros.org/ROS/Tutorials"
+          },
+          {
+            "name": "ROS Answers - Community Forum",
+            "url": "https://answers.ros.org/questions/"
+          },
+          {
+            "name": "Hello Real World with ROS - TU Delft Course",
+            "url": "https://ocw.tudelft.nl/courses/hello-real-world-ros-robot-operating-system/"
+          },
+          {
+            "name": "Programming Robots with ROS - Book (PDF)",
+            "url": "https://www.pdfdrive.com/programming-robots-with-ros-a-practical-introduction-to-the-robot-operating-system-d166617536.html"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Path Planning"
+      },
+      {
+        "type": "text",
+        "value": "Path planning is about finding a collision-free path for robots to navigate autonomously."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Introduction to Path Planning",
+            "url": "/handbook/path-planning-intro"
+          },
+          {
+            "name": "Planning Algorithms - Free Book",
+            "url": "http://lavalle.pl/planning/"
+          },
+          {
+            "name": "A* Algorithm",
+            "url": "/handbook/path-planning-astar"
+          },
+          {
+            "name": "Dijkstra's Algorithm",
+            "url": "/handbook/path-planning-dijkstra"
+          },
+          {
+            "name": "RRT Algorithm",
+            "url": "/handbook/path-planning-rrt"
+          },
+          {
+            "name": "Open Motion Planning Library (OMPL)",
+            "url": "https://ompl.kavrakilab.org/"
+          },
+          {
+            "name": "Path Planning Algorithms - GitHub",
+            "url": "https://github.com/zhm-real/PathPlanning"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "SLAM (Simultaneous Localization and Mapping)"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "SLAM Course Playlist",
+            "url": "https://www.youtube.com/playlist?list=PLgnQpQtFTOGQrZ4O5QzbIHgl3b1JHimN_"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Robot Perception"
+      },
+      {
+        "type": "text",
+        "value": "Robot Perception deals with making intelligent robots that can see, analyze and extract useful data from the 3D world."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Understanding Depth Maps",
+            "url": "https://www.omnivirt.com/blog/depth-map/"
+          },
+          {
+            "name": "Point Cloud Library",
+            "url": "https://pointclouds.org/"
+          },
+          {
+            "name": "Semantic Segmentation Guide",
+            "url": "https://towardsdatascience.com/semantic-segmentation-with-deep-learning-a-guide-and-code-e52fc8958823"
+          },
+          {
+            "name": "Image Classification Tutorial",
+            "url": "https://www.analyticsvidhya.com/blog/2019/01/build-image-classification-model-10-minutes/"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Machine Learning / AI"
+      },
+      {
+        "type": "text",
+        "value": "Machine Learning is about how the computer can learn to solve a task from examples, much like we humans learn."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Andrew Ng's Machine Learning Course",
+            "url": "https://www.coursera.org/learn/machine-learning"
+          },
+          {
+            "name": "ML Course Python Assignments",
+            "url": "https://github.com/dibgerge/ml-coursera-python-assignments"
+          },
+          {
+            "name": "Deep Learning Specialization",
+            "url": "https://www.coursera.org/specializations/deep-learning"
+          },
+          {
+            "name": "Stanford CS231n - Computer Vision",
+            "url": "http://cs231n.stanford.edu/"
+          },
+          {
+            "name": "Stanford CS224n - NLP",
+            "url": "http://web.stanford.edu/class/cs224n/"
+          },
+          {
+            "name": "Stanford CS234 - Reinforcement Learning",
+            "url": "https://www.youtube.com/watch?v=FgzM3zpZ55o&list=PLoROMvodv4rOSOPzutgyCTapiGlY2Nd8u"
+          },
+          {
+            "name": "Sutton & Barto - RL Book",
+            "url": "https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "ML Software Tools"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "NumPy Tutorial - YouTube",
+            "url": "https://www.youtube.com/watch?v=QUT1VHiLmmI"
+          },
+          {
+            "name": "NumPy Documentation",
+            "url": "https://numpy.org/doc/stable/"
+          },
+          {
+            "name": "Matplotlib Tutorial - YouTube",
+            "url": "https://www.youtube.com/watch?v=3Xc3CA655Y4"
+          },
+          {
+            "name": "Matplotlib Documentation",
+            "url": "https://matplotlib.org/"
+          },
+          {
+            "name": "SciKit-Learn Tutorial - YouTube",
+            "url": "https://www.youtube.com/watch?v=pqNCD_5r0IU"
+          },
+          {
+            "name": "SciKit-Learn Documentation",
+            "url": "http://scikit-learn.org/stable"
+          },
+          {
+            "name": "OpenCV Tutorial - YouTube",
+            "url": "https://www.youtube.com/watch?v=oXlwWbU8l2o"
+          },
+          {
+            "name": "OpenCV Documentation",
+            "url": "https://docs.opencv.org/master/"
+          },
+          {
+            "name": "PyTorch Tutorial - YouTube",
+            "url": "https://www.youtube.com/watch?v=GIsg-ZUy0MY"
+          },
+          {
+            "name": "PyTorch Documentation",
+            "url": "https://pytorch.org/docs/stable/"
+          },
+          {
+            "name": "TensorFlow Tutorial - YouTube",
+            "url": "https://www.youtube.com/watch?v=tPYj3fFJGjk"
+          },
+          {
+            "name": "TensorFlow Documentation",
+            "url": "https://www.tensorflow.org/"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Control Systems"
+      },
+      {
+        "type": "text",
+        "value": "Control systems help to control the movements and functions of the robot. Physical modelling of the system becomes crucial for designing a good controller."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Control Theory Handbook Article",
+            "url": "/handbook/control-theory-intro"
+          },
+          {
+            "name": "Control of Mobile Robots - Georgia Tech",
+            "url": "https://www.youtube.com/playlist?list=PL2jykFOD1AWYvdLW6Alr55IydU_qFVe31"
+          },
+          {
+            "name": "Understanding PID Control - MATLAB",
+            "url": "https://www.youtube.com/playlist?list=PLn8PRpmsu08pQBgjxYFXSsODEF3Jqmm-y"
+          },
+          {
+            "name": "PID Controller Article",
+            "url": "/handbook/pid-controller"
+          },
+          {
+            "name": "LQR Controller Article",
+            "url": "/handbook/lqr-controller"
+          },
+          {
+            "name": "MPC Controller Article",
+            "url": "/handbook/mpc-controller"
+          },
+          {
+            "name": "Control Theory Basics - MATLAB",
+            "url": "https://www.youtube.com/playlist?list=PLn8PRpmsu08pFBqgd_6Bi7msgkWFKL33b"
+          },
+          {
+            "name": "State Space & Pole Placement - MATLAB",
+            "url": "https://www.youtube.com/playlist?list=PLn8PRpmsu08podBgFw66-IavqU2SqPg_w"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Mechanical Design"
+      },
+      {
+        "type": "subheading",
+        "value": "CAD Software"
+      },
+      {
+        "type": "text",
+        "value": "Computer-Aided Design (CAD) software is essential for designing robot parts and assemblies."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Autodesk Education (Free Software)",
+            "url": "https://www.autodesk.com/education/edu-software/overview"
+          },
+          {
+            "name": "Fusion 360 Official Tutorials",
+            "url": "https://help.autodesk.com/view/fusion360/ENU/courses/"
+          },
+          {
+            "name": "SolidWorks Tutorials (Google Drive)",
+            "url": "https://drive.google.com/drive/folders/1j9J3IEnAwjRMRvQAYGQYorKHM698ScX9?usp=sharing"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "For more information on how to get Solidworks, get in touch with an ERC member."
+      }
+    ]
+  }
+]

@@ -40,7 +40,8 @@ const PROJECT_FOLDER_MAP = {
     'automated-orchestra_done': 'automated orchestra',
     'automated-dart-board_done': 'dartboard',
     'led-matrix_done': 'led matrix',
-    'swarm-minions_done': 'swarm minions'
+    'swarm-minions_done': 'swarm minions',
+    'wall-e_done': 'walle'
 };
 
 const ProjectDetail = () => {
@@ -51,8 +52,14 @@ const ProjectDetail = () => {
     
     // Get gallery items from the generated gallery media data
     const masonryItems = useMemo(() => {
-        // Use mapped folder name if available, otherwise use the project id
-        const folderId = PROJECT_FOLDER_MAP[id] || id;
+        // Use mapped folder name if available
+        let folderId = PROJECT_FOLDER_MAP[id];
+        
+        // If not in map, try removing _done suffix
+        if (!folderId) {
+            folderId = id.replace(/_done$/, '');
+        }
+        
         const projectGallery = galleryMedia.projects?.[folderId] || [];
         return projectGallery;
     }, [id]);
@@ -102,10 +109,14 @@ const ProjectDetail = () => {
         return <div className="pt-32 text-center">Project not found</div>;
     }
 
+    // Determine the correct back link based on project type
+    const backLink = project.type === 'mini' ? '/projects#mini' : '/projects';
+    const backLabel = project.type === 'mini' ? 'Back to Mini Projects' : 'Back to Projects';
+
     return (
         <div className="min-h-screen pt-24 px-4 container mx-auto">
-            <Link to="/projects" className="inline-flex items-center gap-2 text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white mb-8 transition-colors">
-                <FaArrowLeft /> Back to Projects
+            <Link to={backLink} className="inline-flex items-center gap-2 text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white mb-8 transition-colors">
+                <FaArrowLeft /> {backLabel}
             </Link>
 
             <motion.div
@@ -186,18 +197,47 @@ const ProjectDetail = () => {
                     className="mt-16 pb-20"
                 >
                     <h2 className="text-3xl font-bold mb-8">Project Gallery</h2>
-                    <Masonry
-                        items={masonryItems}
-                        ease="power3.out"
-                        duration={0.6}
-                        stagger={0.05}
-                        animateFrom="bottom"
-                        scaleOnHover={true}
-                        hoverScale={0.97}
-                        blurToFocus={true}
-                        colorShiftOnHover={false}
-                        onItemClick={handleItemClick}
-                    />
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {masonryItems.map((item, index) => (
+                            <motion.div
+                                key={item.id || index}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.05 }}
+                                className="group relative aspect-[4/3] overflow-hidden rounded-xl cursor-pointer"
+                                onClick={() => handleItemClick(item)}
+                            >
+                                {item.type === 'video' ? (
+                                    <video
+                                        src={item.img}
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        muted
+                                        loop
+                                        playsInline
+                                        onMouseEnter={(e) => e.target.play()}
+                                        onMouseLeave={(e) => e.target.pause()}
+                                    />
+                                ) : (
+                                    <img
+                                        src={item.img}
+                                        alt={item.title || item.description || 'Gallery image'}
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    />
+                                )}
+                                {/* Hover overlay with description */}
+                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-end">
+                                    <div className="p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                        {item.title && (
+                                            <p className="text-white font-medium text-sm">{item.title}</p>
+                                        )}
+                                        {item.description && (
+                                            <p className="text-white/80 text-xs mt-1">{item.description}</p>
+                                        )}
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </motion.div>
             )}
 

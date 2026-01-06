@@ -15,6 +15,12 @@ export default {
                     dark: '#0a0a0a',
                     primary: '#3b82f6', // Adjust based on brand
                     accent: '#8b5cf6',
+                },
+                social: {
+                    github: '#ffffff',
+                    linkedin: '#0077B5',
+                    instagram: '#E1306C',
+                    twitter: '#1DA1F2',
                 }
             },
             animation: {

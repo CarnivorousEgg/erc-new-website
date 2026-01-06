@@ -1,0 +1,111 @@
+[
+  {
+    "id": "misc",
+    "title": "Miscellaneous Resources",
+    "category": "misc",
+    "excerpt": "Additional resources and useful links for robotics enthusiasts.",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Miscellaneous"
+      },
+      {
+        "type": "heading",
+        "value": "Online Courses"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Underactuated robotics",
+          "Programming for Robotics",
+          "Introduction to Aerial Robotics",
+          "SLAM Course",
+          "Robotics Specialization - Coursera",
+          "Modern Robotics Specialization - Coursera",
+          "Compiled list of other courses/resources"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Wesbites with resources"
+      },
+      {
+        "type": "list",
+        "items": [
+          "The Robotics Back-End",
+          "RoboticsKnowledgeBase"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Talk Series / Seminars / Podcasts"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Artificial Intelligence Podcast by Lex Fridman",
+          "Robotics Today",
+          "MIT RoboSeminars",
+          "Stanford - Robotics and Autonomous Systems Seminar",
+          "CMU RI Robotics Seminars"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "List of Mailing lists and Google Groups"
+      },
+      {
+        "type": "text",
+        "value": "Robotics Worldwide"
+      },
+      {
+        "type": "text",
+        "value": "European Robotics"
+      },
+      {
+        "type": "text",
+        "value": "AI Robotics"
+      },
+      {
+        "type": "text",
+        "value": "Systems Neuroscience"
+      },
+      {
+        "type": "text",
+        "value": "ML-news"
+      },
+      {
+        "type": "text",
+        "value": "Connectionists"
+      },
+      {
+        "type": "text",
+        "value": "UAI"
+      },
+      {
+        "type": "text",
+        "value": "Reinforcement Learning"
+      },
+      {
+        "type": "text",
+        "value": "Deep Learning"
+      },
+      {
+        "type": "text",
+        "value": "Neuromorphic Engineering"
+      },
+      {
+        "type": "text",
+        "value": "Computer Vision"
+      },
+      {
+        "type": "text",
+        "value": "Artificial Life"
+      },
+      {
+        "type": "text",
+        "value": "Genetic Programming"
+      }
+    ]
+  }
+]

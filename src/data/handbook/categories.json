@@ -1,0 +1,37 @@
+[
+  {
+    "id": "roadmap",
+    "name": "Roadmap",
+    "icon": "🗺️",
+    "description": "Getting started with robotics - languages, tools, and learning paths",
+    "color": "from-purple-500 to-indigo-600"
+  },
+  {
+    "id": "automation",
+    "name": "Automation",
+    "icon": "🤖",
+    "description": "ROS, path planning, control theory, and autonomous systems",
+    "color": "from-blue-500 to-cyan-600"
+  },
+  {
+    "id": "electronics",
+    "name": "Electronics",
+    "icon": "⚡",
+    "description": "Microcontrollers, sensors, actuators, and circuit design",
+    "color": "from-yellow-500 to-orange-600"
+  },
+  {
+    "id": "mechanical",
+    "name": "Mechanical",
+    "icon": "⚙️",
+    "description": "Robot design, kinematics, dynamics, and CAD",
+    "color": "from-green-500 to-emerald-600"
+  },
+  {
+    "id": "simulation",
+    "name": "Simulation",
+    "icon": "🖥️",
+    "description": "Gazebo, STDR, and virtual robot testing environments",
+    "color": "from-pink-500 to-rose-600"
+  }
+]

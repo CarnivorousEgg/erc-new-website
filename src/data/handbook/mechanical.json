@@ -1,0 +1,990 @@
+[
+  {
+    "id": "mechanical-intro",
+    "title": "Introduction to Mechanical Design",
+    "category": "mechanical",
+    "excerpt": "Overview of mechanical aspects in robotics - design, kinematics, dynamics, and CAD.",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Introduction"
+      },
+      {
+        "type": "text",
+        "value": "Mechanical aspects of robotics involve desiging,building and testing mechanical sensors and devices for a robot."
+      },
+      {
+        "type": "text",
+        "value": "This includes the robot configuration, type of robot, joint mechanisms, axes, heat transfer characteristics, mounting positions, among many other aspects that go into the creation of a new robot. CAD or other design software is used to create a new robot concept and how to best manufacture it."
+      },
+      {
+        "type": "text",
+        "value": "Mechanical design also involves solving the kinematics and dynamics equation of the robot, which are essential for peforming any task with robots."
+      }
+    ]
+  },
+  {
+    "id": "mechanical-101",
+    "title": "Mechanical 101",
+    "category": "mechanical",
+    "excerpt": "Basic mechanical concepts for robotics.",
+    "subcategory": "Basics",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Mechanical 101"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Aasim Sayyed",
+            "url": "https://www.linkedin.com/in/aasim-sayyed-a966b423a/?originalSubdomain=in"
+          },
+          {
+            "name": "here",
+            "url": "https://drive.google.com/file/d/1TSnQcirmtd4-c1_goBCdhXNydBE2Uf8y/view?usp=drive_link"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gears",
+    "title": "Gears",
+    "category": "mechanical",
+    "excerpt": "Comprehensive guide to gears - types, advantages, and applications in robotics.",
+    "subcategory": "Components",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Gears"
+      },
+      {
+        "type": "heading",
+        "value": "What are Gears?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Gears are defined as toothed element which are used for transmitting rotary motion from one shaft to another.",
+          "Gears are most often used in transmissions to convert an electric motor’s high speed and low torque to a shaft’s requirements for low speed high torque.",
+          "Gears essentially allow positive engagement between Teeth, so high forces can be transmitted while still undergoing essentially rolling contact.",
+          "Gears do not depend on friction as belt drives and do best when friction is minimized.",
+          "The motion and power transmitted by gears is kinematically equivalent to that transmitted by friction wheels or discs."
+        ]
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/gears1.png",
+        "alt": "gears1",
+        "caption": "gears1"
+      },
+      {
+        "type": "text",
+        "value": "(Transmission of Power)"
+      },
+      {
+        "type": "text",
+        "value": "In order to avoid the slipping, a number of projections (called teeth) as shown in Fig. (b), are provided on the periphery of the wheel A, which will fit into the corresponding recesses on the periphery of the wheel B. A friction wheel with the teeth cut on it is known as toothed wheel or gear. The usual connection to show the toothed wheels is by their pitch circles"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/gears2.png",
+        "alt": "gears2",
+        "caption": "gears2"
+      },
+      {
+        "type": "heading",
+        "value": "Advantages and Disadvantages"
+      },
+      {
+        "type": "subheading",
+        "value": "Advantages"
+      },
+      {
+        "type": "list",
+        "items": [
+          "It transmits exact velocity ratio.",
+          "It may be used to transmit large power.",
+          "It has high efficiency.",
+          "It has reliable service.",
+          "It has compact layout."
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Disadvantages"
+      },
+      {
+        "type": "list",
+        "items": [
+          "The manufacture of gears require special tools and equipment.",
+          "The error in cutting teeth may cause vibrations and noise during operation."
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Types of Gears"
+      },
+      {
+        "type": "list",
+        "items": [
+          "According to the position of axes of the shaft",
+          "Parallel: Spur gear, Helical gear, Rack and Pinion",
+          "Intersecting: Bevel Gear",
+          "Non Intersecting and Non Parallel: Worm and Worm Gears"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "According to the periphery velocity",
+          "Low Velocity",
+          "Medium Velocity",
+          "High Velocity"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "According to the type of gearing",
+          "External Gearing",
+          "Internal Gearing",
+          "Rack and Pinion"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "According to the position of teeth on surface",
+          "Straight",
+          "Inclined",
+          "Curved"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Spur Gear"
+      },
+      {
+        "type": "text",
+        "value": "Spur gears are a type of cylindrical gear, with shafts that are parallel and coplanar, and teeth that are straight and oriented parallel to the shafts. They’re arguably the simplest and most common type of gear – easy to manufacture and suitable for a wide range of applications."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/gears3.png",
+        "alt": "gears3",
+        "caption": "gears3"
+      },
+      {
+        "type": "text",
+        "value": "The teeth of a spur gear have an involute profile and mesh one tooth at a time. The involute form means that spur gears only produce radial forces (no axial forces), but the method of tooth meshing causes high stress on the gear teeth and high noise production. Because of this, spur gears are typically used for lower speed applications, although they can be used at almost any speed."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/gears4.png",
+        "alt": "gears4",
+        "caption": "gears4"
+      },
+      {
+        "type": "text",
+        "value": "Spur gears are generally seen as best for applications that require speed reduction and torque multiplication, such as ball mills and crushing equipment. Examples of high-speed applications that use spur gears – despite their high noise levels – include consumer appliances such as washing machines and blenders. And while noise limits the use of spur gears in passenger automobiles, they are often used in aircraft engines, trains, and even bicycles."
+      },
+      {
+        "type": "heading",
+        "value": "Helical Gear"
+      },
+      {
+        "type": "text",
+        "value": "The teeth of a helical gear are set at an angle (relative to axis of the gear) and take the shape of a helix. This allows the teeth to mesh gradually, starting as point contact and developing into line contact as engagement progresses."
+      },
+      {
+        "type": "text",
+        "value": "One of the most noticeable benefits of helical gears over spur gears is less noise, especially at medium- to high-speeds. Also, with helical gears, multiple teeth are always in mesh, which means less load on each individual tooth. This results in a smoother transition of forces from one tooth to the next, so that vibrations, shock loads, and wear are reduced. One interesting thing about helical gears is that if the angles of the gear teeth are correct, they can be mounted on perpendicular shafts, adjusting the rotation angle by 90 degrees."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/gears5.png",
+        "alt": "gears5",
+        "caption": "gears5"
+      },
+      {
+        "type": "text",
+        "value": "Helical gears are often the default choice in applications that are suitable for spur gears but have non-parallel shafts. They are also used in applications that require high speeds or high loading. And regardless of the load or speed, they generally provide smoother, quieter operation than spur gears."
+      },
+      {
+        "type": "heading",
+        "value": "Bevel Gear"
+      },
+      {
+        "type": "text",
+        "value": "Bevel gears are gears where the axes of the two shafts intersect and the tooth-bearing faces of the gears themselves are conically shaped. Bevel gears are most often mounted on shafts that are 90 degrees apart, but can be designed to work at other angles as well. The pitch surface of bevel gears is a cone."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/gears6.png",
+        "alt": "gears6",
+        "caption": "gears6"
+      },
+      {
+        "type": "text",
+        "value": "There are several types of bevel gears based on the shape of their teeth."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Straight",
+          "They have conical pitch surface and teeth are straight and tapering towards apex.",
+          "They are useful to verify the transmission of the motion that is generated between axes that intersect within one same plane, almost always at a 90-degree angle.",
+          "Straight bevel gears have many uses in watches, dentist drills, hand drills and vending machines."
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "Spiral",
+          "They have curved teeth at an angle allowing tooth contact to be gradual and smooth and operate at very steep planes.",
+          "Spiral bevel gears provide a high level of control over the way in which teeth mesh, and their design allows for certain mounting deflections without excessively increasing the load on either end of the teeth.",
+          "They can be used at high speeds, and are usually employed in motorcycle and bicycle gears."
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "Hypoid",
+          "These are similar to spiral bevel, but the pitch surfaces are hyberbolic and not conical. The pinion can be offset above or below the gear center, thus allowing larger pinion diameter, longer life, and smoother mesh.",
+          "In addition to being used in industrial machinery, they are commonly used in the automotive industry, where it is used in rear-wheel drive vehicles to connect the driveshaft with the wheels."
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Worm Gears"
+      },
+      {
+        "type": "text",
+        "value": "Worm gears are constructed of a worm and a gear (sometimes referred to as a worm wheel), with non-parallel, non-intersecting shafts oriented 90 degrees to each other. The worm is analogous to a screw with a V-type thread, and the gear is analogous to a spur gear. The worm is typically the driving component, with the worm’s thread advancing the teeth of the gear."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/gears7.png",
+        "alt": "gears7",
+        "caption": "gears7"
+      },
+      {
+        "type": "text",
+        "value": "The primary benefit of worm gears is their ability to provide high reduction ratios (like 20:1 and even up to 300:1 or greater) and correspondingly high torque multiplication. They can also be used as speed reducers in low- to medium-speed applications. And, because their reduction ratio is based on the number of gear teeth alone, they are more compact than other types of gears. Worm gears are used widely in material handling and transportation machinery, machine tools, automobiles etc."
+      },
+      {
+        "type": "heading",
+        "value": "Herringbone Gear"
+      },
+      {
+        "type": "text",
+        "value": "The herringbone gear consists of two sets of gear teeth on the same gear, one right hand and one left hand. Having both hands of gear teeth, causes the thrust of one set to cancel out the thrust of the other. It is used for transmitting power between parallel shafts. It was developed to overcome the disadvantage of the high-end thrust that is present with single-helical gears. Also another advantage of this gear type is quiet, smooth operation at higher speeds. They are mostly used on heavy machinery."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/gears8.png",
+        "alt": "gears8",
+        "caption": "gears8"
+      },
+      {
+        "type": "heading",
+        "value": "Rack and Pinion"
+      },
+      {
+        "type": "text",
+        "value": "A rack and pinion drive system consists of a rack (or a “linear gear”) and a pinion (or “circular gear”), which operate to convert rotational motion into linear motion. A rack and pinion drive can use both straight and helical gears. These systems provide high-speed travel over extremely long lengths and are frequently used in large gantry systems for material handling, machining, welding and assembly, especially in the automotive, machine tool, and packaging industries."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/gears9.png",
+        "alt": "gears9",
+        "caption": "gears9"
+      }
+    ]
+  },
+  {
+    "id": "drive-mechanism",
+    "title": "Drive Mechanism",
+    "category": "mechanical",
+    "excerpt": "Understanding different drive mechanisms for wheeled robots - differential drive, Ackermann steering, and omnidirectional drive.",
+    "subcategory": "Kinematics",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Drive Mechanism"
+      },
+      {
+        "type": "text",
+        "value": "Wheeled mobile robots may be classified in two major categories, omnidirectional and nonholonomic."
+      },
+      {
+        "type": "text",
+        "value": "Omnidirectional wheeled mobile robots typically employ either omniwheels or mecanum wheels. An omniwheel is a typical wheel augmented with rollers on its outer circumference. These rollers spin freely about axes in the plane of the wheel and tangential to the wheel's outer circumference, and they allow sideways sliding while the wheel drives forward or backward without slip in that direction. Mecanum wheels are similar except that the spin axes of the circumferential rollers are not in the plane of the wheel. The sideways sliding allowed by omniwheels and mecanum wheels ensures that there are no velocity constraints on the robot's chassis."
+      },
+      {
+        "type": "text",
+        "value": "Nonholomic wheeled robots are subject to a single Pfaffian velocity constraint i.e. they cannot move sideways or parallel to the axis of the axel. Example for a nonholomic wheeled robot is a car and despite this velocity constraint, a car can reach any $(\\phi,x,y)$ configuration in an obstacle-free plane. In other words, the velocity constraint cannot be integrated to an equivalent configuration constraint, and therefore it is a nonholonomic constraint."
+      },
+      {
+        "type": "text",
+        "value": "If we want to prescribe the robot’s movements in the environment, we need to know how the robot variables relate to the primary variables we can control: the angular positions and velocities of the wheel shafts. Therefore, a kinematical model of the robot has to be developed."
+      },
+      {
+        "type": "heading",
+        "value": "Modeling of an Omnibase Robot"
+      },
+      {
+        "type": "text",
+        "value": "Generally Omni wheeled robots use either a three wheeled platform or a four wheeled platform. Each design has its own advantages and disadvantages. In a three wheel design, wheels are at $120^{\\circ}$ from each other and they offers greater traction as any reactive force is distributed through only three points and the robot is well balanced even on uneven terrain."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/drive0.png",
+        "alt": "drive0",
+        "caption": "drive0"
+      },
+      {
+        "type": "text",
+        "value": "The configuration of a robot is defined in the form $q = (x,y,\\theta)$, $d$ is the distance between wheels and the center of the robot $v_i$ and $\\omega_i$ are the linear and angular velocity of the $i^{th}$ wheel respectively. $v, v_n$ are the two components of the linear velocity of the robot and $\\omega$ is the angular velocity. The well known kinematic model of an omnidirectional robot located a $(x,y,\\theta)$ can be written as $v_x(t) = dx(t)/dt , v_y(t) = dy(t)/dt$ and $\\omega(t) = d\\theta(t)/dt$. For a three wheeled robot"
+      },
+      {
+        "type": "text",
+        "value": "$$ \\begin{bmatrix} v_0(t)\\\\ v_1(t)\\\\ v_2(t) \\end{bmatrix} = \\begin{bmatrix} -sin\\pi/3 & cos\\pi/3 & d\\\\ 0 & -1 & d\\\\ sin\\pi/3 & cos\\pi/3 & d \\end{bmatrix} \\begin{bmatrix} v(t)\\\\ v_n(t)\\\\ \\omega(t) \\end{bmatrix} $$"
+      },
+      {
+        "type": "text",
+        "value": "Applying the inverse kinematics is possible to obtain the equations that determine the robot speeds related the wheels speed. Solving in order of $v$, $v_n$ and $\\omega$, the following can be found"
+      },
+      {
+        "type": "text",
+        "value": "$$ v(t) = (\\sqrt{3}/3)(v_2(t) - v_0(t))\\] \\[v_n(t)=(1/3)(v_2(t) +v_0(t))−(2/3)v_1(t)\\] \\[\\omega(t)=(1/(3d))(v_0(t) +v_1(t) +v_2(t)) $$"
+      },
+      {
+        "type": "heading",
+        "value": "Modeling of a Nonholomic Robot"
+      },
+      {
+        "type": "text",
+        "value": "A nonholomic robot is modelled in differnet ways which will then dictate the drive mechanism that can be applied on the robot. Differnet drive mechanism and modelling for a nonholomic robot are:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Unicycle model",
+          "Differential Drive",
+          "Ackermann Steering"
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Unicycle Model"
+      },
+      {
+        "type": "text",
+        "value": "The simplest wheeled mobile robot is a single upright rolling wheel, or unicycle. The configuration of a robot with a wheel of radius $r$ can be written in the form $q = (\\phi,x,y,\\theta)$, where $(x,y)$ is the contact point, $\\phi$ is the heading direction, and $\\theta$ is the rolling angle of the wheel. The kinematic equations can be written as"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/drive1.png",
+        "alt": "drive1",
+        "caption": "drive1"
+      },
+      {
+        "type": "text",
+        "value": "$$ \\dot{q} = \\begin{bmatrix} \\dot{\\phi}\\\\ \\dot{x}\\\\ \\dot{y}\\\\ \\dot{\\theta} \\end{bmatrix} = \\begin{bmatrix} 0 & 1\\\\ rcos\\phi & 0\\\\ rsin\\phi & 0\\\\ 1 & 0 \\end{bmatrix} \\begin{bmatrix} u_1\\\\ u_2 \\end{bmatrix} = G(q)u = g_1(q)u_1 + g_2(q)u_2 $$"
+      },
+      {
+        "type": "text",
+        "value": "The control inputs are $u = (u_1,u_2)$, with $u_1$ the wheel's forward-backward driving speed and $u_2$ the heading direction turning speed."
+      },
+      {
+        "type": "text",
+        "value": "Three things to notice about these models are: (1) there is no drift - zero controls mean zero velocity; (2) the vector fields $g_i(q)$ are generally functions of the configuration $q$; and (3) $\\dot{q}$ is linear in the controls."
+      },
+      {
+        "type": "subheading",
+        "value": "Differnetial Drive"
+      },
+      {
+        "type": "text",
+        "value": "A differential drive is the most basic drive, which consists of two sets of wheels that can be driven independently. This is the most commonly used form of locomotion system used in robots as it’s the simplest and easiest to implement."
+      },
+      {
+        "type": "text",
+        "value": "A differential drive robot consists of two independently driven wheels of radius $r$ that rotate about the same axis, as well as one or more caster wheels, ball casters, or low-friction sliders that keep the robot horizontal. If both the wheels are driven in the same direction and speed, the robot will go in a straight line."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/drive2.jpg",
+        "alt": "drive2",
+        "caption": "drive2"
+      },
+      {
+        "type": "text",
+        "value": "If both wheels are turned with equal speed in opposite directions, as is clear from the diagram shown, the robot will rotate about the central point of the axis. Otherwise, depending on the speed of rotation and its direction, the center of rotation may fall anywhere on the line defined by the two contact points of the tires."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/drive3.png",
+        "alt": "drive3",
+        "caption": "drive3"
+      },
+      {
+        "type": "text",
+        "value": "Let the distance between the driven wheels be $2d$ and choose the $(x,y)$ reference point halfway between the wheels. Writing the configuration as $q = (\\phi,x,y,\\theta_L,\\theta_R)$, where $\\theta_L$ and $\\theta_R$ are the rolling angles of the left and right wheels, respectively, the kinematic equations are"
+      },
+      {
+        "type": "text",
+        "value": "$$ \\dot{q} = \\begin{bmatrix} \\dot{\\phi}\\\\ \\dot{x}\\\\ \\dot{y}\\\\ \\dot{\\theta_L}\\\\ \\dot{\\theta_R} \\end{bmatrix} = \\begin{bmatrix} -r/2d & r/2d\\\\ \\frac{r}{2}cos\\phi & \\frac{r}{2}cos\\phi\\\\ \\frac{r}{2}sin\\phi & \\frac{r}{2}sin\\phi\\\\ 1 & 0\\\\ 0 & 1 \\end{bmatrix} \\begin{bmatrix} u_L\\\\ u_R \\end{bmatrix} $$"
+      },
+      {
+        "type": "text",
+        "value": "where $u_L$ is the angular speed of the left wheel and $u_R$ that of the right. A positive angular speed of each wheel corresponds to forward motion at that wheel."
+      },
+      {
+        "type": "text",
+        "value": "While we can vary the velocity of each wheel, for the robot to perform rolling motion, the robot must rotate about a point that lies along their common left and right wheel axis. The point that the robot rotates about is known as the ICC - Instantaneous Center of Curvature."
+      },
+      {
+        "type": "text",
+        "value": "By varying the linear velocity of the wheels $V_R$ and $V_L$, we can vary the radius of curvature $R$ that the robot follows. Because the rate of rotation $\\omega$ about the ICC must be the same for both wheels, we can write the following equations"
+      },
+      {
+        "type": "text",
+        "value": "$$ \\omega(R + d) = V_R\\] \\[\\omega(R - d) = V_L $$"
+      },
+      {
+        "type": "text",
+        "value": "A differential drive robot cannot move in the direction along the axis - this is a singularity. Differential drive vehicles are very sensitive to slight changes in velocity in each of the wheels. Small errors in the relative velocities between the wheels can affect the robot trajectory."
+      },
+      {
+        "type": "subheading",
+        "value": "Ackermann Steering"
+      },
+      {
+        "type": "text",
+        "value": "Drawbacks of the differential drive are its reliance on a caster wheel, which performs poorly at high speeds, and difficulties in driving straight lines as this requires both motors to drive at the exact same speed. These drawbacks are mitigated by car-like mechanisms, which are driven by a single motor and can steer their front wheels. This mechanism is known as Ackermann steering."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/drive4.png",
+        "alt": "drive4",
+        "caption": "drive4"
+      },
+      {
+        "type": "text",
+        "value": "To define the configuration of the car, we ignore the rolling angles of the four wheels and write $q = (\\phi,x,y,\\psi)$, where $(x,y)$ is the location of the midpoint between the rear wheels, $\\phi$ is the car's heading direction, and $\\psi$ is the steering angle of the car, defined at a virtual wheel at the midpoint between the front wheels. The controls are the forward speed $v$ of the car at its reference point and the angular speed $\\omega$ of the steering angle. The car's kinematics are"
+      },
+      {
+        "type": "text",
+        "value": "$$ \\dot{q} = \\begin{bmatrix} \\dot{\\phi}\\\\ \\dot{x}\\\\ \\dot{y}\\\\ \\dot{\\psi} \\end{bmatrix} = \\begin{bmatrix} (tan\\psi)/l & 0\\\\ cos\\phi & 0\\\\ sin\\phi & 0\\\\ 0 & 1 \\end{bmatrix} \\begin{bmatrix} v\\\\ \\omega \\end{bmatrix} $$"
+      },
+      {
+        "type": "text",
+        "value": "Disadvantages Of Ackermann Steering : The turning mechanism must be accurately controlled. A slight inaccuracy may cause large odometry errors The system is Non – Holonomic hence path planning is extremely difficult as well as inaccurate There are no direct directional actuators."
+      },
+      {
+        "type": "heading",
+        "value": "Other type of Drive Mechanism"
+      },
+      {
+        "type": "text",
+        "value": "There are many different ways in which a robot can be modelled and controlled, some other drive mechanism used in various systems are"
+      },
+      {
+        "type": "text",
+        "value": "Skid Steering - The left and right wheels are driven independently. Steering is accomplished by actuating each side at a different rate or in a different direction, causing the wheels or tracks to slip, or skid, on the ground. The wheels typically have no separate steering mechanism and hold a fixed straight alignment on the body of the machine. By turning the left and right wheel pairs at different speeds, the machine turns by skidding, or dragging its fixed-orientation wheels across the ground."
+      },
+      {
+        "type": "text",
+        "value": "Synchronous Drive - This system uses synchronous rotation of its wheels to achieve motion & turns. It is made up of a system of motors. One set of which drive the wheels and the other set turns the wheels in a synchronous fashion The two sets can be directly mechanically coupled as they always move in the same direction with same speed."
+      },
+      {
+        "type": "text",
+        "value": "Articulated Drive - Similar to Ackerman Steering concept, Articulated method drives a robot by deforming the entire chassis or frame to turn instead of just the wheels. This is generally used for industrial robots where a four wheeled robot is split into two, the front part and the rear part which is connected by a vertical hinge. A motor changes the angle of front part of chassis which turns the robot in a required direction and other motor drives it."
+      },
+      {
+        "type": "heading",
+        "value": "References"
+      },
+      {
+        "type": "list",
+        "items": [
+          "A 4-wheel omni drive robot - Omnibase developed by ERC, applying the concepts of omnidrive can be found here.",
+          "For more details on these drive mechanisms refer Chapter 13 of the Modern Robotics - Mechanics, Planning, And Control by Kevin M. Lynch and Frank C. Park, a video playlist of the same can be found here.",
+          "A video on Differential Drive mechanism from Control of Mobile Robots course by Dr. Magnus Egerstedt can be found here.",
+          "More information on Designing of Ackermann Steering can be read from this paper."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "position-orientation",
+    "title": "Position and Orientation",
+    "category": "mechanical",
+    "excerpt": "Understanding position and orientation in robotics.",
+    "subcategory": "Kinematics",
+    "content": [
+      {
+        "type": "heading",
+        "value": "POSITION AND ORIENATION REPRESENTATION"
+      },
+      {
+        "type": "subheading",
+        "value": "Position and translation"
+      },
+      {
+        "type": "text",
+        "value": "The minimum number of coordinates required to locate a body in Euclidean space is six. A coordinate frame i consists of an origin, denoted $O_{i}$ and a triad of mutually orthogonal basis vectors, denoted $(\\hat x_{i} \\hat y_{i } \\hat z_{i})$, that are all fixed within a particular body. The pose of a body will always be expressed relative to some other body, so it can be expressed as the pose of one coordinate frame relative to another. Similarly, rigid-body displacements can be expressed as displacements between two coordinate frames, one of which may be referred to as moving, while the other may be referred to as fixed."
+      },
+      {
+        "type": "text",
+        "value": "The position of the origin of coordinate frame i relative to coordinate frame j can be denoted by the 3 X 1 vector"
+      },
+      {
+        "type": "text",
+        "value": "$$ ^{j} \\textbf {p} {i} = \\begin{pmatrix} ^{j} p^{x} {i} \\\\ ^{j} p^{y} {i} \\\\ ^{j} p^{z} {i} \\end{pmatrix}$$"
+      },
+      {
+        "type": "text",
+        "value": "The components of this vector are the Cartesian coordinates of $O_{i}$ in the j frame, which are the projections of the vector $^{j} \\textbf {p} _{i}$ onto the corresponding axes."
+      },
+      {
+        "type": "subheading",
+        "value": "Orientation and Rotation"
+      },
+      {
+        "type": "text",
+        "value": "A rotation is a displacement in which at least one point in the rigid body remains in its initial position and not all lines in the body remain parallel to their initial orientations. The orientation of coordinate frame i relative to coordinate frame j can be denoted by expressing the basis vectors .$( \\hat x_{i} \\hat y_{i} \\hat z_{i})$ in terms of the basis vectors ,$( \\hat x_{j} \\hat y_{j} \\hat z_{j})$.This yields, $( ^{j}\\hat x_{i} ^{j}\\hat y_{i} ^{j}\\hat z_{i})$ which when written together as a 3X3 matrix is known as the rotation matrix. The components of $^{j}R_{i}$ are the dot products of the basis vectors of the two coordinate frames."
+      },
+      {
+        "type": "text",
+        "value": "$^{j}R_{i}$ = $\\begin{pmatrix} \\hat x {i}.\\hat x {j} & \\hat y {i}.\\hat x {j} & \\hat z {i}.\\hat x {j} \\\\ \\hat x {i}.\\hat y {j} & \\hat y {i}.\\hat y {j} & \\hat z {i}.\\hat y {j} \\\\ \\hat x {i}.\\hat z {j} & \\hat y {i}.\\hat z {j} & \\hat z {i}.\\hat z {j} \\end{pmatrix}$"
+      },
+      {
+        "type": "text",
+        "value": "Because the basis vectors are unit vectors and the dot product of any two unit vectors is the cosine of the angle between them, the components are commonly referred to as direction cosines. An elementary rotation of frame i about the $z_{j}$ axis through an angle $\\theta$ is"
+      },
+      {
+        "type": "text",
+        "value": "$R_{z}(\\theta) = \\begin{pmatrix} \\cos(\\theta) & -\\sin(\\theta) & 0\\\\ \\sin(\\theta) & \\cos(\\theta) & 0\\\\ 0 & 0 & 1\\end{pmatrix}$"
+      },
+      {
+        "type": "text",
+        "value": "while the same rotation about $\\hat y_{j}$ axis is"
+      },
+      {
+        "type": "text",
+        "value": "$R_{Y}(\\theta) = \\begin{pmatrix} \\cos(\\theta) & 0 & \\sin(\\theta)\\\\ 0 & 1 & 0\\\\ -\\sin(\\theta) & 0 & \\cos(\\theta)\\end{pmatrix}$"
+      },
+      {
+        "type": "text",
+        "value": "and about the axis $\\hat x_{j}$ is"
+      },
+      {
+        "type": "text",
+        "value": "$R_{X}(\\theta) = \\begin{pmatrix} 1 & 0 & 0\\\\ 0 & \\cos(\\theta) & -\\sin(\\theta)\\\\ 0 & \\sin(\\theta) & \\cos(\\theta)\\end{pmatrix}$"
+      },
+      {
+        "type": "text",
+        "value": "Rotation matrices are combined through simple matrix multiplication such that the orientation of frame i relative to frame k can be expressed as"
+      },
+      {
+        "type": "text",
+        "value": "$^{k}R_{i} = ^{k}R_{j} ^{j}R_{i}$"
+      },
+      {
+        "type": "subheading",
+        "value": "Euler Angles"
+      },
+      {
+        "type": "text",
+        "value": "For a minimal representation, the orientation of coordinate frame i relative to coordinate frame j can be denoted as a vector of three angles $(\\alpha , \\beta , \\gamma)^{T}$. These angles are known as Euler angles when each represents a rotation about an axis of a moving coordinate frame. In this way, the location of the axis of each successive rotation depends upon the preceding rotation(s), so the order of the rotations must accompany the three angles to define the orientation."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Fixed-Angles",
+            "url": "https://www.youtube.com/watch?v=uG0P9RX65Ek"
+          },
+          {
+            "name": "Quaternions",
+            "url": "https://robotacademy.net.au/lesson/quaternions-representation-of-rotation-in-3d/"
+          },
+          {
+            "name": "Angle-Axis",
+            "url": "https://www.youtube.com/watch?v=-TUTqVOGSa8"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Homogeneous Transformations"
+      },
+      {
+        "type": "text",
+        "value": "With homogeneous transformations, position vectors and rotation matrices are combined together in a compact notation. Any vector $^{i}r$ expressed relative to the i coordinate frame can be expressed relative to the j coordinate frame if the position and orientation of the i frame are known relative to the j frame."
+      },
+      {
+        "type": "text",
+        "value": "$^{j}r = ^{j}R_{i} ^{i}r + ^{j}p_{i}$"
+      },
+      {
+        "type": "text",
+        "value": "where $^{j}p_{i}$ is the position of the origin of coordinate frame i relative to coordinate frame j and $^{j}R_{i}$ is the orientation of frame i relative to frame j ."
+      },
+      {
+        "type": "text",
+        "value": "The above equation can be written as"
+      },
+      {
+        "type": "text",
+        "value": "$\\begin{pmatrix} ^{j}r \\\\ 1 \\end{pmatrix}$ = $\\begin{pmatrix} ^{j}R_{i} & ^{j}p_{i}\\\\ 0^{T} & 1 \\end{pmatrix}\\begin{pmatrix} ^{i}r \\\\ 1 \\end{pmatrix}$"
+      },
+      {
+        "type": "text",
+        "value": "where"
+      },
+      {
+        "type": "text",
+        "value": "$^{j}T_{i} = \\begin{pmatrix} ^{j}R_{i} & ^{j}p_{i}\\\\ 0^{T} & 1 \\end{pmatrix}$"
+      },
+      {
+        "type": "text",
+        "value": "is the 4X4 homogeneous transformation matrix . Just like Rotation matrices, homogeneous transformation matrices can also be transformed using matrix cross-multiplication."
+      },
+      {
+        "type": "text",
+        "value": "$^{k}T_{i} = ^{k}T_{j} ^{j}T_{i}$"
+      }
+    ]
+  },
+  {
+    "id": "joint-kinematics",
+    "title": "Joint Kinematics",
+    "category": "mechanical",
+    "excerpt": "Understanding joint kinematics for robotic arms and manipulators.",
+    "subcategory": "Kinematics",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Joint Kinematics"
+      },
+      {
+        "type": "text",
+        "value": "The links that compose the robotic mechanism are assumed to be perfectly rigid bodies having surfaces that are geometrically perfect in both position and shape. Accordingly, these rigid bodies are connected together at joints where their idealized surfaces are in ideal contact without any clearance between them. The respective geometries of these surfaces in contact determine the freedom of motion between the two links, or the joint kinematics."
+      },
+      {
+        "type": "subheading",
+        "value": "Revolute"
+      },
+      {
+        "type": "text",
+        "value": "The most general form of a revolute joint, often abbreviated as R and sometimes referred to colloquially as a hinge or pin joint, is a lower pair composed of two congruent surfaces of revolution. The surfaces are the same except one of them is an external surface, convex in any plane normal to the axis of revolution, and one is an internal surface, concave in any plane normal to the axis. The position of one body relative to the other may be expressed as the angle between two lines normal to the joint axis, one fixed in each body. Thus, the joint has one degree of freedom (DOF)."
+      },
+      {
+        "type": "subheading",
+        "value": "Prismatic"
+      },
+      {
+        "type": "text",
+        "value": "The most general form of a prismatic joint, often abbreviated as P and sometimes referred colloquially as a sliding joint, is a lower pair formed from two congruent general cylindrical surfaces. A prismatic joint permits only sliding of one of the members joined relative to the other along the direction of extrusion. The position of one body relative to the other is determined by the distance between two points on a line parallel to the direction of sliding, with one point fixed in each body. Thus, this joint also has one degree of freedom."
+      },
+      {
+        "type": "subheading",
+        "value": "Helical"
+      },
+      {
+        "type": "text",
+        "value": "The most general form of a helical joint, often abbreviated as H and sometimes referred to colloquially as a screw joint, is a lower pair formed from two helicoidal surfaces formed by extruding any curve along a helical path. The simple example is a bolt and nut wherein the basic generating curve is a pair of straight lines."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Spherical",
+            "url": "https://www.sciencedirect.com/topics/engineering/spherical-joint"
+          },
+          {
+            "name": "Cylindrical",
+            "url": "https://en.wikipedia.org/wiki/Cylindrical_joint"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "6-DOF Joint"
+      },
+      {
+        "type": "text",
+        "value": "The motion of two bodies not jointed together can be modeled as a six-degree-of-freedom joint that introduces no constraints. This is particularly useful for mobile robots, such as aircraft, that make at most intermittent contact with the ground, and thus, a body in free motion relative to the fixed frame is termed a floating base. Such a free motion joint model enables the position and orientation of a floating base in space to be expressed with six joint variables."
+      },
+      {
+        "type": "heading",
+        "value": "Geometric Representation"
+      },
+      {
+        "type": "text",
+        "value": "The geometry of a robotic mechanism is conveniently defined by attaching coordinate frames to each link. While these frames could be located arbitrarily, it is advantageous both for consistency and computational efficiency to adhere to a convention for locating the frames on the links. A commonly used convention for selecting frames of reference in robotic applications is the Denavit-Hartenberg, or D-H convention. In this convention, each homogeneous transformation $A_{i}$ is represented as a product of four basic transformations"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/link_2.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "text",
+        "value": "where the four quantities $\\theta_{i} , a_{i} , d_{i} , \\alpha_{i}$ are parameters associated with link i and joint i. The four parameters $a_{i} ,\\alpha_{i} ,d_{i} , and \\: \\theta_{i}$ in are generally given the names link length, link twist, link offset, and joint angle, respectively, three of the above four quantities are constant for a given link, while the fourth parameter, $\\theta i$ for a revolute joint and $d_{i}$ for a prismatic joint, is the joint variable."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "video",
+            "url": "https://www.youtube.com/watch?v=FiKEAdednuo"
+          },
+          {
+            "name": "here",
+            "url": "https://robotacademy.net.au/lesson/denavit-hartenberg-notation/"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/dh_parameters.jpg",
+        "alt": "Image",
+        "caption": ""
+      }
+    ]
+  },
+  {
+    "id": "kinematics",
+    "title": "Forward and Inverse Kinematics",
+    "category": "mechanical",
+    "excerpt": "Understanding forward and inverse kinematics for robot manipulators and serial-chain mechanisms.",
+    "subcategory": "Kinematics",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Forward Kinematics"
+      },
+      {
+        "type": "text",
+        "value": "The forward kinematics problem for a serial-chain manipulator is to find the position and orientation of the end-effector relative to the base given the positions of all of the joints and the values of all of the geometric link parameters. Often, a frame fixed in the end-effector is referred to as the tool frame, and while fixed in the final link N, it in general has a constant offset in both position and orientation from frame N. Likewise, a station frame is often located in the base to establish the location of the task to be performed. This frame generally has a constant offset in its pose relative to frame 0, which is also fixed in the base. In practice, the forward kinematics problem is solved by calculating the transformation between a coordinate frame fixed in the end-effector and another coordinate frame fixed in the base, i.e., between the tool and station frames. This is straightforward for a serial chain since the transformation describing the position of the end-effector relative to the base is obtained by simply concatenating transformations between frames fixed in adjacent links of the chain."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/forward_kinematics.jpg",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "heading",
+        "value": "Inverse Kinematics"
+      },
+      {
+        "type": "text",
+        "value": "The inverse kinematics problem for a serial-chain manipulator is to find the values of the joint positions given the position and orientation of the end-effector relative to the base and the values of all of the geometric link parameters. Once again, this is a simplified statement applying only to serial chains. A more general statement is: given the relative positions and orientations of two members of a mechanism, find the values of all of the joint positions. This amounts to finding all of the joint positions given the homogeneous transformation between the two members of interest. When solving the inverse problem, we often have to choose one solution from a number of valid solutions. There are also degenerate cases with an infinite number of solutions Some solutions of the inverse mapping may not be physically realizable. This is due to manipulators having physical joint limits that prevent the mechanism from achieving certain joint configurations that may be solutions to the inverse kinematics problem (e.g. a joint may not have a full 360 degree motion)"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/Inverse_Kinematics.jpg",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/why_ik.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "text",
+        "value": "To get a more detailed idea of solving inverse and forward kinematics problems for robotic system do checkout this 3 part video series from milfordrobotics"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Part-1",
+            "url": "https://www.youtube.com/watch?v=VjsuBT4Npvk"
+          },
+          {
+            "name": "Part-2",
+            "url": "https://www.youtube.com/watch?v=3ZcYSKVDlOc&t=683s"
+          },
+          {
+            "name": "Part-3",
+            "url": "https://www.youtube.com/watch?v=llUBbpWVPQE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dynamics",
+    "title": "Introduction to Dynamics",
+    "category": "mechanical",
+    "excerpt": "Fundamentals of robot dynamics and motion equations.",
+    "subcategory": "Dynamics",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Introduction to Dynamics"
+      },
+      {
+        "type": "text",
+        "value": "For many applications with fixed-based robots we need to find a multi-body dynamics formulated as:"
+      },
+      {
+        "type": "text",
+        "value": "$$ M(q)\\ddot{q} + b(q,\\dot{q}) + g(q) = \\tau \\: + J_{c}(q)^{T}F_{c} $$"
+      },
+      {
+        "type": "text",
+        "value": "consisting of the following components:"
+      },
+      {
+        "type": "text",
+        "value": "$M(q)$ $\\epsilon$ $\\mathbf{R}$ $^{n_{q}Xn_{q}}$ Generalized Mass matrix(orthogonal)"
+      },
+      {
+        "type": "text",
+        "value": "$q, \\dot{q}, \\ddot{q}$ $\\epsilon$ $\\mathbf{R}^{n_{q}}$ Generalized position, velocity and acceleration vectors"
+      },
+      {
+        "type": "text",
+        "value": "$b(q, \\dot{q})$ $\\epsilon$ $\\mathbf{R}^{n_{q}}$ Coriolis and centrifugal terms."
+      },
+      {
+        "type": "text",
+        "value": "$g(q)$ $\\epsilon$ $\\mathbf{R}^{n_{q}}$ Gravitational terms."
+      },
+      {
+        "type": "text",
+        "value": "$\\tau$ $\\epsilon$ $\\mathbf{R}^{n_{q}}$ External generalized forces."
+      },
+      {
+        "type": "text",
+        "value": "$F_{c}$ $\\epsilon$ $$\\mathbf{R}^{n_{q}}$ External Cartesian forces (e.g. from contacts)"
+      },
+      {
+        "type": "text",
+        "value": "$J_{c}(q)$ $\\epsilon$ $\\mathbf{R}^{n_{q}Xn_{q}}$ Geometric Jacobian corresponding to the external forces."
+      },
+      {
+        "type": "text",
+        "value": "Different methods exist to compute the so-called Equations of Motion (EoM) of a given system, i.e., a closed-form mathematical model of the system dynamics. The two most common methods used in robotics are Newton-Euler method which essentially applies the principles of conservation of linear and angular momentum for all links of a robot and Lagrange Method which utilizes scalar energy-based functions over the the space of generalized coordinates which adhere to certain minimization principles, thus resulting in trajectories which automatically satisfy the kinematic constraints of the system."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "lecture",
+            "url": "https://www.youtube.com/watch?v=B67ug1yx13E"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Newton-Euler Method"
+      },
+      {
+        "type": "subheading",
+        "value": "Newton-Euler for Single Bodies"
+      },
+      {
+        "type": "text",
+        "value": "a very well known formulation formed by Newton and Euler using law of angular and linear momentum is :"
+      },
+      {
+        "type": "text",
+        "value": "​ $\\dot{\\mathsf{p}} {S}$ = $F{ext,S}$"
+      },
+      {
+        "type": "text",
+        "value": "​ $\\dot{\\mathbf{N}}{S}$ = $T{ext}$"
+      },
+      {
+        "type": "text",
+        "value": "where $F_{ext,S}$ are the resultant external forces that act through the COG and $T_{ext}$ are the resultant external torques. External forces which do not act through the COG need to be shifted to an equivalent force/moment pair of which the force acts through the COG."
+      },
+      {
+        "type": "subheading",
+        "value": "Newton-Euler for Multi-Body Systems"
+      },
+      {
+        "type": "text",
+        "value": "When dealing with multi-body systems, a valid approach is to separate all bodies at the joints as depicted in and to consider every body as a single unit. Thereby, the constraint forces F${i}$ at the joints must be introduced as external forces acting on each of the bodies when cut free. For all these bodies, we must then apply conservation of linear and angular momentum in all DoFs, subject to external forces (which now include the joint forces F${i}$ , too). For a general 3D case and a fixed base, this results in a 6$n_{j}$ -dimensional systems of equations. Additionally, there are 5 $n_{j}$ motion constraint due to the ideal joints. They ensure that the two connected bodies only move along the direction of the joint but don’t move in all other directions that are blocked by the joint."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/link_1.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "heading",
+        "value": "Lagrange Method"
+      },
+      {
+        "type": "text",
+        "value": "This method is centered around three fundamental concepts:"
+      },
+      {
+        "type": "text",
+        "value": "1. The definition of generalized coordinates$ q$ and generalized velocities $\\dot{q}$ , which may or may not encode the information regarding the constraints applicable to the system."
+      },
+      {
+        "type": "text",
+        "value": "2. . A scalar function called the Lagrangian function $\\mathcal{L}$. For mechanical systems, it is exactly the difference between the total kinetic energy $\\mathcal{T}$ and the total potential energy $\\mathcal{U}$, of the system at each instant:"
+      },
+      {
+        "type": "text",
+        "value": "​ $\\mathcal{L} = \\mathcal{T} - \\mathcal{U}$"
+      },
+      {
+        "type": "text",
+        "value": "3. The so-called Euler-Lagrange equation, also known as the Euler-Lagrange of the second kind, which applies to the Lagrangian function $\\mathcal{L}$ and to the total external generalized forces $\\tau$ :"
+      },
+      {
+        "type": "text",
+        "value": "​ $\\frac{d}{dt} (\\frac{\\partial{\\mathcal{L}}}{\\partial{\\dot{q}}} )$ - $(\\frac{\\partial{L}}{\\partial{\\dot{q}}})$ = $\\tau$"
+      },
+      {
+        "type": "text",
+        "value": "In the most general case, the Lagrangian is a function of the generalized coordinates and velocities q and q˙ , and it may also have an explicit dependence on time t, hence we redefine the aforementioned scalar energy functions as $\\mathcal{T} = \\mathcal{T}(t, q, \\dot{q})$ and $\\mathcal{U} = \\mathcal{U}(t,q)$, thus $\\mathcal{L} = \\mathcal{L}(t,q,\\dot{q})$ ."
+      },
+      {
+        "type": "text",
+        "value": "In the end, one of the most notable properties of this formulation is the capacity to eliminate all internal reaction forces of the system from the final EoM, in contrast to the Newton-Euler formulation where there they are explicitly accounted for."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "lecture",
+            "url": "https://youtu.be/xc71IuDmZIw"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "some of the other resources you can checkout to know more about kinematics and dynamics involved in robotics are:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "A Mathematical Introduction to Robotic Manipulation by Richard Murray",
+          "Robot dynamics and control by Mark Spong",
+          "Springer Handbook on Robotics by Oussama Khatib"
+        ]
+      }
+    ]
+  }
+]

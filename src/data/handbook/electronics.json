@@ -1,0 +1,1215 @@
+[
+  {
+    "id": "electronics-intro",
+    "title": "Introduction to Electronics",
+    "category": "electronics",
+    "excerpt": "Overview of electronics in robotics - processing units, sensors, and interfacing components.",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Introduction"
+      },
+      {
+        "type": "text",
+        "value": "From interfacing microprocessors to making logical circuits, Robotics is incomplete without electronics. Every task that a Robot performs at the end eventually boils down to some signal received by it. Electronics for any robotics projects involves tasks like setting up the power source, interfacing sensors, setting up the computation unit, etc."
+      },
+      {
+        "type": "text",
+        "value": "Most of the Robots have a processing unit on them which collects data from sensors and peforms all the calculations for determining the steps that the robot needs to peform. Some of the popular processing units used for robots are Raspberry Pi, Nvidia Jetson, Arduino, etc."
+      },
+      {
+        "type": "text",
+        "value": "Sensors are the medium through which any robot interacts with its environment. Some of the common sensor we can see in robots are depth cameras, LIDAR, Encoders, IMU, etc."
+      }
+    ]
+  },
+  {
+    "id": "arduino",
+    "title": "Arduino",
+    "category": "electronics",
+    "excerpt": "Arduino is a very accessible and easy to program microcontroller, great for beginners in robotics.",
+    "subcategory": "Development Boards",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Arduino"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "This",
+            "url": "https://www.youtube.com/watch?v=CqrQmQqpHXc"
+          },
+          {
+            "name": "video",
+            "url": "https://www.youtube.com/watch?v=CqrQmQqpHXc"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Arduino Board Layout"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/arduino1.png",
+        "alt": "arduino",
+        "caption": "arduino"
+      },
+      {
+        "type": "text",
+        "value": "The above diagram shows an Arduino UNO board with all the parts labelled and explained below:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "USB Port: Arduino can be powered by connecting it to your computer using a USB cable. It is also used for uploading code and communicating via the serial port.",
+          "Power Jack: Used to power an arduino directly from a wall adaptor.",
+          "Voltage Regulator: Controls and stabilises the voltage used by the Arduino and its components.",
+          "Crystal Oscillator: A microcontroller is a clock based device. The crystal oscillator present on the arduino generates a clock of frequency 16MHz.",
+          "Reset controllers: Resetting the arduino board starts the execution of a program from the beginning. Arduino can be reset in 2 ways : by pressing the reset button (17) and sending a 0V signal to the RESET pin (5).",
+          "3.3V power",
+          "5V power",
+          "GND (0V)",
+          "VIN: This pin can be used to power the arduino board from an external power source, from 7-20V.",
+          "Analog Pins: These pins (labeled A0-A5) can be used to read continuous analog values (between 0 and 5V). They are often used to interface the Arduino with analog sensors.",
+          "Main Microcontroller: This IC is the main microcontroller, that executes the code you program it with.",
+          "ICSP Pin: Can be used to program the arduino board’s firmware. For advanced users only.",
+          "Power LED indicator: Indicates whether the board is powered up correctly.",
+          "TX/RX LEDs: The TX/RX pins flash to indicate transfer/receival of serial data between the computer and Arduino.",
+          "Digital I/O Pins: These pins can be programmed as input/output pins. When used as output, they can be set HIGH (+5V) or LOW (0V).",
+          "Analog Reference(AREF): Can be used to set an external reference voltage(0-5V) as the upper limit for analog input pins.",
+          "Reset Button: Pressing it causes the Arduino to restart its code."
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "The Blink Sketch"
+      },
+      {
+        "type": "text",
+        "value": "The Blink sketch is like the “Hello World” program in the Arduino world. It simply consists of blinking the onboard LED (labeled ‘L’). No actual circuit connections are required!"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/arduino2.png",
+        "alt": "arduino2",
+        "caption": "arduino2"
+      },
+      {
+        "type": "subheading",
+        "value": "Code"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "here",
+            "url": "https://github.com/schacon/blink/blob/master/blink.ino"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "How to code an Arduino in Arduino IDE"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Download and install Arduino Software (IDE) from here. The Integrated Development Environment (IDE) is a common coding environment for all arduino boards.",
+          "Open the IDE and a new sketch will open up which would look like the image below. Sketch is just a name arduino uses for a program.",
+          "Then just paste the entire code here.",
+          "Now connect your Arduino UNO board to your PC using an A B USB cable and select the option \"Arduino/Genuino Uno\" under Tools > Board menu. Also make sure to select the correct port through which the PC is connected to the board under Tools > Port menu.",
+          "Click on the \"tick\" button in upper left corner to compile the code and check for errors. After resolving any and all errors click on the \"arrow\" button next to it to upload the code to the board.",
+          "After successful upload the Arduino Uno will start executing the code while drawing power from the PC through the USB cable."
+        ]
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/arduinoide.png",
+        "alt": "arduinoide",
+        "caption": "arduinoide"
+      },
+      {
+        "type": "subheading",
+        "value": "Explanation"
+      },
+      {
+        "type": "text",
+        "value": "Every Arduino sketch must have two particular functions:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "void setup()",
+          "The setup() function is called when a sketch starts and will only run once, after each powerup or reset of the Arduino board.",
+          "void loop()",
+          "This function does precisely what its name suggests, that is loops consecutively, allowing your program to change and respond. Whatever code you write inside loop() will keep running as long as the Arduino is receiving power."
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Blink",
+            "url": "https://github.com/schacon/blink/blob/master/blink.ino"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "language": "cpp",
+        "value": "int led = 13;"
+      },
+      {
+        "type": "text",
+        "value": "This line assigns a name to the pin that the LED is attached to, i.e. pin 13."
+      },
+      {
+        "type": "text",
+        "value": "Then we have the setup() function, which runs only once. It includes the following line."
+      },
+      {
+        "type": "code",
+        "language": "cpp",
+        "value": "pinMode(led, OUTPUT);"
+      },
+      {
+        "type": "text",
+        "value": "This tells the Arduino to configure that pin as an output."
+      },
+      {
+        "type": "text",
+        "value": "Then we have the following loop() function."
+      },
+      {
+        "type": "code",
+        "language": "cpp",
+        "value": "void loop()\n{\n  digitalWrite(led, HIGH);  // turn the LED on (HIGH is the voltage level)\n  delay(1000);               // wait for a second\n  digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW\n  delay(1000);              // wait for a second\n}"
+      },
+      {
+        "type": "text",
+        "value": "The digitalWrite() function tells a pin to either switch on (HIGH, or +5V) or off (LOW, or 0V). The delay() function tells the Arduino to wait for a specified number of milliseconds."
+      },
+      {
+        "type": "heading",
+        "value": "Reading Analog Values"
+      },
+      {
+        "type": "text",
+        "value": "The following circuit reads the voltage from a potentiometer and sends it via USB to the serial port."
+      },
+      {
+        "type": "subheading",
+        "value": "Schematic"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/arduinopot.png",
+        "alt": "arduinopot",
+        "caption": "arduinopot"
+      },
+      {
+        "type": "subheading",
+        "value": "Code"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "here",
+            "url": "https://create.arduino.cc/example/builtin/01.Basics%5CAnalogReadSerial/AnalogReadSerial/preview"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Explanation"
+      },
+      {
+        "type": "text",
+        "value": "Whenever the serial port is to be used, it should be initialised with the following line inside void setup(). The 9600 refers to the communication speed in bits-per-second."
+      },
+      {
+        "type": "code",
+        "language": "cpp",
+        "value": "Serial.begin(9600);"
+      },
+      {
+        "type": "text",
+        "value": "The analogRead function reads the voltage at an analog pin and linearly converts it to a value between 0 and 1023. The Serial.println() function prints a variable to the serial monitor, followed by a newline (using Serial.print() to print data without the newline). The delay(1) is to limit the amount of data printed to the serial monitor."
+      },
+      {
+        "type": "heading",
+        "value": "References"
+      },
+      {
+        "type": "list",
+        "items": [
+          "For more lessons and material on Arduino, check out the QSTP - Introduction to Mechatronics, designed by ERC.",
+          "For some more detailed tutorials do read the documentation of Arduino.",
+          "For some video tutorials check out Jeremy Blum's playlist for Arduino.",
+          "For more DIY project ideas and inspirations check out Great Scott's youtube channel.",
+          "To read more about the projects made by people using Arduino, check out Arduino's blog as well."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "esp32",
+    "title": "ESP32",
+    "category": "electronics",
+    "excerpt": "ESP32 is a powerful WiFi and Bluetooth enabled microcontroller.",
+    "subcategory": "Development Boards",
+    "content": [
+      {
+        "type": "heading",
+        "value": "ESP32"
+      },
+      {
+        "type": "heading",
+        "value": "Introduction"
+      },
+      {
+        "type": "text",
+        "value": "ESP32 is a series of feature-rich MCU with integrated Wi-Fi and Bluetooth connectivity for a wide range of applications. Espressif Systems, China, produce it.ESP32 is cheap and nearly ten times faster than Arduino Uno and is a 32-bit versatile device. Developers of ESP32 IC made a small module board with edge castellations. One popular version of such a module board is called ESP-WROOM-32. It is a dual-core, 32-bit microcontroller unit, and all the cores can be controlled individually. It has integrated Wi-Fi, Bluetooth, and Bluetooth Low Energy with multiple digital and analog I/O pins."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/esp32intro2.jpg",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "heading",
+        "value": "Comparison Of ESP32 and Arduino Uno"
+      },
+      {
+        "type": "text",
+        "value": "| Parameter | ESP32 | ARDUINO UNO | |------------------------|---------------------------|-------------| | Processor | Xtensa dual-core | ATMega328P | |Number of Cores| 2 | 1 | |Architecture| 32 bit | 8 bit | | Operating Voltage|2.2 to 3.6V |5V| |CPU Frequency|160 or 240 MHz|16 MHz| |WiFi| YES | NO | |Bluetooth| YES | NO | |RAM| 512 KB | 2 KB| |Flash| 16 MB | 32 KB| |GPIO pins| 36 | 14| |Busses| SPI,I²C,UART,I2S,CAN | SPI,I²C,UART | |ADC Pins| 18 | 6 | |DAC Pins| 2 | 0 | |USB Conector|Micro|Type B| |UART|3|1| |SPI|3|1| |I²C|2|1|"
+      },
+      {
+        "type": "heading",
+        "value": "Pinout"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/ESP32pinout.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "manual",
+            "url": "https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf "
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Peripherals and Features"
+      },
+      {
+        "type": "text",
+        "value": "Now that we have seen the ESP32 Pinout , let us now focus on some of the important peripherals of ESP32 and their associated pins. ESP32 Microcontroller has:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Up to 18 12-bit Analog to Digital converters.",
+          "2, 8-bit Digital to Analog converters.",
+          "10 capacitive touch switch sensors.",
+          "4 SPI channels.",
+          "2 I²C interfaces.",
+          "2 I2S interfaces (for digital audio).",
+          "3 UARTs for communications.",
+          "Up to 8 channels of IR remote control.",
+          "Up to 16 channels of LED PWM (pulse width modulation).",
+          "An integrated Hall-effect sensor.",
+          "An ultra-low-power analog preamp.",
+          "An internal low-dropout regulator."
+        ]
+      },
+      {
+        "type": "text",
+        "value": "GPIO 34 pins, each pin carries out more than one function ( only one will be active). You can configure a pin as either a GPIO or an ADC or an UART in the program.ADC and DAC pins are predefined, and you have to use the manufacturer specified pins. But other functions like PWM, SPI, UART, I2C etc. can be assigned to any GPIO pin through the program."
+      },
+      {
+        "type": "text",
+        "value": "RTC GPIO part of the RTC Low-Power subsystem. These pins can be used to wake ESP32 from a deep sleep as an external wake-up source."
+      },
+      {
+        "type": "text",
+        "value": "ADC ESP32 has two 12-bit SAR Analog to Digital Converter Modules with 8-channels and 10-channels each. So, ADC1 and ADC2 blocks combined together have 18 channels of 12-bit ADC.With 12-bit resolution, the Digital output values will be in the range of 0 – 4093."
+      },
+      {
+        "type": "text",
+        "value": "DAC ESP32 Microcontroller has two independent 8-bit Digital to Analog Converter channels to convert digital values to analog voltage signals. The DAC has an internal resistor network and uses a power supply as an input reference voltage. The following two GPIO Pins are associated with DAC functionalities."
+      },
+      {
+        "type": "list",
+        "items": [
+          "DAC1 — GPIO25",
+          "DAC2 — GPIO26"
+        ]
+      },
+      {
+        "type": "text",
+        "value": "Capacitive Touch GPIOs can detect variations in capacitance on a pin due to touching or approaching the GPIO Pin with a finger or stylus. These Touch GPIOs can be used in implementing capacitive touch pads without any additional hardware."
+      },
+      {
+        "type": "text",
+        "value": "SPI three SPI blocks (SPI, HSPI and VSPI) are present in both master and slave modes. SPI is used to interface with Flash Memory. So, you have two SPI interfaces."
+      },
+      {
+        "type": "text",
+        "value": "I²C There are two I2C interfaces in ESP32 with complete flexibility on assigning pins, i.e., SCL and SDA pins for both I2C interfaces can be assigned in the program by the user.If you are using Arduino IDE, then the default I2C pins are: SDA – GPIO21 SCL – GPIO22"
+      },
+      {
+        "type": "text",
+        "value": "PWM The PWM Controller in ESP32 has 16 independent PWM waveform channels with configurable frequency and duty cycle. The PWM waveform can be used to drive motors and LEDs. You can configure the PWM signal frequency, channel, GPIO pin and also the duty cycle."
+      },
+      {
+        "type": "heading",
+        "value": "How To Program ESP32"
+      },
+      {
+        "type": "text",
+        "value": "One can use C++ and MicroPython to program the ESP32. It supports multiple programming environments :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Arduino IDE",
+          "PlatformIO IDE (VS Code)",
+          "LUA",
+          "MicroPython",
+          "Espressif IDF (IoT Development Framework)",
+          "JavaScript"
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "here",
+            "url": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/index.html"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Using the Arduino IDE"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "https://www.electronicshub.org/esp32-arduino-ide/"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "LED Blink Sketch"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/ledblink.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "here",
+            "url": "https://dronebotworkshop.com/esp32-intro/ "
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "References"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Video on Introduction to ESP 32-Getting Started by DroneBot Workshop",
+          "For more details you can refer to the website of DroneBot Workshop here.",
+          "ESP 32 webpage by Electronics Hub",
+          "Programming Guide to ESP 32 by Electronics Hub and OpenLab.",
+          "Espressif Systems documentation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stm32",
+    "title": "BluePill (STM32F103C8T6)",
+    "category": "electronics",
+    "excerpt": "STM32 is a family of powerful ARM Cortex-M microcontrollers.",
+    "subcategory": "Development Boards",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Blue Pill (STM32F103C8T6)"
+      },
+      {
+        "type": "heading",
+        "value": "Introduction"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "This",
+            "url": "https://www.youtube.com/watch?v=EaZuKRSvwdo"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/bluepill_intro.jpeg",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "heading",
+        "value": "Naming Convention of STM microcontrollers"
+      },
+      {
+        "type": "text",
+        "value": "|Parameter|Meaning| |---------|-------| |STM| name of the manufacturer (STMicroelectronics)| |32| 32 bit ARM architecture | |F|Foundation | |1| Core (ARM Cortex M3)| |03| Line (describes peripherals and speed) |C| 48 pins |8|64 KB flash memory |T|LQFP package (Low Profile Quad Flat Pack) |6|Operating Temperature Range (-40 °C to 85 °C)"
+      },
+      {
+        "type": "heading",
+        "value": "Technical Specifications of STM32"
+      },
+      {
+        "type": "text",
+        "value": "|Parameter|Meaning| |---------|-------| |Architecture|32 bit ARM Cortex M3 |Operating Voltage| 2.7V to 3.6V |CPU Frequency | 72 MHz |Number of GPIO pins| 37 |Number of PWM pins| 12 |Analog Input Pins| 10 (12 bit resolution) |I2C Peripherals| 2 |SPI Peripherals| 2 |CAN 2.0 Peripheral|1| |Timers | 3(16-bit), 1| (PWM) |Flash Memory| 64KB | |RAM| 20kB |"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "official datsheet",
+            "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf"
+          },
+          {
+            "name": "reference manual",
+            "url": "https://www.st.com/content/ccc/resource/technical/document/reference_manual/59/b9/ba/7f/11/af/43/d5/CD00171190.pdf/files/CD00171190.pdf/jcr:content/translations/en.CD00171190.pdf"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Pinout"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/STM32-Pin-Details_0.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "heading",
+        "value": "Programming STM32"
+      },
+      {
+        "type": "subheading",
+        "value": "1) Using STM32duino bootloader (Arduino IDE)"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "This",
+            "url": "https://maker.pro/arduino/tutorial/how-to-program-the-stm32-blue-pill-with-arduino-ide"
+          }
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "2) Using Keil UVision and STM32CubeMX"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "https://www.electronicshub.org/program-stm32f103c8t6-using-keil-uvision/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stm32-vs-arduino",
+    "title": "Arduino vs STM32",
+    "category": "electronics",
+    "excerpt": "Comparison between Arduino and STM32 microcontrollers.",
+    "subcategory": "Development Boards",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Comparison between STM32F103C8T6 and Arduino UNO"
+      },
+      {
+        "type": "text",
+        "value": "| Parameter | STM32F103C8T6 (Blue Pill) | Arduino UNO | |------------------------|---------------------------|-------------| | Processor | STM32F103C8T6 | ATMega328P | | Operating Voltage|3.3V|5V| |CPU Speed|72 MHz|16 MHz| |Analog pins|10|8| |Digital I/O or PWM|37|14| |EEPROM/SRAM (KB)|NA/20|1/2| |Flash Memory|64/128 KB|32 KB| |USB Conector|Micro|Type B| |UART|3|1| |SPI|2|1| |I²C|2|1|"
+      }
+    ]
+  },
+  {
+    "id": "pyboard",
+    "title": "Pyboard - MicroPython",
+    "category": "electronics",
+    "excerpt": "Pyboard runs MicroPython, making it easy to program microcontrollers with Python.",
+    "subcategory": "Development Boards",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Pyboard - MicroPython"
+      },
+      {
+        "type": "text",
+        "value": "MicroPython is an implementation of the Python 3 programming language which is optimized to run on many microcontrollers. It has modules to access the hardware of the microcontroller, and the code is compatible to a great extent with normal python code."
+      },
+      {
+        "type": "text",
+        "value": "The Pyboard is the official MicroPython microcontroller board based on a STM3F405RG microcontroller."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/pyboard1.jpg",
+        "alt": "pyboard1",
+        "caption": "pyboard1"
+      },
+      {
+        "type": "heading",
+        "value": "Pyboard Board Layout"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/pyboard2.jpg",
+        "alt": "pyboard2",
+        "caption": "pyboard2"
+      },
+      {
+        "type": "text",
+        "value": "The hardware has:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "STM32F405RG microcontroller",
+          "168 MHz Cortex M4 CPU with hardware floating point",
+          "1024KiB flash ROM and 192KiB RAM",
+          "Micro USB connector for power and serial communication",
+          "Micro SD card slot, supporting standard and high capacity SD cards",
+          "3-axis accelerometer (MMA7660)",
+          "Real time clock with optional battery backup",
+          "24 GPIO on left and right edges and 5 GPIO on bottom row, plus LED and switch GPIO available on bottom row",
+          "3x 12-bit analog to digital converters, available on 16 pins, 4 with analog ground shielding",
+          "2x 12-bit digital to analog (DAC) converters, available on pins X5 and X6",
+          "4 LEDs (red, green, yellow and blue)",
+          "1 reset and 1 user switch",
+          "On-board 3.3V LDO voltage regulator, capable of supplying up to 250mA, input voltage range 3.6V to 16V",
+          "DFU bootloader in ROM for easy upgrading of firmware"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Blink Sketch"
+      },
+      {
+        "type": "text",
+        "value": "Similar to the blink sketch with Arduino, we can make a simple blink sketch with Pyboard using MicroPython."
+      },
+      {
+        "type": "subheading",
+        "value": "Code"
+      },
+      {
+        "type": "text",
+        "value": "You can copy the code from here:"
+      },
+      {
+        "type": "code",
+        "language": "text",
+        "value": "import pyb\nled = pyb.LED(4)\nwhile True:\n  led.on()\n  pyb.delay(1000)\n  led.off()\n  pyb.delay(1000)"
+      },
+      {
+        "type": "subheading",
+        "value": "How to Code"
+      },
+      {
+        "type": "text",
+        "value": "1. First connect the Pyboard to your computer using a USB. It will open up as a USB flash device with a boot python file and main python file."
+      },
+      {
+        "type": "text",
+        "value": "There are multiple ways to code a MicroPython program and run it on Pyboard."
+      },
+      {
+        "type": "text",
+        "value": "2. One beginner friendly way is to use a serial communication program like putty, which opens the interactive REPL prompt and now you can execute commands directly. Follow this tutorial to setup putty."
+      },
+      {
+        "type": "text",
+        "value": "NOTE: you have to press delete after the indented at the end of the while loop to end the indented block and then only will the loop start running. To exit out of the while loop, use ctrl+c."
+      },
+      {
+        "type": "text",
+        "value": "3. Another way is to run scripts from the built-in file system. Write to the main python file script using any text editor, save and close it. Make sure you eject the Pyboard USB drive and then only press the reset button on the PyBoard. You can use putty as a serial monitor."
+      },
+      {
+        "type": "heading",
+        "value": "References"
+      },
+      {
+        "type": "list",
+        "items": [
+          "For documentation and quick reference, check out the official MicroPython website.",
+          "For a quick introduction to MicroPython and Pyboard, check out this video.",
+          "For a comparison with the Arduino, check out this video.",
+          "To discuss all things related to MicroPython with an online community check out the MicroPython Forum."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "breadboard",
+    "title": "Breadboard",
+    "category": "electronics",
+    "excerpt": "Understanding breadboards for prototyping electronic circuits.",
+    "subcategory": "Basic Components",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Breadboards"
+      },
+      {
+        "type": "text",
+        "value": "The breadboard is the most fundamental tool for electronics prototyping. They are great for creating temporary circuits and require absolutely no soldering."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/breadboardmain.jpg",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "heading",
+        "value": "How to use a breadboard"
+      },
+      {
+        "type": "text",
+        "value": "A solderless breadboard consists of several holes, where wires or leads of electrical can be inserted. Each row of 5 holes is electrically connected by metal clips hidden underneath the surface."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/bbcontacts.jpg",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "text",
+        "value": "Thus, one can connect two components by inserting them into holes of the same row. ICs can be inserted across the central ridge, and connections made as shown below."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/bbic.jpg",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "text",
+        "value": "On either side of the breadboard are the power rails. Each power rail has two long electrically connected rows, and are often connected to batteries or some other power source."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "sparkfun guide",
+            "url": "https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/all"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Tips for breadboard usage"
+      },
+      {
+        "type": "text",
+        "value": "1. To make breadboard connections, DuPont style jumper wires or single core 22AWG wire is most convenient. Avoid multistranded wire."
+      },
+      {
+        "type": "text",
+        "value": "2. Keep wires and wire leads as short as possible, to avoid clutter and make troubleshooting easier."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/neatbb.jpg",
+        "alt": "Image",
+        "caption": ""
+      }
+    ]
+  },
+  {
+    "id": "lidar",
+    "title": "LIDAR",
+    "category": "electronics",
+    "excerpt": "LIDAR sensors for distance measurement and mapping.",
+    "subcategory": "Sensors",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Lidar"
+      },
+      {
+        "type": "text",
+        "value": "Lidar is a method for calculating distances between objects with the help of a laser and measuring the amount of time taken for the reflected light to return back."
+      },
+      {
+        "type": "heading",
+        "value": "Lidar Sensor"
+      },
+      {
+        "type": "text",
+        "value": "A Lidar sensor emits pulsed light waves into the surrounding environment. These pulses bounce off of obstacles and the surrounding environment and then return to the sensor. The sensor then, keeps a track of time it took for the light to bounce off and thus calculating the distance between obstacles. Repeating this process constantly creates a real-time map of the environment."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/lidar-lidar.jpg",
+        "alt": "image",
+        "caption": "image"
+      },
+      {
+        "type": "text",
+        "value": "As an example of how a lidar sensor calculates the distance between the sensor and an obstacle,"
+      },
+      {
+        "type": "text",
+        "value": "Let's define the following variables, 1) Speed of light, $c = 3 × 10^8 m/s$ 2) time taken for light to travel from the lidar sensor, hitting the obstacle and returning back to the sensor, $t$ 3) Distance between the obstacle and the sensor, $d$"
+      },
+      {
+        "type": "text",
+        "value": "Say that the time taken, $t = 5 × 10^{-8} sec$ (Observe the order of magnitude $t$)"
+      },
+      {
+        "type": "text",
+        "value": "So, to calculate the distance $d$, we use the Newton's second law of motion"
+      },
+      {
+        "type": "text",
+        "value": "$$ S = u \\cdot t + \\frac{1}{2} \\cdot a \\cdot t^2 $$"
+      },
+      {
+        "type": "text",
+        "value": "Since, speed of light constant, replacing, $a = 0$, $u = c$, and, $S = d$ we get,"
+      },
+      {
+        "type": "text",
+        "value": "$$ d = c \\cdot t $$"
+      },
+      {
+        "type": "text",
+        "value": "$$ d = 3 × 10^8 × 5 * 10^{-8} $$"
+      },
+      {
+        "type": "text",
+        "value": "$$ d = 15m $$"
+      },
+      {
+        "type": "text",
+        "value": "Therfore, the distance between the sensor and the obstacle is calculated to be 15 meters. This is the basic calculation that goes into calculating the distances."
+      },
+      {
+        "type": "subheading",
+        "value": "Types of Lidar Systems"
+      },
+      {
+        "type": "text",
+        "value": "1) Airborne Lidar - This is installed on aerial drones or vehicles like helicopters. It emits light towards the ground surface giving a fairly detailed and quick map of the terrain above which the vehicle or drone is flying. It is also used for topographic survey."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/lidar-airborne_lidar.jpg",
+        "alt": "image",
+        "caption": "image"
+      },
+      {
+        "type": "text",
+        "value": "2) Terrestrial Lidar - This is generally installed on vehicles moving on the earth's surface. These give a detailed map, and can be used to make a robot or a vehicle navigate through it's evironment. It is also used for observing highways, roads and infrastructure."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/lidar-terrestrial_lidar.png",
+        "alt": "image",
+        "caption": "image"
+      },
+      {
+        "type": "subheading",
+        "value": "Components of a basic Lidar Sensor"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/lidar-components_of_lidar.png",
+        "alt": "image",
+        "caption": "image"
+      },
+      {
+        "type": "text",
+        "value": "A lidar sensor generally consists of 4 main components: 1) Light source - Generally a laser (or anything that emits light in pulses) 2) Optical components - There are multiple optical components for example, the light through the sensor, falls on a rotating/oscillating mirror so as to change the direction of light to cover a 360 view. An optical lens helps to focus light on the photodetector. 3) photodector - The light is recieved by this photodetector and the signal is processed electronically like frequency of light (for speed measurements) and the time taken for the light to bounce. 4) GPS - These sensors need a GPS system to determine the exact position and orientation of the sensor in 3D space."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "here.",
+            "url": "https://www.newport.com/n/lidar"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Lidar usage"
+      },
+      {
+        "type": "text",
+        "value": "To implement Lidar into your ros program, these are the following steps you must follow:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Connect your Lidar sensor to a power supply, and connect a data transmitter to the Lidar sensor and the computer.",
+          "You need to give permissions to the on data input port of the computer. To check the permissions, type",
+          "If your permissions are set properly, you should get an output like shown below. Just focus on the starting part, `crw-rw-rw. If instead, it is something of the form crw-rw--`, then your permissions are not set properly.",
+          "To set permissions, (replace `ACM0` with whatever your ports are)",
+          "Next, you need to download the package of your Lidar manufacturer. Following are the common packages and their github links. You need to clone these github repositories in the src directory of your catkin workspace."
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Slamtec",
+            "url": "https://github.com/Slamtec/rplidar_ros"
+          },
+          {
+            "name": "YDLiDAR",
+            "url": "https://github.com/EAIBOT/ydlidar"
+          },
+          {
+            "name": "Hokuyo",
+            "url": "https://github.com/ros-drivers/urg_node"
+          },
+          {
+            "name": "ROS SICK",
+            "url": "https://github.com/SICKAG/sick_scan"
+          },
+          {
+            "name": "ROS2 SICK",
+            "url": "https://github.com/SICKAG/sick_scan2"
+          },
+          {
+            "name": "RoboSense",
+            "url": "https://github.com/RoboSense-LiDAR/rslidar_sdk"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "After you have cloned the ros packages, go into your workspace directory,",
+          "Now just run the launch file according to your Lidar manufacturer package. For the above 6 manufacturers, run the following launch files. (If you are getting package not found error, please give appropriate permissions to the launch files using chmod)."
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "github repo",
+            "url": "https://github.com/SICKAG/sick_scan"
+          }
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "github repo",
+            "url": "https://github.com/SICKAG/sick_scan2"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "6) RoboSense ``bash roslaunch rslidar_sdk start.launch ``"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this link.",
+            "url": "https://www.generationrobots.com/blog/en/lidar-integration-with-ros-quickstart-guide-and-projects-ideas"
+          }
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this link",
+            "url": "https://maker.pro/ros/tutorial/how-to-use-a-lidar-sensor-with-robot-operating-system-ros"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Applications of Lidar"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this research paper",
+            "url": "https://www.isprs.org/proceedings/XXXVII/congress/3b_pdf/50.pdf"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Companies working on Lidar technologies"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "tuSimple",
+            "url": "https://www.tusimple.com/"
+          },
+          {
+            "name": "AEye",
+            "url": "https://www.aeye.ai/"
+          },
+          {
+            "name": "SiLC Technologies",
+            "url": "https://www.silc.com/"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "References -"
+      },
+      {
+        "type": "text",
+        "value": "George, N., 2021. 11 Interesting LiDAR Applications. [online] Blog.cloudfactory.com. Available at: <https://blog.cloudfactory.com/interesting-lidar-applications> [Accessed 7 September 2021]."
+      },
+      {
+        "type": "text",
+        "value": "Geospatial World. 2021. What is LiDAR technology and how does it work?. [online] Available at: <https://www.geospatialworld.net/blogs/what-is-lidar-technology-and-how-does-it-work/> [Accessed 7 September 2021]."
+      },
+      {
+        "type": "text",
+        "value": "Microdrones.com. 2021. 5 Compelling Applications for LiDAR Technology. [online] Available at: <https://www.microdrones.com/en/content/5-compelling-applications-for-lidar-technology/> [Accessed 7 September 2021]."
+      },
+      {
+        "type": "text",
+        "value": "Sentech. 2021. The revealing science behind Lidar technology. [online] Available at: <https://www.sentech.nl/en/sensor-technology/revealing-science-behind-lidar-technology/> [Accessed 7 September 2021]."
+      },
+      {
+        "type": "text",
+        "value": "Velodyne Lidar. 2021. What is Lidar? Learn How Lidar Works | Velodyne Lidar. [online] Available at: <https://velodynelidar.com/what-is-lidar/> [Accessed 7 September 2021]."
+      }
+    ]
+  },
+  {
+    "id": "servo-motor",
+    "title": "Servo Motors",
+    "category": "electronics",
+    "excerpt": "Understanding servo motors and their applications in robotics.",
+    "subcategory": "Motors",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Servo Motors"
+      },
+      {
+        "type": "text",
+        "value": "Servo motors are simply just electric motors which give the users precise control over the angle of rotation, speed and torque of the motor. The shaft of a servo motor can be made to rotate by a certain angle and then it waits till the next signal is given to it. Moreover, the speed and torque, and in certain applications, even the sense of rotation of the motor can be adjusted by changing the command signal given to the motor. Whereas on the other hand, this is not possible in a simple electric motor, as it runs at a constant speed in the same direction as long as it is connected to a constant power supply. Apart from increased control, servo motors also provide high precision owing to its working principle - the servomechanism."
+      },
+      {
+        "type": "heading",
+        "value": "What is Servomechanism ?"
+      },
+      {
+        "type": "text",
+        "value": "Servomechanism is a closed loop control system which aims at achieving a fixed value of the output based on the given command, without using a variable input signal. It works by calculating the difference between the reference input signal or the command signal and the output signal received from a sensor. The feedback signal thus obtained, acts as the input signal for the device to be controlled. Hence, with the help of this feedback mechanism, we can make the output equal the reference input without having to alter the reference input manually at regular intervals. Once the output signal becomes equal to the command signal, the feedback signal goes to zero and hence the process stops till a new command signal is given."
+      },
+      {
+        "type": "heading",
+        "value": "Working of a Servo motor"
+      },
+      {
+        "type": "text",
+        "value": "A servo motor construction consists of a simple electric motor, some gears, a potentiometer/encoder/resolver, an error detector amplifier, and a control circuit. Potentiometers, encoders and resolvers all perform the same function by acting as sensors that measure the rotary position of the motor shaft. There are however certain differences in the way they function. If interested, you can take a look at these resources which give a detailed comparison between"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Potentiometer and Encoder",
+          "Encoder and Resolver"
+        ]
+      },
+      {
+        "type": "text",
+        "value": "Let us consider the simple case of a potentiometer used in the servo motor to clearly understand its working. The potentiometer gives the output reference signal by sensing the position of the shaft, hence its knob is positioned such that it does not produce any signal in the initial condition. Now, the command signal, i.e. the input reference signal, is introduced. This command signal represents how much we want the motor shaft to rotate. Next, the input reference signal and the output reference signal are fed into the error detector amplifier, where their difference is amplified and then generated as the output. This output from the amplifier acts as the input signal for the servo motor, which now starts rotating. The knob of the potentiometer is linked to the motor shaft with the help of a gear arrangement. Thus, as the shaft rotates, the knob of the potentiometer also rotates in a way such that the difference between the input and output reference signals decreases until it becomes zero. When the difference becomes zero, the output of the amplifier also goes to zero and no input signal will be given to the motor, due to which it stops rotating. Now it will remain in this condition until a new command signal is given, so that it generates a difference with the output from the potentiometer, and the process is repeated again."
+      },
+      {
+        "type": "heading",
+        "value": "Applications of Servo motors"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "1",
+            "url": "https://realpars.com/servo-motor/"
+          },
+          {
+            "name": "2",
+            "url": "https://www.efxkits.us/different-types-servo-motor-applications/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wifi-module",
+    "title": "WiFi Module",
+    "category": "electronics",
+    "excerpt": "WiFi modules for wireless communication in robotics projects.",
+    "subcategory": "Modules",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Wi-Fi module"
+      },
+      {
+        "type": "text",
+        "value": "Wifi modules or wifi microcontrollers are used to send and recieve data over Wi-Fi. They can also accept commands over the Wi-Fi. Wi-Fi modules are used for communications bewtween devices. They are most commonly used in the field of Internet of Thnigs."
+      },
+      {
+        "type": "heading",
+        "value": "ESP8266"
+      },
+      {
+        "type": "text",
+        "value": "ESP8266 is the most widely used Wi-Fi module. It is a low-cost microchip with a full TCP/IP stack and microcontroller capability, produced by Espressif Systems. This small module allows microcontrollers to connect to a Wi-Fi network and make simple TCP/IP connections."
+      },
+      {
+        "type": "text",
+        "value": "ESP8226 comes with the capabilites of:-"
+      },
+      {
+        "type": "list",
+        "items": [
+          "2.4 Ghz Wi-Fi",
+          "General-purpose input/output (16 GPIO)",
+          "Inter-Integrated Circuit (I²C) serial communication protocol",
+          "Analog-to-digital conversion (10-bit ADC)"
+        ]
+      },
+      {
+        "type": "text",
+        "value": "It runs at operating voltage of 3V and can handle maximum voltage of around 3.6V. It can be easily interfaced with microcontrollers board via Serial Port. There are numerous breakout boards available based on ESP8266 Wifi Module like ESP8266 NodeMCU V3. Because of its compact size, its most importantly used in autonomous project."
+      },
+      {
+        "type": "subheading",
+        "value": "ESP8266 pinout"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/pinout.png",
+        "alt": "ESP8266 pinout",
+        "caption": "ESP8266 pinout"
+      },
+      {
+        "type": "text",
+        "value": "|Pin Number|Pin Name|Working| |-|-|-| |1|RX |Serial Receiver Pin| |2|VCC|Power Pin (+3.3 V; can handle up to 3.6 V| |3|GPIO 0|General-Purpose I/O No. 0| |4|RST|Reset| |5|CH_PD|Chip power-down| |6|GPIO 2|General-purpose I/O No. 2| |7|TX|Serial Transmitter Pin| |8|GND|Ground|"
+      },
+      {
+        "type": "subheading",
+        "value": "Scanning and dispalying available WiFi networks using ESP8266"
+      },
+      {
+        "type": "text",
+        "value": "ESP8266 comes with a built in micro-controller. It has a Arduino support and can be programmed easily."
+      },
+      {
+        "type": "text",
+        "value": "Arduino support for ESP8266"
+      },
+      {
+        "type": "text",
+        "value": "1. Download Arduino IDE from Arduino.cc(1.6.4 or greater) > <https://www.arduino.cc/en/Main/Software>"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Install the ESP8266 Board Package",
+          "Select Preferences under File",
+          "Enter <http://arduino.esp8266.com/stable/package_esp8266com_index.json> into Additional Boards Manager URL's field under preferences.",
+          "Select the Board Manager under the Tools.",
+          "Use the Board Manager to install the ESP8266 package.",
+          "Restart the Arduino IDE and Select the Generic ESP8266 Module board"
+        ]
+      },
+      {
+        "type": "text",
+        "value": "Connection"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/connection.png",
+        "alt": "Circuit diagram",
+        "caption": "Circuit diagram"
+      },
+      {
+        "type": "text",
+        "value": "A USB to serial converter is nedded to program ESP8266. The above image shows connections made from Explore USB to Serial and Explore Wifi boards."
+      },
+      {
+        "type": "text",
+        "value": "Code"
+      },
+      {
+        "type": "code",
+        "language": "cpp",
+        "value": "#include \"ESP8266WiFi.h\"\n \nvoid setup() {\n  Serial.begin(115200);\n \n  // Set WiFi to station mode and disconnect from an AP if it was previously connected\n  WiFi.mode(WIFI_STA);\n  WiFi.disconnect();\n  delay(100);\n \n  Serial.println(\"Setup done\");\n}\n \nvoid loop() {\n  Serial.println(\"scan start\");\n \n  // WiFi.scanNetworks will return the number of networks found\n  int n = WiFi.scanNetworks();\n  Serial.println(\"scan done\");\n  if (n == 0)\n    Serial.println(\"no networks found\");\n  else\n  {\n    Serial.print(n);\n    Serial.println(\" networks found\");\n    for (int i = 0; i < n; ++i)\n    {\n      // Print SSID and RSSI for each network found\n      Serial.print(i + 1);\n      Serial.print(\": \");\n      Serial.print(WiFi.SSID(i));\n      Serial.print(\" (\");\n      Serial.print(WiFi.RSSI(i));\n      Serial.print(\")\");\n      Serial.println((WiFi.encryptionType(i) == ENC_TYPE_NONE)?\" \":\"*\");\n      delay(10);\n    }\n  }\n  Serial.println(\"\");\n \n  // Wait a bit before scanning again\n  delay(5000);\n}"
+      },
+      {
+        "type": "subheading",
+        "value": "References"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Documentation of ESP8266.h library.",
+          "Technical Reference Manual by Espressif Systems.",
+          "ESP8266 Community Forum",
+          "ESP8266 for IoT guide by Nabto."
+        ]
+      }
+    ]
+  }
+]

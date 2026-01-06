@@ -1,0 +1,52 @@
+[
+  {
+    "id": "about",
+    "title": "About the Handbook",
+    "category": "about",
+    "excerpt": "About the ERC Handbook and how to contribute.",
+    "content": [
+      {
+        "type": "heading",
+        "value": "About Us"
+      },
+      {
+        "type": "text",
+        "value": "The Electronics and Robotics Club (ERC) of BITS Goa is a diverse group of students with interests ranging from electronics to machine learning to mechanical design. Over the years, we have evolved into a platform to learn and experiment with various aspects of science and engineering and to apply them in robotics. We are open to anyone with a general interest in engineering and who wants to explore robotics, so feel free to get in touch with us."
+      },
+      {
+        "type": "text",
+        "value": "This handbook is part of an effort from our side to provide an organised set of learning resources to make it easy for anyone to get started with the field of robotics. We have compiled a bunch of staple and commonly used resources in an orderly fashion giving a breadth-first overview of basic concepts essential in all the three significant verticals of robotics: Design, Electronics and Control and Automation."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "issue",
+            "url": "https://github.com/ERC-BPGC/handbook/issues"
+          },
+          {
+            "name": "PRs",
+            "url": "https://github.com/ERC-BPGC/handbook/pulls"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "We hope this handbook helps you in some or the other way!"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "website",
+            "url": "https://erc-bpgc.github.io/"
+          },
+          {
+            "name": "blog",
+            "url": "https://erc-bpgc.github.io/blog/"
+          }
+        ]
+      }
+    ]
+  }
+]

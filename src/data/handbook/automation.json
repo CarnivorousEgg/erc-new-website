@@ -1,0 +1,1951 @@
+[
+  {
+    "id": "automation-intro",
+    "title": "Introduction to Automation",
+    "category": "automation",
+    "excerpt": "Overview of automation in robotics - planning, control systems, and state estimation for autonomous robots.",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Introduction"
+      },
+      {
+        "type": "text",
+        "value": "Robots would be pretty useless without having the ability to do stuff on their own. Today, with ever more powerful machine learning techniques, robots are on their way to becoming truly autonomous. Different aspects of Automation include Planning, Controls and State estimation."
+      },
+      {
+        "type": "text",
+        "value": "From the moment we wake up in the morning until our head hits the pillow at night, we must plan our actions. A large problem in the development of autonomous robots is devising a way to give them the capabilities to make their own plans in a variety of situations. Motion planning refers to the computational process of moving from one place to another in the presence of obstacles."
+      },
+      {
+        "type": "text",
+        "value": "The Robot control system directs the motion and sensory processing of a robot .We need the controllers for the robot because the dynamics (system plant) vary with the time. Such as when the robot moves up in a slope and then down in the slope, or first travels on smooth concrete, then on a carpeted floor."
+      },
+      {
+        "type": "text",
+        "value": "A key aspect of robotics today is estimating the state, such as position and orientation, of a robot as it moves through the world. Most robots and autonomous vehicles depend on noisy data from sensors such as cameras or laser rangefinders or a combination of these to localise themselves in a three-dimensional world."
+      }
+    ]
+  },
+  {
+    "id": "ros-setup",
+    "title": "Setting Up ROS",
+    "category": "automation",
+    "excerpt": "Complete guide to setting up your ROS development environment including OS, ROS installation, and essential tools.",
+    "subcategory": "ROS",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Preparing your Development Environment"
+      },
+      {
+        "type": "text",
+        "value": "One of the most essential and widely used tools for robot automation in Robot Operating System or ROS. This section will guide you through how to setup ROS and other tools on your computer."
+      },
+      {
+        "type": "heading",
+        "value": "1. Operating System"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Ubuntu 18.04",
+            "url": "https://releases.ubuntu.com/18.04.4/"
+          }
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/"
+          },
+          {
+            "name": "option",
+            "url": "https://www.youtube.com/watch?v=IQIaDO9nR6Y&app=desktop"
+          }
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "VirtualBox",
+            "url": "https://www.virtualbox.org/"
+          },
+          {
+            "name": "VirtualBox",
+            "url": "https://www.virtualbox.org/"
+          },
+          {
+            "name": "here",
+            "url": "https://ethz.ch/content/dam/ethz/special-interest/mavt/robotics-n-intelligent-systems/rsl-dam/ROS2020/CoursePreparation.pdf"
+          }
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "WSL",
+            "url": "https://ubuntu.com/wsl"
+          },
+          {
+            "name": "here",
+            "url": "https://janbernloehr.de/2017/06/10/ros-windows"
+          }
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "ROS Development Studio",
+            "url": "https://www.theconstructsim.com/"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "2. Robot Operating System (ROS)"
+      },
+      {
+        "type": "text",
+        "value": "Note that this part is unnecessary if you followed the given instructions to set up a VM. For everyone else, this part is essential. Different versions of Ubuntu need different variants of ROS. Instructions given below -"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "ROS Melodic",
+            "url": "http://wiki.ros.org/melodic/Installation/Ubuntu"
+          },
+          {
+            "name": "ROS Kinetic",
+            "url": "http://wiki.ros.org/kinetic/Installation/Ubuntu"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "3. Useful tools to make your life easier"
+      },
+      {
+        "type": "text",
+        "value": "Git​ : Fundamental tool in open source software development. Used for version control and sharing of code."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "value": "\tsudo apt install git"
+      },
+      {
+        "type": "text",
+        "value": "Terminator​ : Terminal Emulator useful for having multiple terminals in a window."
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "value": "\tsudo apt install terminator "
+      },
+      {
+        "type": "text",
+        "value": "Code Editors : A good editor can go a long way in boosting productivity. We recommend ​VSCode​ which has plugins for python and ROS. A comprehensive guide for how to integrate ROS into your favourite IDE can be found ​here​."
+      },
+      {
+        "type": "heading",
+        "value": "4. ROS Packages"
+      },
+      {
+        "type": "text",
+        "value": "You can install already developed ROS packages using the apt (package manager for Ubuntu). Replace <package_name> name of the ROS package"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "value": "\tsudo apt install ros-$ROS_DISTRO-<package_name>"
+      },
+      {
+        "type": "text",
+        "value": "For example Turtlebot is one of the most commonly used ground bots for simulation purposes. You can install Turtlebot and it's related packages using the following command -"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "value": "\tsudo apt install ros-$ROS_DISTRO-turtlebot3-*"
+      },
+      {
+        "type": "heading",
+        "value": "5. Tips for getting things to work + some helpful facts"
+      },
+      {
+        "type": "text",
+        "value": "Make a habit of running sudo apt update before installing packages in linux."
+      },
+      {
+        "type": "text",
+        "value": "For the uninitiated, your bashrc file is the configuration file for your bash terminal (the thing you type commands into). It's usually located in your home directory at ~/.bashrc For more info, check out this."
+      },
+      {
+        "type": "text",
+        "value": "Don’t forget to source the workspace you want to use. For convenience you can source the workspace on startup by editing your .bashrc file to include the following line. Replace <workspace_path> with the path of your workspace"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "value": "\tsource <workspace_path>/devel/setup.bash"
+      },
+      {
+        "type": "text",
+        "value": "You cannot source two workspaces at the same time."
+      },
+      {
+        "type": "text",
+        "value": "Anaconda and ROS cannot be used in the same environment because they have a conflicting python path. As given here , to deal with this, edit your bashrc file by commenting the anaconda python path like this -"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "value": "\t//  export PATH=\"/home//anaconda3/bin:$PATH \""
+      },
+      {
+        "type": "text",
+        "value": "Use python pip to install python dependencies. Anaconda should be avoided."
+      }
+    ]
+  },
+  {
+    "id": "ros-basics",
+    "title": "Getting Started with ROS",
+    "category": "automation",
+    "excerpt": "Learn ROS fundamentals including nodes, topics, publishers, subscribers, and the catkin build system.",
+    "subcategory": "ROS",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Getting Started with Robot Operating System (ROS)\""
+      },
+      {
+        "type": "heading",
+        "value": "1. What is ROS?"
+      },
+      {
+        "type": "text",
+        "value": "For someone completely new to ROS, the best way to think about it is a collection of tools and frameworks which make automating robotics projects much easier. Every ROS project has a certain structure which you have to follow. Your job would be to fill in the automation code along defining how the different parts of your code are communicating with one another. Once this is done, the underlying ROS framework takes care of the actual networking and connections."
+      },
+      {
+        "type": "text",
+        "value": "ROS also has the advantage of having a large open source community with tons of packages. This means you have a lot of prewritten code to help with your project and you don't have to start from scratch."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "1",
+            "url": "https://www.youtube.com/watch?v=J1qT85pTW0w&feature=youtu.be"
+          },
+          {
+            "name": "2",
+            "url": "https://www.youtube.com/watch?v=UL1_Ue4rUWs"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "src": "Graph.png",
+        "alt": "Skeleton",
+        "caption": "Skeleton"
+      },
+      {
+        "type": "text",
+        "value": "A ROS system can be visualized as a graph where all the vertices are ​nodes and the edges between them are known as ​topics. In simple terms nodes are programs that perform a particular task and send out/receive data in the form of messages. These messages are exchanged between two nodes over the topic (edge) connecting them. An example of a typical ROS system is given in the figure to the left wherein “robot”, “laser”, “map”, “localisation” and “planner” are the nodes and the arrows connecting the nodes are the topics. An arrow ​from A to B indicates that the topic carries messages from node ​A to node B."
+      },
+      {
+        "type": "heading",
+        "value": "2. Reference Material"
+      },
+      {
+        "type": "text",
+        "value": "While we have tried our best to provide a concise introduction to the basic concepts in this document, there are a lot of other much more thorough and complete resources that you should follow. This document can be treated more as a reference guide with some useful tips for beginners."
+      },
+      {
+        "type": "text",
+        "value": "The two most useful resources you can go through are -"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Programming Robots with ROS :​ A Practical Introduction to the Robot Operating System by Morgan Quigley.",
+          "ROSwiki​ tutorials : The official ROS tutorials."
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "The Construct",
+            "url": "https://www.youtube.com/channel/UCt6Lag-vv25fTX3e11mVY1Q"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "3. Basic Concepts"
+      },
+      {
+        "type": "text",
+        "value": "Now let’s get familiar with some very commonly used terms in ROS development. Along with the following introduction you should go through ​ Chapter 1 and 2​ of Morgan Quigley for in depth explanation and examples."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "here",
+            "url": "http://wiki.ros.org/catkin/conceptual_overview"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "_Note : The command used for building a workspace should be consistent everytime, i.e. if the workspace was built using catkin_make the very first time while initializing the workspace, all the subsequent builds should be done using catkin_make. To change the method of build in a pre existing workspace, you can use the command ``catkin clean`` which will clear everything except the source space (src folder) of the workspace. It can then be rebuilt using the desired command._"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "documentation",
+            "url": "https://colcon.readthedocs.io/en/released/user/quick-start.html"
+          }
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "http://wiki.ros.org/catkin/Tutorials/create_a_workspace"
+          }
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "http://wiki.ros.org/ROS/Tutorials/CreatingPackage"
+          },
+          {
+            "name": "this",
+            "url": "http://wiki.ros.org/ROS/Tutorials/BuildingPackages"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "ROS Nodes and Packages: A ​node is an executable file (could be python or C++) which performs a specific task and communicates with other nodes through ​ topics. ​Two main ways this is done is through publisher-subscriber relationship or services. All of the programming involved in creating a ROS based project is done while writing these nodes."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "http://wiki.ros.org/Topics"
+          },
+          {
+            "name": "this",
+            "url": "http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "Note: A single node can simultaneously act as a subscriber to one topic and a publisher of another topic and a server for one service and the client for another."
+      },
+      {
+        "type": "text",
+        "value": "Publisher - Subscriber Model: ​This is a model through which two nodes can exchange data in the form of messages asynchronously, usually used when a one way stream of information is involved."
+      },
+      {
+        "type": "text",
+        "value": "For example, suppose you are developing a self-driving car and you have a node which processes the video feed from a camera to detect street signs. Whenever it detects a sign, it needs to communicate its type and distance from the car to another node which will use this information to control the speed of the car. In this scenario your sign detection node will be a publisher which publishes data about the signs it detects to a specific topic, say signs. ​Your controller node will be a subscriber which will subscribe to the ​ signs ​ topic and perform a certain task whenever it receives a message on this topic."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Publisher: The publisher object of a ROS node publishes the data in the form of messages over a topic. There is a particular rate (which the user defines) at which the messages get published.",
+          "Subscriber: The data published by the publisher of one ROS node can be received or ‘subscribed’ through the Subscriber object of a ROS node. The Subscriber object subscribes to the topic over which any publisher publishes the messages. Every Subscriber object is associated with a callback function which gets called everytime a message is published over the topic."
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "C++​",
+            "url": "http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29#roscpp_tutorials.2FTutorials.2FWritingPublisherSubscriber.Writing_the_Publisher_Node"
+          },
+          {
+            "name": "pytho​n",
+            "url": "http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29#roscpp_tutorials.2FTutorials.2FWritingPublisherSubscriber.Writing_the_Publisher_Node"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "Services: Another common mode of communication, especially suited when there is a transaction style relationship between the two nodes is the service - consisting of a server and a client."
+      },
+      {
+        "type": "text",
+        "value": "For example consider in your self driving car, you have one node to control the movement of the car and another to plan an optimal route to your destination. In such a scenario, the main control node would be the ​client ​for the route planning ​ server. This means that whenever the controller requires a route to be planned, supposed it finds out the route is blocked up ahead, then it would send a request to the server. This request would consist of the current location, the destination as well as any preferences the controller might have (like faster/more comfortable). The server would then compute an optimal route and return it to the client as the response."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Client: ​This is the node which sends requests to a server. In the client code, you can create a special function which acts as a proxy between the client and server. Whenever you call the function, it sends a request to the server with the arguments passed to it as parameters.",
+          "Server: ​This node constantly monitors for requests from the client. Whenever it receives one, it carries out the required task independently of the client and sends"
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "C++​",
+            "url": "http://wiki.ros.org/ROS/Tutorials/WritingServiceClient%28c%2B%2B%29"
+          },
+          {
+            "name": "​python",
+            "url": "http://wiki.ros.org/ROS/Tutorials/WritingServiceClient%28python%29"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "4. Getting things running"
+      },
+      {
+        "type": "text",
+        "value": "Getting a complete ROS system up and running requires a bit more work than executing a single file. Check out ​Chapter 20 of Morgan Quigley for more detailed explanation as well as examples for all of the following tools."
+      },
+      {
+        "type": "text",
+        "value": "ROS Master: Before running the functional nodes in your system, you should first understand ROS Master. This can be visualised as a central server to which all nodes are connected by default. It allows any node to look up information about any other node. This is essential for connecting nodes within the system. For eg. when a node (A) needs to subscribe to a topic published by another node (B), it will get the network address of node B from ROS Master."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "here",
+            "url": "http://wiki.ros.org/roscore"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "rosrun: Once you start the ROS Master, you can now start your own ROS nodes. For this ROS has a special command called rosrun which lets you run the executable files for your node from anywhere. The format for rosrun is -"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "value": "rosrun <package_name> <executable_name>.py"
+      },
+      {
+        "type": "text",
+        "value": "(Replace <package_name> and <executable_name> appropriately)"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "here​",
+            "url": "https://www.guru99.com/file-permissions.html"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "value": "chmod u+x <executable_name>.py"
+      },
+      {
+        "type": "text",
+        "value": "(Replace <executable_name> appropriately)"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "terminator",
+            "url": "https://terminator-gtk3.readthedocs.io/"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "A note on the tab key in terminal: Typing out long commands into the terminal can get tedious. So ros has a handy capability of completing your commands for you. Whenever you are using ​ rosrun​ or roslaunch​, you can type out the first few letters in the package name and then press the Tab key on your keyboard. At this point, the package name will be autocomplete, saving you a lot of typing. Try it out, this works with other terminal commands too!"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "http://wiki.ros.org/roslaunch/Tutorials"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "roscd: roscd is a command line tool which allows you to navigate or ‘cd’ (change directory) to (in command line terms) a package without knowing its exact path. Note: The workspace in which the package is present needs to be sourced. E.g. If you wish to navigate into the ‘turtlebot3_gazebo’ package you’ll just type the following command in the terminal:"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "value": "roscd turtlebot3_gazebo"
+      },
+      {
+        "type": "text",
+        "value": "rqt_graph: Once you have your system running, you can obtain a diagram along with other details of the system by running the rqt_graph command in another terminal window."
+      }
+    ]
+  },
+  {
+    "id": "ros-parameters",
+    "title": "ROS Parameters and Advanced Concepts",
+    "category": "automation",
+    "excerpt": "Advanced ROS concepts including parameters, launch files, and message types.",
+    "subcategory": "ROS",
+    "content": [
+      {
+        "type": "heading",
+        "value": "ROS Parameters and Parameter Server"
+      },
+      {
+        "type": "text",
+        "value": "Parameter server is a collection of values or parameters that can be retrieved or modified by the nodes during runtime upon requests through command prompt, nodes or launch files. Parameters are intended to be static, globally available values like integers, floats, strings and boolean values and can be stored independently or within a YAML file. Parameters are meant to be gloablly viewable so nodes can easily inspect the configuration state of the system and modify if necessary."
+      },
+      {
+        "type": "subheading",
+        "value": "Accessing and setting Parameters"
+      },
+      {
+        "type": "text",
+        "value": "Via command line Parameters can be accessed, modified or deleted using the rosparam command line utility in the rosbash suite of terminal commands. 1) To list all the parameters : ``rosparam list``"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "namespace",
+            "url": "https://www.theconstructsim.com/ros-5-mins-046-ros-namespace/"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "2) To assign a value to an already existing parameter or to set a new one : ``rosparam set <parameter_name> <parameter_value>``"
+      },
+      {
+        "type": "text",
+        "value": "Note : You can also load the parameters into the parameter server from a YAML file using ``rosparam load <filename> <namepsace>``"
+      },
+      {
+        "type": "text",
+        "value": "3) To get/read a parameter value : ``rosparam get <parameter_name>``"
+      },
+      {
+        "type": "text",
+        "value": "Note : You can also dump/save the parameters into a YAML file from parameter server using ``rosparam dump <filename> <namespace>``"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "http://wiki.ros.org/rosparam"
+          }
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "http://wiki.ros.org/rospy/Overview/Parameter%20Server"
+          }
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "http://wiki.ros.org/roslaunch/XML/param"
+          }
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "1",
+            "url": "http://wiki.ros.org/Parameter%20Server"
+          },
+          {
+            "name": "2",
+            "url": "https://www.clearpathrobotics.com/assets/guides/kinetic/ros/ROS%20Parameter%20Server.html"
+          },
+          {
+            "name": "3",
+            "url": "https://www.cse.sc.edu/~jokane/agitr/agitr-small-param.pdf"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "path-planning-intro",
+    "title": "Introduction to Path Planning",
+    "category": "automation",
+    "excerpt": "Overview of path planning algorithms and their applications in robotics.",
+    "subcategory": "Path Planning",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Path Planning in Robotics"
+      },
+      {
+        "type": "heading",
+        "value": "What is a path?"
+      },
+      {
+        "type": "text",
+        "value": "Path, as the name suggests is a set of waypoints which a Robot is expected to travel. There can be many criterions for deciding a path that the Robot should follow. Various optimisations, checks are made before deciding an optimial path."
+      },
+      {
+        "type": "heading",
+        "value": "Why Planning is important for Autonomous Robots?"
+      },
+      {
+        "type": "text",
+        "value": "Path planning is one of the most important primitives for autonomous mobile robots. The ability to be able to travel on its own by finding a collision free, optimal path is an important aspect of making robots autonomous"
+      },
+      {
+        "type": "heading",
+        "value": "Path planning for Autonomous Robots"
+      },
+      {
+        "type": "text",
+        "value": "Path planning, as illustrated above is an important aspect of autonomous robots. There are various methods how a path is planned. There are various algorithms on path planning. Some of the common features of path planners are:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Given a start and a goal position(or pose), give out a set of states(positions or velocities) that the robot should take to reach the goal from start.",
+          "The path generated should be collision free with the obstacles in the environment.",
+          "Generally the path generated should optimise some hueristic(or parameter).",
+          "The path generated should be traversable by a robot given its dynamics."
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Path Planning algorithms"
+      },
+      {
+        "type": "text",
+        "value": "The problem to find an optimal path has been studied since many decades. There are many algorithms that are graph-based, sampling-based. Each branch follows a particular approach to solve the path planning problem."
+      },
+      {
+        "type": "text",
+        "value": "1. Graph based algorithms: Graph based algorithms overlay a topological graph on a robots configurational space and perform search for an optimal path. Some of the notable graph-based algorithms are:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Dijkstra's Algorithm",
+          "A-Star (A*)",
+          "D-Star (D*)"
+        ]
+      },
+      {
+        "type": "text",
+        "value": "2. Sampling based algorithms: Sampling based algorithms represent the configuration space with a roadmap or build a tree, generated by randomly sampling states in the configuration space. Some of the notable sampling-based algorithms are:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Rapidly exploring Random Tree (RRT)",
+          "RRT Star (RRT*)",
+          "Informed RRT Star",
+          "Batch Informed Trees Star (BIT*)"
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Additional References"
+      },
+      {
+        "type": "list",
+        "items": [
+          "For a better understanding of the path planning problem refer here.",
+          "Understand configuration spaces from this video."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "path-planning-astar",
+    "title": "A* Algorithm",
+    "category": "automation",
+    "excerpt": "A-star is a graph-based, path search algorithm known for its completeness, optimality, and optimal efficiency.",
+    "subcategory": "Path Planning",
+    "content": [
+      {
+        "type": "heading",
+        "value": "A-Star Algorithm"
+      },
+      {
+        "type": "text",
+        "value": "A-star is a graph-based, path search algorithm. It is used in many fields of computer science as a search algorithm. It is often used due to its completeness, optimality, and optimal efficiency."
+      },
+      {
+        "type": "subheading",
+        "value": "Salient Features of the Algorithm"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Resolution complete and Resolution optimal : The algorithm finds the optimal solution to the given problem at a chosen discretization, if one exits.",
+          "A-Star uses a hueristic to estimate the total cost of a solution constrained to pass through a state. Thus, it searches in order of decreasing solution quality and is optimally efficient.",
+          "Any other optimal algorithm using the same hueristic will expand at least as many vertices as A-Star."
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Idea of Hueristics Functions"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Hueristic functions are used to map every node in the graph to a non-negative value.",
+          "Criteria for Hueristics Functions",
+          "Should be a monotonic function",
+          "Should satisfy $H(goal) = 0$",
+          "For any two adjacent nodes $x$ and $y$:",
+          "$H(x, y) \\leq H(y) + d(x, y)$",
+          "$d(x, y) = EdgeCost(x, y)$",
+          "These properties ensure that for all nodes $n$:",
+          "$H(n) \\leq length of Shortest Path(n, GOAL)$",
+          "For path Planning on a grid:",
+          "Euclidean Distance:",
+          "Manhattan Distance:"
+        ]
+      },
+      {
+        "type": "text",
+        "value": "Where $x_n$, $y_n$ and $x_g$, $y_g$ are the $x$, $y$ coordinates of a the node and the goal respectively."
+      },
+      {
+        "type": "subheading",
+        "value": "Psuedo Code for the Algorithm"
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "value": "def Astar(start, goal, graph):\n    # Set the g, f values for all nodes in the graph\n    for node in graph:\n        node.f = Infinity\n        node.g = Infinity\n\n    # Create an empty list to store visited nodes\n    nodes = []\n\n    # Add Start to nodes list\n    nodes.add(start)\n\n    # Loop to traverse the graph\n    while nodes is not EMPTY:\n        # Obtain bode with the least f-value\n        CURRENT = argmin(node, criteria=node.f)\n\n        # Check if current node is the goal Node\n        # which means the graph has been completely traversed\n        if CURRENT == goal:\n            report \"SUCCESS\"\n            break\n        # Update parameters for adjacent nodes\n        for adjacent_node in CURRENT.adjacent_nodes:\n            if adjacent_node.g > CURRENT.g + cost of edge from n to current:\n                adjacent_node.g = CURRENT.g + cost of edge from n to current\n                adjacent_node.f = adjacent_node.g + H(node)\n                adjacent_node.parent = CURRENT\n\n                # Add the adjacent node to nodes list if not there already\n                if adjacent_node not in nodes:\n                    nodes.add(adjacent_node)"
+      },
+      {
+        "type": "text",
+        "value": "Notations in the Psuedo Code explained:"
+      },
+      {
+        "type": "code",
+        "language": "text",
+        "value": "g-value = distance between a node and the start node\nH-function = Hueristic funciton\nf-value = g-value + Hueristic value of the node"
+      },
+      {
+        "type": "subheading",
+        "value": "References"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Original paper on A-Star path planning algorithm.",
+          "Psuedo Code can be found here",
+          "Video explainig A-star can be found here"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "path-planning-dijkstra",
+    "title": "Dijkstra's Algorithm",
+    "category": "automation",
+    "excerpt": "Dijkstra's algorithm for finding shortest paths between nodes in a graph.",
+    "subcategory": "Path Planning",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Dijkstra's Algorithm"
+      },
+      {
+        "type": "text",
+        "value": "Dijkstra's Algorithm is an algorithm for finding the shortest path between one source node and all the other nodes in a graph, thereby producing a shortest-path-tree."
+      },
+      {
+        "type": "subheading",
+        "value": "Psuedo Code"
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "value": "# Set the distances if all nodes in the graph to infinty\nfor node in graph:\n    node.distance = INFINITY\n\n# Create an empty list\nnodes = []\n\n# Set the start distance to ZERO\nSTART.distance = 0\n\n# Add start to the list\nnodes.add(START)\n\n# Loop to update distances\nwhile nodes is not empty:\n    CURRENT = argmin(node, criteria=node.distance)\n\n    if CURRENT == GOAL:\n        report \"Success\"\n        break\n\n    for adjacent_node in CURRENT.adjacent_nodes:\n        if adjacent_node.distance > CURRENT.distance + cost of edge from CURRENT to adjacent_node:\n            adjacent_node.distance = CURRENT.distance + cost of edge from CURRENT to adjacent_node\n            adjacent_node.parent = CURRENT\n\n            # Add adjacent_node to the list, if it is not already present\n            if adjacent_node not in nodes:\n                nodes.add(adjacent_node)"
+      },
+      {
+        "type": "subheading",
+        "value": "References:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Psuedo Code for Dijkstra's Algorithm can be found here",
+          "A video explaining Dijkstra's Algorithm can be found here"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "path-planning-rrt",
+    "title": "Rapidly-exploring Random Tree (RRT)",
+    "category": "automation",
+    "excerpt": "RRT is a sampling-based path planning algorithm for high-dimensional spaces.",
+    "subcategory": "Path Planning",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Rapidly Exploring Random Trees"
+      },
+      {
+        "type": "subheading",
+        "value": "Salient Features"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Randomly samples nodes in the Configuration space of the robot to build a tree of valid configurations.",
+          "It is Probabilistically Complete,having the probability to find a solution if it exists. In worst case, time taken to find a solution can be very long (longer than exhaustive search). The probability of finding a solution goes to $1$ as number of sampled nodes goes to $\\infty$.",
+          "In practise, the algorithm tends to be very effecitve in high dimensional spaces.",
+          "There is no gaurantee regarding the optimality of the solution. The path produced my bot the the shortest path.",
+          "Post processing of the path generated is required as the path generated is often very unordered or in zig-zag fashion."
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Intuition"
+      },
+      {
+        "type": "text",
+        "value": "The basic idea behind the algorithm is to start out at a start node and to generate random points in the configuration space and the tree is extended by connecting the randomly generated point to the closest node in the existing tree available."
+      },
+      {
+        "type": "text",
+        "value": "There are a few key things to note here. Firstly, the points aren't joined directly. We take a maximum distance between sampled node and nearest node (called DELTA in the pseudocode). We extend the nearest node by this distance towards the randomly sampled node, if the sampled node is farther than this distance. Otherwise, if the sampled node is closer than this value, we directly connect the two nodes."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/rrt01.png",
+        "alt": "Joon&#39;s Lectures: Improving the Optimality of RRT: RRT*",
+        "caption": "Joon&#39;s Lectures: Improving the Optimality of RRT: RRT*"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Joon's Lectures",
+            "url": "https://joonlecture.blogspot.com/2011/02/improving-optimality-of-rrt-rrt.html"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "In the above image, $q_{rand}$ is the randomly sampled point, $q_{nearest}$ is the nearest (to $q_{rand}$) point in the tree. Since the distance between $q_{rand}$ and $q_{nearest}$ is greater than the maximum distance $v$, we connect $q_{nearest}$ to $q_{new}$, which is at a distance of $v$ from $q_{nearest}$."
+      },
+      {
+        "type": "text",
+        "value": "This process is continuously carried out for many iterations until the goal is reached. The tree expands rapidly, and hence the name."
+      },
+      {
+        "type": "subheading",
+        "value": "Collision Checking Function"
+      },
+      {
+        "type": "text",
+        "value": "One important requirement of sampling algorithms, is the ability to check if a configuration is valid or not. To check if a configuration $X$ is valid in a configuration free space $\\mathbb{C}$, a function as such can be used:"
+      },
+      {
+        "type": "text",
+        "value": "$$ CollisionCheck(X) = \\begin{cases} 0 \\quad &\\text{if} \\, X \\in \\mathbb{C} \\\\ 1 \\quad &\\text{if} \\, X \\notin \\mathbb{C} \\end{cases} \\\\ $$"
+      },
+      {
+        "type": "subheading",
+        "value": "Psuedo Code"
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "value": "def RRT(START, GOAL):\n\tTREE = []\n\tTREE.add(START)\n\tDELTA = maximum distance between sampled node and nearest node. \n\tREPEAT n times:\n\t\tX = generateNewConfiguration()\n\t\tif X in FREE_SPACE:\n\t\t\tfor nodes in TREE:\n\t\t\t\tY = argmin(nodes, criteria=distance)\n\t\t\tif DIST(X, Y) < DELTA:\n\t\t\t\tFind a configuration Z that is at DELTA distance along the path from X to Y\n\t\t\t\tif TRAVERSABLE(X, Z):\n\t\t\t\t\tX.parent = Y\n\t\t\t\t\tTREE.add(X)\n\t\t\telse:\n\t\t\t\tif TRAVERSABLE(X, Y):\n\t\t\t\t\tX.parent = Y\n\t\t\t\t\tTREE.add(X)\n\t\t\tif X is GOAL:\n\t\t\t\treport \"SUCCESS\"\n\t\t\t\tbreak\n"
+      },
+      {
+        "type": "subheading",
+        "value": "Notations and Functions used in Psuedo Code:"
+      },
+      {
+        "type": "text",
+        "value": "Function used to check if a path is traversable:"
+      },
+      {
+        "type": "text",
+        "value": "$$ Traversable(X, Y) = \\begin{cases} 1 \\quad &\\text{if} \\, \\operatorname{LineJoining}(X, Y) \\in \\mathbb{C} \\\\ 0 \\quad &\\text{if} \\, \\operatorname{LineJoining}(X, Y) \\notin \\mathbb{C} \\\\ \\end{cases} $$"
+      },
+      {
+        "type": "text",
+        "value": "In case of Rotations:"
+      },
+      {
+        "type": "text",
+        "value": "$$ Dist(X, Y) = \\min{(\\lvert X_n - Y_n \\rvert}, \\lvert\\ 2\\pi - \\lvert X_n - Y_n \\rvert \\rvert) $$"
+      },
+      {
+        "type": "subheading",
+        "value": "References"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Refer this article for more information about RRT and RRT*",
+          "A video explaining RRT algorithm.",
+          "Refer to the paper here"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "path-planning-rrt-star",
+    "title": "RRT* (RRT Star)",
+    "category": "automation",
+    "excerpt": "An optimized version of RRT that provides asymptotically optimal solutions.",
+    "subcategory": "Path Planning",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Optimal Rapidly Exploring Random Trees (RRT*)"
+      },
+      {
+        "type": "text",
+        "value": "In the year 2011, Sertac Karaman and Emilio Frazzoli in their paper Sampling-based Algorithms for Optimal Motion Planning, introduced three new path planning algorithms that improved upon the existing algorithms. These were, namely, *optimal rapidly exploring random trees (RRT\\), optimal probabilistic road mapping (PRM\\), and rapidly exploring random graphs (RRG)*."
+      },
+      {
+        "type": "text",
+        "value": "The most popular algorithm among these is the RRT* algorithm, that is heavily based on the RRT algorithm, and has some improvisions, and provides a more optimal solution."
+      },
+      {
+        "type": "text",
+        "value": "Let's now look at the RRT* algorithm that was originally proposed in the paper along with the pseudo code. All the mathematical notations and functions in the paper are clearly explained here."
+      },
+      {
+        "type": "text",
+        "value": "The following image shows the RRT* algorithm applied on a 2D graph."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/rrt_star_visualisation.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "SAI VEMPRALA",
+            "url": "https://www.mathworks.com/matlabcentral/profile/authors/4026649"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Intuition"
+      },
+      {
+        "type": "text",
+        "value": "The node sampling and selection process is exactly the same as RRT, wherein a point is randomly generated and a node is created at that point or at a specified maximum distance from the existing node, whichever is closer."
+      },
+      {
+        "type": "text",
+        "value": "However, the difference is where the connection is made. We assign every node a cost function that denotes the length of the shortest path from the start node. We then search for nodes inside a circle of given radius r centred at the newly sampled point."
+      },
+      {
+        "type": "text",
+        "value": "We then rearrange the connections such that they minimize the cost function and optimize the path. This can rearrange the graph in such a way that we get the shortest path."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/rrt_star_algo.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Joon's lectures",
+            "url": "https://joonlecture.blogspot.com/2011/02/improving-optimality-of-rrt-rrt.html"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "In the image above, after rearranging the connections, the path to the green points, i.e., $q_{near}$ is shorter through the red connections than through the earlier connections."
+      },
+      {
+        "type": "heading",
+        "value": "Pseudocode"
+      },
+      {
+        "type": "text",
+        "value": "The following is the pseudocode for the RRT* algorithm. An explanation of all the unique functions used in the pseudocode is explained below."
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "value": "def RRT_Star(V, E, r, c):\n\tV = [x_init]\n\tE = []\n\t# G = (V, E)\n\tfor i in range(1, n):\n\t\tx_rand = SampleFree()\n\t\tx_nearest = Nearest(V, E, x_rand)\n\t\tx_new = Steer(x_nearest, x_rand)\n\t\tif ObstacleFree(x_nearest, x_new):\n\t\t\tX_near = Near(V, E, x_new, r)\n\t\t\t# list of all nodes at radius r\n\t\t\tV.append(x_new)\n\t\t\tx_min = x_nearest\n\t\t\tc_min = cost(x_nearest) + c(Line(x_nearest, x_new))\n\t\t\t# the cost of the nearest node to new node\n\t\t\t# to check whether to change paths\n\n\t\t\tfor x_near in X_near:\n\t\t\t\tif CollisionFree(x_near, x_new)*Cost(x_near)+c(Line(x_near, x_new)) < c_min:\n\t\t\t\t\tx_min = x_near\n\t\t\t\t\tc_min = Cost(x_near) + c(Line(x_near, x_new))\n\t\t\t\t\t# update c_min, because we now need to find nodes that are closer than this new x_new\n\n\t\t\tE.append([x_min, x_new])\n\n\t\t\tfor x_near in X_near:\n\t\t\t\tif CollisionFree(x_new, x_near)*Cost(x_new) + c(Line(x_new, x_near)) < Cost(x_near):\n\t\t\t\t\tx_parent = Parent(x_near)\n\t\t\t\t\tE.remove([x_parent, x_near])\n\t\t\t\t\tE.append([x_new, x_near])\n\t\t\t\t\t# remove all edges between nodes (in radius r) and their parents and join them with x_new\n\t\t\t\t\t# this is the step of reconnection of edges\n\treturn V, E\n"
+      },
+      {
+        "type": "heading",
+        "value": "Functions used in Pseudocode"
+      },
+      {
+        "type": "subheading",
+        "value": "SampleFree()"
+      },
+      {
+        "type": "text",
+        "value": "The function SampleFree() is used to return a randomly sampled node. The samples are generally assumed to be drawn from a uniform distribution."
+      },
+      {
+        "type": "text",
+        "value": "Suppose the set of sample space is given as $\\Omega$ and for each $\\omega \\in \\Omega$,"
+      },
+      {
+        "type": "text",
+        "value": "is a map from $\\Omega$ to a sequence of points $\\mathcal{X_{free}}$, which is the obstacle-free space."
+      },
+      {
+        "type": "subheading",
+        "value": "Nearest()"
+      },
+      {
+        "type": "text",
+        "value": "This function is used to return the nearest node in the graph."
+      },
+      {
+        "type": "text",
+        "value": "Let's say that our tree is a graph $G=(V,E)$ where $V$ and $E$ are sets of vertices and edges of our tree, where $V\\subset \\mathcal{X}$. We take a point $x\\in \\mathcal{X}$ such that the function $Nearest:(G,x)\\mapsto v \\in V$ returns the node $v$ in $V$ that is closest to the point $x$ in terms of a distance function, such as Euclidean distance, i.e.,"
+      },
+      {
+        "type": "text",
+        "value": "where $argmin_{v \\in V} ||x-v||$ means that the value $v$ in $V$ is returned such that the distance $||x-v||$ is minimum."
+      },
+      {
+        "type": "subheading",
+        "value": "Near()"
+      },
+      {
+        "type": "text",
+        "value": "This function is used to find the nodes in the graph in a fixed radius in order to rearrange the connections such that we get the optimal path."
+      },
+      {
+        "type": "text",
+        "value": "Let's say the radius is $r$ such that $r\\in \\mathbb{R}$. The function $Near:(G,x,r)\\mapsto V'\\subseteq V$ returns the vertices $V'$ in $V$ that are contained in a circle of radius $r$ centred $x$, i.e.,"
+      },
+      {
+        "type": "text",
+        "value": "where $\\mathfrak{B}_{x,r}$ is the set of all points within the fixed radius $r$ centred at $x$."
+      },
+      {
+        "type": "subheading",
+        "value": "Steer()"
+      },
+      {
+        "type": "text",
+        "value": "This function is the one that creates a new node that is at a maximal distance from the nearest node in the direction of the sampled node (or it's equal to the sampled node itself, if it's closer than this distance)."
+      },
+      {
+        "type": "text",
+        "value": "Suppose we have two points $x,y\\in \\mathcal{X}$. The function $Steer:(x,y)\\mapsto z$ returns a point $z \\in \\mathcal{X}$ such that $z$ is closer to $y$ than $x$ is. This will be such that $z$ minimizes the distance $||z-y||$ and at the same time maintains the distance $||z-x||\\leq\\eta$ for the predefined maximal distance $\\eta > 0$, i.e.,"
+      },
+      {
+        "type": "subheading",
+        "value": "Line()"
+      },
+      {
+        "type": "text",
+        "value": "The Line() function is used to denote a straight line, i.e., given two points $x_1,x_2\\in \\mathbb{R}^d$,"
+      },
+      {
+        "type": "subheading",
+        "value": "Parent()"
+      },
+      {
+        "type": "text",
+        "value": "The Parent() function is used to denote the parent node of a given node in a tree, i.e., given a tree $G=(V,E)$, $Parent:V\\mapsto V$ is a function that maps a vertex $v\\in V$ to the unique vertex $u\\in V$ such that $(u,v)\\in E$."
+      },
+      {
+        "type": "text",
+        "value": "Note that if $v_0 \\in V$ is the start node of $G$, then, by convention, $Parent(v_0)=v_0$."
+      },
+      {
+        "type": "subheading",
+        "value": "Cost()"
+      },
+      {
+        "type": "text",
+        "value": "This is function that makes RRT* different from RRT. As mentioned before, we assign each node a cost that is a function of the distance along the path from the start node. It's given as follows.If $Cost:V\\mapsto \\mathbb{R}^+$ is a function that maps the vertex $v_0\\mapsto V$ to the cost of the unique path from the root of the tree to $v$, then"
+      },
+      {
+        "type": "text",
+        "value": "where $c$ is a function that transforms the length value of the $Line$ into a cost"
+      },
+      {
+        "type": "text",
+        "value": "Note that if $v_0$ is the start node or root vertex of $G$, then, by convention, $Cost(v_0)=0$."
+      },
+      {
+        "type": "subheading",
+        "value": "CollisionFree()"
+      },
+      {
+        "type": "text",
+        "value": "CollisionFree(x,x') returns True if the line segment joining x and x' lies in $\\mathcal{X_{free}}$, where $x,x'\\in \\mathcal{X}$ and False otherwise."
+      },
+      {
+        "type": "heading",
+        "value": "Visual comparison between RRT and RRT*"
+      },
+      {
+        "type": "text",
+        "value": "The following image shows the RRT and RRT\\ algorithms applied on a 2D graph with obstacles. The plot on the left is RRT and the plot on the right is RRT. As one can see, the RRT\\* algorithm provides a more optimal solution to the path planning problem."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/rrt_vs_rrt_star.png",
+        "alt": "A Comparison of the RRT (a) and RRT* (b) algorithms on an example (Karaman and Frazzoli, 2011)",
+        "caption": "A Comparison of the RRT (a) and RRT* (b) algorithms on an example (Karaman and Frazzoli, 2011)"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "András Gyimesi",
+            "url": "https://www.researchgate.net/profile/Andras-Gyimesi"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "A flowchart summary of the RRT* algorithm"
+      },
+      {
+        "type": "text",
+        "value": "The following flowchart provides a visual summary of the optimal rapidly exploring random trees algorithm."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/rrt_star_summary.png",
+        "alt": "MEAQR RRT* Algorithm Flowchart ",
+        "caption": "MEAQR RRT* Algorithm Flowchart "
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Nir Rikovitch",
+            "url": "https://www.researchgate.net/profile/Nir-Rikovitch"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "References"
+      },
+      {
+        "type": "list",
+        "items": [
+          "The paper by Karaman and Frazzoli.",
+          "Refer this article for a synopsis.",
+          "Watch this video and this video for visualization of the algorithm."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "path-planning-prm",
+    "title": "Probabilistic Roadmap (PRM)",
+    "category": "automation",
+    "excerpt": "PRM is a sampling-based algorithm that creates a roadmap of the free space.",
+    "subcategory": "Path Planning",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Probabilistic Roadmaps"
+      },
+      {
+        "type": "heading",
+        "value": "Introduction"
+      },
+      {
+        "type": "text",
+        "value": "The probabilistic roadmap method is a fairly simple sampling based path planning method, compared to the other sampling based algorithms, RRT and RRT\\*. It was introduced in the paper titled Probabilistic Roadmaps for Path Planning in High-Dimensional Configuration Spaces, and the invention of the PRM method is credited to Lydia E. Kavraki."
+      },
+      {
+        "type": "text",
+        "value": "As this is a sampling based algorithm, it involves randomly sampling points in a given space."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/prm_visualisation.gif",
+        "alt": "Probabilistic roadmap - Wikipedia",
+        "caption": "Probabilistic roadmap - Wikipedia"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Probabilistic_roadmap"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "This algorithm is divided into two phases, namely, the learning phase and the query phase."
+      },
+      {
+        "type": "text",
+        "value": "In the learning phase, the roadmap containing nodes and edges is generated. These nodes and edges are entirely inside the search space and do not overlap with obstacles."
+      },
+      {
+        "type": "text",
+        "value": "In the query phase, graph based algorithms, like A* and Dijkstra's algorithms, are used on the probabilistic roadmap to find the optimal path."
+      },
+      {
+        "type": "text",
+        "value": "It is important to first get an intuition of the algorithm before moving on to the pseudocode."
+      },
+      {
+        "type": "heading",
+        "value": "How it works"
+      },
+      {
+        "type": "subheading",
+        "value": "Learning Phase"
+      },
+      {
+        "type": "text",
+        "value": "The robot in question can only take certain configurations and positions in a given space. The set of all these configurations is called the configuration space or C-space."
+      },
+      {
+        "type": "text",
+        "value": "In a given space, the first step is to randomly generate a point. It is then checked whether this point is in C-space or not."
+      },
+      {
+        "type": "text",
+        "value": "If it is in C-space, we add this point to the graph by connecting it to all the points in the graph that are within a specific radius from the generated point by a straight line. It also checks whether this line is in free space, and only forms this connection if it is."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/prm_algo.svgz",
+        "alt": "Adaptation Algorithm of Geometric Graphs for Robot Motion Planning in  Dynamic Environments",
+        "caption": "Adaptation Algorithm of Geometric Graphs for Robot Motion Planning in  Dynamic Environments"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Mathematical Problems in Engineering",
+            "url": "https://www.hindawi.com/journals/mpe/2016/3973467/"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "In the above diagram, a node $q_i$ was randomly generated. Nodes within the radius $r_{\\eta}$ are searched for and connected to $q_i$ through edges."
+      },
+      {
+        "type": "text",
+        "value": "This process is then repeated as many times as necessary. As the number of samples tends to infinity, the likelihood that the graph is a true road map tends to 100%."
+      },
+      {
+        "type": "text",
+        "value": "Once this is done, we add the start node and the goal node by joining a line from each of the two to the closest node in the graph to each of them."
+      },
+      {
+        "type": "subheading",
+        "value": "Query Phase"
+      },
+      {
+        "type": "text",
+        "value": "This phase involves using the nodes of the roadmap generated in the learning phase as points on a graph and use graph based algorithms like A* and Dijkstra to come up with an optimal path for the robot to take."
+      },
+      {
+        "type": "text",
+        "value": "Given the start and goal configurations, $s$ and $g$, the method tries to connect them to two nodes $\\tilde{s}$ and $\\tilde{g}$ in the graph. If succesful, the method tries to find the optimal path from $s$ to $g$ using graph based algorithms."
+      },
+      {
+        "type": "text",
+        "value": "We have already covered graph based algorithms separately so you can refer to those for how they work."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/prm_query_phase.png",
+        "alt": "2: Probabilistic Roadmaps. The blue nodes are the sampled collision... |  Download Scientific Diagram",
+        "caption": "2: Probabilistic Roadmaps. The blue nodes are the sampled collision... |  Download Scientific Diagram"
+      },
+      {
+        "type": "text",
+        "value": "One interesting thing to note is that the learning phase and query phase can be interwoven, i.e., the two phases don't need to be carried out sequentially."
+      },
+      {
+        "type": "text",
+        "value": "For example, we might first create a small roadmap and then apply graph based algorithms on it. We might simultaneously perform the learning phase and connect new nodes generated to the path to create a more optimal path as both phases are being carried out simultaneously."
+      },
+      {
+        "type": "text",
+        "value": "For this section, however, we will assume the learning phase has been carried out before performing query phase."
+      },
+      {
+        "type": "text",
+        "value": "Let's now look at the pseudocode that describes the algorithm. The functions used in the pseudocode are explained in our page on the RRT\\* algorithm, under the section \"Functions used in Pseudocode\"."
+      },
+      {
+        "type": "heading",
+        "value": "Pseudocode"
+      },
+      {
+        "type": "text",
+        "value": "The following pseudocode only performs the learning phase for the PRM algorithm. The query phase has not been included in the pseudocode."
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "value": "def PRM(n, r, x_init, x_goal):\n\tV = []\n\tE = []\n\tfor i in range(n):\n\t\tx_rand = SampleFree()\n\t\tU = Near(V, E, x_rand, r)\n\t\tV.append(x_rand)\n\t\tU.Sort(distance(x_rand))\n\t\tfor u in U:\n\t\t\tif [[x_rand, u], [u, x_rand]] not in E:\n\t\t\t\tif CollisionFree(x_rand, u):\n\t\t\t\t\tE.append([[x_rand, u], [u, x_rand]])\n\n\treturn V, E"
+      },
+      {
+        "type": "text",
+        "value": "In this psuedocode, the function U.Sort(distance(x_rand)) sorts the list U according to the Euclidean distance between each element of the list and x_rand, in increasing order."
+      },
+      {
+        "type": "heading",
+        "value": "References"
+      },
+      {
+        "type": "list",
+        "items": [
+          "The original paper on PRM.",
+          "You can watch this video for a brief explanation.",
+          "Refer this video to code this algorithm on MATLAB."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "control-theory-intro",
+    "title": "Introduction to Control Theory",
+    "category": "automation",
+    "excerpt": "Fundamentals of control systems for robotics applications.",
+    "subcategory": "Control Theory",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Control Theory"
+      },
+      {
+        "type": "text",
+        "value": "A robot can exhibit a number of different behaviors, depending on the task and its environment. It can act as a source of programmed motions for tasks such as moving an object from one place to another or tracing a trajectory. It can act as a source of forces, as when applying a polishing wheel to a workpiece. In tasks such as writing on a chalkboard, it must control forces in some directions (the force must press the chalk against the board) and motions in others (the motion must be in the plane of the board). When the purpose of the robot is to act as a haptic display, rendering a virtual environment, we may want it to act like a spring, damper, or mass, yielding in response to forces applied to it."
+      },
+      {
+        "type": "text",
+        "value": "In each of these cases, it is the job of the robot controller to convert the task specification to forces and torques at the actuators. Control strategies that achieve the behaviors described above are known as motion control, force control, hybrid motion-force control, or impedance control."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/controller.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "text",
+        "value": "A typical control block diagram is shown above The sensors are typically: potentiometers, encoders, or resolvers for joint position and angle sensing; tachometers for joint velocity sensing; joint force-torque sensors; and/or multi-axis force-torque sensors."
+      },
+      {
+        "type": "heading",
+        "value": "Types of control systems"
+      },
+      {
+        "type": "subheading",
+        "value": "Open Loop control system"
+      },
+      {
+        "type": "text",
+        "value": "A control system in which the control action is totally independent of output of the system then it is called open loop control system. A manual control system is also an open loop control system. The figure below shows a control system block diagram of an open loop control system in which process output is totally independent of the controller action."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/controller_1.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "text",
+        "value": "Practical examples of Open loop control system:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Electric Hand Drier – Hot air (output) comes out as long as you keep your hand under the machine, irrespective of how much your hand is dried.",
+          "Automatic Washing Machine – This machine runs according to the pre-set time irrespective of washing is completed or not.",
+          "Bread Toaster – This machine runs as per adjusted time irrespective of toasting is completed or not."
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Closed Loop control system"
+      },
+      {
+        "type": "text",
+        "value": "Control system in which the output has an effect on the input quantity in such a manner that the input quantity will adjust itself based on the output generated is called closed loop control system. Open loop control system can be converted in to closed loop control system by providing a feedback. Figure below shows the block diagram of closed loop control system in which feedback is taken from output and fed in to input."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/controller_2.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "text",
+        "value": "Practical example of Closed loop control system:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Missile Launched and Auto Tracked by Radar – The direction of missile is controlled by comparing the target and position of the missile.",
+          "An Air Conditioner – An air conditioner functions depending upon the temperature of the room.",
+          "Cooling System in Car – It operates depending upon the temperature which it controls."
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Core topics in Control Theory"
+      },
+      {
+        "type": "text",
+        "value": "Before we design any controller, we have to consider the key factors that will drive the robot and how are we supposed to build the controller that will drive us to the best results which are also known as control objectives. These factors are listed below:"
+      },
+      {
+        "type": "text",
+        "value": "1.Stability : By this, we mean to measure the level of stability in the signal which will drive the object and also keep a check on the fluctuation of the signal. For eg. if we are making a cruise controller for a car, then the controller should give a stable signal after the car has reached the cruising speed and the speed should remain constant (no fluctuations)."
+      },
+      {
+        "type": "text",
+        "value": "2.Tracking : It is necessary to give controls after analyzing the response given due to the input signal. For instance, in a cruise controller, after setting up cruising speed, it is necessary for the controller to keep a regular check on the speed by which it can decide whether to accelerate or retard."
+      },
+      {
+        "type": "text",
+        "value": "3.Robustness : Robust control systems often incorporate advanced topologies which include multiple feedback loops and feed-forward paths. The control laws may be represented by high order transfer functions required to simultaneously accomplish desired disturbance rejection performance with robust closed loop operation. For example, the controller should not be hard coded to function only for a certain velocity ,say 50 miles/hour if designing a cruise control."
+      },
+      {
+        "type": "text",
+        "value": "4.Disturbance : It refers to the noise (not useful signal) that the controller might signal while sending or any sort of attenuation that can happen. It actually depends on the quality of instruments used in making a controller and also due to some external factors."
+      },
+      {
+        "type": "text",
+        "value": "5.Optimality : It is a set of differential equations that describe the paths of the control variables that minimize the cost function."
+      },
+      {
+        "type": "heading",
+        "value": "Laplace transform"
+      },
+      {
+        "type": "text",
+        "value": "The Laplace transform plays a important role in control theory. It appears in the description of linear time invariant systems, where it changes convolution operators into multiplication operators and allows to define the transfer function of a system. The properties of systems can be then translated into properties of the transfer function. It allows the use of graphical methods to predict system performance without solving the differential equations of the system. These include response, steady state behavior, and transient behavior."
+      },
+      {
+        "type": "subheading",
+        "value": "Laplace Vs Fourier transform"
+      },
+      {
+        "type": "text",
+        "value": "Laplace transform: $F(s)=\\int_{0}^{\\infty}f(t)e^{-st}dt \\qquad f^{'}(t)\\Rightarrow sF(s)$ Fourier transform: $F(\\omega) = \\int_{-\\infty}^{\\infty}f(t)e^{-j\\omega t}dt$ Laplace transforms often depend on the initial value of the function whereas Fourier transforms are independent of the initial value. The transforms are only the same if the function is the same both sides of the y-axis (so the unit step function is different)."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "https://www.electrical4u.com/laplace-transformation/"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Closed Loop Transfer Function"
+      },
+      {
+        "type": "text",
+        "value": "A closed-loop transfer function in control theory is a mathematical expression describing the net result of the effects of a closed feedback loop on the input signal to the circuits enclosed by the loop."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/controller_4.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "text",
+        "value": "Where: block G represents the open-loop gains of the controller or system and is the forward path, and block H represents the gain of the sensor, transducer or measurement system in the feedback path."
+      },
+      {
+        "type": "text",
+        "value": "To find the transfer function of the closed-loop system above, we must first calculate the output signal θo in terms of the input signal θi. To do so, we can easily write the equations of the given block-diagram as follows."
+      },
+      {
+        "type": "text",
+        "value": "The output from the system is equal to: Output = G x Error"
+      },
+      {
+        "type": "text",
+        "value": "Note that the error signal, θe is also the input to the feed-forward block: G"
+      },
+      {
+        "type": "text",
+        "value": "The output from the summing point is equal to: Error = Input - H x Output"
+      },
+      {
+        "type": "text",
+        "value": "If H = 1 (unity feedback) then:"
+      },
+      {
+        "type": "text",
+        "value": "The output from the summing point will be: Error (θe) = Input - Output"
+      },
+      {
+        "type": "text",
+        "value": "Eliminating the error term, then:"
+      },
+      {
+        "type": "text",
+        "value": "The output is equal to: Output = G x (Input - H x Output)"
+      },
+      {
+        "type": "text",
+        "value": "Therefore: G x Input = Output + G x H x Output"
+      },
+      {
+        "type": "text",
+        "value": "Rearranging the above gives us the closed-loop transfer function of:"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/controller_5.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "heading",
+        "value": "Controllability"
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/controlablity.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/controlablity_1.jpg",
+        "alt": "graph",
+        "caption": "graph"
+      },
+      {
+        "type": "heading",
+        "value": "Types of Feedback Control"
+      },
+      {
+        "type": "subheading",
+        "value": "Positive Feedback"
+      },
+      {
+        "type": "text",
+        "value": "In a “positive feedback control system”, the set point and output values are added together by the controller as the feedback is “in-phase” with the input. The effect of positive (or regenerative) feedback is to “increase” the systems gain, i.e, the overall gain with positive feedback applied will be greater than the gain without feedback]"
+      },
+      {
+        "type": "subheading",
+        "value": "Negative Feedback"
+      },
+      {
+        "type": "text",
+        "value": "In a “negative feedback control system”, the set point and output values are subtracted from each other as the feedback is “out-of-phase” with the original input. The effect of negative (or degenerative) feedback is to “reduce” the gain. As a rule negative feedback systems are more stable than positive feedback systems. Negative feedback also makes systems more immune to random variations in component values and inputs."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/whatis-feedback_loop_mobile.jpg",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "https://www.electrical4u.com/types-of-systems-linear-and-non-linear-system/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pid-controller",
+    "title": "PID Controller",
+    "category": "automation",
+    "excerpt": "PID control is the most popular technique used in industries because it is relatively easy and simple to design and implement.",
+    "subcategory": "Control Theory",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Linear Control Techniques"
+      },
+      {
+        "type": "text",
+        "value": "Linear Control technique is the most widely used technique for designing control systems in robotics because of its simple implementation when your system is operating in vicinity of a particular point. Some of the common linear control system design techniques, includes the well-known PID control, H2 and H$\\infty$ optimal control, linear quadratic regulator (LQR) with loop transfer recovery design (LTR) , and some newly developed design techniques, such as the robust and perfect tracking (RPT) method."
+      },
+      {
+        "type": "heading",
+        "value": "PID Controller"
+      },
+      {
+        "type": "text",
+        "value": "PID control is the most popular technique used in industries because it is relatively easy and simple to design and implement. Most importantly, it works in most practical situations, although its performance is somewhat limited owing to its restricted structure."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/Pid.jpg",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "text",
+        "value": "Hence, a PID control law has the following general form for the input command: $u(t) = K~p~e(t) + K~i~\\int e(t) + K~d~\\frac{de(t)}{dt}$ where $e = q - q~d~$ is the error signal, and $K~p~, K~i~$ and $K~d~$ are positive constant gains associated with proportional, integral, and derivative controllers."
+      },
+      {
+        "type": "text",
+        "value": "Consider the control system , in which G(s) is the plant to be controlled and K(s) is the PID controller, it can be characterized by the following transfer function: $K(s) = K~p~(1+\\frac{1}{Tis}+Tds)$ The control system design is then to determine the parameters Kp , Ti and Td such that the resulting dosed-loop system yields a certain desired performance, i.e. it meets certain prescribed design specifications."
+      },
+      {
+        "type": "subheading",
+        "value": "Proportional factor"
+      },
+      {
+        "type": "text",
+        "value": "The proportional factor is easiest to understand: The output of the proportional factor is the product of gain and measured error ε. Hence, larger proportional gain or error makes for greater output from the proportional factor. Setting the proportional gain too high causes a controller to repeatedly overshoot the setpoint, leading to oscillation."
+      },
+      {
+        "type": "text",
+        "value": "The downside to a proportional-only loop is that when error becomes too small, loop output becomes negligible. Therefore, even when the proportional loop reaches steady state, there is still error. The larger the proportional gain, the smaller the steady state error — but the larger the proportional gain, the more likely the loop is to become unstable. This dilemma leads to inevitable steady-state error called offset."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/propotional.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "subheading",
+        "value": "Integral Factor"
+      },
+      {
+        "type": "text",
+        "value": "The main function of an integral control is to eliminate the steady state error and make the system follow the set point at steady state conditions. The integral controller leads to an increasing control command for a positive error, and a decreasing control command for a negative error. The downside to the integral factor is that it strongly contributes to controller output overshoot past the target setpoint. The shorter the integral time, the more aggressively the integral works."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/integral.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "subheading",
+        "value": "Derivative Factor"
+      },
+      {
+        "type": "text",
+        "value": "The purpose of derivative control is to improve the closed-loop stability of a system. A derivative controller has a predicting action by extrapolating the error using a tangent to the error curve. The derivative factor is the least understood and used of the three factors. In fact, a majority of PID loops in the real world are really just PI loops. A properly used derivative allows for more aggressive proportional and integral factors."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/derivative.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "heading",
+        "value": "PID Tuning Method"
+      },
+      {
+        "type": "text",
+        "value": "The determination of corresponding PID parameter values for getting the optimum performance from the process is called tuning. This is obviously a crucial part in case of all closed loop control systems. There are number of tuning methods have been introduced to obtain fast and acceptable performance."
+      },
+      {
+        "type": "subheading",
+        "value": "Trial and Error Method"
+      },
+      {
+        "type": "text",
+        "value": "This is the simple method of tuning a PID controller. Once we get the clear understanding of PID parameters, the trial and error method become relatively easy."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Set integral and derivative terms to zero first and then increase the proportional gain until the output of the control loop oscillates at a constant rate. This increase of proportional gain should be in such that response the system becomes faster provided it should not make system unstable.",
+          "Once the P-response is fast enough, set the integral term, so that the oscillations will be gradually reduced. Change this I-value until the steady state error is reduced, but it may increase overshoot.",
+          "Once P and I parameters have been set to a desired values with minimal steady state error, increase the derivative gain until the system reacts quickly to its set point. Increasing derivative term decreases the overshoot of the controller response."
+        ]
+      },
+      {
+        "type": "subheading",
+        "value": "Zeigler-Nichols Method"
+      },
+      {
+        "type": "text",
+        "value": "It is another popular method for tuning PID controllers. Ziegler and Nichols presented two classical methods for determining values of proportional gain, integral time and derivative time based on transient response characteristics of a given plant or system."
+      },
+      {
+        "type": "text",
+        "value": "First Method"
+      },
+      {
+        "type": "text",
+        "value": "Obtain a unit step response of the plant experimentally and it may look‘s’ shaped curve as shown in figure below. This method applies, if obtained response exhibit s-shaped curve for unit step input otherwise it cannot be applied. This curve can also be obtained by dynamic simulation of the plant."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/tuning_1.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "list",
+        "items": [
+          "Obtain two constants, delay time L and time constant T by drawing a tangent line at the inflection point of the s-shaped curve.",
+          "Set the parameters of Kp, Ti , and T<sub>d<sub> values from the table given below for three types of controllers."
+        ]
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/tuning_2.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "text",
+        "value": "Second Method"
+      },
+      {
+        "type": "list",
+        "items": [
+          "It is very similar to the trial and error method where integral and derivative terms are set to the zero, i.e., making Ti infinity and Td zero.",
+          "Increase the proportional gain such that the output exhibits sustained oscillations. If the system does not produce sustained oscillations then this method cannot be applied. The gain at which sustained oscillations produced is called as critical gain."
+        ]
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/tuning_3.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "text",
+        "value": "Once the sustain oscillations are produced, set the values of Ti and Td as per the given table for P, PI and PID controllers based on critical gain and critical period."
+      },
+      {
+        "type": "image",
+        "src": "/images/handbook/images/tuning_4.png",
+        "alt": "Image",
+        "caption": ""
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "https://www.youtube.com/watch?v=3yU2k8R9JeU&t=308s"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lqr-controller",
+    "title": "Linear Quadratic Regulator (LQR)",
+    "category": "automation",
+    "excerpt": "LQR is an optimal control technique that minimizes a quadratic cost function for linear systems.",
+    "subcategory": "Control Theory",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Linear-Quadratic Regulator(LQR) Controller"
+      },
+      {
+        "type": "text",
+        "value": "The theory of optimal control is concerned with operating a dynamic system at minimum cost. The case where the system dynamics are described by a set of linear differential equations and the cost is described by a quadratic function is called the LQ problem. One of the main results in the theory is that the solution is provided by the linear–quadratic regulator (LQR)."
+      },
+      {
+        "type": "text",
+        "value": "The settings of a (regulating) controller governing either a machine or process (like an airplane or chemical reactor) are found by using a mathematical algorithm that minimizes a cost function with weighting factors needed to be supplied. A cost function is a function that maps an event or values of one or more variables onto a real number intuitively representing some \"cost\" associated with the event. The cost function is often defined as a sum of the deviations of key measurements, like altitude or process temperature, from their desired values. The algorithm thus finds those controller settings that minimize undesired deviations. The magnitude of the control action itself may also be included in the cost function."
+      },
+      {
+        "type": "heading",
+        "value": "Finite horizon LQR"
+      },
+      {
+        "type": "text",
+        "value": "For a continuous-time linear system, defined on $t \\epsilon [t_0,t_1]$ , described by: $\\dot{x} = Ax + Bu$"
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "Riccati differential equation",
+            "url": "https://en.wikipedia.org/wiki/Riccati_differential_equation"
+          }
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "https://www.youtube.com/watch?v=1_UobILf3cc&list=RDCMUCm5mt-A4w61lknZ9lCsZtBw&start_radio=1&t=7"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "value": "Linear Quadratic Gaussian (LQG) control theory"
+      },
+      {
+        "type": "text",
+        "value": "Here, Given a linear model of the plant in a statespace description, and assuming that the disturbance and measurement noise are Gaussian stochastic processes with known power spectral densities, the designer translates the design specifications into a quadratic performance criterion consisting of some state variables and control signal inputs. The object of design then is to minimize the performance criterion by using appropriate state or measurement feedback controllers while guaranteeing the closed-loop stability. When LQG controller problem is solved in a deterministic setting, known as an H2 optimal control problem, in which the H2 norm of a certain transfer function from an exogenous disturbance to a pertinent controlled output of a given plant is minimized by appropriate use of an internally stabilizing controller."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "https://www.youtube.com/watch?v=7OZVbqPQ2Zw"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "H∞ (i.e. \"H-infinity\") methods are used in control theory to synthesize controllers to achieve stabilization with guaranteed performance. To use H∞ methods, a control designer expresses the control problem as a mathematical optimization problem and then finds the controller that solves this optimization. H∞ techniques have the advantage over classical control techniques in that H∞ techniques are readily applicable to problems involving multivariate systems with cross-coupling between channels."
+      },
+      {
+        "type": "text",
+        "value": "Read this material from MIT Open Courseware to know about H∞ methods in more detail."
+      }
+    ]
+  },
+  {
+    "id": "mpc-controller",
+    "title": "Model Predictive Control (MPC)",
+    "category": "automation",
+    "excerpt": "MPC is an advanced control method that uses a model to predict future system behavior.",
+    "subcategory": "Control Theory",
+    "content": [
+      {
+        "type": "heading",
+        "value": "Model Based Controllers"
+      },
+      {
+        "type": "text",
+        "value": "Model-based control uses information about the dynamics of the system's structure and its behavior in time to obtain a better control result regarding stability and performance of the controlled system. Take the following simple example:"
+      },
+      {
+        "type": "text",
+        "value": "Let $\\frac{d^2x}{dt^2}= f(x)+u$"
+      },
+      {
+        "type": "text",
+        "value": "be the system to be controlled, where x - state vector, f(x) - nonlinear vector function, u - control vector. Suppose we have some estimation est(x) than we use a control law like $u = -est(x)+u_{st}$ where ust be some maybe linear PID control law $u_{st} = K_px + K_d\\frac{dx}{dt} + K_i\\int xdt$ So we get $\\frac{d^2x}{dt^2} = \\Delta f + K_px + K_d\\frac{dx}{dt} + K_i\\int xdt$ where $\\Delta f =f(x) - est(x)$ If the model uncertainties are small enough we get a linear system with a disturbance Delta f which can be stabilized using appropriate control gains Kp, Kd, KI. Above given is just an example of model based controller in real life model based controller are way more complex than this."
+      },
+      {
+        "type": "text",
+        "value": "Model Predictive Control(MPC) is the most widely known model based controller. Model Predictive Controllers rely on the dynamic models of the process, most often linear empirical models obtained by system identification."
+      },
+      {
+        "type": "text",
+        "value": "Model predictive control offers several important advantages:"
+      },
+      {
+        "type": "text",
+        "value": "(1) the process model captures the dynamic and static interactions between input, output, and disturbance variables,"
+      },
+      {
+        "type": "text",
+        "value": "(2) constraints on inputs and outputs are considered in a systematic manner,"
+      },
+      {
+        "type": "text",
+        "value": "(3) the control calculations can be coordinated with the calculation of optimum set points, and"
+      },
+      {
+        "type": "text",
+        "value": "(4) accurate model predictions can provide early warnings of potential problems."
+      },
+      {
+        "type": "text",
+        "value": "The mathematics and concepts involved in MPC are a bit complex and require a decent understanding of mathematics of control theory."
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "http://folk.ntnu.no/skoge/vgprosessregulering/papers-pensum/seborg-c20ModelPredictiveControl.pdf"
+          }
+        ]
+      },
+      {
+        "type": "resources",
+        "items": [
+          {
+            "name": "this",
+            "url": "https://www.youtube.com/watch?v=YwodGM2eoy4"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "value": "Some of the other resources you should check to understand control theory and various controllers in more detail are:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Control Bootcamp playlist by Steve Brunton",
+          "Control Systems Lectures by Brian Douglas",
+          "Control of Mobile Robots course by Georgia Tech University on Coursera",
+          "Modern Robotics - Mechanical, Planning and Control by Kevin.M.Lynch and Frank.C.Park",
+          "MIT Courseware Control Theory Notes"
+        ]
+      }
+    ]
+  }
+]

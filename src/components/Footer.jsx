@@ -40,10 +40,10 @@ const Footer = () => {
                                 <h4 className="font-bold text-lg text-gray-800 dark:text-gray-200">Quick Links</h4>
                                 <div className="flex flex-wrap justify-center gap-6">
                                     <Link to="/" className="sitemap-link">Home</Link>
-                                    <Link to="/about" className="sitemap-link">About</Link>
                                     <Link to="/projects" className="sitemap-link">Projects</Link>
                                     <Link to="/events" className="sitemap-link">Events</Link>
-                                    <Link to="/sitemap" className="sitemap-link font-medium text-blue-500 hover:text-blue-400">Sitemap</Link>
+                                    <Link to="/about" className="sitemap-link">About Us</Link>
+                                    <Link to="/about#contact" className="sitemap-link font-medium text-blue-500 hover:text-blue-400">Contact Us</Link>
                                 </div>
                             </div>
 
@@ -56,16 +56,16 @@ const Footer = () => {
                                 
                                 <div className="flex items-center justify-center md:justify-end">
                                     <div className="flex gap-4">
-                                        <a href="https://github.com/ERC-BPGC" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-xl">
+                                        <a href="https://github.com/ERC-BPGC" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:opacity-70 transition-opacity text-xl">
                                             <FaGithub />
                                         </a>
-                                        <a href="https://in.linkedin.com/company/electronics-robotics-club-bits-goa" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-blue-500 transition-colors text-xl">
+                                        <a href="https://in.linkedin.com/company/electronics-robotics-club-bits-goa" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:opacity-70 transition-opacity text-xl">
                                             <FaLinkedin />
                                         </a>
-                                        <a href="https://www.instagram.com/erc_bitsgoa/" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-pink-500 transition-colors text-xl">
+                                        <a href="https://www.instagram.com/erc_bitsgoa/" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:opacity-70 transition-opacity text-xl">
                                             <FaInstagram />
                                         </a>
-                                        <a href="https://twitter.com/erc_bpgc" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-blue-400 transition-colors text-xl">
+                                        <a href="https://twitter.com/erc_bpgc" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:opacity-70 transition-opacity text-xl">
                                             <FaTwitter />
                                         </a>
                                     </div>
