@@ -70,23 +70,25 @@
         ],
         "editions": [
             {
-                "year": 2024,
-                "problemStatementLink": "https://docs.google.com/document/d/1XoXo3bY7y3b6F2F1z5Jt1Q9K2ZV8e9H5/edit?usp=sharing&ouid=115234567890123456789&rtpof=true&sd=true",
-                "participants": 40,
+                "year": 2025,
+                "problemStatementLink": "https://github.com/ERC-BPGC/ERC-hackathon-2025/blob/main/ROS2%20Robotics%20Hackathon_%20Warehouse%20Automation%20Quest.pdf",
+                "participants": 72,
                 "leaderboard": [
-                    { "rank": 1, "teamName": "Team Name", "college": "College Name", "score": 0 },
-                    { "rank": 2, "teamName": "Team Name", "college": "College Name", "score": 0 },
-                    { "rank": 3, "teamName": "Team Name", "college": "College Name", "score": 0 }
+                    { "category": "Overall", "teamName": "Autonomix", "college": "BITS Goa"},
+                    { "category": "Automation", "teamName": "RoboTitans", "college": "Vidyalankar Institute of Technology"},
+                    { "category": "Electrical", "teamName": "Coconut", "college": "BITS Goa"},
+                    { "category": "Mechanical", "teamName": "Autonomix", "college": "BITS Goa"}
                 ]
             },
             {
-                "year": 2023,
-                "problemStatementLink": "",
-                "participants": 10,
+                "year": 2024,
+                "problemStatementLink": "https://github.com/ERC-BPGC/ERC-hackathon-2024/blob/main/erc_hackathon_24.pdf",
+                "participants": 87,
                 "leaderboard": [
-                    { "rank": 1, "teamName": "Team Name", "college": "College Name", "score": 0 },
-                    { "rank": 2, "teamName": "Team Name", "college": "College Name", "score": 0 },
-                    { "rank": 3, "teamName": "Team Name", "college": "College Name", "score": 0 }
+                    { "category": "Overall", "teamName": "MARS", "college": "Thapar Institute of Engineering and Technology"},
+                    { "category": "Automation", "teamName": "MARS", "college": "Thapar Institute of Engineering and Technology"},
+                    { "category": "Electrical", "teamName": "Incognito Tabs", "college": "BITS Goa"},
+                    { "category": "Mechanical", "teamName": "MARS", "college": "Thapar Institute of Engineering and Technology"}
                 ]
             }
         ]
