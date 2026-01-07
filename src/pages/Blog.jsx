@@ -66,12 +66,12 @@ const Blog = () => {
                 </motion.div>
 
                 <div className="flex flex-col lg:flex-row gap-12">
-                    {/* Left Sidebar - Filters */}
+                    {/* Left Sidebar - Filters - Hidden on mobile */}
                     <motion.aside
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="lg:w-64 flex-shrink-0"
+                        className="hidden lg:block lg:w-64 flex-shrink-0"
                     >
                         <div className="sticky top-28">
                             <h2 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-4 tracking-wider">

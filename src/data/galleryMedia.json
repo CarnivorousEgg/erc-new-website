@@ -167,6 +167,15 @@
                 "description": "Group photo with event participants",
                 "height": 350,
                 "orientation": "horizontal"
+            },
+            {
+                "id": "open-day-10",
+                "img": "/images/events/open-day/WhatsApp%20Image%202026-01-07%20at%207.13.07%20PM.jpeg",
+                "type": "image",
+                "title": "WhatsApp Image 2026 01 07 at 7.13.07 PM",
+                "description": "Recent Open Day event showcase",
+                "height": 350,
+                "orientation": "horizontal"
             }
         ],
         "qstp": [],
@@ -395,9 +404,9 @@
                 "orientation": "horizontal"
             }
         ],
-        "choubot": [
+        "chotubot": [
             {
-                "id": "choubot-1",
+                "id": "chotubot-1",
                 "img": "/images/projects/choubot/cover.JPG",
                 "type": "image",
                 "title": "cover",
@@ -406,7 +415,7 @@
                 "orientation": "horizontal"
             },
             {
-                "id": "choubot-2",
+                "id": "chotubot-2",
                 "img": "/images/projects/choubot/IMG_7653.JPG",
                 "type": "image",
                 "title": "IMG 7653",
@@ -415,7 +424,7 @@
                 "orientation": "horizontal"
             },
             {
-                "id": "choubot-3",
+                "id": "chotubot-3",
                 "img": "/images/projects/choubot/IMG_7654.JPG",
                 "type": "image",
                 "title": "IMG 7654",
@@ -424,7 +433,7 @@
                 "orientation": "horizontal"
             },
             {
-                "id": "choubot-4",
+                "id": "chotubot-4",
                 "img": "/images/projects/choubot/IMG_7656.JPG",
                 "type": "image",
                 "title": "IMG 7656",
@@ -433,7 +442,7 @@
                 "orientation": "horizontal"
             },
             {
-                "id": "choubot-5",
+                "id": "chotubot-5",
                 "img": "/images/projects/choubot/IMG_7657.JPG",
                 "type": "image",
                 "title": "IMG 7657",
@@ -654,7 +663,7 @@
         "quadruped": [
             {
                 "id": "quadruped-1",
-                "img": "/images/projects/quadruped/cover.png",
+                "img": "/images/projects/quadruped/cover.jpeg",
                 "type": "image",
                 "title": "cover",
                 "description": "Quadruped - 12 DoF four-legged robot",
@@ -669,6 +678,24 @@
                 "description": "Quadruped motor assembly",
                 "height": 650,
                 "orientation": "vertical"
+            },
+            {
+                "id": "quadruped-3",
+                "img": "/images/projects/quadruped/WhatsApp%20Image%202026-01-07%20at%207.13.07%20PM%20(1).jpeg",
+                "type": "image",
+                "title": "Quadruped Robot",
+                "description": "Latest quadruped robot build",
+                "height": 400,
+                "orientation": "horizontal"
+            },
+            {
+                "id": "quadruped-4",
+                "img": "/images/projects/quadruped/WhatsApp%20Video%202026-01-07%20at%207.13.04%20PM.mp4",
+                "type": "video",
+                "title": "Quadruped in Action",
+                "description": "Quadruped robot walking demonstration",
+                "height": 350,
+                "orientation": "horizontal"
             }
         ],
         "quadruped-bhaagwati": [
@@ -892,7 +919,17 @@
                 "orientation": "horizontal"
             }
         ],
-        "swarm-drones": [],
+        "swarm-drones": [
+            {
+                "id": "swarm-drones-1",
+                "img": "/images/projects/swarm-drones/tof_sensor_reading.mkv",
+                "type": "video",
+                "title": "ToF Sensor Reading",
+                "description": "Time-of-Flight sensor reading demonstration",
+                "height": 350,
+                "orientation": "horizontal"
+            }
+        ],
         "swarmbots": [
             {
                 "id": "swarmbots-1",

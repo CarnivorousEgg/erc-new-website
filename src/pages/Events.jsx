@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import eventsData from '../data/events.json';
 import galleryMedia from '../data/galleryMedia.json';
+import BackToTop from '../components/BackToTop';
 
 // Helper function to get a thumbnail image for an event
 const getEventThumbnail = (event) => {
@@ -31,6 +32,7 @@ const Events = () => {
             transition={{ duration: 0.5 }}
             className="min-h-screen pt-24 px-4 container mx-auto pb-20"
         >
+            <BackToTop />
             <header className="text-center mb-16">
                 <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
                     Events

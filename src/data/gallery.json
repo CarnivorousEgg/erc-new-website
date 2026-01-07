@@ -69,10 +69,10 @@
             "link": "/projects/carborone"
         },
         {
-            "name": "Choubot",
+            "name": "Chotubot",
             "image": "/images/projects/choubot/cover.JPG",
             "description": "",
-            "link": "/projects/choubot"
+            "link": "/projects/chotubot"
         },
         {
             "name": "Cubli",
@@ -136,7 +136,7 @@
         },
         {
             "name": "Quadruped",
-            "image": "/images/projects/quadruped/cover.png",
+            "image": "/images/projects/quadruped/cover.jpeg",
             "description": "Quadruped - 12 DoF four-legged robot",
             "link": "/projects/quadruped"
         },

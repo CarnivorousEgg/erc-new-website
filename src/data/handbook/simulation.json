@@ -54,7 +54,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "here",
+            "name": "Gazebo Installation Guide",
             "url": "http://gazebosim.org/tutorials?cat=install"
           }
         ]

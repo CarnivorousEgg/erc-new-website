@@ -1,8 +1,77 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import rehypeHighlight from 'rehype-highlight';
+import 'katex/dist/katex.min.css';
 import handbookData from '../data/handbook/index.js';
 import { FaChevronDown, FaChevronRight, FaExternalLinkAlt } from 'react-icons/fa';
+
+// Base URL for handbook images from GitHub pages
+const HANDBOOK_GITHUB_BASE = 'https://erc-bpgc.github.io/handbook';
+
+// Category to section path mapping for GitHub fallback
+const CATEGORY_SECTION_MAP = {
+    'automation': {
+        'ROS': 'automation/ROS/images',
+        'PathPlanners': 'automation/PathPlanners/images',
+        'ControlTheory': 'automation/ControlTheory/images',
+        'default': 'automation/images'
+    },
+    'electronics': {
+        'Development_Boards': 'electronics/Development_Boards/images',
+        'Sensors': 'electronics/Sensors/images',
+        'Modules': 'electronics/Modules/images',
+        'Motors': 'electronics/Motors/images',
+        'Basic_Electronic_Components': 'electronics/Basic_Electronic_Components/images',
+        'default': 'electronics/Development_Boards/images'
+    },
+    'mechanical': {
+        'default': 'mechanical/images'
+    },
+    'simulation': {
+        'gazebo': 'simulation/gazebo/images',
+        'stdr': 'simulation/stdr/images',
+        'default': 'simulation/images'
+    }
+};
+
+// Helper function to resolve handbook image URLs
+const resolveHandbookImageUrl = (src, category) => {
+    if (!src) return '';
+    
+    // If it's already a full URL, return as-is
+    if (src.startsWith('http://') || src.startsWith('https://')) {
+        return src;
+    }
+    
+    // Return local path directly - it's now corrected in JSON files
+    return src;
+};
+
+// Get GitHub fallback URL for an image
+const getGitHubFallbackUrl = (src, category) => {
+    if (!src) return null;
+    
+    const filename = src.split('/').pop();
+    const categoryMap = CATEGORY_SECTION_MAP[category] || CATEGORY_SECTION_MAP['electronics'];
+    
+    // Try to determine the section from filename
+    let section = 'default';
+    if (filename.includes('lidar')) section = 'Sensors';
+    else if (filename.includes('arduino') || filename.includes('esp') || filename.includes('stm') || filename.includes('pyboard') || filename.includes('bluepill')) section = 'Development_Boards';
+    else if (filename.includes('breadboard') || filename.includes('bb')) section = 'Basic_Electronic_Components';
+    else if (filename.includes('servo')) section = 'Motors';
+    else if (filename.includes('wifi')) section = 'Modules';
+    else if (filename.includes('gazebo') || filename.includes('rviz')) section = 'gazebo';
+    else if (filename.includes('stdr')) section = 'stdr';
+    
+    const path = categoryMap[section] || categoryMap['default'];
+    return `${HANDBOOK_GITHUB_BASE}/${path}/${filename}`;
+};
 
 const Handbook = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -11,6 +80,7 @@ const Handbook = () => {
     const [expandedSubcategories, setExpandedSubcategories] = useState({});
     const [searchQuery, setSearchQuery] = useState('');
     const location = useLocation();
+    const navigate = useNavigate();
 
     const { categories, articles } = handbookData;
 
@@ -23,12 +93,33 @@ const Handbook = () => {
         setExpandedCategories(expanded);
     }, [categories]);
 
-    // Set first article as selected by default
+    // Handle URL hash for article selection (e.g., /handbook#ros-setup)
     useEffect(() => {
+        const hash = location.hash.replace('#', '');
+        if (hash) {
+            const article = articles.find(a => a.id === hash);
+            if (article) {
+                setSelectedArticle(article);
+                // Expand the relevant category and subcategory
+                setExpandedCategories(prev => ({
+                    ...prev,
+                    [article.category]: true
+                }));
+                if (article.subcategory) {
+                    const key = `${article.category}-${article.subcategory}`;
+                    setExpandedSubcategories(prev => ({
+                        ...prev,
+                        [key]: true
+                    }));
+                }
+                return;
+            }
+        }
+        // Set first article as selected by default
         if (!selectedArticle && articles.length > 0) {
             setSelectedArticle(articles[0]);
         }
-    }, [articles, selectedArticle]);
+    }, [location.hash, articles]);
 
     // Group articles by category and subcategory
     const articlesByCategory = useMemo(() => {
@@ -91,6 +182,10 @@ const Handbook = () => {
 
     const handleArticleClick = (article) => {
         setSelectedArticle(article);
+        // Update URL hash for SEO and direct linking
+        navigate(`/handbook#${article.id}`, { replace: true });
+        // Scroll to top when changing articles
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     return (
@@ -320,12 +415,26 @@ const Handbook = () => {
                                                     );
                                                 case 'text':
                                                     return (
-                                                        <p 
+                                                        <div 
                                                             key={index} 
-                                                            className="text-gray-600 dark:text-gray-400 leading-relaxed whitespace-pre-line"
+                                                            className="prose prose-lg dark:prose-invert max-w-none
+                                                                prose-p:text-gray-600 dark:prose-p:text-gray-400 prose-p:leading-relaxed prose-p:my-2
+                                                                prose-strong:text-black dark:prose-strong:text-white
+                                                                prose-code:text-blue-600 dark:prose-code:text-blue-400
+                                                                prose-code:bg-gray-100 dark:prose-code:bg-gray-800
+                                                                prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+                                                                prose-a:text-blue-600 dark:prose-a:text-blue-400
+                                                                prose-ul:text-gray-600 dark:prose-ul:text-gray-400
+                                                                prose-ol:text-gray-600 dark:prose-ol:text-gray-400
+                                                            "
                                                         >
-                                                            {block.value}
-                                                        </p>
+                                                            <ReactMarkdown
+                                                                remarkPlugins={[remarkGfm, remarkMath]}
+                                                                rehypePlugins={[rehypeKatex, rehypeHighlight]}
+                                                            >
+                                                                {block.value}
+                                                            </ReactMarkdown>
+                                                        </div>
                                                     );
                                                 case 'code':
                                                     return (
@@ -341,13 +450,24 @@ const Handbook = () => {
                                                         </div>
                                                     );
                                                 case 'image':
+                                                    const imgSrc = resolveHandbookImageUrl(block.src, selectedArticle?.category);
+                                                    const fallbackSrc = getGitHubFallbackUrl(block.src, selectedArticle?.category);
                                                     return (
                                                         <figure key={index} className="my-6">
                                                             <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
                                                                 <img 
-                                                                    src={block.src} 
+                                                                    src={imgSrc} 
                                                                     alt={block.alt || block.caption || 'Handbook image'} 
                                                                     className="w-full h-auto max-h-[500px] object-contain bg-white dark:bg-gray-800"
+                                                                    onError={(e) => {
+                                                                        // Try GitHub fallback first
+                                                                        if (fallbackSrc && e.target.src !== fallbackSrc) {
+                                                                            e.target.src = fallbackSrc;
+                                                                        } else {
+                                                                            // Hide broken images
+                                                                            e.target.style.display = 'none';
+                                                                        }
+                                                                    }}
                                                                 />
                                                             </div>
                                                             {block.caption && (

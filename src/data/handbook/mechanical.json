@@ -20,29 +20,20 @@
       {
         "type": "text",
         "value": "Mechanical design also involves solving the kinematics and dynamics equation of the robot, which are essential for peforming any task with robots."
-      }
-    ]
-  },
-  {
-    "id": "mechanical-101",
-    "title": "Mechanical 101",
-    "category": "mechanical",
-    "excerpt": "Basic mechanical concepts for robotics.",
-    "subcategory": "Basics",
-    "content": [
+      },
       {
         "type": "heading",
-        "value": "Mechanical 101"
+        "value": "Resources"
+      },
+      {
+        "type": "text",
+        "value": "This document covers the fundamental mechanical concepts needed for robotics. Click the link below to access the complete guide."
       },
       {
         "type": "resources",
         "items": [
           {
-            "name": "Aasim Sayyed",
-            "url": "https://www.linkedin.com/in/aasim-sayyed-a966b423a/?originalSubdomain=in"
-          },
-          {
-            "name": "here",
+            "name": "Mechanical 101 Guide (Google Drive)",
             "url": "https://drive.google.com/file/d/1TSnQcirmtd4-c1_goBCdhXNydBE2Uf8y/view?usp=drive_link"
           }
         ]
@@ -54,7 +45,6 @@
     "title": "Gears",
     "category": "mechanical",
     "excerpt": "Comprehensive guide to gears - types, advantages, and applications in robotics.",
-    "subcategory": "Components",
     "content": [
       {
         "type": "heading",
@@ -454,7 +444,7 @@
       },
       {
         "type": "text",
-        "value": "$$ \\omega(R + d) = V_R\\] \\[\\omega(R - d) = V_L $$"
+        "value": "$$\\omega(R + d) = V_R$$\n\n$$\\omega(R - d) = V_L$$"
       },
       {
         "type": "text",
@@ -749,7 +739,7 @@
             "url": "https://www.youtube.com/watch?v=FiKEAdednuo"
           },
           {
-            "name": "here",
+            "name": "Denavit-Hartenberg Notation Tutorial",
             "url": "https://robotacademy.net.au/lesson/denavit-hartenberg-notation/"
           }
         ]

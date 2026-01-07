@@ -27,25 +27,32 @@ const Projects = () => {
 
     // Filter projects based on selected tab
     const getSortedProjects = () => {
+        let filtered;
         if (filter === 'research') {
             // All research projects - ongoing first, then completed
             const ongoing = projectsData.filter(p => p.type === 'research' && p.category === 'ongoing');
             const completed = projectsData.filter(p => p.type === 'research' && p.category === 'completed');
-            return [...ongoing, ...completed];
-        }
-        if (filter === 'mini') {
+            filtered = [...ongoing, ...completed];
+        } else if (filter === 'mini') {
             // All mini projects
-            return projectsData.filter(p => p.type === 'mini');
-        }
-        if (filter === 'ongoing') {
+            filtered = projectsData.filter(p => p.type === 'mini');
+        } else if (filter === 'ongoing') {
             // All ongoing projects (both research and mini)
-            return projectsData.filter(p => p.category === 'ongoing');
-        }
-        if (filter === 'completed') {
+            filtered = projectsData.filter(p => p.category === 'ongoing');
+        } else if (filter === 'completed') {
             // All completed projects (both research and mini)
-            return projectsData.filter(p => p.category === 'completed');
+            filtered = projectsData.filter(p => p.category === 'completed');
+        } else {
+            filtered = [...projectsData];
         }
-        return projectsData;
+        
+        // Sort by date (most recent first) - projects without dates go to the end
+        return filtered.sort((a, b) => {
+            if (!a.date && !b.date) return 0;
+            if (!a.date) return 1;
+            if (!b.date) return -1;
+            return new Date(b.date) - new Date(a.date);
+        });
     };
 
     const filteredProjects = getSortedProjects();
@@ -153,7 +160,10 @@ const Projects = () => {
                                             })()}
                                         </div>
                                     </div>
-                                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{project.description}</p>
+                                    {project.date && (
+                                        <p className="text-sm text-gray-500 dark:text-gray-500 mb-2">{project.date}</p>
+                                    )}
+                                    <p className="hidden md:block text-gray-600 dark:text-gray-400 text-sm mb-4">{project.description}</p>
                                 </div>
                             </Link>
                         </motion.div>

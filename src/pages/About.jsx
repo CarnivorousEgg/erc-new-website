@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ChromaGrid from '../components/ChromaGrid';
@@ -7,8 +7,7 @@ import AlumniTimeline from '../components/AlumniTimeline';
 import BackToTop from '../components/BackToTop';
 import CurveDivider from '../components/CurveDivider';
 import teamData from '../data/team.json';
-import newsData from '../data/news.json';
-import { FaLinkedin, FaInstagram, FaEnvelope, FaTwitter, FaCamera } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaEnvelope, FaTwitter, FaCamera, FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { cn } from '../utils/cn';
 import '../components/ContactAnimations.css';
@@ -45,7 +44,6 @@ const tabs = [
     { id: 'story', label: 'Our Story' },
     { id: 'team', label: 'Current Team' },
     { id: 'alumni', label: 'Alumni' },
-    { id: 'news', label: 'News' },
     { id: 'contact', label: 'Contact Us' }
 ];
 
@@ -54,6 +52,7 @@ const About = () => {
     const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState('story');
     const [startCounters, setStartCounters] = useState(false);
+    const countersRef = useRef(null);
 
     const years = useCountUp(15, 2000, startCounters);
     const projects = useCountUp(20, 2000, startCounters);
@@ -72,10 +71,27 @@ const About = () => {
         }
     }, [location.hash]);
 
+    // Use IntersectionObserver to start counters when scrolled into view
     useEffect(() => {
-        if (activeTab === 'story') {
-            setStartCounters(true);
+        if (activeTab !== 'story') return;
+        
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setStartCounters(true);
+                        observer.disconnect();
+                    }
+                });
+            },
+            { threshold: 0.3 }
+        );
+        
+        if (countersRef.current) {
+            observer.observe(countersRef.current);
         }
+        
+        return () => observer.disconnect();
     }, [activeTab]);
 
     // Handle tab change and update URL hash
@@ -146,7 +162,7 @@ const About = () => {
                             </div>
 
                             {/* Stats Counters */}
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div ref={countersRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                 <div className="p-6 rounded-xl bg-gray-100 dark:bg-white/5 border border-gray-200/60 dark:border-white/10">
                                     <h3 className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">{years}+</h3>
                                     <p className="text-gray-600 dark:text-gray-400">Years of Innovation</p>
@@ -183,38 +199,6 @@ const About = () => {
                     {activeTab === 'alumni' && (
                         <section className="w-full overflow-hidden">
                             <AlumniTimeline alumni={teamData.alumni} />
-                        </section>
-                    )}
-
-                    {activeTab === 'news' && (
-                        <section className="w-full max-w-4xl mx-auto px-4">
-                            <div className="text-center mb-12">
-                                <h2 className="text-3xl md:text-4xl font-bold mb-4">News</h2>
-                                <p className="text-gray-600 dark:text-gray-400">
-                                    Latest updates from our members
-                                </p>
-                            </div>
-                            
-                            <div className="space-y-4">
-                                {newsData.map((item, index) => (
-                                    <motion.div
-                                        key={item.id}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: index * 0.05 }}
-                                        className="flex gap-4 md:gap-6 p-4 md:p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                                    >
-                                        <div className="flex-shrink-0 w-24 md:w-28">
-                                            <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
-                                                [{item.date}]
-                                            </span>
-                                        </div>
-                                        <p className="text-gray-700 dark:text-gray-300 flex-1">
-                                            {item.content}
-                                        </p>
-                                    </motion.div>
-                                ))}
-                            </div>
                         </section>
                     )}
 
@@ -315,7 +299,7 @@ const About = () => {
                                 <div>
                                     <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 sm:hidden">Send us an email</p>
                                     <a
-                                        href="mailto:erc@goa.bits-pilani.ac.in"
+                                        href="mailto:bitsg.erc@gmail.com"
                                         className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-gray-900/30 dark:hover:shadow-white/20 overflow-hidden"
                                     >
                                         <div className="flex justify-between items-center relative">
@@ -328,6 +312,31 @@ const About = () => {
                                             </div>
                                             <span className="text-sm md:text-base text-white/80 dark:text-gray-600 group-hover:text-white dark:group-hover:text-gray-900 transition-all duration-300 ease-linear hidden sm:flex items-center gap-2 md:group-hover:opacity-0 md:group-hover:duration-[4100ms]">
                                                 Send us an email
+                                                <span className="text-lg md:text-xl">→</span>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                {/* GitHub Bar */}
+                                <div>
+                                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-2 sm:hidden">Check out our code</p>
+                                    <a
+                                        href="https://github.com/ERC-BPGC"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group block w-full py-6 md:py-10 px-6 md:px-10 rounded-2xl bg-gradient-to-r from-gray-800 to-gray-700 hover:from-gray-700 hover:to-gray-600 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-gray-800/30"
+                                    >
+                                        <div className="flex justify-between items-center">
+                                            <div className="flex items-center gap-4 md:gap-6">
+                                                {/* GitHub icon with spin animation */}
+                                                <FaGithub className="text-3xl md:text-5xl text-white transition-all duration-500 md:group-hover:rotate-[360deg] md:group-hover:scale-110" />
+                                                <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight">
+                                                    The Hub
+                                                </span>
+                                            </div>
+                                            <span className="text-sm md:text-base text-white/80 group-hover:text-white group-hover:translate-x-2 transition-all duration-300 hidden sm:flex items-center gap-2">
+                                                Check out our code
                                                 <span className="text-lg md:text-xl">→</span>
                                             </span>
                                         </div>

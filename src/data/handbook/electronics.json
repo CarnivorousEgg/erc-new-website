@@ -38,7 +38,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "This",
+            "name": "Arduino Video Tutorial",
             "url": "https://www.youtube.com/watch?v=CqrQmQqpHXc"
           },
           {
@@ -105,7 +105,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "here",
+            "name": "Blink Example Code",
             "url": "https://github.com/schacon/blink/blob/master/blink.ino"
           }
         ]
@@ -218,7 +218,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "here",
+            "name": "AnalogReadSerial Example",
             "url": "https://create.arduino.cc/example/builtin/01.Basics%5CAnalogReadSerial/AnalogReadSerial/preview"
           }
         ]
@@ -395,7 +395,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "here",
+            "name": "ESP-IDF Documentation",
             "url": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/index.html"
           }
         ]
@@ -408,7 +408,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "ESP32 Arduino IDE Setup Guide",
             "url": "https://www.electronicshub.org/esp32-arduino-ide/"
           }
         ]
@@ -427,7 +427,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "here",
+            "name": "ESP32 Introduction Tutorial",
             "url": "https://dronebotworkshop.com/esp32-intro/ "
           }
         ]
@@ -467,7 +467,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "This",
+            "name": "STM32 Introduction Video",
             "url": "https://www.youtube.com/watch?v=EaZuKRSvwdo"
           }
         ]
@@ -529,7 +529,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "This",
+            "name": "STM32 Blue Pill Arduino Programming Guide",
             "url": "https://maker.pro/arduino/tutorial/how-to-program-the-stm32-blue-pill-with-arduino-ide"
           }
         ]
@@ -542,7 +542,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "STM32 Keil UVision Programming Guide",
             "url": "https://www.electronicshub.org/program-stm32f103c8t6-using-keil-uvision/"
           }
         ]
@@ -1082,11 +1082,11 @@
         "type": "resources",
         "items": [
           {
-            "name": "1",
+            "name": "Servo Motor Basics",
             "url": "https://realpars.com/servo-motor/"
           },
           {
-            "name": "2",
+            "name": "Servo Motor Types and Applications",
             "url": "https://www.efxkits.us/different-types-servo-motor-applications/"
           }
         ]

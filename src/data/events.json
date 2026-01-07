@@ -78,6 +78,15 @@
                     { "category": "Automation", "teamName": "RoboTitans", "college": "Vidyalankar Institute of Technology"},
                     { "category": "Electrical", "teamName": "Coconut", "college": "BITS Goa"},
                     { "category": "Mechanical", "teamName": "Autonomix", "college": "BITS Goa"}
+                ],
+                "submissions": [
+                    { "teamName": "ROBOTITANS", "submissionLink": "https://github.com/Rudrayani-cell/Robotic-ROS-Team---ROBOTITANS-/tree/main"},
+                    { "teamName": "VRAR", "submissionLink": "https://github.com/muthupattan006/erc_ros_hackathon"},
+                    { "teamName": "Kalman but not kalm", "submissionLink": "https://github.com/EvilGenius1010/erc_hackathon_main.git"},
+                    { "teamName": "ROS-Fusion Kumar Catia", "submissionLink": "https://github.com/TheMan005/ROS-FUSION-KUMAR-CATIA.git"},
+                    { "teamName": "Coconut", "submissionLink": "https://github.com/Ishan-Bhartiya/ERC-Hackathon-Coconut"},
+                    { "teamName": "Autonomix", "submissionLink": "https://github.com/NishVerse/Autonomix"},
+                    { "teamName": "ROBO FORGE / Unemployment Forge", "submissionLink": "https://github.com/J-Harshvardhan/Hackathon-Roboforge_Unemployment_forge"}
                 ]
             },
             {
@@ -89,6 +98,14 @@
                     { "category": "Automation", "teamName": "MARS", "college": "Thapar Institute of Engineering and Technology"},
                     { "category": "Electrical", "teamName": "Incognito Tabs", "college": "BITS Goa"},
                     { "category": "Mechanical", "teamName": "MARS", "college": "Thapar Institute of Engineering and Technology"}
+                ],
+                "submissions": [
+                    { "teamName": "ARC (BPHC)", "submissionLink": "https://github.com/madhavramini/surveillance-repair-bot"},
+                    { "teamName": "Yadu's R0b0ni99as", "submissionLink": "https://github.com/patelkrish5090/Yadu-s-R0b0ni99as"},
+                    { "teamName": "MARS", "submissionLink": "https://github.com/NishitMittal2004/Team_MARS_BITS_Hackathon/tree/master"},
+                    { "teamName": "Incognito Tabs", "submissionLink": "https://github.com/CarnivorousEgg/IncognitoTabs"},
+                    { "teamName": "RavenClaw", "submissionLink": "https://github.com/HRIDAY-SHINDE/RavenClaw"},
+                    { "teamName": "Batti Gul Meter Chalu", "submissionLink": "https://github.com/Bh8723/Batti-Gul-Meter-Chalu"}
                 ]
             }
         ]

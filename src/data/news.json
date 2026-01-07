@@ -1,5 +1,9 @@
 [
     {
+        "id": "dec-2025-2",
+        "date": "Dec 2025",
+        "content": "Harsh Jain is joining Schlumberger as a Design Engineer"
+    },{
         "id": "dec-2025-1",
         "date": "Dec 2025",
         "content": "Ritwik Sharma will be a student researcher at NUS, Singapore"
@@ -7,7 +11,7 @@
     {
         "id": "oct-2025-1",
         "date": "Oct 2025",
-        "content": "Ajinkya will be interning at"
+        "content": "Ajinkya will be interning at Guardian"
     },
     {
         "id": "aug-2025-2",
@@ -22,7 +26,7 @@
     {
         "id": "jun-2025-1",
         "date": "Jun 2025",
-        "content": "Parth Shah will be interning with Peppermint Robotics"
+        "content": "Parth Shah is interning with Peppermint Robotics"
     },
     {
         "id": "may-2025-1",

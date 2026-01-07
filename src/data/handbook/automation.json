@@ -59,11 +59,11 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "Ubuntu Dual Boot Installation Guide",
             "url": "https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/"
           },
           {
-            "name": "option",
+            "name": "Ubuntu Installation Video Tutorial",
             "url": "https://www.youtube.com/watch?v=IQIaDO9nR6Y&app=desktop"
           }
         ]
@@ -80,7 +80,7 @@
             "url": "https://www.virtualbox.org/"
           },
           {
-            "name": "here",
+            "name": "ROS VirtualBox Setup Guide (ETH Zurich)",
             "url": "https://ethz.ch/content/dam/ethz/special-interest/mavt/robotics-n-intelligent-systems/rsl-dam/ROS2020/CoursePreparation.pdf"
           }
         ]
@@ -93,7 +93,7 @@
             "url": "https://ubuntu.com/wsl"
           },
           {
-            "name": "here",
+            "name": "ROS on Windows WSL Guide",
             "url": "https://janbernloehr.de/2017/06/10/ros-windows"
           }
         ]
@@ -243,11 +243,11 @@
         "type": "resources",
         "items": [
           {
-            "name": "1",
+            "name": "ROS Graph Concepts Video Tutorial",
             "url": "https://www.youtube.com/watch?v=J1qT85pTW0w&feature=youtu.be"
           },
           {
-            "name": "2",
+            "name": "ROS Master and Nodes Video Tutorial",
             "url": "https://www.youtube.com/watch?v=UL1_Ue4rUWs"
           }
         ]
@@ -302,7 +302,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "here",
+            "name": "Catkin Conceptual Overview",
             "url": "http://wiki.ros.org/catkin/conceptual_overview"
           }
         ]
@@ -324,7 +324,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "ROS Workspace Creation Tutorial",
             "url": "http://wiki.ros.org/catkin/Tutorials/create_a_workspace"
           }
         ]
@@ -333,11 +333,11 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "ROS Creating Package Tutorial",
             "url": "http://wiki.ros.org/ROS/Tutorials/CreatingPackage"
           },
           {
-            "name": "this",
+            "name": "ROS Building Packages Tutorial",
             "url": "http://wiki.ros.org/ROS/Tutorials/BuildingPackages"
           }
         ]
@@ -350,11 +350,11 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "ROS Topics",
             "url": "http://wiki.ros.org/Topics"
           },
           {
-            "name": "this",
+            "name": "Creating Messages and Services",
             "url": "http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv"
           }
         ]
@@ -435,7 +435,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "here",
+            "name": "roscore Documentation",
             "url": "http://wiki.ros.org/roscore"
           }
         ]
@@ -488,7 +488,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "roslaunch Tutorials",
             "url": "http://wiki.ros.org/roslaunch/Tutorials"
           }
         ]
@@ -560,7 +560,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "rosparam Documentation",
             "url": "http://wiki.ros.org/rosparam"
           }
         ]
@@ -569,7 +569,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "rospy Parameter Server Guide",
             "url": "http://wiki.ros.org/rospy/Overview/Parameter%20Server"
           }
         ]
@@ -578,7 +578,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "roslaunch XML param Tag",
             "url": "http://wiki.ros.org/roslaunch/XML/param"
           }
         ]
@@ -587,11 +587,11 @@
         "type": "resources",
         "items": [
           {
-            "name": "1",
+            "name": "ROS Parameter Server Wiki",
             "url": "http://wiki.ros.org/Parameter%20Server"
           },
           {
-            "name": "2",
+            "name": "Clearpath ROS Parameter Guide",
             "url": "https://www.clearpathrobotics.com/assets/guides/kinetic/ros/ROS%20Parameter%20Server.html"
           },
           {
@@ -1489,7 +1489,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "Laplace Transform Guide",
             "url": "https://www.electrical4u.com/laplace-transformation/"
           }
         ]
@@ -1604,7 +1604,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "Types of Control Systems",
             "url": "https://www.electrical4u.com/types-of-systems-linear-and-non-linear-system/"
           }
         ]
@@ -1784,7 +1784,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "PID Tuning Video Tutorial",
             "url": "https://www.youtube.com/watch?v=3yU2k8R9JeU&t=308s"
           }
         ]
@@ -1831,7 +1831,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "LQR Control Video Tutorial",
             "url": "https://www.youtube.com/watch?v=1_UobILf3cc&list=RDCMUCm5mt-A4w61lknZ9lCsZtBw&start_radio=1&t=7"
           }
         ]
@@ -1848,7 +1848,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "LQG Control Video Tutorial",
             "url": "https://www.youtube.com/watch?v=7OZVbqPQ2Zw"
           }
         ]
@@ -1918,7 +1918,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "MPC Technical Paper",
             "url": "http://folk.ntnu.no/skoge/vgprosessregulering/papers-pensum/seborg-c20ModelPredictiveControl.pdf"
           }
         ]
@@ -1927,7 +1927,7 @@
         "type": "resources",
         "items": [
           {
-            "name": "this",
+            "name": "MPC Video Tutorial",
             "url": "https://www.youtube.com/watch?v=YwodGM2eoy4"
           }
         ]

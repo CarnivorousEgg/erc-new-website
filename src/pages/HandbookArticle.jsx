@@ -1,6 +1,12 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import rehypeHighlight from 'rehype-highlight';
+import 'katex/dist/katex.min.css';
 import handbookData from '../data/handbook/index.js';
 
 const HandbookArticle = () => {
@@ -95,11 +101,22 @@ const HandbookArticle = () => {
                     className="space-y-8"
                 >
                     {/* Main Content */}
-                    {article.content && (
-                        <div className="prose prose-lg dark:prose-invert max-w-none">
-                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-wrap">
+                    {article.content && !Array.isArray(article.content) && (
+                        <div className="prose prose-lg dark:prose-invert max-w-none
+                            prose-headings:text-black dark:prose-headings:text-white
+                            prose-p:text-gray-700 dark:prose-p:text-gray-300
+                            prose-strong:text-black dark:prose-strong:text-white
+                            prose-code:text-blue-600 dark:prose-code:text-blue-400
+                            prose-code:bg-gray-100 dark:prose-code:bg-gray-800
+                            prose-code:px-1 prose-code:py-0.5 prose-code:rounded
+                            prose-a:text-blue-600 dark:prose-a:text-blue-400
+                        ">
+                            <ReactMarkdown
+                                remarkPlugins={[remarkGfm, remarkMath]}
+                                rehypePlugins={[rehypeKatex, rehypeHighlight]}
+                            >
                                 {article.content}
-                            </p>
+                            </ReactMarkdown>
                         </div>
                     )}
 
@@ -110,9 +127,21 @@ const HandbookArticle = () => {
                                 {section.title}
                             </h2>
                             
-                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-wrap mb-4">
-                                {section.content}
-                            </p>
+                            <div className="prose prose-lg dark:prose-invert max-w-none mb-4
+                                prose-p:text-gray-700 dark:prose-p:text-gray-300
+                                prose-strong:text-black dark:prose-strong:text-white
+                                prose-code:text-blue-600 dark:prose-code:text-blue-400
+                                prose-code:bg-gray-100 dark:prose-code:bg-gray-800
+                                prose-code:px-1 prose-code:py-0.5 prose-code:rounded
+                                prose-a:text-blue-600 dark:prose-a:text-blue-400
+                            ">
+                                <ReactMarkdown
+                                    remarkPlugins={[remarkGfm, remarkMath]}
+                                    rehypePlugins={[rehypeKatex, rehypeHighlight]}
+                                >
+                                    {section.content}
+                                </ReactMarkdown>
+                            </div>
 
                             {/* Code Block */}
                             {section.code && (

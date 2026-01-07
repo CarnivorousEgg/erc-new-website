@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaEnvelope } from 'react-icons/fa';
 import './CloudDivider.css';
 
 const Footer = () => {
@@ -56,6 +56,9 @@ const Footer = () => {
                                 
                                 <div className="flex items-center justify-center md:justify-end">
                                     <div className="flex gap-4">
+                                        <a href="mailto:bitsg.erc@gmail.com" className="text-gray-500 dark:text-gray-400 hover:opacity-70 transition-opacity text-xl">
+                                            <FaEnvelope />
+                                        </a>
                                         <a href="https://github.com/ERC-BPGC" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:opacity-70 transition-opacity text-xl">
                                             <FaGithub />
                                         </a>

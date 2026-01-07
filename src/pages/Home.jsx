@@ -7,6 +7,7 @@ import SponsorsTicker from '../components/SponsorsTicker';
 import galleryData from '../data/gallery.json';
 import galleryMedia from '../data/galleryMedia.json';
 import sponsorsData from '../data/sponsors.json';
+import newsData from '../data/news.json';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -49,22 +50,48 @@ const Home = () => {
                 {/* Video Background - Cycles through Home-Videos */}
                 <div className="absolute inset-0">
                     <video
+                        key={currentVideoIndex}
                         ref={videoRef}
                         autoPlay
                         muted
                         playsInline
                         onEnded={handleVideoEnded}
                         className="w-full h-full object-cover"
-                        key={currentVideoIndex}
-                    >
-                        <source src={HOME_VIDEOS[currentVideoIndex]} type="video/mp4" />
-                    </video>
+                        src={HOME_VIDEOS[currentVideoIndex]}
+                    />
                     {/* Black overlay for text visibility */}
-                    <div className="absolute inset-0 bg-black/50"></div>
+                    <div className="absolute inset-0 bg-black/50 pointer-events-none"></div>
+                </div>
                     
-                    {/* Video indicator dots */}
-                    {HOME_VIDEOS.length > 1 && (
-                        <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+                {/* Video navigation arrows */}
+                {HOME_VIDEOS.length > 1 && (
+                    <>
+                        {/* Left Arrow - Minimalist */}
+                        <button
+                            onClick={() => {
+                                setCurrentVideoIndex((prev) => (prev - 1 + HOME_VIDEOS.length) % HOME_VIDEOS.length);
+                            }}
+                            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white transition-all duration-300 hover:scale-125"
+                            aria-label="Previous video"
+                        >
+                            <svg className="w-10 h-10 md:w-14 md:h-14 drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        {/* Right Arrow - Minimalist */}
+                        <button
+                            onClick={() => {
+                                setCurrentVideoIndex((prev) => (prev + 1) % HOME_VIDEOS.length);
+                            }}
+                            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 p-2 text-white/70 hover:text-white transition-all duration-300 hover:scale-125"
+                            aria-label="Next video"
+                        >
+                            <svg className="w-10 h-10 md:w-14 md:h-14 drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                        {/* Video indicator dots */}
+                        <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
                             {HOME_VIDEOS.map((_, index) => (
                                 <button
                                     key={index}
@@ -78,8 +105,8 @@ const Home = () => {
                                 />
                             ))}
                         </div>
-                    )}
-                </div>
+                    </>
+                )}
 
                 {/* Old GridScan Background - Commented out */}
                 {/* <div className="absolute inset-0">
@@ -215,7 +242,7 @@ const Home = () => {
             <section className="relative">
                 <CurveDivider variant={3} />
                 <div className="py-20 px-4 container mx-auto">
-                    <h2 className="text-4xl font-bold text-center mb-12">ERC Gallery</h2>
+                    <h2 className="text-4xl font-bold text-center mb-12"><span className="text-blue-500">ERC</span> Gallery</h2>
                     <p className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
                         Explore our amazing events, competitions, and innovative projects that showcase the creativity and technical expertise of our club members.
                     </p>
@@ -225,6 +252,57 @@ const Home = () => {
                             overlayBlurColor="var(--dome-overlay)"
                             segments={20}
                         />
+                    </div>
+                </div>
+            </section>
+
+            {/* Section 4: Latest News */}
+            <section className="relative">
+                <CurveDivider variant={1} />
+                <div className="py-20 px-4 container mx-auto">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="text-center mb-12">
+                            <h2 className="text-4xl font-bold mb-4">News</h2>
+                            <p className="text-gray-600 dark:text-gray-400">
+                                Latest updates from our members
+                            </p>
+                        </div>
+                        
+                        <div className="space-y-3">
+                            {newsData.slice(0, 8).map((item, index) => (
+                                <motion.div
+                                    key={item.id}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.05 }}
+                                    className="flex gap-4 md:gap-6 p-4 md:p-5 bg-gray-50 dark:bg-gray-800/50 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                                >
+                                    <div className="flex-shrink-0 w-24 md:w-28">
+                                        <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+                                            [{item.date}]
+                                        </span>
+                                    </div>
+                                    <p className="text-gray-700 dark:text-gray-300 flex-1">
+                                        {item.content}
+                                    </p>
+                                </motion.div>
+                            ))}
+                        </div>
+
+                        {newsData.length > 8 && (
+                            <div className="text-center mt-8">
+                                <Link
+                                    to="/about#news"
+                                    className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-colors"
+                                >
+                                    View All News
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </Link>
+                            </div>
+                        )}
                     </div>
                 </div>
             </section>

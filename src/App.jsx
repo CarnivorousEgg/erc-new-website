@@ -12,6 +12,7 @@ import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import Handbook from './pages/Handbook';
 import HandbookArticle from './pages/HandbookArticle';
+import NotFound from './pages/NotFound';
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/handbook" element={<Handbook />} />
                 <Route path="/handbook/:id" element={<HandbookArticle />} />
                 <Route path="/about" element={<About />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
         </div>

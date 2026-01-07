@@ -1,6 +1,12 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import rehypeHighlight from 'rehype-highlight';
+import 'katex/dist/katex.min.css';
 import blogs from '../data/blogs.json';
 
 const BlogDetail = () => {
@@ -111,15 +117,30 @@ const BlogDetail = () => {
                     transition={{ duration: 0.6, delay: 0.1 }}
                     className="mb-12"
                 >
-                    <div className="relative rounded-2xl overflow-hidden">
+                    <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20">
                         <img
                             src={blog.coverImage}
                             alt={blog.title}
                             className="w-full h-64 md:h-96 object-cover"
                             onError={(e) => {
-                                e.target.src = 'https://via.placeholder.com/800x400?text=ERC+Blog';
+                                // Try GitHub fallback URL for local images
+                                const src = e.target.src;
+                                if (!src.includes('raw.githubusercontent.com') && src.includes('/images/')) {
+                                    const path = src.substring(src.indexOf('/images/'));
+                                    e.target.src = `https://raw.githubusercontent.com/ERC-BPGC/erc-website-static/main${path}`;
+                                } else {
+                                    // Hide broken image and show gradient background
+                                    e.target.style.display = 'none';
+                                }
                             }}
                         />
+                        {/* Fallback gradient with title */}
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <div className="text-center p-8 opacity-30">
+                                <div className="text-6xl mb-4">📝</div>
+                                <div className="text-xl font-bold text-gray-600 dark:text-gray-400">ERC Blog</div>
+                            </div>
+                        </div>
                     </div>
                 </motion.div>
 
@@ -138,27 +159,52 @@ const BlogDetail = () => {
                                 </h2>
                             )}
                             
-                            {/* Content paragraphs */}
-                            <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
-                                {section.content.split('\n\n').map((paragraph, pIndex) => (
-                                    <p key={pIndex} className="whitespace-pre-wrap">
-                                        {paragraph}
-                                    </p>
-                                ))}
+                            {/* Content - rendered with markdown */}
+                            <div className="prose prose-lg dark:prose-invert max-w-none
+                                prose-headings:text-black dark:prose-headings:text-white
+                                prose-p:text-gray-700 dark:prose-p:text-gray-300
+                                prose-strong:text-black dark:prose-strong:text-white
+                                prose-code:text-blue-600 dark:prose-code:text-blue-400
+                                prose-code:bg-gray-100 dark:prose-code:bg-gray-800
+                                prose-code:px-1 prose-code:py-0.5 prose-code:rounded
+                                prose-pre:bg-gray-900 prose-pre:border prose-pre:border-gray-700
+                                prose-a:text-blue-600 dark:prose-a:text-blue-400
+                                prose-ul:text-gray-700 dark:prose-ul:text-gray-300
+                                prose-ol:text-gray-700 dark:prose-ol:text-gray-300
+                                prose-li:text-gray-700 dark:prose-li:text-gray-300
+                            ">
+                                <ReactMarkdown
+                                    remarkPlugins={[remarkGfm, remarkMath]}
+                                    rehypePlugins={[rehypeKatex, rehypeHighlight]}
+                                >
+                                    {section.content}
+                                </ReactMarkdown>
                             </div>
 
                             {/* Section Image */}
                             {section.image && (
                                 <figure className="my-8">
-                                    <div className="rounded-xl overflow-hidden">
+                                    <div className="rounded-xl overflow-hidden bg-gradient-to-br from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 min-h-[200px] flex items-center justify-center">
                                         <img
                                             src={section.image.src}
                                             alt={section.image.caption}
                                             className="w-full object-contain bg-gray-100 dark:bg-gray-900"
                                             onError={(e) => {
-                                                e.target.style.display = 'none';
+                                                // Try GitHub fallback URL
+                                                const src = e.target.src;
+                                                if (!src.includes('raw.githubusercontent.com') && src.startsWith('/')) {
+                                                    e.target.src = `https://raw.githubusercontent.com/ERC-BPGC/erc-website-static/main${src}`;
+                                                } else {
+                                                    // Hide and show placeholder
+                                                    e.target.style.display = 'none';
+                                                    e.target.parentElement.classList.add('image-fallback');
+                                                }
                                             }}
                                         />
+                                        <div className="image-placeholder hidden text-center p-8">
+                                            <div className="text-4xl mb-2">🖼️</div>
+                                            <div className="text-sm text-gray-500 dark:text-gray-400">Image unavailable</div>
+                                        </div>
                                     </div>
                                     {section.image.caption && (
                                         <figcaption className="text-center text-sm text-gray-500 dark:text-gray-400 mt-3 italic">

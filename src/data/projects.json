@@ -50,7 +50,7 @@
         "title": "Quadruped",
         "category": "ongoing",
         "type": "research",
-        "image": "/images/projects/quadruped/cover.png",
+        "image": "/images/projects/quadruped/cover.jpeg",
         "description": "Project Quadruped aims to develop an advanced quadruped robot designed for autonomous site documentation and surveying in challenging environments, such as construction sites and disaster areas. Inspired by Boston Dynamics, 'Spot', the robot features four robotic legs, each with three degrees of freedom (3-DOF), allowing it to traverse uneven terrain, climb stairs, and maneuver over obstacles with ease. This versatility makes it ideal for environments where traditional wheeled robots may struggle.",
         "github": "https://github.com/ERC-BPGC/quadruped",
         "team_leads": [

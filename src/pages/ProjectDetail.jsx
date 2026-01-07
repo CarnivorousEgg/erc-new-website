@@ -34,7 +34,7 @@ const PROJECT_FOLDER_MAP = {
     'robotic-arm-3dof_done': '3dof - arm',
     '8bit-computer_done': '8bit',
     'drone-automation': 'drone-auto',
-    'desktop-companion-bot_done': 'choubot',
+    'desktop-companion-bot_done': 'chotubot',
     'stewart-platform': 'stewarts platform',
     'single-inverted-pendulum_done': 'inverted pendulum',
     'automated-orchestra_done': 'automated orchestra',
@@ -64,28 +64,20 @@ const ProjectDetail = () => {
         return projectGallery;
     }, [id]);
 
-    // Filter only images for lightbox navigation
-    const imageItems = useMemo(() => 
-        masonryItems.filter(item => item.type === 'image'), 
-        [masonryItems]
-    );
-
     const handleItemClick = (item) => {
-        if (item.type === 'image') {
-            const index = imageItems.findIndex(img => img.id === item.id);
-            if (index !== -1) {
-                setLightboxIndex(index);
-                setLightboxOpen(true);
-            }
+        const index = masonryItems.findIndex(i => i.id === item.id);
+        if (index !== -1) {
+            setLightboxIndex(index);
+            setLightboxOpen(true);
         }
     };
 
     const handlePrev = () => {
-        setLightboxIndex((prev) => (prev - 1 + imageItems.length) % imageItems.length);
+        setLightboxIndex((prev) => (prev - 1 + masonryItems.length) % masonryItems.length);
     };
 
     const handleNext = () => {
-        setLightboxIndex((prev) => (prev + 1) % imageItems.length);
+        setLightboxIndex((prev) => (prev + 1) % masonryItems.length);
     };
 
     const handleKeyDown = (e) => {
@@ -214,8 +206,14 @@ const ProjectDetail = () => {
                                         muted
                                         loop
                                         playsInline
-                                        onMouseEnter={(e) => e.target.play()}
-                                        onMouseLeave={(e) => e.target.pause()}
+                                        preload="metadata"
+                                        onMouseEnter={(e) => {
+                                            e.target.play().catch(err => console.log('Video play failed:', err));
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.target.pause();
+                                            e.target.currentTime = 0;
+                                        }}
                                     />
                                 ) : (
                                     <img
@@ -225,7 +223,7 @@ const ProjectDetail = () => {
                                     />
                                 )}
                                 {/* Hover overlay with description */}
-                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-end">
+                                {/* <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-end">
                                     <div className="p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                                         {item.title && (
                                             <p className="text-white font-medium text-sm">{item.title}</p>
@@ -234,7 +232,7 @@ const ProjectDetail = () => {
                                             <p className="text-white/80 text-xs mt-1">{item.description}</p>
                                         )}
                                     </div>
-                                </div>
+                                </div> */}
                             </motion.div>
                         ))}
                     </div>
@@ -243,7 +241,7 @@ const ProjectDetail = () => {
 
             {/* Lightbox Modal */}
             <AnimatePresence>
-                {lightboxOpen && imageItems.length > 0 && (
+                {lightboxOpen && masonryItems.length > 0 && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -260,7 +258,7 @@ const ProjectDetail = () => {
                         </button>
 
                         {/* Navigation arrows */}
-                        {imageItems.length > 1 && (
+                        {masonryItems.length > 1 && (
                             <>
                                 <button 
                                     className="absolute left-4 text-white text-3xl p-3 hover:bg-white/10 rounded-full transition-colors z-10"
@@ -277,22 +275,38 @@ const ProjectDetail = () => {
                             </>
                         )}
 
-                        {/* Image */}
-                        <motion.img
-                            key={imageItems[lightboxIndex]?.id}
-                            initial={{ scale: 0.9, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.9, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            src={imageItems[lightboxIndex]?.img}
-                            alt={imageItems[lightboxIndex]?.title}
-                            className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg"
-                            onClick={(e) => e.stopPropagation()}
-                        />
+                        {/* Media (Image or Video) */}
+                        {masonryItems[lightboxIndex]?.type === 'video' ? (
+                            <motion.video
+                                key={masonryItems[lightboxIndex]?.id}
+                                initial={{ scale: 0.9, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                exit={{ scale: 0.9, opacity: 0 }}
+                                transition={{ duration: 0.2 }}
+                                src={masonryItems[lightboxIndex]?.img}
+                                controls
+                                autoPlay
+                                loop
+                                className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg"
+                                onClick={(e) => e.stopPropagation()}
+                            />
+                        ) : (
+                            <motion.img
+                                key={masonryItems[lightboxIndex]?.id}
+                                initial={{ scale: 0.9, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                exit={{ scale: 0.9, opacity: 0 }}
+                                transition={{ duration: 0.2 }}
+                                src={masonryItems[lightboxIndex]?.img}
+                                alt={masonryItems[lightboxIndex]?.title}
+                                className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg"
+                                onClick={(e) => e.stopPropagation()}
+                            />
+                        )}
 
-                        {/* Image counter */}
+                        {/* Media counter */}
                         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full">
-                            {lightboxIndex + 1} / {imageItems.length}
+                            {lightboxIndex + 1} / {masonryItems.length}
                         </div>
                     </motion.div>
                 )}

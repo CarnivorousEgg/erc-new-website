@@ -152,7 +152,7 @@
               "url": "https://www.youtube.com/c/mcwhorpj"
             },
             {
-              "name": "here",
+              "name": "Arduino Development Guide",
               "url": "https://erc-bpgc.github.io/handbook/electronics/Development_Boards/Arduino/"
             },
             {
@@ -207,15 +207,15 @@
           "type": "resources",
           "items": [
             {
-              "name": "this",
+              "name": "ROS Video Tutorial",
               "url": "https://www.youtube.com/watch?v=N6K2LWG2kRI"
             },
             {
-              "name": "this",
+              "name": "ROS Basics Video",
               "url": "https://www.youtube.com/watch?v=LyC9RAYE96M"
             },
             {
-              "name": "this",
+              "name": "ROS Introduction",
               "url": "https://erc-bpgc.github.io/handbook/automation/ROS/ros/"
             }
           ]
@@ -224,7 +224,7 @@
           "type": "resources",
           "items": [
             {
-              "name": "this",
+              "name": "ROS Setup Guide",
               "url": "https://erc-bpgc.github.io/handbook/automation/ROS/setting_up/"
             }
           ]
@@ -237,7 +237,7 @@
               "url": "http://wiki.ros.org/ROS/Tutorials"
             },
             {
-              "name": "here",
+              "name": "ROS Part 2",
               "url": "https://erc-bpgc.github.io/handbook/automation/ROS/ros_p2/"
             }
           ]
@@ -690,11 +690,11 @@
           "type": "resources",
           "items": [
             {
-              "name": "1",
+              "name": "ROS Visualization Video 1",
               "url": "https://www.youtube.com/watch?v=J1qT85pTW0w&feature=youtu.be"
             },
             {
-              "name": "2",
+              "name": "ROS Visualization Video 2",
               "url": "https://www.youtube.com/watch?v=UL1_Ue4rUWs"
             }
           ]
@@ -746,7 +746,7 @@
           "type": "resources",
           "items": [
             {
-              "name": "here",
+              "name": "Catkin Conceptual Overview",
               "url": "http://wiki.ros.org/catkin/conceptual_overview"
             }
           ]
@@ -768,7 +768,7 @@
           "type": "resources",
           "items": [
             {
-              "name": "this",
+              "name": "Create a Catkin Workspace",
               "url": "http://wiki.ros.org/catkin/Tutorials/create_a_workspace"
             }
           ]
@@ -777,11 +777,11 @@
           "type": "resources",
           "items": [
             {
-              "name": "this",
+              "name": "Creating a ROS Package",
               "url": "http://wiki.ros.org/ROS/Tutorials/CreatingPackage"
             },
             {
-              "name": "this",
+              "name": "Building ROS Packages",
               "url": "http://wiki.ros.org/ROS/Tutorials/BuildingPackages"
             }
           ]
@@ -794,11 +794,11 @@
           "type": "resources",
           "items": [
             {
-              "name": "this",
+              "name": "ROS Topics",
               "url": "http://wiki.ros.org/Topics"
             },
             {
-              "name": "this",
+              "name": "Creating Messages and Services",
               "url": "http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv"
             }
           ]
@@ -873,7 +873,7 @@
           "type": "resources",
           "items": [
             {
-              "name": "here",
+              "name": "roscore Documentation",
               "url": "http://wiki.ros.org/roscore"
             }
           ]
@@ -895,7 +895,7 @@
           "type": "resources",
           "items": [
             {
-              "name": "here​",
+              "name": "Linux File Permissions",
               "url": "https://www.guru99.com/file-permissions.html"
             }
           ]
