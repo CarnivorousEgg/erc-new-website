@@ -4,6 +4,7 @@ import SpotlightCard from '../components/SpotlightCard';
 import CurveDivider from '../components/CurveDivider';
 import DomeGallery from '../components/DomeGallery';
 import SponsorsTicker from '../components/SponsorsTicker';
+import OptimizedVideo from '../components/OptimizedVideo';
 import galleryData from '../data/gallery.json';
 import galleryMedia from '../data/galleryMedia.json';
 import sponsorsData from '../data/sponsors.json';
@@ -49,15 +50,18 @@ const Home = () => {
             <section className="section-hero relative h-screen flex flex-col items-center justify-center overflow-hidden">
                 {/* Video Background - Cycles through Home-Videos */}
                 <div className="absolute inset-0">
-                    <video
+                    <OptimizedVideo
                         key={currentVideoIndex}
                         ref={videoRef}
                         autoPlay
                         muted
                         playsInline
+                        eager={true}
                         onEnded={handleVideoEnded}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full"
+                        style={{ width: '100%', height: '100%' }}
                         src={HOME_VIDEOS[currentVideoIndex]}
+                        poster={`/Home-Videos/poster-${currentVideoIndex}.webp`}
                     />
                     {/* Black overlay for text visibility */}
                     <div className="absolute inset-0 bg-black/50 pointer-events-none"></div>

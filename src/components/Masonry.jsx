@@ -180,7 +180,6 @@ const Masonry = ({
   }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
 
   const handleMouseEnter = (e, item) => {
-    const element = e.currentTarget;
     const selector = `[data-key="${item.id}"]`;
 
     if (scaleOnHover) {
@@ -190,29 +189,9 @@ const Masonry = ({
         ease: 'power2.out'
       });
     }
-
-    // Show overlay
-    const overlay = element.querySelector('.masonry-overlay');
-    if (overlay) {
-      gsap.to(overlay, {
-        opacity: 1,
-        duration: 0.3
-      });
-    }
-
-    if (colorShiftOnHover) {
-      const colorOverlay = element.querySelector('.color-overlay');
-      if (colorOverlay) {
-        gsap.to(colorOverlay, {
-          opacity: 0.3,
-          duration: 0.3
-        });
-      }
-    }
   };
 
   const handleMouseLeave = (e, item) => {
-    const element = e.currentTarget;
     const selector = `[data-key="${item.id}"]`;
 
     if (scaleOnHover) {
@@ -221,25 +200,6 @@ const Masonry = ({
         duration: 0.3,
         ease: 'power2.out'
       });
-    }
-
-    // Hide overlay
-    const overlay = element.querySelector('.masonry-overlay');
-    if (overlay) {
-      gsap.to(overlay, {
-        opacity: 0,
-        duration: 0.3
-      });
-    }
-
-    if (colorShiftOnHover) {
-      const colorOverlay = element.querySelector('.color-overlay');
-      if (colorOverlay) {
-        gsap.to(colorOverlay, {
-          opacity: 0,
-          duration: 0.3
-        });
-      }
     }
   };
 
@@ -283,31 +243,6 @@ const Masonry = ({
                 <div 
                   className="masonry-item-img" 
                   style={{ backgroundImage: `url(${item.img})` }}
-                />
-              )}
-              
-              {/* Dark overlay with description */}
-              <div className="masonry-overlay">
-                <div className="masonry-overlay-content">
-                  {item.title && <h3 className="masonry-title">{item.title}</h3>}
-                  {item.description && <p className="masonry-description">{item.description}</p>}
-                </div>
-              </div>
-
-              {colorShiftOnHover && (
-                <div
-                  className="color-overlay"
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    background: 'linear-gradient(45deg, rgba(255,0,150,0.5), rgba(0,150,255,0.5))',
-                    opacity: 0,
-                    pointerEvents: 'none',
-                    borderRadius: '10px'
-                  }}
                 />
               )}
             </div>

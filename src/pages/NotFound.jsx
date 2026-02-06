@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import OptimizedImage from '../components/OptimizedImage';
 
 const NotFound = () => {
     return (
@@ -18,14 +19,19 @@ const NotFound = () => {
                 className="text-center max-w-2xl"
             >
                 {/* Error Image */}
-                <motion.img
-                    src="/images/error404.png"
-                    alt="404 - Page Not Found"
-                    className="w-full max-w-md mx-auto mb-8"
+                <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                />
+                    className="w-full max-w-md mx-auto mb-8"
+                >
+                    <OptimizedImage
+                        src="/images/error404.png"
+                        alt="404 - Page Not Found"
+                        className="w-full"
+                        style={{ width: '100%', height: 'auto' }}
+                    />
+                </motion.div>
 
                 {/* Error Text */}
                 <h1 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-4">

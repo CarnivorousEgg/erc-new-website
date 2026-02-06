@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "scrape": "node scripts/scrape_linkedin.js"
+    "scrape": "node scripts/scrape_linkedin.js",
+    "optimize:images": "node scripts/optimize_images.js"
   },
   "dependencies": {
     "@use-gesture/react": "^10.3.1",

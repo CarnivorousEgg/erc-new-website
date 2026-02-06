@@ -277,31 +277,18 @@ const EventDetail = () => {
                                 {item.type === 'video' ? (
                                     <video
                                         src={item.img}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        className="w-full h-full object-cover"
                                         muted
                                         loop
                                         playsInline
-                                        onMouseEnter={(e) => e.target.play()}
-                                        onMouseLeave={(e) => e.target.pause()}
                                     />
                                 ) : (
                                     <img
                                         src={item.img}
                                         alt={item.title || item.description || 'Gallery image'}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        className="w-full h-full object-cover"
                                     />
                                 )}
-                                {/* Hover overlay with description */}
-                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-end">
-                                    <div className="p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                        {item.title && (
-                                            <p className="text-white font-medium text-sm">{item.title}</p>
-                                        )}
-                                        {item.description && (
-                                            <p className="text-gray-300 text-xs mt-1">{item.description}</p>
-                                        )}
-                                    </div>
-                                </div>
                             </motion.div>
                         ))}
                     </div>

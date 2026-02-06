@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../utils/cn';
 import ThemeToggle from './ThemeToggle';
 import MobileMenu from './MobileMenu';
+import OptimizedImage from './OptimizedImage';
 
 const navItems = [
     { name: 'Home', path: '/' },
@@ -92,7 +93,13 @@ const Navbar = () => {
                 to="/"
                 className="absolute left-6 top-1/2 -translate-y-1/2 pointer-events-auto"
             >
-                <img src="/images/erc-logo.png" alt="ERC Logo" className="h-12 w-auto hover:opacity-80 transition-opacity" />
+                <OptimizedImage 
+                    src="/images/erc-logo.png" 
+                    alt="ERC Logo" 
+                    className="h-12 w-auto hover:opacity-80 transition-opacity" 
+                    eager={true}
+                    style={{ height: '48px', width: 'auto' }}
+                />
             </Link>
             <div className="flex items-center gap-2 p-2 rounded-full bg-white/80 dark:bg-white/10 backdrop-blur-md border border-black/10 dark:border-white/20 shadow-lg pointer-events-auto transition-colors duration-300">
                 {navItems.map((item) => {

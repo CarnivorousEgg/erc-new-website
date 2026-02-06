@@ -4,6 +4,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { FiChevronDown, FiX, FiMenu, FiSun, FiMoon } from 'react-icons/fi';
 import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import OptimizedImage from './OptimizedImage';
 
 const menuItems = [
     {
@@ -178,10 +179,12 @@ const MobileMenu = ({ theme, toggleTheme }) => {
                     }}
                     className="cursor-pointer pointer-events-auto"
                 >
-                    <img 
+                    <OptimizedImage 
                         src="/images/erc-logo.png" 
                         alt="ERC Logo" 
                         className="h-10 w-auto drop-shadow-lg"
+                        eager={true}
+                        style={{ height: '40px', width: 'auto' }}
                     />
                 </div>
 
