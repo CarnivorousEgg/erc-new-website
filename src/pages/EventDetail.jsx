@@ -287,6 +287,8 @@ const EventDetail = () => {
                                         src={item.img}
                                         alt={item.title || item.description || 'Gallery image'}
                                         className="w-full h-full object-cover"
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                 )}
                             </motion.div>
@@ -323,6 +325,7 @@ const EventDetail = () => {
                                 src={selectedImage.src}
                                 alt={selectedImage.alt}
                                 className="max-w-full max-h-[90vh] object-contain rounded-lg"
+                                decoding="async"
                             />
                             <button
                                 onClick={() => setSelectedImage(null)}

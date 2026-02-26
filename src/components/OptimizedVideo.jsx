@@ -118,6 +118,8 @@ const OptimizedVideo = forwardRef(({
         <img
           src={poster}
           alt="Video thumbnail"
+          loading="lazy"
+          decoding="async"
           style={{
             position: 'absolute',
             inset: 0,

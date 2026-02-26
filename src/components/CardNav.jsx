@@ -226,7 +226,7 @@ const CardNav = ({
                     </div>
 
                     <div className="logo-container" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
-                        <img src={logo} alt={logoAlt} className="logo" />
+                        <img src={logo} alt={logoAlt} className="logo" loading="eager" decoding="async" />
                     </div>
 
                     <button

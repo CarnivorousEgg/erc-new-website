@@ -122,6 +122,8 @@ const BlogDetail = () => {
                             src={blog.coverImage}
                             alt={blog.title}
                             className="w-full h-64 md:h-96 object-cover"
+                            loading="lazy"
+                            decoding="async"
                             onError={(e) => {
                                 // Try GitHub fallback URL for local images
                                 const src = e.target.src;
@@ -189,6 +191,8 @@ const BlogDetail = () => {
                                             src={section.image.src}
                                             alt={section.image.caption}
                                             className="w-full object-contain bg-gray-100 dark:bg-gray-900"
+                                            loading="lazy"
+                                            decoding="async"
                                             onError={(e) => {
                                                 // Try GitHub fallback URL
                                                 const src = e.target.src;

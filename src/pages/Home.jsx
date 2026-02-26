@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import GridScan from '../components/GridScan';
 import SpotlightCard from '../components/SpotlightCard';
 import CurveDivider from '../components/CurveDivider';
 import DomeGallery from '../components/DomeGallery';

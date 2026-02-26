@@ -29,6 +29,8 @@ const InfiniteScroll = ({ items }) => {
                                 src={item.image}
                                 alt={item.name}
                                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                                loading="lazy"
+                                decoding="async"
                             />
                         </div>
                         <span className="text-gray-400 group-hover:text-white font-medium transition-colors text-center">

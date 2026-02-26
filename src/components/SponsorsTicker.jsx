@@ -50,6 +50,8 @@ const SponsorsTicker = ({ sponsors }) => {
                             src={getLogo(sponsor)}
                             alt={sponsor.name}
                             className="sponsor-logo"
+                            loading="lazy"
+                            decoding="async"
                         />
                     </a>
                 ))}

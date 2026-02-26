@@ -459,6 +459,8 @@ const Handbook = () => {
                                                                     src={imgSrc} 
                                                                     alt={block.alt || block.caption || 'Handbook image'} 
                                                                     className="w-full h-auto max-h-[500px] object-contain bg-white dark:bg-gray-800"
+                                                                    loading="lazy"
+                                                                    decoding="async"
                                                                     onError={(e) => {
                                                                         // Try GitHub fallback first
                                                                         if (fallbackSrc && e.target.src !== fallbackSrc) {

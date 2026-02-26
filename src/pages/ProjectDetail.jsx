@@ -121,6 +121,8 @@ const ProjectDetail = () => {
                         src={project.image}
                         alt={project.title}
                         className="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
                     />
                 </div>
 
@@ -145,7 +147,7 @@ const ProjectDetail = () => {
                                     
                                     const cardContent = (
                                         <div className={`flex items-center gap-4 bg-gray-100 dark:bg-white/5 p-3 rounded-xl border border-gray-200 dark:border-white/10 ${linkedinUrl ? 'hover:bg-gray-200 dark:hover:bg-white/10 cursor-pointer transition-colors' : ''}`}>
-                                            <img src={imageUrl} alt={lead.name} className="w-12 h-12 rounded-full object-cover" />
+                                            <img src={imageUrl} alt={lead.name} className="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async" />
                                             <h4 className="font-bold">{lead.name}</h4>
                                         </div>
                                     );
@@ -213,6 +215,8 @@ const ProjectDetail = () => {
                                         src={item.img}
                                         alt={item.title || item.description || 'Gallery image'}
                                         className="w-full h-full object-cover"
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                 )}
                                 {/* Hover overlay removed as per user request */}

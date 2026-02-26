@@ -215,6 +215,8 @@ const AlumniTimeline = ({ alumni = [] }) => {
                                                 src={member.image}
                                                 alt={member.name}
                                                 className="profile-img"
+                                                loading="lazy"
+                                                decoding="async"
                                                 onError={(e) => {
                                                     e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=random`;
                                                 }}
