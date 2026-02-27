@@ -6,6 +6,8 @@ import teamData from '../data/team.json';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaArrowLeft, FaLinkedin, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Masonry from '../components/Masonry';
+import SEO from '../components/SEO';
+import { PAGE_SEO } from '../config/seo';
 
 // Helper function to find team member by name
 const findTeamMember = (name) => {
@@ -14,13 +16,13 @@ const findTeamMember = (name) => {
         m => m.name.toLowerCase() === name.toLowerCase()
     );
     if (currentMember) return currentMember;
-    
+
     // Search in project leads
     const projectLead = teamData.projectLeads?.find(
         m => m.name.toLowerCase() === name.toLowerCase()
     );
     if (projectLead) return projectLead;
-    
+
     // Search in alumni
     const alumniMember = teamData.alumni?.find(
         m => m.name.toLowerCase() === name.toLowerCase()
@@ -49,17 +51,17 @@ const ProjectDetail = () => {
     const project = projectsData.find(p => p.id === id);
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
-    
+
     // Get gallery items from the generated gallery media data
     const masonryItems = useMemo(() => {
         // Use mapped folder name if available
         let folderId = PROJECT_FOLDER_MAP[id];
-        
+
         // If not in map, try removing _done suffix
         if (!folderId) {
             folderId = id.replace(/_done$/, '');
         }
-        
+
         const projectGallery = galleryMedia.projects?.[folderId] || [];
         return projectGallery;
     }, [id]);
@@ -107,6 +109,12 @@ const ProjectDetail = () => {
 
     return (
         <div className="min-h-screen pt-24 px-4 container mx-auto">
+            <SEO
+                title={`${project.title} – ERC BITS Goa`}
+                description={project.description || PAGE_SEO.projects.description}
+                ogImage={project.image || PAGE_SEO.projects.ogImage}
+                canonicalPath={`/projects/${project.id}`}
+            />
             <Link to={backLink} className="inline-flex items-center gap-2 text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white mb-8 transition-colors">
                 <FaArrowLeft /> {backLabel}
             </Link>
@@ -144,19 +152,19 @@ const ProjectDetail = () => {
                                     const teamMember = findTeamMember(lead.name);
                                     const linkedinUrl = teamMember?.linkedin;
                                     const imageUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(lead.name)}&background=3b82f6&color=fff&size=400&font-size=0.4`;
-                                    
+
                                     const cardContent = (
                                         <div className={`flex items-center gap-4 bg-gray-100 dark:bg-white/5 p-3 rounded-xl border border-gray-200 dark:border-white/10 ${linkedinUrl ? 'hover:bg-gray-200 dark:hover:bg-white/10 cursor-pointer transition-colors' : ''}`}>
                                             <img src={imageUrl} alt={lead.name} className="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async" />
                                             <h4 className="font-bold">{lead.name}</h4>
                                         </div>
                                     );
-                                    
+
                                     return linkedinUrl ? (
-                                        <a 
+                                        <a
                                             key={index}
-                                            href={linkedinUrl} 
-                                            target="_blank" 
+                                            href={linkedinUrl}
+                                            target="_blank"
                                             rel="noopener noreferrer"
                                         >
                                             {cardContent}
@@ -237,7 +245,7 @@ const ProjectDetail = () => {
                         onClick={() => setLightboxOpen(false)}
                     >
                         {/* Close button */}
-                        <button 
+                        <button
                             className="absolute top-4 right-4 text-white text-2xl p-2 hover:bg-white/10 rounded-full transition-colors z-10"
                             onClick={() => setLightboxOpen(false)}
                         >
@@ -247,13 +255,13 @@ const ProjectDetail = () => {
                         {/* Navigation arrows */}
                         {masonryItems.length > 1 && (
                             <>
-                                <button 
+                                <button
                                     className="absolute left-4 text-white text-3xl p-3 hover:bg-white/10 rounded-full transition-colors z-10"
                                     onClick={(e) => { e.stopPropagation(); handlePrev(); }}
                                 >
                                     <FaChevronLeft />
                                 </button>
-                                <button 
+                                <button
                                     className="absolute right-4 text-white text-3xl p-3 hover:bg-white/10 rounded-full transition-colors z-10"
                                     onClick={(e) => { e.stopPropagation(); handleNext(); }}
                                 >

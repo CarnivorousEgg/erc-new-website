@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import eventsData from '../data/events.json';
 import galleryMedia from '../data/galleryMedia.json';
 import BackToTop from '../components/BackToTop';
+import SEO from '../components/SEO';
+import { PAGE_SEO } from '../config/seo';
 
 // Helper function to get a thumbnail image for an event
 const getEventThumbnail = (event) => {
@@ -11,14 +13,14 @@ const getEventThumbnail = (event) => {
     if (event.image && event.image.includes('.')) {
         return event.image;
     }
-    
+
     // Try to get first image from galleryMedia
     const eventGallery = galleryMedia.events?.[event.id] || [];
     if (eventGallery.length > 0) {
         const firstImage = eventGallery.find(item => item.type === 'image');
         if (firstImage) return firstImage.img;
     }
-    
+
     return null;
 };
 
@@ -32,6 +34,12 @@ const Events = () => {
             transition={{ duration: 0.5 }}
             className="min-h-screen pt-24 px-4 container mx-auto pb-20"
         >
+            <SEO
+                title={PAGE_SEO.events.title}
+                description={PAGE_SEO.events.description}
+                ogImage={PAGE_SEO.events.ogImage}
+                canonicalPath="/events"
+            />
             <BackToTop />
             <header className="text-center mb-16">
                 <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
@@ -73,10 +81,10 @@ const Events = () => {
                                         </svg>
                                     </div>
                                 )}
-                                
+
                                 {/* Gradient Overlay - Always visible, darker for better text readability */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30" />
-                                
+
                                 {/* Event Name - Always visible with enhanced hover */}
                                 <div className="absolute inset-0 flex flex-col items-center justify-end p-6">
                                     <h3 className="text-xl font-bold text-white text-center mb-2">

@@ -9,6 +9,8 @@ import rehypeHighlight from 'rehype-highlight';
 import 'katex/dist/katex.min.css';
 import handbookData from '../data/handbook/index.js';
 import { FaChevronDown, FaChevronRight, FaExternalLinkAlt } from 'react-icons/fa';
+import SEO from '../components/SEO';
+import { PAGE_SEO } from '../config/seo';
 
 // Base URL for handbook images from GitHub pages
 const HANDBOOK_GITHUB_BASE = 'https://erc-bpgc.github.io/handbook';
@@ -42,12 +44,12 @@ const CATEGORY_SECTION_MAP = {
 // Helper function to resolve handbook image URLs
 const resolveHandbookImageUrl = (src, category) => {
     if (!src) return '';
-    
+
     // If it's already a full URL, return as-is
     if (src.startsWith('http://') || src.startsWith('https://')) {
         return src;
     }
-    
+
     // Return local path directly - it's now corrected in JSON files
     return src;
 };
@@ -55,10 +57,10 @@ const resolveHandbookImageUrl = (src, category) => {
 // Get GitHub fallback URL for an image
 const getGitHubFallbackUrl = (src, category) => {
     if (!src) return null;
-    
+
     const filename = src.split('/').pop();
     const categoryMap = CATEGORY_SECTION_MAP[category] || CATEGORY_SECTION_MAP['electronics'];
-    
+
     // Try to determine the section from filename
     let section = 'default';
     if (filename.includes('lidar')) section = 'Sensors';
@@ -68,7 +70,7 @@ const getGitHubFallbackUrl = (src, category) => {
     else if (filename.includes('wifi')) section = 'Modules';
     else if (filename.includes('gazebo') || filename.includes('rviz')) section = 'gazebo';
     else if (filename.includes('stdr')) section = 'stdr';
-    
+
     const path = categoryMap[section] || categoryMap['default'];
     return `${HANDBOOK_GITHUB_BASE}/${path}/${filename}`;
 };
@@ -126,11 +128,11 @@ const Handbook = () => {
         const grouped = {};
         categories.forEach(cat => {
             const categoryArticles = articles.filter(a => a.category === cat.id);
-            
+
             // Separate intro article and subcategorized articles
             const introArticle = categoryArticles.find(a => !a.subcategory);
             const subcategorized = categoryArticles.filter(a => a.subcategory);
-            
+
             // Group by subcategory
             const bySubcategory = {};
             subcategorized.forEach(article => {
@@ -139,7 +141,7 @@ const Handbook = () => {
                 }
                 bySubcategory[article.subcategory].push(article);
             });
-            
+
             grouped[cat.id] = {
                 intro: introArticle,
                 subcategories: bySubcategory
@@ -151,7 +153,7 @@ const Handbook = () => {
     // Filter articles based on search
     const filteredArticles = useMemo(() => {
         if (!searchQuery) return articles;
-        return articles.filter(article => 
+        return articles.filter(article =>
             article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             article.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
         );
@@ -190,6 +192,12 @@ const Handbook = () => {
 
     return (
         <div className="min-h-screen pt-24 pb-16 bg-white dark:bg-[#0a0a0a]">
+            <SEO
+                title={PAGE_SEO.handbook.title}
+                description={PAGE_SEO.handbook.description}
+                ogImage={PAGE_SEO.handbook.ogImage}
+                canonicalPath="/handbook"
+            />
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 {/* Header */}
                 <motion.div
@@ -239,7 +247,7 @@ const Handbook = () => {
                                 {categories.map(category => {
                                     const categoryData = articlesByCategory[category.id];
                                     const hasSubcategories = categoryData && Object.keys(categoryData.subcategories).length > 0;
-                                    
+
                                     return (
                                         <div key={category.id}>
                                             {/* Category Header */}
@@ -280,21 +288,20 @@ const Handbook = () => {
                                                             {categoryData?.intro && (
                                                                 <button
                                                                     onClick={() => handleArticleClick(categoryData.intro)}
-                                                                    className={`w-full text-left py-1.5 px-3 rounded text-sm transition-colors ${
-                                                                        selectedArticle?.id === categoryData.intro.id
+                                                                    className={`w-full text-left py-1.5 px-3 rounded text-sm transition-colors ${selectedArticle?.id === categoryData.intro.id
                                                                             ? 'bg-blue-500 text-white'
                                                                             : 'text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
-                                                                    }`}
+                                                                        }`}
                                                                 >
                                                                     {categoryData.intro.title}
                                                                 </button>
                                                             )}
-                                                            
+
                                                             {/* Subcategories */}
                                                             {hasSubcategories && Object.entries(categoryData.subcategories).map(([subcategoryName, subcategoryArticles]) => {
                                                                 const subcategoryKey = `${category.id}-${subcategoryName}`;
                                                                 const isExpanded = expandedSubcategories[subcategoryKey];
-                                                                
+
                                                                 return (
                                                                     <div key={subcategoryName}>
                                                                         {/* Subcategory Header */}
@@ -316,7 +323,7 @@ const Handbook = () => {
                                                                                 )}
                                                                             </div>
                                                                         </button>
-                                                                        
+
                                                                         {/* Subcategory Articles */}
                                                                         <AnimatePresence>
                                                                             {isExpanded && (
@@ -332,11 +339,10 @@ const Handbook = () => {
                                                                                             <button
                                                                                                 key={article.id}
                                                                                                 onClick={() => handleArticleClick(article)}
-                                                                                                className={`w-full text-left py-1.5 px-3 rounded text-sm transition-colors ${
-                                                                                                    selectedArticle?.id === article.id
+                                                                                                className={`w-full text-left py-1.5 px-3 rounded text-sm transition-colors ${selectedArticle?.id === article.id
                                                                                                         ? 'bg-blue-500 text-white'
                                                                                                         : 'text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
-                                                                                                }`}
+                                                                                                    }`}
                                                                                             >
                                                                                                 {article.title}
                                                                                             </button>
@@ -397,8 +403,8 @@ const Handbook = () => {
                                             switch (block.type) {
                                                 case 'heading':
                                                     return (
-                                                        <h3 
-                                                            key={index} 
+                                                        <h3
+                                                            key={index}
                                                             className="text-2xl font-bold text-black dark:text-white mt-8 mb-4 pt-6 border-t border-gray-200 dark:border-gray-700"
                                                         >
                                                             {block.value}
@@ -406,8 +412,8 @@ const Handbook = () => {
                                                     );
                                                 case 'subheading':
                                                     return (
-                                                        <h4 
-                                                            key={index} 
+                                                        <h4
+                                                            key={index}
                                                             className="text-lg font-semibold text-black dark:text-white mt-6 mb-3"
                                                         >
                                                             {block.value}
@@ -415,8 +421,8 @@ const Handbook = () => {
                                                     );
                                                 case 'text':
                                                     return (
-                                                        <div 
-                                                            key={index} 
+                                                        <div
+                                                            key={index}
                                                             className="prose prose-lg dark:prose-invert max-w-none
                                                                 prose-p:text-gray-600 dark:prose-p:text-gray-400 prose-p:leading-relaxed prose-p:my-2
                                                                 prose-strong:text-black dark:prose-strong:text-white
@@ -455,9 +461,9 @@ const Handbook = () => {
                                                     return (
                                                         <figure key={index} className="my-6">
                                                             <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
-                                                                <img 
-                                                                    src={imgSrc} 
-                                                                    alt={block.alt || block.caption || 'Handbook image'} 
+                                                                <img
+                                                                    src={imgSrc}
+                                                                    alt={block.alt || block.caption || 'Handbook image'}
                                                                     className="w-full h-auto max-h-[500px] object-contain bg-white dark:bg-gray-800"
                                                                     loading="lazy"
                                                                     decoding="async"
@@ -526,14 +532,14 @@ const Handbook = () => {
                                     Welcome to the ERC Handbook
                                 </h2>
                                 <p className="text-gray-600 dark:text-gray-400 mb-8">
-                                    Select a topic from the sidebar to get started. This handbook covers everything 
+                                    Select a topic from the sidebar to get started. This handbook covers everything
                                     from basic programming concepts to advanced robotics topics.
                                 </p>
 
                                 {/* Category Overview Grid */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     {categories.map(category => (
-                                        <div 
+                                        <div
                                             key={category.id}
                                             className="p-5 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700"
                                         >

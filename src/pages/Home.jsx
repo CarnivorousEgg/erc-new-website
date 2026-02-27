@@ -1,15 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import SpotlightCard from '../components/SpotlightCard';
 import CurveDivider from '../components/CurveDivider';
 import DomeGallery from '../components/DomeGallery';
 import SponsorsTicker from '../components/SponsorsTicker';
-import OptimizedVideo from '../components/OptimizedVideo';
+import SEO from '../components/SEO';
 import galleryData from '../data/gallery.json';
 import galleryMedia from '../data/galleryMedia.json';
 import sponsorsData from '../data/sponsors.json';
 import newsData from '../data/news.json';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { PAGE_SEO } from '../config/seo';
 
 // Home videos from the public/Home-Videos folder
 const HOME_VIDEOS = galleryMedia.homeVideos || [
@@ -18,24 +19,90 @@ const HOME_VIDEOS = galleryMedia.homeVideos || [
     '/Home-Videos/Laser.mp4'
 ];
 
+// Crossfade duration in ms
+const CROSSFADE_MS = 800;
+
 const Home = () => {
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-    const videoRef = useRef(null);
+    // Track which "slot" (A or B) is currently active
+    const [activeSlot, setActiveSlot] = useState('A');
+
+    // Two video refs — we alternate between them for seamless crossfade
+    const videoARef = useRef(null);
+    const videoBRef = useRef(null);
+
+    // Opacity state for slots
+    const [opacityA, setOpacityA] = useState(1);
+    const [opacityB, setOpacityB] = useState(0);
+
+    // Tracks which src is loaded in each slot
+    const slotSrcRef = useRef({ A: HOME_VIDEOS[0], B: null });
+
+    const switchToVideo = useCallback((newIndex) => {
+        const newSrc = HOME_VIDEOS[newIndex];
+        const incomingSlot = activeSlot === 'A' ? 'B' : 'A';
+        const incomingRef = incomingSlot === 'A' ? videoARef : videoBRef;
+
+        if (!incomingRef.current) return;
+
+        // Load the new video into the inactive slot
+        slotSrcRef.current[incomingSlot] = newSrc;
+        incomingRef.current.src = newSrc;
+        incomingRef.current.load();
+
+        const onCanPlay = () => {
+            incomingRef.current.removeEventListener('canplay', onCanPlay);
+            incomingRef.current.play().catch(() => { });
+
+            // Crossfade: fade in incoming, fade out outgoing
+            if (incomingSlot === 'A') {
+                setOpacityA(1);
+                setOpacityB(0);
+            } else {
+                setOpacityA(0);
+                setOpacityB(1);
+            }
+            setActiveSlot(incomingSlot);
+        };
+
+        incomingRef.current.addEventListener('canplay', onCanPlay, { once: true });
+    }, [activeSlot]);
 
     // Handle video ended event to switch to next video
-    const handleVideoEnded = () => {
-        setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % HOME_VIDEOS.length);
-    };
+    const handleVideoEnded = useCallback(() => {
+        const nextIndex = (currentVideoIndex + 1) % HOME_VIDEOS.length;
+        setCurrentVideoIndex(nextIndex);
+        switchToVideo(nextIndex);
+    }, [currentVideoIndex, switchToVideo]);
 
-    // When video index changes, play the new video
+    // When currentVideoIndex changes externally (via arrows/dots), switch video
+    const prevIndexRef = useRef(currentVideoIndex);
     useEffect(() => {
-        if (videoRef.current) {
-            videoRef.current.load();
-            videoRef.current.play().catch(() => {
-                // Autoplay might be blocked, that's okay
-            });
+        if (prevIndexRef.current !== currentVideoIndex) {
+            prevIndexRef.current = currentVideoIndex;
+            switchToVideo(currentVideoIndex);
         }
-    }, [currentVideoIndex]);
+    }, [currentVideoIndex, switchToVideo]);
+
+    // Start the first video on mount
+    useEffect(() => {
+        if (videoARef.current) {
+            videoARef.current.play().catch(() => { });
+        }
+    }, []);
+
+    // Preload prev/next videos by setting link rel preload
+    useEffect(() => {
+        const nextIndex = (currentVideoIndex + 1) % HOME_VIDEOS.length;
+        const nextSrc = HOME_VIDEOS[nextIndex];
+        // Just set the inactive slot's src early so the browser can buffer it
+        const inactiveRef = activeSlot === 'A' ? videoBRef : videoARef;
+        if (inactiveRef.current && slotSrcRef.current[activeSlot === 'A' ? 'B' : 'A'] !== nextSrc) {
+            inactiveRef.current.src = nextSrc;
+            inactiveRef.current.load();
+            slotSrcRef.current[activeSlot === 'A' ? 'B' : 'A'] = nextSrc;
+        }
+    }, [currentVideoIndex, activeSlot]);
 
     return (
         <motion.div
@@ -45,27 +112,56 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             className="relative min-h-screen"
         >
+            <SEO
+                title={PAGE_SEO.home.title}
+                description={PAGE_SEO.home.description}
+                ogImage={PAGE_SEO.home.ogImage}
+                canonicalPath="/"
+            />
             {/* Hero Section with Video Background - Full Screen */}
             <section className="section-hero relative h-screen flex flex-col items-center justify-center overflow-hidden">
-                {/* Video Background - Cycles through Home-Videos */}
+                {/* Dual-video crossfade — eliminates black frame on switch */}
                 <div className="absolute inset-0">
-                    <OptimizedVideo
-                        key={currentVideoIndex}
-                        ref={videoRef}
+                    {/* Slot A */}
+                    <video
+                        ref={videoARef}
                         autoPlay
                         muted
                         playsInline
-                        eager={true}
-                        onEnded={handleVideoEnded}
-                        className="w-full h-full"
-                        style={{ width: '100%', height: '100%' }}
-                        src={HOME_VIDEOS[currentVideoIndex]}
-                        poster={`/Home-Videos/poster-${currentVideoIndex}.webp`}
+                        preload="auto"
+                        src={HOME_VIDEOS[0]}
+                        poster={`/Home-Videos/poster-0.webp`}
+                        onEnded={activeSlot === 'A' ? handleVideoEnded : undefined}
+                        style={{
+                            position: 'absolute', inset: 0,
+                            width: '100%', height: '100%',
+                            objectFit: 'cover',
+                            opacity: opacityA,
+                            transition: `opacity ${CROSSFADE_MS}ms ease-in-out`,
+                            pointerEvents: 'none'
+                        }}
+                    />
+                    {/* Slot B */}
+                    <video
+                        ref={videoBRef}
+                        muted
+                        playsInline
+                        preload="auto"
+                        poster={`/Home-Videos/poster-1.webp`}
+                        onEnded={activeSlot === 'B' ? handleVideoEnded : undefined}
+                        style={{
+                            position: 'absolute', inset: 0,
+                            width: '100%', height: '100%',
+                            objectFit: 'cover',
+                            opacity: opacityB,
+                            transition: `opacity ${CROSSFADE_MS}ms ease-in-out`,
+                            pointerEvents: 'none'
+                        }}
                     />
                     {/* Black overlay for text visibility */}
                     <div className="absolute inset-0 bg-black/50 pointer-events-none"></div>
                 </div>
-                    
+
                 {/* Video navigation arrows */}
                 {HOME_VIDEOS.length > 1 && (
                     <>
@@ -99,11 +195,10 @@ const Home = () => {
                                 <button
                                     key={index}
                                     onClick={() => setCurrentVideoIndex(index)}
-                                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                                        index === currentVideoIndex 
-                                            ? 'bg-white w-6' 
-                                            : 'bg-white/50 hover:bg-white/70'
-                                    }`}
+                                    className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentVideoIndex
+                                        ? 'bg-white w-6'
+                                        : 'bg-white/50 hover:bg-white/70'
+                                        }`}
                                     aria-label={`Play video ${index + 1}`}
                                 />
                             ))}
@@ -240,7 +335,7 @@ const Home = () => {
                     <SponsorsTicker sponsors={sponsorsData} />
                 </div>
             </section>
-            
+
             {/* Section 3: ERC Gallery */}
             <section className="relative">
                 <CurveDivider variant={3} />
@@ -270,7 +365,7 @@ const Home = () => {
                                 Latest updates from our members
                             </p>
                         </div>
-                        
+
                         <div className="space-y-3">
                             {newsData.slice(0, 8).map((item, index) => (
                                 <motion.div
