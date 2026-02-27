@@ -13,7 +13,7 @@ import SEO from '../components/SEO';
 import { PAGE_SEO } from '../config/seo';
 
 // Base URL for handbook images from GitHub pages
-const HANDBOOK_GITHUB_BASE = 'https://erc-bpgc.github.io/handbook';
+const HANDBOOK_GITHUB_BASE = 'https://ercbpgc.in/handbook';
 
 // Category to section path mapping for GitHub fallback
 const CATEGORY_SECTION_MAP = {

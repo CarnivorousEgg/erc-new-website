@@ -6,10 +6,10 @@
  * as a fallback and are further customized in their page components.
  */
 
-export const SITE_URL = 'https://erc-bpgc.github.io'; // Update to production URL
+export const SITE_URL = 'https://ercbpgc.in'; // Update to production URL
 export const SITE_NAME = 'ERC BITS Goa';
 
-export const DEFAULT_OG_IMAGE = '/images/og-default.jpg'; // Create this image in public/images/
+export const DEFAULT_OG_IMAGE = '/images/alumni2.jpg'; // Create this image in public/images/
 
 export const PAGE_SEO = {
     home: {
