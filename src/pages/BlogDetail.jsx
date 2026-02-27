@@ -8,6 +8,8 @@ import rehypeKatex from 'rehype-katex';
 import rehypeHighlight from 'rehype-highlight';
 import 'katex/dist/katex.min.css';
 import blogs from '../data/blogs.json';
+import SEO from '../components/SEO';
+import { PAGE_SEO } from '../config/seo';
 
 const BlogDetail = () => {
     const { id } = useParams();
@@ -37,6 +39,13 @@ const BlogDetail = () => {
 
     return (
         <div className="min-h-screen pt-24 pb-16 bg-white dark:bg-black">
+            <SEO
+                title={`${blog.title} – ERC BITS Goa`}
+                description={blog.excerpt}
+                ogImage={blog.coverImage || PAGE_SEO.blog.ogImage}
+                ogType="article"
+                canonicalPath={`/blog/${blog.id}`}
+            />
             <article className="max-w-4xl mx-auto px-4 sm:px-6">
                 {/* Back Link */}
                 <motion.div
@@ -160,7 +169,7 @@ const BlogDetail = () => {
                                     {section.title}
                                 </h2>
                             )}
-                            
+
                             {/* Content - rendered with markdown */}
                             <div className="prose prose-lg dark:prose-invert max-w-none
                                 prose-headings:text-black dark:prose-headings:text-white

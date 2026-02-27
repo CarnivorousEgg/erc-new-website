@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import projectsData from '../data/projects.json';
 import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import BackToTop from '../components/BackToTop';
+import SEO from '../components/SEO';
+import { PAGE_SEO } from '../config/seo';
 
 const Projects = () => {
     const location = useLocation();
@@ -15,7 +17,7 @@ const Projects = () => {
         const queryFilter = searchParams.get('filter');
         // Also check for hash-based filter (e.g., #completed, #ongoing) for backwards compatibility
         const hash = location.hash.replace('#', '');
-        
+
         if (queryFilter && ['research', 'mini', 'ongoing', 'completed'].includes(queryFilter)) {
             setFilter(queryFilter);
         } else if (hash && ['research', 'mini', 'ongoing', 'completed'].includes(hash)) {
@@ -45,7 +47,7 @@ const Projects = () => {
         } else {
             filtered = [...projectsData];
         }
-        
+
         // Sort by date (most recent first) - projects without dates go to the end
         return filtered.sort((a, b) => {
             if (!a.date && !b.date) return 0;
@@ -99,6 +101,12 @@ const Projects = () => {
             transition={{ duration: 0.5 }}
             className="min-h-screen pt-24 px-4 container mx-auto pb-20"
         >
+            <SEO
+                title={PAGE_SEO.projects.title}
+                description={PAGE_SEO.projects.description}
+                ogImage={PAGE_SEO.projects.ogImage}
+                canonicalPath="/projects"
+            />
             <BackToTop />
             {/* Tabs */}
             <div className="hidden md:flex justify-center gap-4 mb-16 flex-wrap">

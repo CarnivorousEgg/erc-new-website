@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import Analytics from './components/Analytics';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import ProjectDetail from './pages/ProjectDetail';
@@ -17,6 +18,8 @@ import NotFound from './pages/NotFound';
 function App() {
     return (
         <div className="min-h-screen bg-white text-black dark:bg-black dark:text-white selection:bg-blue-500/30 transition-colors duration-300">
+            {/* Google Analytics — tracks every route change */}
+            <Analytics />
             <Navbar />
             <ScrollToTop />
             <Routes>
@@ -38,3 +41,4 @@ function App() {
 }
 
 export default App;
+

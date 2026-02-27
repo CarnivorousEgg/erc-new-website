@@ -6,11 +6,13 @@ import ChromaGrid from '../components/ChromaGrid';
 import AlumniTimeline from '../components/AlumniTimeline';
 import BackToTop from '../components/BackToTop';
 import CurveDivider from '../components/CurveDivider';
+import SEO from '../components/SEO';
 import teamData from '../data/team.json';
 import { FaLinkedin, FaInstagram, FaEnvelope, FaTwitter, FaCamera, FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { cn } from '../utils/cn';
 import '../components/ContactAnimations.css';
+import { PAGE_SEO } from '../config/seo';
 
 // Counter animation hook
 const useCountUp = (end, duration = 2000, shouldStart = false) => {
@@ -74,7 +76,7 @@ const About = () => {
     // Use IntersectionObserver to start counters when scrolled into view
     useEffect(() => {
         if (activeTab !== 'story') return;
-        
+
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -86,11 +88,11 @@ const About = () => {
             },
             { threshold: 0.3 }
         );
-        
+
         if (countersRef.current) {
             observer.observe(countersRef.current);
         }
-        
+
         return () => observer.disconnect();
     }, [activeTab]);
 
@@ -108,7 +110,12 @@ const About = () => {
             transition={{ duration: 0.5 }}
             className="min-h-screen pt-24 px-4 container mx-auto pb-20"
         >
-
+            <SEO
+                title={PAGE_SEO.about.title}
+                description={PAGE_SEO.about.description}
+                ogImage={PAGE_SEO.about.ogImage}
+                canonicalPath="/about"
+            />
             <BackToTop />
 
             {/* Tab Navigation */}
@@ -184,12 +191,12 @@ const About = () => {
                             {/* Coordinators Section */}
                             <h2 className="text-4xl font-bold text-center mb-12">Coordinators</h2>
                             <ChromaGrid items={teamData.current} />
-                            
+
                             {/* Curve Divider */}
                             <div className="my-16">
                                 <CurveDivider variant={2} />
                             </div>
-                            
+
                             {/* Project Leads Section */}
                             <h2 className="text-4xl font-bold text-center mb-12">Project Leads</h2>
                             <ChromaGrid items={teamData.projectLeads || []} />

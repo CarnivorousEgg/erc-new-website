@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import blogs from '../data/blogs.json';
 import { FaPlus, FaMinus } from 'react-icons/fa';
+import SEO from '../components/SEO';
+import { PAGE_SEO } from '../config/seo';
 
 const Blog = () => {
     const [selectedCategories, setSelectedCategories] = useState([]);
@@ -24,7 +26,7 @@ const Blog = () => {
 
     // Toggle category selection
     const toggleCategory = (category) => {
-        setSelectedCategories(prev => 
+        setSelectedCategories(prev =>
             prev.includes(category)
                 ? prev.filter(c => c !== category)
                 : [...prev, category]
@@ -34,9 +36,9 @@ const Blog = () => {
     // Filter blogs based on categories and search
     const filteredBlogs = useMemo(() => {
         return blogs.filter(blog => {
-            const matchesCategory = selectedCategories.length === 0 || 
+            const matchesCategory = selectedCategories.length === 0 ||
                 selectedCategories.some(cat => blog.categories.includes(cat));
-            const matchesSearch = searchQuery === '' || 
+            const matchesSearch = searchQuery === '' ||
                 blog.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 blog.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 blog.author.name.toLowerCase().includes(searchQuery.toLowerCase());
@@ -52,6 +54,12 @@ const Blog = () => {
 
     return (
         <div className="min-h-screen pt-24 pb-16 bg-white dark:bg-[#0a0a0a]">
+            <SEO
+                title={PAGE_SEO.blog.title}
+                description={PAGE_SEO.blog.description}
+                ogImage={PAGE_SEO.blog.ogImage}
+                canonicalPath="/blog"
+            />
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 {/* Header */}
                 <motion.div
@@ -99,11 +107,10 @@ const Blog = () => {
                                     {categoriesWithCounts.map(({ name, count }) => (
                                         <label
                                             key={name}
-                                            className={`flex items-center gap-3 py-1.5 px-2 rounded cursor-pointer transition-colors group ${
-                                                selectedCategories.includes(name)
+                                            className={`flex items-center gap-3 py-1.5 px-2 rounded cursor-pointer transition-colors group ${selectedCategories.includes(name)
                                                     ? 'bg-blue-500 dark:bg-blue-600 text-white'
                                                     : 'hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400'
-                                            }`}
+                                                }`}
                                         >
                                             <input
                                                 type="checkbox"
@@ -111,19 +118,17 @@ const Blog = () => {
                                                 onChange={() => toggleCategory(name)}
                                                 className="sr-only"
                                             />
-                                            <span className={`w-4 h-4 border-2 rounded flex items-center justify-center text-xs transition-colors ${
-                                                selectedCategories.includes(name)
+                                            <span className={`w-4 h-4 border-2 rounded flex items-center justify-center text-xs transition-colors ${selectedCategories.includes(name)
                                                     ? 'border-white bg-white text-blue-600'
                                                     : 'border-gray-300 dark:border-gray-600 group-hover:border-gray-400'
-                                            }`}>
+                                                }`}>
                                                 {selectedCategories.includes(name) && '✓'}
                                             </span>
                                             <span className="text-sm flex-1">{name}</span>
-                                            <span className={`text-xs ${
-                                                selectedCategories.includes(name)
+                                            <span className={`text-xs ${selectedCategories.includes(name)
                                                     ? 'text-white/70'
                                                     : 'text-gray-400 dark:text-gray-500'
-                                            }`}>
+                                                }`}>
                                                 ({count})
                                             </span>
                                         </label>
@@ -170,37 +175,33 @@ const Blog = () => {
                                     >
                                         {/* Blog Row */}
                                         <div
-                                            className={`group transition-colors ${
-                                                expandedBlog === blog.id
+                                            className={`group transition-colors ${expandedBlog === blog.id
                                                     ? 'bg-blue-500 dark:bg-blue-600'
                                                     : 'hover:bg-gray-50 dark:hover:bg-gray-900'
-                                            }`}
+                                                }`}
                                         >
                                             <div className="flex items-center gap-6 py-4">
                                                 {/* Bullet Point */}
-                                                <span className={`w-2 h-2 rounded-full flex-shrink-0 ${
-                                                    expandedBlog === blog.id
+                                                <span className={`w-2 h-2 rounded-full flex-shrink-0 ${expandedBlog === blog.id
                                                         ? 'bg-white'
                                                         : 'bg-gray-300 dark:bg-gray-600'
-                                                }`} />
-                                                
+                                                    }`} />
+
                                                 {/* Date */}
-                                                <span className={`w-20 text-sm font-mono flex-shrink-0 ${
-                                                    expandedBlog === blog.id
+                                                <span className={`w-20 text-sm font-mono flex-shrink-0 ${expandedBlog === blog.id
                                                         ? 'text-white/80'
                                                         : 'text-gray-500 dark:text-gray-400'
-                                                }`}>
+                                                    }`}>
                                                     {formatDate(blog.date)}
                                                 </span>
 
                                                 {/* Title - Clickable */}
                                                 <Link
                                                     to={`/blog/${blog.id}`}
-                                                    className={`flex-1 text-lg font-medium transition-colors ${
-                                                        expandedBlog === blog.id
+                                                    className={`flex-1 text-lg font-medium transition-colors ${expandedBlog === blog.id
                                                             ? 'text-white'
                                                             : 'text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400'
-                                                    }`}
+                                                        }`}
                                                 >
                                                     {blog.title}
                                                     {expandedBlog === blog.id && (
@@ -211,11 +212,10 @@ const Blog = () => {
                                                 {/* Expand Button */}
                                                 <button
                                                     onClick={() => setExpandedBlog(expandedBlog === blog.id ? null : blog.id)}
-                                                    className={`w-8 h-8 flex items-center justify-center rounded-full transition-colors ${
-                                                        expandedBlog === blog.id
+                                                    className={`w-8 h-8 flex items-center justify-center rounded-full transition-colors ${expandedBlog === blog.id
                                                             ? 'bg-white text-blue-600'
                                                             : 'text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
-                                                    }`}
+                                                        }`}
                                                     aria-label={expandedBlog === blog.id ? 'Collapse' : 'Expand'}
                                                 >
                                                     {expandedBlog === blog.id ? <FaMinus size={12} /> : <FaPlus size={12} />}

@@ -124,3 +124,6 @@ dist
 
 public/Home-Videos/Computer_Vision.MP4
 
+# Generated gallery thumbnails (derived from originals, auto-built via prebuild)
+public/**/*.thumb.webp
+

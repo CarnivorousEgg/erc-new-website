@@ -8,6 +8,8 @@ import rehypeKatex from 'rehype-katex';
 import rehypeHighlight from 'rehype-highlight';
 import 'katex/dist/katex.min.css';
 import handbookData from '../data/handbook/index.js';
+import SEO from '../components/SEO';
+import { PAGE_SEO } from '../config/seo';
 
 const HandbookArticle = () => {
     const { id } = useParams();
@@ -32,7 +34,7 @@ const HandbookArticle = () => {
     }
 
     const category = categories.find(c => c.id === article.category);
-    
+
     // Find related articles (same category, excluding current)
     const relatedArticles = articles
         .filter(a => a.category === article.category && a.id !== article.id)
@@ -45,6 +47,12 @@ const HandbookArticle = () => {
 
     return (
         <div className="min-h-screen pt-24 pb-16 bg-white dark:bg-black">
+            <SEO
+                title={`${article.title} – ERC Handbook`}
+                description={article.excerpt || PAGE_SEO.handbook.description}
+                ogImage={PAGE_SEO.handbook.ogImage}
+                canonicalPath={`/handbook/${article.id}`}
+            />
             <article className="max-w-4xl mx-auto px-4 sm:px-6">
                 {/* Back Link */}
                 <motion.div
@@ -126,7 +134,7 @@ const HandbookArticle = () => {
                             <h2 className="text-2xl font-bold text-black dark:text-white mb-4">
                                 {section.title}
                             </h2>
-                            
+
                             <div className="prose prose-lg dark:prose-invert max-w-none mb-4
                                 prose-p:text-gray-700 dark:prose-p:text-gray-300
                                 prose-strong:text-black dark:prose-strong:text-white
