@@ -63,7 +63,6 @@ export default defineConfig({
       cache: false,
       cacheLocation: undefined,
     }),
-    // Convert all JPG/PNG to WebP after build & rewrite references
     webpConvert({
       quality: 80,
       keepOriginals: false,

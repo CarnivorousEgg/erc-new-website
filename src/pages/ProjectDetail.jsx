@@ -6,6 +6,7 @@ import teamData from '../data/team.json';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaArrowLeft, FaLinkedin, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Masonry from '../components/Masonry';
+import NotFound from './NotFound';
 import SEO from '../components/SEO';
 import { PAGE_SEO } from '../config/seo';
 
@@ -100,7 +101,7 @@ const ProjectDetail = () => {
     }, [lightboxOpen]);
 
     if (!project) {
-        return <div className="pt-32 text-center">Project not found</div>;
+        return <NotFound />;
     }
 
     // Determine the correct back link based on project type

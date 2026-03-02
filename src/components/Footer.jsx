@@ -82,7 +82,7 @@ const Footer = () => {
                         <div className="container mx-auto px-4 py-6">
                             <div className="text-center text-gray-400 dark:text-gray-500 text-sm flex flex-col gap-1">
                                 <p>&copy; {new Date().getFullYear()} Electronics and Robotics Club, BITS Goa. All rights reserved.</p>
-                                <p>Made with ❤️ Parth Jaju</p>
+                                <p>Made with ❤️, by Parth Jaju</p>
                             </div>
                         </div>
                     </div>

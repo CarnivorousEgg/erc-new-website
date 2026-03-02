@@ -10,45 +10,39 @@ const Projects = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
-    const [filter, setFilter] = useState('research');
+    const [tab, setTab] = useState('research');
+    const [statusFilter, setStatusFilter] = useState('all'); // 'all', 'ongoing', 'completed'
 
     React.useEffect(() => {
-        // Check for query param filter (e.g., ?filter=completed)
         const queryFilter = searchParams.get('filter');
-        // Also check for hash-based filter (e.g., #completed, #ongoing) for backwards compatibility
         const hash = location.hash.replace('#', '');
 
-        if (queryFilter && ['research', 'mini', 'ongoing', 'completed'].includes(queryFilter)) {
-            setFilter(queryFilter);
-        } else if (hash && ['research', 'mini', 'ongoing', 'completed'].includes(hash)) {
-            setFilter(hash);
+        if (queryFilter && ['research', 'mini'].includes(queryFilter)) {
+            setTab(queryFilter);
+        } else if (hash && ['research', 'mini'].includes(hash)) {
+            setTab(hash);
+        } else if (hash === 'ongoing' || hash === 'completed') {
+            // Backwards compatibility: map old status tabs to research + filter
+            setTab('research');
+            setStatusFilter(hash);
         } else {
-            setFilter('research');
+            setTab('research');
         }
     }, [location.hash, searchParams]);
 
-    // Filter projects based on selected tab
+    // Filter projects based on selected tab and status filter
     const getSortedProjects = () => {
-        let filtered;
-        if (filter === 'research') {
-            // All research projects - ongoing first, then completed
-            const ongoing = projectsData.filter(p => p.type === 'research' && p.category === 'ongoing');
-            const completed = projectsData.filter(p => p.type === 'research' && p.category === 'completed');
+        let filtered = projectsData.filter(p => p.type === tab);
+
+        if (statusFilter !== 'all') {
+            filtered = filtered.filter(p => p.category === statusFilter);
+        } else if (tab === 'research') {
+            // When showing all research, put ongoing first
+            const ongoing = filtered.filter(p => p.category === 'ongoing');
+            const completed = filtered.filter(p => p.category === 'completed');
             filtered = [...ongoing, ...completed];
-        } else if (filter === 'mini') {
-            // All mini projects
-            filtered = projectsData.filter(p => p.type === 'mini');
-        } else if (filter === 'ongoing') {
-            // All ongoing projects (both research and mini)
-            filtered = projectsData.filter(p => p.category === 'ongoing');
-        } else if (filter === 'completed') {
-            // All completed projects (both research and mini)
-            filtered = projectsData.filter(p => p.category === 'completed');
-        } else {
-            filtered = [...projectsData];
         }
 
-        // Sort by date (most recent first) - projects without dates go to the end
         return filtered.sort((a, b) => {
             if (!a.date && !b.date) return 0;
             if (!a.date) return 1;
@@ -62,34 +56,28 @@ const Projects = () => {
     const tabs = [
         { id: 'research', label: 'All Research Projects' },
         { id: 'mini', label: 'All Mini Projects' },
+    ];
+
+    const statusOptions = [
+        { id: 'all', label: 'All' },
         { id: 'ongoing', label: 'Ongoing' },
         { id: 'completed', label: 'Completed' },
     ];
 
-    // Determine which badge to show based on current filter
+    // Badge always shows status (ongoing/completed)
     const getBadge = (project) => {
-        if (filter === 'research' || filter === 'mini') {
-            // In type tabs, show status (ongoing/completed)
-            return {
-                text: project.category,
-                colorClass: project.category === 'ongoing'
-                    ? 'bg-green-100 text-green-600 dark:bg-green-500/20 dark:text-green-400'
-                    : 'bg-purple-100 text-purple-600 dark:bg-purple-500/20 dark:text-purple-400'
-            };
-        } else {
-            // In status tabs (ongoing/completed), show type (research/mini)
-            return {
-                text: project.type,
-                colorClass: project.type === 'research'
-                    ? 'bg-blue-100 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400'
-                    : 'bg-orange-100 text-orange-600 dark:bg-orange-500/20 dark:text-orange-400'
-            };
-        }
+        return {
+            text: project.category,
+            colorClass: project.category === 'ongoing'
+                ? 'bg-green-100 text-green-600 dark:bg-green-500/20 dark:text-green-400'
+                : 'bg-purple-100 text-purple-600 dark:bg-purple-500/20 dark:text-purple-400'
+        };
     };
 
-    const handleFilterChange = (filterId) => {
-        setFilter(filterId);
-        const hash = filterId === 'research' ? '' : `#${filterId}`;
+    const handleTabChange = (tabId) => {
+        setTab(tabId);
+        setStatusFilter('all');
+        const hash = tabId === 'research' ? '' : `#${tabId}`;
         navigate(hash, { replace: true });
     };
 
@@ -109,19 +97,36 @@ const Projects = () => {
             />
             <BackToTop />
             {/* Tabs */}
-            <div className="hidden md:flex justify-center gap-4 mb-16 flex-wrap">
-                {tabs.map((tab) => (
-                    <button
-                        key={tab.id}
-                        onClick={() => handleFilterChange(tab.id)}
-                        className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === tab.id
-                            ? 'bg-black text-white dark:bg-white dark:text-black shadow-lg scale-105'
-                            : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-white/10 dark:text-white dark:hover:bg-white/20'
-                            }`}
-                    >
-                        {tab.label}
-                    </button>
-                ))}
+            <div className="hidden md:flex flex-col items-center gap-4 mb-16">
+                <div className="flex justify-center gap-4 flex-wrap">
+                    {tabs.map((t) => (
+                        <button
+                            key={t.id}
+                            onClick={() => handleTabChange(t.id)}
+                            className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${tab === t.id
+                                ? 'bg-black text-white dark:bg-white dark:text-black shadow-lg scale-105'
+                                : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-white/10 dark:text-white dark:hover:bg-white/20'
+                                }`}
+                        >
+                            {t.label}
+                        </button>
+                    ))}
+                </div>
+                {/* Status Filter */}
+                <div className="flex gap-2">
+                    {statusOptions.map((opt) => (
+                        <button
+                            key={opt.id}
+                            onClick={() => setStatusFilter(opt.id)}
+                            className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-300 border ${statusFilter === opt.id
+                                ? 'border-blue-500 bg-blue-500/10 text-blue-600 dark:text-blue-400'
+                                : 'border-gray-300 dark:border-white/20 text-gray-500 dark:text-gray-400 hover:border-gray-400 dark:hover:border-white/40'
+                                }`}
+                        >
+                            {opt.label}
+                        </button>
+                    ))}
+                </div>
             </div>
 
             {/* Grid */}

@@ -30,67 +30,67 @@
             "name": "3dof   arm",
             "image": "/images/projects/3dof - arm/cover.png",
             "description": "Robotic Arm 3 DoF",
-            "link": "/projects/3dof - arm"
+            "link": "/projects/robotic-arm-3dof_done"
         },
         {
             "name": "8bit",
             "image": "/images/projects/8bit/cover.JPG",
             "description": "8-Bit Computer Project - Custom built computer from scratch",
-            "link": "/projects/8bit"
+            "link": "/projects/8bit-computer_done"
         },
         {
             "name": "Acoustic Camera",
             "image": "/images/projects/acoustic-camera/cover.jpg",
             "description": "",
-            "link": "/projects/acoustic-camera"
+            "link": "/projects/acoustic-camera_done"
         },
         {
             "name": "Air Hockey",
             "image": "/images/projects/air-hockey/cover.png",
             "description": "",
-            "link": "/projects/air-hockey"
+            "link": "/projects/air-hockey_done"
         },
         {
             "name": "Automated orchestra",
             "image": "/images/projects/automated orchestra/DSC_1015.JPG",
             "description": "",
-            "link": "/projects/automated orchestra"
+            "link": "/projects/automated-orchestra_done"
         },
         {
             "name": "Ball Drone",
             "image": "/images/projects/ball-drone/cover.png",
             "description": "",
-            "link": "/projects/ball-drone"
+            "link": "/projects/ball-drone_done"
         },
         {
             "name": "Carborone",
             "image": "/images/projects/carborone/cover.jpeg",
             "description": "",
-            "link": "/projects/carborone"
+            "link": "/projects/carborone_done"
         },
         {
             "name": "Chotubot",
             "image": "/images/projects/choubot/cover.JPG",
             "description": "",
-            "link": "/projects/chotubot"
+            "link": "/projects/desktop-companion-bot_done"
         },
         {
             "name": "Cubli",
             "image": "/images/projects/cubli/DSC_1191.JPG",
             "description": "",
-            "link": "/projects/cubli"
+            "link": "/projects/cubli_done"
         },
         {
             "name": "Dartboard",
             "image": "/images/projects/dartboard/DSC_1199.JPG",
             "description": "",
-            "link": "/projects/dartboard"
+            "link": "/projects/automated-dart-board_done"
         },
         {
             "name": "Drone Auto",
             "image": "/images/projects/drone-auto/cover.JPG",
             "description": "Drone automation project",
-            "link": "/projects/drone-auto"
+            "link": "/projects/drone-automation"
         },
         {
             "name": "Gennav",
@@ -102,121 +102,121 @@
             "name": "Inverted pendulum",
             "image": "/images/projects/inverted pendulum/DSC_1043.JPG",
             "description": "",
-            "link": "/projects/inverted pendulum"
+            "link": "/projects/single-inverted-pendulum_done"
         },
         {
             "name": "Klann",
             "image": "/images/projects/klann/cover.jpeg",
             "description": "",
-            "link": "/projects/klann"
+            "link": "/projects/klann_done"
         },
         {
             "name": "Led matrix",
             "image": "/images/projects/led matrix/DSC_1013.JPG",
             "description": "",
-            "link": "/projects/led matrix"
+            "link": "/projects/led-matrix_done"
         },
         {
             "name": "Led Globe",
             "image": "/images/projects/led-globe/cover.jpeg",
             "description": "",
-            "link": "/projects/led-globe"
+            "link": "/projects/led-globe_done"
         },
         {
             "name": "Led Hexapad",
             "image": "/images/projects/led-hexapad/cover.jpeg",
             "description": "",
-            "link": "/projects/led-hexapad"
+            "link": "/projects/led-hexapad_done"
         },
         {
             "name": "Modbot",
             "image": "/images/projects/modbot/cover.jpeg",
             "description": "",
-            "link": "/projects/modbot"
+            "link": "/projects/modbot_done"
         },
         {
             "name": "Quadruped",
             "image": "/images/projects/quadruped/cover.jpeg",
             "description": "Quadruped - 12 DoF four-legged robot",
-            "link": "/projects/quadruped"
+            "link": "/projects/quadruped_done"
         },
         {
             "name": "Quadruped Bhaagwati",
             "image": "/images/projects/quadruped-bhaagwati/cover.png",
             "description": "",
-            "link": "/projects/quadruped-bhaagwati"
+            "link": "/projects/quadruped-bhaagwati_done"
         },
         {
             "name": "Robotic Arm",
             "image": "/images/projects/robotic-arm/cover.JPG",
             "description": "Robotic Arm v2",
-            "link": "/projects/robotic-arm"
+            "link": "/projects/robotic-arm-v2_done"
         },
         {
             "name": "Sketcher",
             "image": "/images/projects/sketcher/cover.jpeg",
             "description": "",
-            "link": "/projects/sketcher"
+            "link": "/projects/sketcher_done"
         },
         {
             "name": "Snakebot",
             "image": "/images/projects/snakebot/cover.JPG",
             "description": "SnakeBot modular robot",
-            "link": "/projects/snakebot"
+            "link": "/projects/snakebot_done"
         },
         {
             "name": "Spiderbot",
             "image": "/images/projects/spiderbot/cover.JPG",
             "description": "SpiderBot hexapod robot",
-            "link": "/projects/spiderbot"
+            "link": "/projects/spiderbot_done"
         },
         {
             "name": "Stewarts platform",
             "image": "/images/projects/stewarts platform/20250124_225728.jpg",
             "description": "",
-            "link": "/projects/stewarts platform"
+            "link": "/projects/stewart-platform"
         },
         {
             "name": "Swarm minions",
             "image": "/images/projects/swarm minions/DSC_1009.JPG",
             "description": "",
-            "link": "/projects/swarm minions"
+            "link": "/projects/swarm-minions_done"
         },
         {
             "name": "Swarmbots",
             "image": "/images/projects/swarmbots/cover.png",
             "description": "",
-            "link": "/projects/swarmbots"
+            "link": "/projects/swarmbots_done"
         },
         {
             "name": "Swarmbots 2",
             "image": "/images/projects/swarmbots-2/cover.jpg",
             "description": "",
-            "link": "/projects/swarmbots-2"
+            "link": "/projects/swarmbots-2_done"
         },
         {
             "name": "Tars",
             "image": "/images/projects/tars/20250209_184940.jpg",
             "description": "",
-            "link": "/projects/tars"
+            "link": "/projects/tars_done"
         },
         {
             "name": "Trotbot",
             "image": "/images/projects/trotbot/cover.jpg",
             "description": "Trotbot omni-directional robot",
-            "link": "/projects/trotbot"
+            "link": "/projects/trotbot_done"
         },
         {
             "name": "Vulcan",
             "image": "/images/projects/vulcan/cover.JPG",
             "description": "Vulcan humanoid head",
-            "link": "/projects/vulcan"
+            "link": "/projects/vulcan_done"
         },
         {
             "name": "Walle",
             "image": "/images/projects/walle/cover.jpeg",
             "description": "",
-            "link": "/projects/walle"
+            "link": "/projects/wall-e_done"
         }
     ],
     "alumni": [

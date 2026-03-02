@@ -12,7 +12,9 @@
     "preview": "vite preview",
     "scrape": "node scripts/scrape_linkedin.js",
     "optimize:images": "node scripts/optimize_images.js",
-    "thumbnails:generate": "node scripts/generate_thumbnails.js"
+    "thumbnails:generate": "node scripts/generate_thumbnails.js",
+    "webp:convert": "node scripts/convert_to_webp.js",
+    "webp:convert:force": "node scripts/convert_to_webp.js --force"
   },
   "dependencies": {
     "@use-gesture/react": "^10.3.1",

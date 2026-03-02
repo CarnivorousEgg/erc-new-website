@@ -248,17 +248,17 @@ const Home = () => {
                         key={currentVideoIndex}
                     >
                         {currentVideoIndex === 0 && (
-                            <Link to="/projects" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-colors shadow-lg shadow-blue-500/30">
+                            <Link to="/projects" className="hidden md:inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-colors shadow-lg shadow-blue-500/30">
                                 Explore Projects
                             </Link>
                         )}
                         {currentVideoIndex === 1 && (
-                            <Link to="/events" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-colors shadow-lg shadow-blue-500/30">
+                            <Link to="/events" className="hidden md:inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-colors shadow-lg shadow-blue-500/30">
                                 Explore Events
                             </Link>
                         )}
                         {currentVideoIndex === 2 && (
-                            <Link to="/about#contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-colors shadow-lg shadow-blue-500/30">
+                            <Link to="/about#contact" className="hidden md:inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-colors shadow-lg shadow-blue-500/30">
                                 Contact Us
                             </Link>
                         )}
@@ -294,7 +294,7 @@ const Home = () => {
                 <div className="py-20 px-4 container mx-auto">
                     <h2 className="text-4xl font-bold text-center mb-12">What We Do</h2>
                     <div className="grid md:grid-cols-3 gap-8">
-                        <Link to="/projects" className="block transition-transform hover:scale-105">
+                        <Link to="/projects" className="block transition-transform md:hover:scale-105">
                             <SpotlightCard>
                                 <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Research Projects</h3>
                                 <p className="text-gray-600 dark:text-gray-400">
@@ -303,7 +303,7 @@ const Home = () => {
                             </SpotlightCard>
                         </Link>
 
-                        <Link to="/events" className="block transition-transform hover:scale-105">
+                        <Link to="/events" className="block transition-transform md:hover:scale-105">
                             <SpotlightCard>
                                 <h3 className="text-2xl font-bold mb-4 text-purple-600 dark:text-purple-400">Hosting Events</h3>
                                 <p className="text-gray-600 dark:text-gray-400">
@@ -312,7 +312,7 @@ const Home = () => {
                             </SpotlightCard>
                         </Link>
 
-                        <Link to="/about#contact" className="block transition-transform hover:scale-105">
+                        <Link to="/about#contact" className="block transition-transform md:hover:scale-105">
                             <SpotlightCard>
                                 <h3 className="text-2xl font-bold mb-4 text-pink-600 dark:text-pink-400">Community Building</h3>
                                 <p className="text-gray-600 dark:text-gray-400">

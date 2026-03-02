@@ -65,8 +65,17 @@
         animation-duration: 20s;
     }
 
+    .sponsors-ticker:hover {
+        animation-play-state: running;
+    }
+
     .sponsor-item {
         padding: 0.5rem 1rem;
+        pointer-events: none;
+    }
+
+    .sponsor-item:hover {
+        transform: none;
     }
 
     .sponsor-logo {

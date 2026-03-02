@@ -76,7 +76,6 @@ export default function webpConvert(options = {}) {
       // 2. Convert each image to WebP
       for (const imagePath of imageFiles) {
         try {
-          const ext = path.extname(imagePath).toLowerCase();
           const webpPath = imagePath.replace(/\.(jpg|jpeg|png)$/i, '.webp');
 
           const originalBuffer = fs.readFileSync(imagePath);
