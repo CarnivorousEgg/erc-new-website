@@ -119,6 +119,19 @@ dist
 # Puppeteer session data
 .puppeteer_data/
 
+# Windows
+desktop.ini
+Thumbs.db
+
+# macOS
+.DS_Store
+
+# Build output
+dist/
+
+# Editor
+*.bak
+
 
 
 

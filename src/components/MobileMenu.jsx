@@ -179,11 +179,10 @@ const MobileMenu = ({ theme, toggleTheme }) => {
                     }}
                     className="cursor-pointer pointer-events-auto"
                 >
-                    <OptimizedImage 
+                    <img 
                         src="/images/erc-logo.png" 
                         alt="ERC Logo" 
                         className="h-10 w-auto drop-shadow-lg"
-                        eager={true}
                         style={{ height: '40px', width: 'auto' }}
                     />
                 </div>

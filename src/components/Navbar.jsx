@@ -93,11 +93,10 @@ const Navbar = () => {
                 to="/"
                 className="absolute left-6 top-1/2 -translate-y-1/2 pointer-events-auto"
             >
-                <OptimizedImage 
+                <img 
                     src="/images/erc-logo.png" 
                     alt="ERC Logo" 
                     className="h-12 w-auto hover:opacity-80 transition-opacity" 
-                    eager={true}
                     style={{ height: '48px', width: 'auto' }}
                 />
             </Link>
