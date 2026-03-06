@@ -93,6 +93,7 @@ const Projects = () => {
                 title={PAGE_SEO.projects.title}
                 description={PAGE_SEO.projects.description}
                 ogImage={PAGE_SEO.projects.ogImage}
+                keywords={PAGE_SEO.projects.keywords}
                 canonicalPath="/projects"
             />
             <BackToTop />

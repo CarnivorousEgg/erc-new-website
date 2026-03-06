@@ -114,6 +114,7 @@ const About = () => {
                 title={PAGE_SEO.about.title}
                 description={PAGE_SEO.about.description}
                 ogImage={PAGE_SEO.about.ogImage}
+                keywords={PAGE_SEO.about.keywords}
                 canonicalPath="/about"
             />
             <BackToTop />

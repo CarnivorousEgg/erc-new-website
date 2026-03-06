@@ -38,6 +38,7 @@ const Events = () => {
                 title={PAGE_SEO.events.title}
                 description={PAGE_SEO.events.description}
                 ogImage={PAGE_SEO.events.ogImage}
+                keywords={PAGE_SEO.events.keywords}
                 canonicalPath="/events"
             />
             <BackToTop />

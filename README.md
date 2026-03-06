@@ -607,6 +607,15 @@ Some events (Open Day, Quark, Eduspark, Inductions, Hackathon) happen every year
 - Add their photos to `public/images/projects/<project-id>/`
 - Run `node scripts/generate_gallery_data.js` after adding images
 
+### Mobile-Friendly Redesign
+The site is currently optimized for laptops and larger screens. A full mobile responsiveness pass is needed:
+- **Layout fixes:** Several pages have layout issues on small screens (project grids, event galleries, handbook navigation)
+- **Navigation:** The mobile menu (`MobileMenu.jsx`) needs UX improvements — desktop nav features don't all translate well to mobile
+- **Feature parity:** Some desktop-only features (e.g., DomeGallery hover effects, masonry lightbox gestures) need mobile-specific alternatives or should be hidden on small screens
+- **Touch interactions:** Replace hover-dependent interactions with tap/swipe equivalents
+- **Performance:** Reduce image sizes and defer heavy animations on mobile to improve load times
+- **Testing:** Test across common mobile viewports (iPhone SE, iPhone 14, Pixel 7, iPad)
+
 ### Other Ideas
 - [ ] Integration with GitHub for live project stats (stars, last commit)
 - [ ] Dark mode improvements for image galleries

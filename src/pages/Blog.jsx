@@ -58,6 +58,7 @@ const Blog = () => {
                 title={PAGE_SEO.blog.title}
                 description={PAGE_SEO.blog.description}
                 ogImage={PAGE_SEO.blog.ogImage}
+                keywords={PAGE_SEO.blog.keywords}
                 canonicalPath="/blog"
             />
             <div className="max-w-7xl mx-auto px-4 sm:px-6">

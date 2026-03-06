@@ -18,6 +18,7 @@ const NotFound = () => {
                 title={PAGE_SEO.notFound.title}
                 description={PAGE_SEO.notFound.description}
                 ogImage={PAGE_SEO.notFound.ogImage}
+                keywords={PAGE_SEO.notFound.keywords}
             />
             <motion.div
                 initial={{ opacity: 0, y: 20 }}

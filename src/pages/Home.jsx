@@ -116,6 +116,7 @@ const Home = () => {
                 title={PAGE_SEO.home.title}
                 description={PAGE_SEO.home.description}
                 ogImage={PAGE_SEO.home.ogImage}
+                keywords={PAGE_SEO.home.keywords}
                 canonicalPath="/"
             />
             {/* Hero Section with Video Background - Full Screen */}

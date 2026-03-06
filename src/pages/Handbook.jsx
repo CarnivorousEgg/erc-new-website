@@ -196,6 +196,7 @@ const Handbook = () => {
                 title={PAGE_SEO.handbook.title}
                 description={PAGE_SEO.handbook.description}
                 ogImage={PAGE_SEO.handbook.ogImage}
+                keywords={PAGE_SEO.handbook.keywords}
                 canonicalPath="/handbook"
             />
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
