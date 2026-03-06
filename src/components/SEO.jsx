@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { SITE_NAME, SITE_URL, DEFAULT_OG_IMAGE, TWITTER_HANDLE, DEFAULT_KEYWORDS } from '../config/seo';
+import { SITE_NAME, SITE_URL, DEFAULT_OG_IMAGE, TWITTER_HANDLE, DEFAULT_KEYWORDS, CONTACT_EMAIL, OLD_DOMAIN } from '../config/seo';
 
 /**
  * SEO component — manages <head> meta tags for each page.
@@ -25,16 +25,16 @@ const SEO = ({
     const canonicalUrl = `${SITE_URL}${canonicalPath}`;
     const ogImageUrl = ogImage?.startsWith('http') ? ogImage : `${SITE_URL}${ogImage}`;
 
-    // Default Organization structured data
-    const defaultJsonLd = {
+    // Organization structured data
+    const organizationJsonLd = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         name: 'Electronics and Robotics Club, BITS Pilani Goa Campus',
-        alternateName: ['ERC', 'ERC BITS Goa', 'ERC BPGC'],
+        alternateName: ['ERC', 'ERC BITS Goa', 'ERC BPGC', 'The Robotics Club of BITS GOA'],
         url: SITE_URL,
         logo: `${SITE_URL}/images/erc-logo.png`,
-        description: 'The Electronics and Robotics Club (ERC) of BITS Pilani, Goa Campus.',
-        email: 'ercbitsgoa@gmail.com',
+        description: 'The Electronics and Robotics Club (ERC) of BITS Pilani, Goa Campus — the robotics club of BITS Goa.',
+        email: CONTACT_EMAIL,
         address: {
             '@type': 'PostalAddress',
             streetAddress: 'BITS Pilani K K Birla Goa Campus',
@@ -45,15 +45,35 @@ const SEO = ({
         },
         sameAs: [
             'https://www.instagram.com/erc_bitsgoa/',
-            'https://www.facebook.com/ElectronicsAndRoboticsClub/',
             'https://github.com/ERC-BPGC',
             'https://in.linkedin.com/company/electronics-robotics-club-bits-goa',
-            'https://twitter.com/erc_bpgc',
-            'https://erc-bpgc.github.io/',
+            'https://x.com/ERC_BITS_Goa',
+            `${OLD_DOMAIN}/`,
         ],
     };
 
-    const structuredData = jsonLd || defaultJsonLd;
+    // WebSite structured data — helps Google understand site identity
+    const websiteJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: SITE_NAME,
+        alternateName: ['ERC', 'ERC BPGC', 'Electronics and Robotics Club BITS Goa'],
+        url: SITE_URL,
+    };
+
+    // Page-level WebPage structured data
+    const webPageJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: fullTitle,
+        description,
+        url: canonicalUrl,
+        isPartOf: { '@type': 'WebSite', url: SITE_URL },
+    };
+
+    const structuredDataArray = jsonLd
+        ? [jsonLd]
+        : [organizationJsonLd, websiteJsonLd, webPageJsonLd];
 
     return (
         <Helmet>
@@ -80,10 +100,12 @@ const SEO = ({
             {/* Canonical */}
             <link rel="canonical" href={canonicalUrl} />
 
-            {/* Structured Data */}
-            <script type="application/ld+json">
-                {JSON.stringify(structuredData)}
-            </script>
+            {/* Structured Data — multiple JSON-LD blocks */}
+            {structuredDataArray.map((data, i) => (
+                <script key={i} type="application/ld+json">
+                    {JSON.stringify(data)}
+                </script>
+            ))}
         </Helmet>
     );
 };

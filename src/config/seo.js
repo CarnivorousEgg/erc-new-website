@@ -8,11 +8,13 @@
 
 export const SITE_URL = 'https://ercbpgc.in';
 export const SITE_NAME = 'ERC BITS Goa';
-export const TWITTER_HANDLE = '@erc_bpgc';
+export const TWITTER_HANDLE = '@ERC_BITS_Goa';
+export const CONTACT_EMAIL = 'bitsg.erc@gmail.com';
+export const OLD_DOMAIN = 'https://erc-bpgc.github.io';
 
 export const DEFAULT_OG_IMAGE = '/images/erc-logo.png';
 
-export const DEFAULT_KEYWORDS = 'ERC, ERC BITS Goa, ERC BPGC, Electronics and Robotics Club, BITS Pilani Goa, BITS Goa robotics, robotics club, electronics club, BPGC, erc bits goa, erc bpgc, robotics BITS Goa, college robotics India';
+export const DEFAULT_KEYWORDS = 'ERC, ERC BITS Goa, ERC BPGC, Electronics and Robotics Club, BITS Pilani Goa, BITS Goa robotics, robotics club, electronics club, BPGC, erc bits goa, erc bpgc, robotics BITS Goa, college robotics India, The Robotics Club of BITS GOA, ercbpgc.in';
 
 export const PAGE_SEO = {
     home: {
